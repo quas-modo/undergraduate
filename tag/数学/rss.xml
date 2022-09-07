@@ -38,7 +38,7 @@
 &lt;p&gt;在转换时，写清楚如何转换，便于后期检查和校对&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;奇数阶反对称行列式值为 0&lt;/li&gt;
-&lt;li&gt;三角、倒三角、对角线行列式 为对角线上的数的乘积&lt;/li&gt;
+&lt;li&gt;上三角、下三角、对角行列式 为对角线上的数的乘积&lt;/li&gt;
 &lt;/ol&gt;
  ]]></description>
         </item>
