@@ -13,10 +13,11 @@
         <pubDate>Wed, 07 Sep 2022 16:00:59 +0800</pubDate>
         <lastBuildDate>Wed, 07 Sep 2022 16:00:59 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2022/09/07/Lecture-1-%E8%A1%8C%E5%88%97%E5%BC%8F/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/2022/09/07/linear-algebra/Lecture-1-%E8%A1%8C%E5%88%97%E5%BC%8F/</guid>
             <title>Lecture 1 行列式</title>
-            <link>https://quas-modo.github.io/2022/09/07/Lecture-1-%E8%A1%8C%E5%88%97%E5%BC%8F/</link>
-            <category term="线性代数" scheme="https://quas-modo.github.io/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" />
+            <link>https://quas-modo.github.io/2022/09/07/linear-algebra/Lecture-1-%E8%A1%8C%E5%88%97%E5%BC%8F/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+            <category term="线性代数" scheme="https://quas-modo.github.io/categories/NJUSE/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" />
             <category term="数学" scheme="https://quas-modo.github.io/tags/%E6%95%B0%E5%AD%A6/" />
             <pubDate>Wed, 07 Sep 2022 16:00:59 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;n阶行列式的性质&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#n阶行列式的性质&#34;&gt;#&lt;/a&gt; n 阶行列式的性质&lt;/h2&gt;

@@ -10,9 +10,9 @@
     </author>
     <updated>2022-09-07T08:00:59.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/2022/09/07/Lecture-1-%E8%A1%8C%E5%88%97%E5%BC%8F/</id>
+        <id>https://quas-modo.github.io/2022/09/07/linear-algebra/Lecture-1-%E8%A1%8C%E5%88%97%E5%BC%8F/</id>
         <title>Lecture 1 行列式</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/09/07/Lecture-1-%E8%A1%8C%E5%88%97%E5%BC%8F/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/09/07/linear-algebra/Lecture-1-%E8%A1%8C%E5%88%97%E5%BC%8F/"/>
         <content type="html">&lt;h2 id=&#34;n阶行列式的性质&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#n阶行列式的性质&#34;&gt;#&lt;/a&gt; n 阶行列式的性质&lt;/h2&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -35,14 +35,15 @@
 &lt;li&gt;上三角、下三角、对角行列式 为对角线上的数的乘积&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="线性代数" scheme="https://quas-modo.github.io/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="线性代数" scheme="https://quas-modo.github.io/categories/NJUSE/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" />
         <category term="数学" scheme="https://quas-modo.github.io/tags/%E6%95%B0%E5%AD%A6/" />
         <updated>2022-09-07T08:00:59.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2022/09/07/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/</id>
+        <id>https://quas-modo.github.io/2022/09/07/thoughts/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/</id>
         <title>欢迎来到我的世界</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/09/07/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/09/07/thoughts/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/"/>
         <content type="html">&lt;h1 id=&#34;欢迎朋友们来到我的世界~&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#欢迎朋友们来到我的世界~&#34;&gt;#&lt;/a&gt; 欢迎朋友们来到我的世界～&lt;/h1&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;会在这里&lt;s&gt;不定期&lt;/s&gt;（希望是定期）更新课程笔记、专业书籍笔记整理、书影音杂感以及一些胡言乱语&lt;/p&gt;
@@ -51,6 +52,7 @@
 &lt;p&gt;（逃&lt;/p&gt;
 </content>
         <category term="书影音" scheme="https://quas-modo.github.io/categories/%E4%B9%A6%E5%BD%B1%E9%9F%B3/" />
+        <category term="杂谈" scheme="https://quas-modo.github.io/categories/%E4%B9%A6%E5%BD%B1%E9%9F%B3/%E6%9D%82%E8%B0%88/" />
         <category term="杂谈" scheme="https://quas-modo.github.io/tags/%E6%9D%82%E8%B0%88/" />
         <category term="书影音" scheme="https://quas-modo.github.io/tags/%E4%B9%A6%E5%BD%B1%E9%9F%B3/" />
         <updated>2022-09-07T07:18:58.000Z</updated>
