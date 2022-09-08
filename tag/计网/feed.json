@@ -17,31 +17,6 @@
                 "互联网计算",
                 "计网"
             ]
-        },
-        {
-            "id": "https://quas-modo.github.io/2022/09/07/linear-algebra/Lecture-1-%E8%A1%8C%E5%88%97%E5%BC%8F/",
-            "url": "https://quas-modo.github.io/2022/09/07/linear-algebra/Lecture-1-%E8%A1%8C%E5%88%97%E5%BC%8F/",
-            "title": "Lecture 1 行列式",
-            "date_published": "2022-09-07T08:00:59.000Z",
-            "content_html": "<h2 id=\"n阶行列式的性质\"><a class=\"anchor\" href=\"#n阶行列式的性质\">#</a> n 阶行列式的性质</h2>\n<p><span id=\"more\"></span></p>\n<ol>\n<li><strong>行列式与它的转置行列式的值相等</strong>【证明较繁琐】【由此可得，对于行成立的性质，对于列也同样成立】</li>\n<li><strong>对调两行（列）的位置，行列式的值相差一个符号</strong>【证明较繁琐】</li>\n<li>两行（列）相等的行列式的值为 0（由<strong>定理 2</strong> 推导）</li>\n<li>行列式可以按任一行（列）展开（由<strong>定理 2</strong> 推导）</li>\n<li>行列式的任一行（列）元素的公因子可以提到行列式外面</li>\n<li>若行列式某两行（列）对应元素成比例，则行列式的值为 0。<strong>包括 k=0 的情况</strong></li>\n<li>行列式的任意一行（列）乘以数 k 加到另一行（列）上去，行列式的值不便</li>\n<li>行列式任一行（列）的元素与另一行（列）元素的代数余子式对应乘积之和为零。（由<strong>定理 7</strong> 推导）</li>\n<li>n 阶范德蒙德行列式</li>\n<li>块三角行列式（AB 在正对角线上）</li>\n</ol>\n<h2 id=\"n阶行列式解题技巧\"><a class=\"anchor\" href=\"#n阶行列式解题技巧\">#</a> n 阶行列式解题技巧</h2>\n<p>将一行或一列化为大量的 0，然后展开计算</p>\n<p>在转换时，写清楚如何转换，便于后期检查和校对</p>\n<ol>\n<li>奇数阶反对称行列式值为 0</li>\n<li>上三角、下三角、对角行列式 为对角线上的数的乘积</li>\n</ol>\n",
-            "tags": [
-                "NJUSE",
-                "线性代数",
-                "数学"
-            ]
-        },
-        {
-            "id": "https://quas-modo.github.io/2022/09/07/thoughts/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/",
-            "url": "https://quas-modo.github.io/2022/09/07/thoughts/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/",
-            "title": "欢迎来到我的世界",
-            "date_published": "2022-09-07T07:18:58.000Z",
-            "content_html": "<h1 id=\"欢迎朋友们来到我的世界~\"><a class=\"anchor\" href=\"#欢迎朋友们来到我的世界~\">#</a> 欢迎朋友们来到我的世界～</h1>\n<p><span id=\"more\"></span></p>\n<p>会在这里<s>不定期</s>（希望是定期）更新课程笔记、专业书籍笔记整理、书影音杂感以及一些胡言乱语</p>\n<p>欢迎交流</p>\n<p>欢迎加友链</p>\n<p>（逃</p>\n",
-            "tags": [
-                "书影音",
-                "杂谈",
-                "杂谈",
-                "书影音"
-            ]
         }
     ]
 }
