@@ -7,6 +7,18 @@
     "home_page_url": "https://quas-modo.github.io",
     "items": [
         {
+            "id": "https://quas-modo.github.io/2022/09/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B/Lecture01/",
+            "url": "https://quas-modo.github.io/2022/09/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B/Lecture01/",
+            "title": "Lecture01",
+            "date_published": "2022-09-09T01:54:05.000Z",
+            "content_html": "<p>本系列参考中科大郑铨老师网课和《计算机网络：自顶向下》整理。</p>\n<p>因为是听完课很久之后整理的，所以只整理了纲要（趴</p>\n<p><span id=\"more\"></span></p>\n<h1 id=\"第一章-概论\"><a class=\"anchor\" href=\"#第一章-概论\">#</a> 第一章 概论</h1>\n<h2 id=\"什么是internet\"><a class=\"anchor\" href=\"#什么是internet\">#</a> 什么是 Internet？</h2>\n<h3 id=\"从构成因特网的基本硬件和软件组件理解\"><a class=\"anchor\" href=\"#从构成因特网的基本硬件和软件组件理解\">#</a> 从构成因特网的基本硬件和软件组件理解</h3>\n<ul>\n<li>\n<p><strong>节点</strong></p>\n<ul>\n<li>主机及其上运行的应用程序</li>\n<li>路由器、交换机等网络交换设备</li>\n</ul>\n</li>\n<li>\n<p><strong>边</strong></p>\n<ul>\n<li>接入网链路：主机连接到互联网的链路</li>\n<li>主干链路：路由器间的链路</li>\n</ul>\n</li>\n<li>\n<p><strong>协议</strong></p>\n</li>\n</ul>\n<h3 id=\"从服务角度-分布式应用提供服务的联网基础设施理解\"><a class=\"anchor\" href=\"#从服务角度-分布式应用提供服务的联网基础设施理解\">#</a> 从服务角度、分布式应用提供服务的联网基础设施理解</h3>\n<ul>\n<li>使用通信设施进行通信的分布式应用</li>\n<li>通信基础设施为 apps 提供编程接口（通信服务）</li>\n</ul>\n<h2 id=\"什么是协议\"><a class=\"anchor\" href=\"#什么是协议\">#</a> 什么是协议？</h2>\n<p>协议定义了在两个或多个通信实体之间交换的报文的<strong>格式和顺序</strong>，以及报文发送和 / 或接收一条报文或其他事件所采取的<strong>动作</strong>。</p>\n<h2 id=\"网络结构\"><a class=\"anchor\" href=\"#网络结构\">#</a> 网络结构</h2>\n<ul>\n<li>\n<p>网络边缘</p>\n<p>端系统</p>\n<ul>\n<li>客户端 / 服务器模式</li>\n<li>对等（peer-peer）模式</li>\n</ul>\n</li>\n<li>\n<p>网络核心</p>\n<ul>\n<li>\n<p>电路交换</p>\n<p>频分复用（FDM，Frequency-Division Multiplexing）和时分复用（TDM, Time-Division Multiplexing）</p>\n<p>独享资源，不共享，用于电话，不适合计算机之间的通信</p>\n</li>\n<li>\n<p>分组交换</p>\n<p>储存和转发、时延（节点处理时延、排队时延、传输时延、传播时延）和分组丢失、转发表和路由选择协议</p>\n<ul>\n<li>数据报网络</li>\n<li>虚电路网络</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>\n<p>接入网</p>\n<ul>\n<li>家庭接入：DSL（数字用户线）、电缆、FTTH（光纤到户）、拨号和卫星</li>\n<li>企业（和家庭）接入：以太网和 WiFi</li>\n<li>广域无线接入：3G 和 LTE</li>\n</ul>\n</li>\n<li>\n<p>物理媒体</p>\n<ul>\n<li>导引型媒体\n<ul>\n<li>双绞铜线</li>\n<li>同轴电缆</li>\n<li>光纤</li>\n</ul>\n</li>\n<li>非导引型媒体\n<ul>\n<li>陆地无线电信道</li>\n<li>卫星无线电信道</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<h2 id=\"internet结构和isp\"><a class=\"anchor\" href=\"#internet结构和isp\">#</a> Internet 结构和 ISP</h2>\n<p>互联网络结构：网络的网络</p>\n<p>端系统通过接入 ISPs（Internet Service Providers）连接到互联网中</p>\n<p>因特网内容服务商（ICP, Internet Content Providers）会构建自己的网络</p>\n<h2 id=\"协议层次及其服务模型\"><a class=\"anchor\" href=\"#协议层次及其服务模型\">#</a> 协议层次及其服务模型</h2>\n<p>上层依赖下层提供的服务，并创造新的服务和功能</p>\n<ol>\n<li>\n<p>应用层</p>\n<p>为人类用户或者其他用户进程提供网络应用服务</p>\n</li>\n<li>\n<p>运输层</p>\n<p>主机和主机的数据传输</p>\n<p>细分网络层的服务，进程到进程（port）</p>\n<p>将不可靠的通信变成可靠的通信</p>\n</li>\n<li>\n<p>网络层</p>\n<p>为数据报从源到目的选择路由</p>\n<p>主机主机之间的通信，端到端通信，不可靠</p>\n</li>\n<li>\n<p>链路层</p>\n<p>point to point 相邻网络节点间的数据传输</p>\n</li>\n<li>\n<p>物理层</p>\n<p>在线路上传送 bit</p>\n</li>\n</ol>\n",
+            "tags": [
+                "专业书籍",
+                "计算机网络自顶向下",
+                "计网"
+            ]
+        },
+        {
             "id": "https://quas-modo.github.io/2022/09/08/COA/Lecture01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/",
             "url": "https://quas-modo.github.io/2022/09/08/COA/Lecture01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/",
             "title": "Lecture01-计算机系统概述",
