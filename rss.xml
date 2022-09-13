@@ -10,8 +10,199 @@
         </author>
         <description>notes/thoughts/nonsense</description>
         <language>zh-CN</language>
-        <pubDate>Sun, 11 Sep 2022 00:20:37 +0800</pubDate>
-        <lastBuildDate>Sun, 11 Sep 2022 00:20:37 +0800</lastBuildDate>
+        <pubDate>Tue, 13 Sep 2022 17:43:01 +0800</pubDate>
+        <lastBuildDate>Tue, 13 Sep 2022 17:43:01 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://quas-modo.github.io/2022/09/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B/Lecture03-%E5%BA%94%E7%94%A8%E5%B1%82/</guid>
+            <title>Lecture03-应用层</title>
+            <link>https://quas-modo.github.io/2022/09/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B/Lecture03-%E5%BA%94%E7%94%A8%E5%B1%82/</link>
+            <category term="专业书籍" scheme="https://quas-modo.github.io/categories/%E4%B8%93%E4%B8%9A%E4%B9%A6%E7%B1%8D/" />
+            <category term="计算机网络自顶向下" scheme="https://quas-modo.github.io/categories/%E4%B8%93%E4%B8%9A%E4%B9%A6%E7%B1%8D/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B/" />
+            <category term="计网" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BD%91/" />
+            <pubDate>Tue, 13 Sep 2022 17:43:01 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;动画有助于更好地理解&lt;/p&gt;
+&lt;p&gt;interactive animation speaks a thousand words&lt;/p&gt;
+&lt;p&gt;断更好几天了（趴）&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;第三章-运输层&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第三章-运输层&#34;&gt;#&lt;/a&gt; 第三章 运输层&lt;/h1&gt;
+&lt;p&gt;在网络层的基础上增加了&lt;strong&gt;端口号&lt;/strong&gt;来实现进程到进程的通信。&lt;/p&gt;
+&lt;h2 id=&#34;概述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#概述&#34;&gt;#&lt;/a&gt; 概述&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;TCP&lt;/strong&gt;：可靠的、保序的传输，提供多路复用、解复用，拥塞控制、流量控制、建立连接&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;UDP&lt;/strong&gt;：不可靠的、不保序的传输，提供多路复用和解复用&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;都不提供延时保证和带宽保证，延时和带宽依赖于网络层的服务&lt;/p&gt;
+&lt;h2 id=&#34;多路复用与多路分解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#多路复用与多路分解&#34;&gt;#&lt;/a&gt; 多路复用与多路分解&lt;/h2&gt;
+&lt;p&gt;multiplexing and demultiplexing&lt;/p&gt;
+&lt;p&gt;在源主机从不同的套接字中收集数据块，并为每个数据块封装上首部信息，从而生成报文段，然后将报文段传递到网络层，所有这些工作称&lt;strong&gt;多路复用&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个套接字有唯一标志符&lt;/li&gt;
+&lt;li&gt;传输层 / 运输层报文段中包含源端口号、目的端口号、传输数据等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;将运输层报文段中的数据交付到正确的套接字的工作称为&lt;strong&gt;多路分解&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;以上可用两家小孩寄邮件类比理解。&lt;/p&gt;
+&lt;h3 id=&#34;端口号&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#端口号&#34;&gt;#&lt;/a&gt; 端口号&lt;/h3&gt;
+&lt;p&gt;0-65535&lt;/p&gt;
+&lt;p&gt;0-1023 周知端口号 / 著名端口号 well-known port number&lt;/p&gt;
+&lt;p&gt;一般而言，应用程序的客户端让运输层自动地（也是透明地）分配端口号，而服务器端则分配一个特定的端口号。&lt;/p&gt;
+&lt;h3 id=&#34;面向无连接的多路复用与多路分解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#面向无连接的多路复用与多路分解&#34;&gt;#&lt;/a&gt; 面向无连接的多路复用与多路分解&lt;/h3&gt;
+&lt;p&gt;一个 UDP 套接字是由一个&lt;strong&gt;二元组&lt;/strong&gt;全面标识的，包含一个目标 IP 地址和一个目的端口号。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果两个 UDP 报文段有不同的源 IP 地址和 / 或源端口号，但具有相同的目的 IP 地址和目的端口号，那么这两个报文段将通过相同的目的套接字被定向到相同的目的进程。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;面向连接的多路复用与多路分解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#面向连接的多路复用与多路分解&#34;&gt;#&lt;/a&gt; 面向连接的多路复用与多路分解&lt;/h3&gt;
+&lt;p&gt;一个 TCP 套接字是由一个&lt;strong&gt;四元组&lt;/strong&gt;全面标识的，包含源地址、源端口、目的 IP 地址、目的端口。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不同的源将定向到不同的目的进程。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;web服务器与tcp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web服务器与tcp&#34;&gt;#&lt;/a&gt; Web 服务器与 TCP&lt;/h3&gt;
+&lt;p&gt;连接套接字与进程之间并非总是有着一一对应的关系。如今一些高性能的 Web 服务器通常只有一个进程，但是为每个新的客户连接创建一个具有新连接套接字的新线程。&lt;/p&gt;
+&lt;h2 id=&#34;无连接运输udp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#无连接运输udp&#34;&gt;#&lt;/a&gt; 无连接运输：UDP&lt;/h2&gt;
+&lt;h3 id=&#34;udp的优点为什么要使用udp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#udp的优点为什么要使用udp&#34;&gt;#&lt;/a&gt; UDP 的优点 / 为什么要使用 UDP：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;关于发送什么数据以及何时发送的应用层控制得更为精细&lt;/li&gt;
+&lt;li&gt;无须连接建立&lt;/li&gt;
+&lt;li&gt;无连接状态&lt;/li&gt;
+&lt;li&gt;分组首部开销小&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;udp检验和&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#udp检验和&#34;&gt;#&lt;/a&gt; UDP 检验和&lt;/h3&gt;
+&lt;p&gt;端到端原则：某种功能必须是基于端到端的实现，“与在较高级别提供这些功能的代价相比，在较低级别设置的功能可能是冗余的或几乎没有价值的、”&lt;/p&gt;
+&lt;p&gt;回卷、反码&lt;/p&gt;
+&lt;p&gt;在目标地址，将四个比特字加在一起，每一位为 1，则无差错。&lt;/p&gt;
+&lt;h2 id=&#34;可靠数据传输rdt的原理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可靠数据传输rdt的原理&#34;&gt;#&lt;/a&gt; 可靠数据传输（rdt）的原理&lt;/h2&gt;
+&lt;p&gt;rdt: reliable data transfer protocol&lt;/p&gt;
+&lt;p&gt;双向的数据传输协议就是两个单向的数据传输协议的综合&lt;/p&gt;
+&lt;p&gt;FSM Finite-State Machine&lt;/p&gt;
+&lt;h3 id=&#34;构造可靠数据传输协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#构造可靠数据传输协议&#34;&gt;#&lt;/a&gt; 构造可靠数据传输协议&lt;/h3&gt;
+&lt;h4 id=&#34;基于完全可靠信道-rdt10&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基于完全可靠信道-rdt10&#34;&gt;#&lt;/a&gt; 基于完全可靠信道 rdt1.0&lt;/h4&gt;
+&lt;p&gt;直接传就好了 Orz&lt;/p&gt;
+&lt;h4 id=&#34;经具有比特差错信道的可靠数据传输-rdt20&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#经具有比特差错信道的可靠数据传输-rdt20&#34;&gt;#&lt;/a&gt; 经具有比特差错信道的可靠数据传输 rdt2.0&lt;/h4&gt;
+&lt;p&gt;ARQ Automatic Repeat reQuest 自动重传请求协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;差错检测&lt;/li&gt;
+&lt;li&gt;接收方反馈（ACK, NAK）&lt;/li&gt;
+&lt;li&gt;重传&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;停等（stop-wait）协议：发送方将不会发送一块新数据，除非发送方确信接收方已正确接受当前分组。&lt;/p&gt;
+&lt;h4 id=&#34;如果acknak出错-rdt21&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如果acknak出错-rdt21&#34;&gt;#&lt;/a&gt; 如果 ACK/NAK 出错 -&amp;gt; rdt2.1&lt;/h4&gt;
+&lt;p&gt;增加序号 0,1&lt;/p&gt;
+&lt;p&gt;根据收到的序号即可确定是否正在重传前一个发送分组&lt;/p&gt;
+&lt;h4 id=&#34;nak-free-在ack后加序号-rdt22&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nak-free-在ack后加序号-rdt22&#34;&gt;#&lt;/a&gt; NAK free 在 ACK 后加序号 -&amp;gt; rdt2.2&lt;/h4&gt;
+&lt;p&gt;为后面发送多个数据做准备&lt;/p&gt;
+&lt;p&gt;确认信息减少一般，协议简单&lt;/p&gt;
+&lt;h4 id=&#34;经具有比特差错的丢包信道的可靠数据传输-rdt30&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#经具有比特差错的丢包信道的可靠数据传输-rdt30&#34;&gt;#&lt;/a&gt; 经具有比特差错的丢包信道的可靠数据传输 rdt3.0&lt;/h4&gt;
+&lt;p&gt;比特交替协议 alternating-bit protocol&lt;/p&gt;
+&lt;p&gt;设置倒计数计时器 (countdown timer) ，一旦超过时间，则重传&lt;/p&gt;
+&lt;p&gt;虽然可能造成冗余数据分组（duplicate data packet），但 rdt2.0 已经处理了这部分内容&lt;/p&gt;
+&lt;h3 id=&#34;流水线可靠数据传输协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#流水线可靠数据传输协议&#34;&gt;#&lt;/a&gt; 流水线可靠数据传输协议&lt;/h3&gt;
+&lt;p&gt;rdt3.0 的&lt;strong&gt;停等协议&lt;/strong&gt;降低了传输的性能，等待到收到回复后才进行下一步操作，链路的利用率太低。&lt;/p&gt;
+&lt;p&gt;因此，开发了流水线技术，即一次传输多个分组。&lt;/p&gt;
+&lt;h3 id=&#34;回退n步go-back-n-如何处理流水线的差错恢复&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#回退n步go-back-n-如何处理流水线的差错恢复&#34;&gt;#&lt;/a&gt; 回退 N 步 Go-Back-N —— 如何处理流水线的差错恢复&lt;/h3&gt;
+&lt;p&gt;N - window size 窗口长度&lt;/p&gt;
+&lt;p&gt;sliding-window protocol 滑动窗口协议&lt;/p&gt;
+&lt;h4 id=&#34;发送方响应的事件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#发送方响应的事件&#34;&gt;#&lt;/a&gt; 发送方响应的事件&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;上层调用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;收到一个 ACK 累计确认&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;超时事件&lt;/p&gt;
+&lt;p&gt;如果出现超时，发送方重传所有已发送但还未被确认过的分组。&lt;/p&gt;
+&lt;p&gt;如果收到一个 ACK，但仍有已发送但未被确认的分组，则定时器被重新启动。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;接收方&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#接收方&#34;&gt;#&lt;/a&gt; 接收方&lt;/h4&gt;
+&lt;p&gt;接收方若收到 失序、错误分组，则丢弃该分组，并为&lt;strong&gt;最近按序接收的分组&lt;/strong&gt;重新发送 ACK。&lt;/p&gt;
+&lt;h4 id=&#34;优点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#优点&#34;&gt;#&lt;/a&gt; 优点&lt;/h4&gt;
+&lt;p&gt;接收缓存简单&lt;/p&gt;
+&lt;h4 id=&#34;缺点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#缺点&#34;&gt;#&lt;/a&gt; 缺点&lt;/h4&gt;
+&lt;p&gt;单个分组的差错就能引起 GBN 重传大量分组&lt;/p&gt;
+&lt;p&gt;（配套的 GBN Java 小程序好好玩&lt;/p&gt;
+&lt;h3 id=&#34;selective-repeat-sr-如何处理流水线的差错恢复&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#selective-repeat-sr-如何处理流水线的差错恢复&#34;&gt;#&lt;/a&gt; Selective Repeat SR —— 如何处理流水线的差错恢复&lt;/h3&gt;
+&lt;h4 id=&#34;接收方-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#接收方-2&#34;&gt;#&lt;/a&gt; 接收方&lt;/h4&gt;
+&lt;p&gt;失序的分组将被缓存直到所有丢失分组（即序号更小的分组）皆被接收&lt;/p&gt;
+&lt;p&gt;接收到后为&lt;strong&gt;接收的分组&lt;/strong&gt;发送 ACK&lt;/p&gt;
+&lt;p&gt;不在缓存范围内的分组将被丢失&lt;/p&gt;
+&lt;h4 id=&#34;发送方&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#发送方&#34;&gt;#&lt;/a&gt; 发送方&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;从上层收到数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;超时 —— 每个分组都要有自己的逻辑计时器，超时发送后只能发送一个分组。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;收到 ACK—— 窗口基序号向前移动到具有最小序号的未确认分组处，如果窗口移动了并且有序号落在窗口内的为发送分组，则发送这些分组。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;具体可实际操作一下小程序&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;出错率低适合用 GBN，链路容量大适合用 SR&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;面向连接的运输tcp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#面向连接的运输tcp&#34;&gt;#&lt;/a&gt; 面向连接的运输：TCP&lt;/h2&gt;
+&lt;h3 id=&#34;tcp连接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp连接&#34;&gt;#&lt;/a&gt; TCP 连接&lt;/h3&gt;
+&lt;p&gt;全双工服务 full-duplex service&lt;/p&gt;
+&lt;p&gt;最大报文段长度 MSS Maximum Segment Size&lt;/p&gt;
+&lt;h3 id=&#34;tcp报文段结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp报文段结构&#34;&gt;#&lt;/a&gt; TCP 报文段结构&lt;/h3&gt;
+&lt;p&gt;Holy &amp;amp;^%@! That idiot made a TCP header diagram in Lego(TM)!&lt;/p&gt;
+&lt;p&gt;有趣，但孩子不玩乐高（x&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9yaWdodGVvdXNpdC53b3JkcHJlc3MuY29tLzIwMTAvMDYvMjcvcHJhY3RpY2FsLXZpc3VhbC10aHJlZS1kaW1lbnNpb25hbC1wZWRhZ29neS1mb3ItaW50ZXJuZXQtcHJvdG9jb2wtcGFja2V0LWhlYWRlci1jb250cm9sLWZpZWxkcy8=&#34;&gt;https://righteousit.wordpress.com/2010/06/27/practical-visual-three-dimensional-pedagogy-for-internet-protocol-packet-header-control-fields/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;源端口号、目标端口、序号、确认号、首部长度、保留未用、标志字段、接收窗口、因特网检验和、紧急数据指针、选项、数据&lt;/p&gt;
+&lt;h4 id=&#34;序号和确认号&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#序号和确认号&#34;&gt;#&lt;/a&gt; 序号和确认号&lt;/h4&gt;
+&lt;p&gt;在主机 A 的一个进程与主机 B 的一个进程的连接中，主机 A 填充进报文段的&lt;strong&gt;确认号&lt;/strong&gt;是主机 A 期望从主机 B 收到的下一字节的序号。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;累积确认&lt;/strong&gt;：TCP 只确认该流中至第一个丢失字节为止的字节&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;捎带&lt;/strong&gt;：对客户到服务器的数据的确认被装载在一个承载服务器到客户的数据的报文段中&lt;/p&gt;
+&lt;h3 id=&#34;往返时间的估计与超时&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#往返时间的估计与超时&#34;&gt;#&lt;/a&gt; 往返时间的估计与超时&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;指数加权移动平均&lt;/strong&gt;：根据较近的 SampleRTT 的值估计目前的平均&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;超时间隔&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;katex-display&#34;&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;I&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;v&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;E&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;mo&gt;∗&lt;/mo&gt;&lt;mi&gt;D&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;v&lt;/mi&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;TimeoutInterval = EstimatedRTT + 4 * DevRTT
+&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.69444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.07847em;&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.01968em;&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.77777em;vertical-align:-0.08333em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.05764em;&#34;&gt;E&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.00773em;&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;∗&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;D&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.00773em;&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;（用了一些公式计算出了 EstimatedRTT 和 DevRTT，进而估算 TimeoutInterval）&lt;/p&gt;
+&lt;h3 id=&#34;可靠数据传输&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可靠数据传输&#34;&gt;#&lt;/a&gt; 可靠数据传输&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;超时间隔加倍&lt;/strong&gt;：再次超时，超时间隔设置为原来的两倍&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;冗余 ACK&lt;/strong&gt;：一旦收到 3 个冗余 ACK，TCP 就执行快速重传（fast retransmit）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TCP 是 GBN 和 SR 协议的混合体&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;流量控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#流量控制&#34;&gt;#&lt;/a&gt; 流量控制&lt;/h3&gt;
+&lt;p&gt;区分流量控制和拥塞控制。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;流量控制&lt;/strong&gt;是端到端的控制，例如 A 通过网络给 B 发数据，A 发送的太快导致 B 没法接收 (B 缓冲窗口过小或者处理过慢)，这时候的控制就是流量控制，原理是通过&lt;strong&gt;滑动窗口的大小&lt;/strong&gt;改变来实现。 其中，rwnd 指接收窗口 receive window。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;katex-display&#34;&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34; display=&#34;block&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mo&gt;&amp;lt;&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;LastByteSent - LastByteAcked &amp;lt;= rwnd
+&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.8777699999999999em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;L&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.05017em;&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.05764em;&#34;&gt;S&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.8888799999999999em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;L&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.05017em;&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03148em;&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;&amp;lt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.36687em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.69444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02691em;&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;d&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;拥塞控制&lt;/strong&gt;是 A 与 B 之间的网络发生堵塞导致传输过慢或者丢包，来不及传输。防止过多的数据注入到网络中，这样可以使网络中的路由器或链路不至于过载。拥塞控制是一个全局性的过程，涉及到所有的主机、路由器，以及与降低网络性能有关的所有因素。&lt;/p&gt;
+&lt;h3 id=&#34;tcp连接管理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp连接管理&#34;&gt;#&lt;/a&gt; TCP 连接管理&lt;/h3&gt;
+&lt;p&gt;SYN&lt;/p&gt;
+&lt;p&gt;FIN&lt;/p&gt;
+&lt;p&gt;通过三次握手建立连接，两次握手会造成半连接（只有一端维护了连接）&lt;/p&gt;
+&lt;h2 id=&#34;拥塞控制原理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拥塞控制原理&#34;&gt;#&lt;/a&gt; 拥塞控制原理&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;拥塞表现&lt;/strong&gt;：分组丢失、延时较长&lt;/p&gt;
+&lt;h3 id=&#34;拥塞原因与代价&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拥塞原因与代价&#34;&gt;#&lt;/a&gt; 拥塞原因与代价&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;当分组的到达速率接近链路容量时，分组经历巨大的排队时延&lt;/li&gt;
+&lt;li&gt;发送方必须执行重传以补偿因为缓存溢出而丢失（丢弃）的分组&lt;/li&gt;
+&lt;li&gt;发送方在遇到大时延时所进行的不必要重传会引起路由器利用其链路带宽转发不必要的分组副本&lt;/li&gt;
+&lt;li&gt;当一个分组沿一条路径被丢弃时，每个上游路由器用于转发该分组到丢弃该分组而使用的传输容量最终被浪费调了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;拥塞控制方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拥塞控制方法&#34;&gt;#&lt;/a&gt; 拥塞控制方法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;端到端拥塞控制&lt;/li&gt;
+&lt;li&gt;网络辅助拥塞控制（NI 字段表示轻微拥塞，CI 字段表示拥塞指示）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tcp-拥塞控制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp-拥塞控制&#34;&gt;#&lt;/a&gt; TCP 拥塞控制&lt;/h2&gt;
+&lt;p&gt;TCP 使用端到端的拥塞控制，而不是网络辅助的拥塞控制。网络辅助的拥塞控制代价过高。&lt;/p&gt;
+&lt;h3 id=&#34;指导性原则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#指导性原则&#34;&gt;#&lt;/a&gt; 指导性原则&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;一个丢失的报文段意味着拥塞，因此当丢失报文段时应当降低 TCP 发送方的速率。&lt;/li&gt;
+&lt;li&gt;一个确认报文段指示该网络正在向接收方交付发送方的报文段，因此，当对先前未确认报文段的确认到达时，能够增加发送方的速率。&lt;/li&gt;
+&lt;li&gt;宽带检测&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;tcp拥塞控制算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp拥塞控制算法&#34;&gt;#&lt;/a&gt; TCP 拥塞控制算法&lt;/h3&gt;
+&lt;h4 id=&#34;慢启动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#慢启动&#34;&gt;#&lt;/a&gt; 慢启动&lt;/h4&gt;
+&lt;p&gt;指数增长，每过一个 RTT，发送速率就翻番&lt;/p&gt;
+&lt;h4 id=&#34;拥塞避免&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拥塞避免&#34;&gt;#&lt;/a&gt; 拥塞避免&lt;/h4&gt;
+&lt;p&gt;线性增长，无论何时到达一个新的确认，就将 cwnd 增加一个 MSS 字节&lt;/p&gt;
+&lt;h4 id=&#34;快速恢复&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#快速恢复&#34;&gt;#&lt;/a&gt; 快速恢复&lt;/h4&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://quas-modo.github.io/2022/09/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B/Lecture02-%E5%BA%94%E7%94%A8%E5%B1%82/</guid>
             <title>Lecture02-应用层</title>
