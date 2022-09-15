@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Carpe diem</title>
+        <subtitle>pluck the day</subtitle>
+        <icon>https://quas-modo.github.io/images/favicon.ico</icon>
+        <link>https://quas-modo.github.io</link>
+        <author>
+          <name>quas-modo</name>
+        </author>
+        <description>notes/thoughts/nonsense</description>
+        <language>zh-CN</language>
+        <pubDate>Thu, 15 Sep 2022 16:12:37 +0800</pubDate>
+        <lastBuildDate>Thu, 15 Sep 2022 16:12:37 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://quas-modo.github.io/2022/09/15/cpp/Lecture03-%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</guid>
+            <title>Lecture03-结构化程序设计</title>
+            <link>https://quas-modo.github.io/2022/09/15/cpp/Lecture03-%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+            <pubDate>Thu, 15 Sep 2022 16:12:37 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;cpp 第三讲&lt;br /&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;lecture03-结构化程序设计&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture03-结构化程序设计&#34;&gt;#&lt;/a&gt; Lecture03 - 结构化程序设计&lt;/h1&gt;
+&lt;p&gt;Data Structure + Algorithm&lt;/p&gt;
+&lt;p&gt;课程结构&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Data&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;计算、控制流转换&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如何组织（function 函数的形式）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;构造数据类型（array，struct，union，pointer）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;data&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#data&#34;&gt;#&lt;/a&gt; Data&lt;/h2&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 性质 数据类型 名  值&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 地址相关 - 可以操作系统，需要接近底层&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;datatype&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#datatype&#34;&gt;#&lt;/a&gt; datatype&lt;/h3&gt;
+&lt;h4 id=&#34;定义值集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#定义值集&#34;&gt;#&lt;/a&gt; 定义值集&lt;/h4&gt;
+&lt;p&gt;int double 有限 可数 离散&lt;/p&gt;
+&lt;p&gt;数据类型决定值集，决定取值范围。需要知道取值范围，从而考虑和控制&lt;strong&gt; overflow 溢出&lt;/strong&gt;的问题。&lt;/p&gt;
+&lt;p&gt;在计算机系统中，数值一律用&lt;strong&gt;补码&lt;/strong&gt;来表示和存储。原因在于，使用补码，可以将符号位和数值域统一处理；同时，加法和减法也可以统一处理。&lt;/p&gt;
+&lt;figure class=&#34;highlight c&#34;&gt;&lt;figcaption data-lang=&#34;c&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;INT_MAX &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2147483647&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;INT_MAX &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2147483648&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;INT_MAX &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; INT_MAX &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;INT_MIN &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2147483648&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;INT_MIN &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2147483647&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;INT_MIN &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; INT_MIN &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;typedef short INT16&lt;/p&gt;
+&lt;h4 id=&#34;定义计算&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#定义计算&#34;&gt;#&lt;/a&gt; 定义计算&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;算数（移位）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;逻辑&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I/O&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;cpp 类型系统 —— 强、动静结合&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;也有些语言会更加灵活，比如 duck 类型，&lt;/p&gt;
+&lt;h2 id=&#34;基本数据类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本数据类型&#34;&gt;#&lt;/a&gt; 基本数据类型&lt;/h2&gt;
+&lt;p&gt;char、int、float、double&lt;/p&gt;
+&lt;p&gt;Modifiers: long、short、signed、unsigned&lt;/p&gt;
+&lt;p&gt;​	char 只能用 signed、unsigned 修饰&lt;/p&gt;
+&lt;p&gt;​	float 不能被修饰&lt;/p&gt;
+&lt;p&gt;​	double 只能用 long 修饰&lt;/p&gt;
+&lt;p&gt;​	int 可以用 4 种修饰符组合修饰&lt;/p&gt;
+&lt;p&gt;省略表示&lt;/p&gt;
+&lt;p&gt;操作符 sizeof&lt;/p&gt;
+&lt;p&gt;ANSI C++: wchar_t、bool&lt;/p&gt;
+&lt;h2 id=&#34;表达式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#表达式&#34;&gt;#&lt;/a&gt; 表达式&lt;/h2&gt;
+&lt;h3 id=&#34;组成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组成&#34;&gt;#&lt;/a&gt; 组成&lt;/h3&gt;
+&lt;p&gt;operand&lt;/p&gt;
+&lt;p&gt;operator&lt;/p&gt;
+&lt;p&gt;others&lt;/p&gt;
+&lt;h3 id=&#34;求值&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#求值&#34;&gt;#&lt;/a&gt; 求值&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;优先级&lt;/li&gt;
+&lt;li&gt;结合性&lt;/li&gt;
+&lt;li&gt;类型转换约定&lt;/li&gt;
+&lt;li&gt;求值次序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;种类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#种类&#34;&gt;#&lt;/a&gt; 种类&lt;/h3&gt;
+&lt;p&gt;赋值表达式&lt;/p&gt;
+&lt;p&gt;算数表达式&lt;/p&gt;
+&lt;p&gt;条件运算符表达式（三目运算符）&lt;/p&gt;
+&lt;p&gt;逗号表达式&lt;/p&gt;
+&lt;p&gt;字位运算符表达式&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;异或运算 ^&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;与全 0 的二进制串的运算 —— 不变&lt;/p&gt;
+&lt;p&gt;与全 1 的二进制串的运算 —— 取反&lt;/p&gt;
+&lt;p&gt;与本身的运算 —— 清零&lt;/p&gt;
+&lt;p&gt;与同一个对象运算两次 —— 还原&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 一个小应用 —— 交换 ab&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;a &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;^&lt;/span&gt; b&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;b &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; b &lt;span class=&#34;token operator&#34;&gt;^&lt;/span&gt; a&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;a &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;^&lt;/span&gt; b&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;操作符可重载&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作符可重载&#34;&gt;#&lt;/a&gt; 操作符可重载&lt;/h3&gt;
+&lt;h2 id=&#34;语句&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#语句&#34;&gt;#&lt;/a&gt; 语句&lt;/h2&gt;
+&lt;h3 id=&#34;表达式语句&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#表达式语句&#34;&gt;#&lt;/a&gt; 表达式语句&lt;/h3&gt;
+&lt;h3 id=&#34;io语句&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#io语句&#34;&gt;#&lt;/a&gt; IO 语句&lt;/h3&gt;
+&lt;p&gt;stdio.h&lt;/p&gt;
+&lt;p&gt;iostream.h&lt;/p&gt;
+&lt;p&gt;cin&lt;/p&gt;
+&lt;p&gt;cout&lt;/p&gt;
+&lt;h3 id=&#34;控制流语句&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#控制流语句&#34;&gt;#&lt;/a&gt; 控制流语句&lt;/h3&gt;
+&lt;p&gt;顺序、选择、重复&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;switch case 中只用整型表达式&lt;/strong&gt; 还可以搭配 enum 语句使用，这样可以更方便阅读，也不用在文件中硬编码，可以存到文件当中。&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
