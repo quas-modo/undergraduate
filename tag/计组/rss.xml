@@ -27,6 +27,7 @@
 &lt;p&gt;区分中央处理单元（CPU）和处理器。&lt;/p&gt;
 &lt;p&gt;CPU 的制作工艺逐渐在提高，几乎不变的是 CPU 的大小，一直在增加的是晶体管的数量。&lt;/p&gt;
 &lt;p&gt;目前，苹果 M2 以及可以集成 200 亿的晶体管。&lt;/p&gt;
+&lt;h2 id=&#34;问题与解决思路&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题与解决思路&#34;&gt;#&lt;/a&gt; 问题与解决思路&lt;/h2&gt;
 &lt;h3 id=&#34;可以通过无限增加cpu的大小来增加性能嘛&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可以通过无限增加cpu的大小来增加性能嘛&#34;&gt;#&lt;/a&gt; 可以通过无限增加 CPU 的大小来增加性能嘛？&lt;/h3&gt;
 &lt;p&gt;不可以，面积越大，意味着&lt;strong&gt;互联延迟&lt;/strong&gt;越大。一个时钟周期需要大于最长互联延迟。存在物理极限。&lt;/p&gt;
 &lt;h3 id=&#34;问题1cpu的频率不能无限提高&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题1cpu的频率不能无限提高&#34;&gt;#&lt;/a&gt; 问题 1：CPU 的频率不能无限提高&lt;/h3&gt;
@@ -81,16 +82,18 @@
 &lt;p&gt;I/O 性能跟不上 CPU 速度的提升&lt;/p&gt;
 &lt;h3 id=&#34;解决5采用缓冲区和改进io操作技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决5采用缓冲区和改进io操作技术&#34;&gt;#&lt;/a&gt; 解决 5：采用缓冲区和改进 I/O 操作技术&lt;/h3&gt;
 &lt;p&gt;设立缓存区&lt;/p&gt;
-&lt;h3 id=&#34;总线&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总线&#34;&gt;#&lt;/a&gt; 总线&lt;/h3&gt;
-&lt;h4 id=&#34;共享&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#共享&#34;&gt;#&lt;/a&gt; 共享&lt;/h4&gt;
-&lt;p&gt;所有部件都通过总线传递数据&lt;/p&gt;
-&lt;h4 id=&#34;分时&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分时&#34;&gt;#&lt;/a&gt; 分时&lt;/h4&gt;
-&lt;p&gt;只有一个部件能够传输数据&lt;/p&gt;
 &lt;h3 id=&#34;问题6计算机部件互连复杂&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题6计算机部件互连复杂&#34;&gt;#&lt;/a&gt; 问题 6：计算机部件互连复杂&lt;/h3&gt;
 &lt;h3 id=&#34;解决6采用总线&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决6采用总线&#34;&gt;#&lt;/a&gt; 解决 6：采用总线&lt;/h3&gt;
-&lt;p&gt;控制线&lt;/p&gt;
-&lt;p&gt;地址线&lt;/p&gt;
-&lt;p&gt;数据线&lt;/p&gt;
+&lt;h4 id=&#34;总线&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总线&#34;&gt;#&lt;/a&gt; 总线&lt;/h4&gt;
+&lt;p&gt;目前，对通用计算机而言，各种点对点互连结构逐渐取代总线互连的方式。但是总线结构依然普遍用于嵌入式系统。&lt;/p&gt;
+&lt;h5 id=&#34;共享&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#共享&#34;&gt;#&lt;/a&gt; 共享&lt;/h5&gt;
+&lt;p&gt;所有部件都通过总线传递数据&lt;/p&gt;
+&lt;h5 id=&#34;分时&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分时&#34;&gt;#&lt;/a&gt; 分时&lt;/h5&gt;
+&lt;p&gt;只有一个部件能够传输数据&lt;/p&gt;
+&lt;h5 id=&#34;功能组&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#功能组&#34;&gt;#&lt;/a&gt; 功能组&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;控制线&lt;/strong&gt; —— 控制对数据线路与地址线路的访问和使用，控制信号传递&lt;strong&gt;命令和定时信息&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;地址线&lt;/strong&gt; —— 指定数据总线上数据的源或目的，地址总线的宽度决定了系统可能的&lt;strong&gt;最大内存容量&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;数据线&lt;/strong&gt; —— 为系统模块之间的数据传输提供路径，一般而言，线路的条数决定了&lt;strong&gt;一次能传输的位数&lt;/strong&gt;，数据总线的宽度是决定系统整体性能的一个关键因素&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -152,8 +155,18 @@ PCIE/AGP、Memory、CPU。&lt;/p&gt;
 &lt;p&gt;MRLOPS（每秒百万条浮点操作）&lt;/p&gt;
 &lt;p&gt;基准程序&lt;/p&gt;
 &lt;h3 id=&#34;性能设计的基本原则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#性能设计的基本原则&#34;&gt;#&lt;/a&gt; 性能设计的基本原则&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
 &lt;p&gt;大概率事件优先原则&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
 &lt;p&gt;阿姆代尔定律 Amdahl 定律&lt;/p&gt;
+&lt;p&gt;技术或设计的某一部分的加速不会导致性能产生相应的改进。性能的提高是有限度的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Little 定律&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id=&#34;对应书籍整理-计算机系统概述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#对应书籍整理-计算机系统概述&#34;&gt;#&lt;/a&gt; 对应书籍整理 - 计算机系统概述&lt;/h1&gt;
 &lt;h2 id=&#34;计算机结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#计算机结构&#34;&gt;#&lt;/a&gt; 计算机结构&lt;/h2&gt;
 &lt;h3 id=&#34;硬件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#硬件&#34;&gt;#&lt;/a&gt; 硬件&lt;/h3&gt;
