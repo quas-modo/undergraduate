@@ -8,7 +8,140 @@
     <author>
       <name>quas-modo</name>
     </author>
-    <updated>2022-09-21T15:02:26.000Z</updated>
+    <updated>2022-09-21T23:56:44.000Z</updated>
+    <entry>
+        <id>https://quas-modo.github.io/2022/09/22/cpp/105-STL/</id>
+        <title>105 STL</title>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/09/22/cpp/105-STL/"/>
+        <content type="html">&lt;h1 id=&#34;stl-standard-template-library&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#stl-standard-template-library&#34;&gt;#&lt;/a&gt; STL Standard Template Library&lt;/h1&gt;
+&lt;p&gt;roil expressive codes&lt;br /&gt;
+Spectacular&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZmx1ZW50Y3BwLmNvbS93cC1jb250ZW50L3VwbG9hZHMvMjAxOC8wMy93b3JsZF9tYXBfODAwLmpwZw==&#34;&gt;img&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://www.fluentcpp.com/wp-content/uploads/2018/03/world_map_800.jpg&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;heap&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#heap&#34;&gt;#&lt;/a&gt; Heap&lt;/h2&gt;
+&lt;p&gt;the parent is bigger&lt;br /&gt;
+Make_heap&lt;br /&gt;
+Push_heap&lt;br /&gt;
+Pop_heap&lt;/p&gt;
+&lt;h2 id=&#34;sort&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sort&#34;&gt;#&lt;/a&gt; Sort&lt;/h2&gt;
+&lt;p&gt;Partial_sort&lt;br /&gt;
+Nth_element&lt;br /&gt;
+Sort_heap&lt;br /&gt;
+Inplace_merge&lt;/p&gt;
+&lt;h2 id=&#34;partition&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#partition&#34;&gt;#&lt;/a&gt; Partition&lt;/h2&gt;
+&lt;p&gt;boolean&lt;br /&gt;
+Partition_point&lt;/p&gt;
+&lt;h2 id=&#34;permutations&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#permutations&#34;&gt;#&lt;/a&gt; Permutations&lt;/h2&gt;
+&lt;p&gt;Rotate&lt;/p&gt;
+&lt;p&gt;​	  put the last to the first&lt;br /&gt;
+Shuffle&lt;/p&gt;
+&lt;p&gt;​	do randomly&lt;br /&gt;
+Next_permutation&lt;br /&gt;
+Prev_permutation&lt;br /&gt;
+Reverse&lt;/p&gt;
+&lt;h2 id=&#34;secret-runes&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#secret-runes&#34;&gt;#&lt;/a&gt; Secret runes&lt;/h2&gt;
+&lt;p&gt;Stable_*&lt;br /&gt;
+Relative order&lt;br /&gt;
+Is_*	&lt;br /&gt;
+Is_*_until&lt;br /&gt;
+Don’t hold anymore&lt;/p&gt;
+&lt;h2 id=&#34;queries&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#queries&#34;&gt;#&lt;/a&gt; Queries&lt;/h2&gt;
+&lt;h3 id=&#34;numeric-algorithms&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#numeric-algorithms&#34;&gt;#&lt;/a&gt; Numeric algorithms&lt;/h3&gt;
+&lt;p&gt;Count&lt;br /&gt;
+Accumulate&lt;br /&gt;
+Partial_sum&lt;br /&gt;
+Inner_product&lt;br /&gt;
+Adjacent_difference&lt;br /&gt;
+Sample&lt;br /&gt;
+select randomly&lt;/p&gt;
+&lt;h3 id=&#34;querying-a-property&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#querying-a-property&#34;&gt;#&lt;/a&gt; Querying a property&lt;/h3&gt;
+&lt;p&gt;All_of&lt;br /&gt;
+Any_of&lt;br /&gt;
+None_of&lt;/p&gt;
+&lt;h3 id=&#34;querying-a-property-on-2-ranges&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#querying-a-property-on-2-ranges&#34;&gt;#&lt;/a&gt; Querying a property on 2 ranges&lt;/h3&gt;
+&lt;p&gt;Equal&lt;br /&gt;
+Same size&lt;br /&gt;
+Each equal&lt;br /&gt;
+Lexicographical_compare&lt;br /&gt;
+Mismatch&lt;br /&gt;
+Return pair&amp;lt;iterator, iterator&amp;gt;&lt;/p&gt;
+&lt;h3 id=&#34;searching-a-value&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#searching-a-value&#34;&gt;#&lt;/a&gt; Searching a value&lt;/h3&gt;
+&lt;p&gt;Not sorted&lt;br /&gt;
+Find&lt;br /&gt;
+Adjacent_find&lt;br /&gt;
+Sorted&lt;br /&gt;
+Equal_range&lt;br /&gt;
+Upper_bound&lt;br /&gt;
+Binary_search&lt;/p&gt;
+&lt;h3 id=&#34;searching-a-range&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#searching-a-range&#34;&gt;#&lt;/a&gt; Searching a range&lt;/h3&gt;
+&lt;p&gt;Search&lt;br /&gt;
+Find_end&lt;br /&gt;
+Find_first_of&lt;/p&gt;
+&lt;h3 id=&#34;searching-a-relative-value&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#searching-a-relative-value&#34;&gt;#&lt;/a&gt; Searching a relative value&lt;/h3&gt;
+&lt;p&gt;Max_element&lt;br /&gt;
+Min_element&lt;br /&gt;
+Minmax_element&lt;/p&gt;
+&lt;h2 id=&#34;glorious-county-of-lagos-on-sets&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#glorious-county-of-lagos-on-sets&#34;&gt;#&lt;/a&gt; Glorious county of Lagos on sets&lt;/h2&gt;
+&lt;p&gt;Set_difference&lt;br /&gt;
+Set_intersection&lt;br /&gt;
+Set_union&lt;br /&gt;
+Set_symmetric_difference&lt;br /&gt;
+Includes&lt;br /&gt;
+Merge&lt;/p&gt;
+&lt;h2 id=&#34;movers&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#movers&#34;&gt;#&lt;/a&gt; Movers&lt;/h2&gt;
+&lt;p&gt;Copy&lt;br /&gt;
+Move&lt;br /&gt;
+Swap_ranges&lt;br /&gt;
+Copy_backward&lt;br /&gt;
+Move_backward&lt;/p&gt;
+&lt;p&gt;##Value Modifiers&lt;/p&gt;
+&lt;p&gt;Fill&lt;br /&gt;
+Fill the same number&lt;br /&gt;
+Generate&lt;br /&gt;
+Iota&lt;br /&gt;
+Increment number&lt;br /&gt;
+Replace&lt;/p&gt;
+&lt;h2 id=&#34;structure-changes&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#structure-changes&#34;&gt;#&lt;/a&gt; Structure changes&lt;/h2&gt;
+&lt;p&gt;Remove&lt;br /&gt;
+Erase&lt;br /&gt;
+Unique&lt;br /&gt;
+Remove the adjacent same element, and move the element forward&lt;/p&gt;
+&lt;h3 id=&#34;_copy&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#_copy&#34;&gt;#&lt;/a&gt; *_copy&lt;/h3&gt;
+&lt;p&gt;Remove_copy&lt;br /&gt;
+Unique_copy&lt;br /&gt;
+Reverse_copy&lt;br /&gt;
+Rotate_copy&lt;br /&gt;
+Replace_copy&lt;br /&gt;
+Partition_copy&lt;br /&gt;
+Partial_sort_copy&lt;/p&gt;
+&lt;h3 id=&#34;_if&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#_if&#34;&gt;#&lt;/a&gt; *_if&lt;/h3&gt;
+&lt;p&gt;Find_if&lt;br /&gt;
+Find_if_not&lt;br /&gt;
+Count_if&lt;br /&gt;
+Remove_if&lt;br /&gt;
+Remove_copy_if&lt;br /&gt;
+Replace_if&lt;br /&gt;
+Replace_copy_if&lt;br /&gt;
+Copy_if&lt;/p&gt;
+&lt;h2 id=&#34;lone-islnad&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lone-islnad&#34;&gt;#&lt;/a&gt; lone islnad&lt;/h2&gt;
+&lt;p&gt;Transform&lt;br /&gt;
+It can has more than one collection(parameters) to transform.&lt;/p&gt;
+&lt;p&gt;For_each&lt;/p&gt;
+&lt;h2 id=&#34;raw-memory&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#raw-memory&#34;&gt;#&lt;/a&gt; Raw memory&lt;/h2&gt;
+&lt;p&gt;Uninitialized_fill&lt;br /&gt;
+Uninitialized_copy&lt;br /&gt;
+Uninitialized_move&lt;br /&gt;
+Destroy&lt;/p&gt;
+&lt;p&gt;_n&lt;br /&gt;
+Fill_n&lt;br /&gt;
+Search_n&lt;br /&gt;
+…&lt;/p&gt;
+</content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+        <updated>2022-09-21T23:56:44.000Z</updated>
+    </entry>
     <entry>
         <id>https://quas-modo.github.io/2022/09/21/cpp/Lecture04-%E7%AC%AC%E4%B8%80%E6%AC%A1cpp%E7%BC%96%E7%A8%8B/</id>
         <title>Lecture04-第一次cpp编程</title>
