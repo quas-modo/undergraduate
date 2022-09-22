@@ -20,7 +20,9 @@
             <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
             <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
             <pubDate>Thu, 22 Sep 2022 07:56:44 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;stl-standard-template-library&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#stl-standard-template-library&#34;&gt;#&lt;/a&gt; STL Standard Template Library&lt;/h1&gt;
+            <description><![CDATA[ &lt;p&gt;STL 算法概述&lt;br /&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;stl-standard-template-library&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#stl-standard-template-library&#34;&gt;#&lt;/a&gt; STL Standard Template Library&lt;/h1&gt;
 &lt;p&gt;roil expressive codes&lt;br /&gt;
 Spectacular&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZmx1ZW50Y3BwLmNvbS93cC1jb250ZW50L3VwbG9hZHMvMjAxOC8wMy93b3JsZF9tYXBfODAwLmpwZw==&#34;&gt;img&lt;/span&gt;&lt;/p&gt;
