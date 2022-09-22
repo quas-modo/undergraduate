@@ -8,7 +8,161 @@
     <author>
       <name>quas-modo</name>
     </author>
-    <updated>2022-09-21T23:56:44.000Z</updated>
+    <updated>2022-09-22T23:41:11.000Z</updated>
+    <entry>
+        <id>https://quas-modo.github.io/2022/09/23/COA/Lecture03-04-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E8%A1%A8%E7%A4%BA/</id>
+        <title>Lecture03 04-数据的机器级表表示</title>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/09/23/COA/Lecture03-04-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E8%A1%A8%E7%A4%BA/"/>
+        <content type="html">&lt;p&gt;仅记录有用部分，课件详细内容在 ppt 上已经很清楚了。&lt;/p&gt;
+&lt;p&gt;需要加强的地方：二进制转十进制，十进制转二进制，补码的模不懂，静默式和通知式，非规格化数不懂、精度保护中的舍入看不懂，大端小端&lt;/p&gt;
+&lt;p&gt;好难…… 呜呜看不懂&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第一次作业讲解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第一次作业讲解&#34;&gt;#&lt;/a&gt; 第一次作业讲解&lt;/h2&gt;
+&lt;p&gt;作业 1：. 为什么速率的总和没有意义？&lt;/p&gt;
+&lt;p&gt;作业 2：指令集结构不同的计算机，只比较 MIPS 是没有意义的，例如此题当中，A 的 MIPS 大，但是运行时间较长。&lt;/p&gt;
+&lt;p&gt;作业 3：采用不同指令集、&lt;strong&gt;流水线&lt;/strong&gt;和并行&lt;/p&gt;
+&lt;p&gt;作业 4：MIPS 求和有意义吗？&lt;/p&gt;
+&lt;p&gt;组织不可见，结构可见&lt;/p&gt;
+&lt;h1 id=&#34;lecture0304-数据的机器级表示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture0304-数据的机器级表示&#34;&gt;#&lt;/a&gt; lecture03/04 - 数据的机器级表示&lt;/h1&gt;
+&lt;p&gt;参考紫书第 2 章 / 黑书第 9 章 计算机算数&lt;/p&gt;
+&lt;h2 id=&#34;课堂ppt结合黑书版本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂ppt结合黑书版本&#34;&gt;#&lt;/a&gt; 课堂 /ppt—— 结合黑书版本&lt;/h2&gt;
+&lt;h3 id=&#34;信息的二进制编码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息的二进制编码&#34;&gt;#&lt;/a&gt; 信息的二进制编码&lt;/h3&gt;
+&lt;h3 id=&#34;整数的二进制表示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#整数的二进制表示&#34;&gt;#&lt;/a&gt; 整数的二进制表示&lt;/h3&gt;
+&lt;h4 id=&#34;无符号整数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#无符号整数&#34;&gt;#&lt;/a&gt; 无符号整数&lt;/h4&gt;
+&lt;h4 id=&#34;有符号整数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#有符号整数&#34;&gt;#&lt;/a&gt; 有符号整数&lt;/h4&gt;
+&lt;h5 id=&#34;原码-符号幅值表示法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#原码-符号幅值表示法&#34;&gt;#&lt;/a&gt; 原码 符号幅值表示法&lt;/h5&gt;
+&lt;p&gt;符号位不同，数值位相同&lt;/p&gt;
+&lt;p&gt;不同位长间的转换：符号位左移，空余的填补 0&lt;/p&gt;
+&lt;p&gt;浮点数的尾数用原码定点小数表示&lt;/p&gt;
+&lt;p&gt;零的表示不唯一，不利于程序员编程&lt;/p&gt;
+&lt;h5 id=&#34;反码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#反码&#34;&gt;#&lt;/a&gt; 反码&lt;/h5&gt;
+&lt;p&gt;符号位和数值位均取反&lt;/p&gt;
+&lt;h5 id=&#34;移码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#移码&#34;&gt;#&lt;/a&gt; 移码&lt;/h5&gt;
+&lt;p&gt;是一种有&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU2lnbmVkX251bWJlcl9yZXByZXNlbnRhdGlvbg==&#34;&gt;符号数表示&lt;/span&gt;的方法，其中有符号数 n 是由对应于&lt;strong&gt;无符号数 n + K&lt;/strong&gt; 的位模式表示，K 是&lt;em&gt;偏置值&lt;/em&gt;或&lt;em&gt;偏移量&lt;/em&gt;。&lt;/p&gt;
+&lt;p&gt;bias 通常取 2 的 n-1 次方或者 2 的 n-1 次方减 1&lt;br /&gt;
+ 当 bias 为 2 的 n-1 次方时，移码和补码仅第一位不同，0 的表示唯一&lt;br /&gt;
+&lt;strong&gt;浮点数的阶用移码表示&lt;/strong&gt;：当两个数都是负数的时候，移码更容易比较&lt;/p&gt;
+&lt;h5 id=&#34;补码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#补码&#34;&gt;#&lt;/a&gt; 补码&lt;/h5&gt;
+&lt;p&gt;计算机处理中，&lt;strong&gt;通常使用补码&lt;/strong&gt;&lt;br /&gt;
+负数的数值部分 &lt;strong&gt;各位取反，末尾加 1&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;不同位长间的转换：符号位移到最左位，其余空出位用符号位的值替代&lt;/p&gt;
+&lt;p&gt;加和减的统一：&lt;br /&gt;
+一个负数的补码等于模减该负数的绝对值&lt;br /&gt;
+对于一个确定的模，某数减去小于模的另一数，总可以加上另一数负数的补码来代替。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;求真值的补码&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;全 0：0&lt;/p&gt;
+&lt;p&gt;全 1：-1&lt;/p&gt;
+&lt;p&gt;10000...：- 2 &lt;sup&gt;n-1&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;求补码的真值&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;**X = - x&lt;sub&gt;n-1&lt;/sub&gt; * 2 &lt;sup&gt;n-1&lt;/sup&gt; + ... + x &lt;sub&gt;2&lt;/sub&gt; * 2 &lt;sup&gt;1&lt;/sup&gt;+ x &lt;sub&gt;1&lt;/sub&gt;*2&lt;sup&gt;0&lt;/sup&gt; **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;若对负数的补码再取负，得到原来那个数&lt;/strong&gt;【其中的特例是，-2&lt;sup&gt;n-1&lt;/sup&gt; 在取负之后仍然为本身，因为范围内并没有 2&lt;sup&gt;n-1&lt;/sup&gt; 与之相对应】&lt;/p&gt;
+&lt;h3 id=&#34;浮点数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#浮点数&#34;&gt;#&lt;/a&gt; 浮点数&lt;/h3&gt;
+&lt;p&gt;单精度 32 位（1+8+23）&lt;strong&gt;仍然表示 2&lt;sup&gt;32&lt;/sup&gt; 个数&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;双精度 64 位（1+11+52）&lt;/p&gt;
+&lt;p&gt;基底为 2（也存在基底为 16 的情况）—— 基数越大，范围越大，精度越低&lt;/p&gt;
+&lt;h4 id=&#34;表示方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#表示方法&#34;&gt;#&lt;/a&gt; 表示方法&lt;/h4&gt;
+&lt;p&gt;S E M&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;符号位&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;8 位移码表示阶码（指数） —— 范围为 - 126~127，全 0 和全 1 为特殊值&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;23 位原码表示 24 位尾数，最高位总为 1&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;表示的数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#表示的数&#34;&gt;#&lt;/a&gt; 表示的数&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;规格化数&lt;/strong&gt;，关注上溢出和下溢出，&lt;/p&gt;
+&lt;p&gt;下溢出部分用&lt;strong&gt;非格式化数&lt;/strong&gt;表示，它的间距是等距的&lt;/p&gt;
+&lt;p&gt;越靠近原点，数越密集；越远离原点，数越稀疏&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;静默式和通知式非数&lt;/strong&gt; —— 静默式表示未定义的算数结果，通知式非数表示未初始化的值。&lt;/p&gt;
+&lt;h2 id=&#34;计算机组成与体系结构性能设计&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#计算机组成与体系结构性能设计&#34;&gt;#&lt;/a&gt; 计算机组成与体系结构：性能设计&lt;/h2&gt;
+&lt;h3 id=&#34;整数的加法与减法补码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#整数的加法与减法补码&#34;&gt;#&lt;/a&gt; 整数的加法与减法（补码）&lt;/h3&gt;
+&lt;p&gt;上溢规则&lt;/p&gt;
+&lt;p&gt;减法规则 —— 减法，即加上减数的 2 的补&lt;/p&gt;
+&lt;p&gt;在实际的操作中，有 OF 溢出位记录是否溢出&lt;/p&gt;
+&lt;h3 id=&#34;整数的乘法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#整数的乘法&#34;&gt;#&lt;/a&gt; 整数的乘法&lt;/h3&gt;
+&lt;h4 id=&#34;无符号整数的乘法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#无符号整数的乘法&#34;&gt;#&lt;/a&gt; 无符号整数的乘法&lt;/h4&gt;
+&lt;p&gt;两个 n 为二进制整数的乘法可产生最大长度为 2n 位的积&lt;/p&gt;
+&lt;p&gt;乘&lt;/p&gt;
+&lt;p&gt;移位&lt;/p&gt;
+&lt;p&gt;计数 - 1&lt;/p&gt;
+&lt;h4 id=&#34;有符号整数的乘法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#有符号整数的乘法&#34;&gt;#&lt;/a&gt; 有符号整数的乘法&lt;/h4&gt;
+&lt;p&gt;只要有一个是负数，原来的方法就不奏效&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;把被乘数和乘数都转变成正数再相乘，当两者初始的符号不相同时，结果取 2 的补&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;布斯（Booth）算法&lt;/p&gt;
+&lt;p&gt;分为 10 01 【00 11】三种情况讨论&lt;/p&gt;
+&lt;p&gt;运用公式，   &lt;strong&gt;2 &lt;sup&gt;n&lt;/sup&gt; + 2 &lt;sup&gt;n-1&lt;/sup&gt; + ... + 2 &lt;sup&gt;n-k&lt;/sup&gt; = 2 &lt;sup&gt;n+1&lt;/sup&gt; - 2 &lt;sup&gt;n-k&lt;/sup&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;很巧妙，优雅，实在是太优雅了！&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;整数的除法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#整数的除法&#34;&gt;#&lt;/a&gt; 整数的除法&lt;/h3&gt;
+&lt;p&gt;搞来搞去，也很优雅&lt;/p&gt;
+&lt;h3 id=&#34;浮点数加法和减法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#浮点数加法和减法&#34;&gt;#&lt;/a&gt; 浮点数加法和减法&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;检查 0&lt;/li&gt;
+&lt;li&gt;对齐有效值&lt;/li&gt;
+&lt;li&gt;加法&lt;/li&gt;
+&lt;li&gt;规格化&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意时时检查是否有效值为 0，以及是否溢出&lt;/p&gt;
+&lt;p&gt;若两个数的阶值差别非常大，则较小的数丢失&lt;/p&gt;
+&lt;h3 id=&#34;浮点数乘法和除法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#浮点数乘法和除法&#34;&gt;#&lt;/a&gt; 浮点数乘法和除法&lt;/h3&gt;
+&lt;p&gt;由于阶值是移码的形式，相乘的时候，两个阶值的和要减去一个偏移量，相除的时候，两个阶值的差要加上一个偏移量&lt;/p&gt;
+&lt;h4 id=&#34;精度考虑&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#精度考虑&#34;&gt;#&lt;/a&gt; 精度考虑&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;保护位&lt;/p&gt;
+&lt;p&gt;对齐的时候会导致丢失，在末尾增加保护位，可以扩展有效值的右端&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;舍入（不懂）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;计算机组成与系统结构习题解答和教学指导&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#计算机组成与系统结构习题解答和教学指导&#34;&gt;#&lt;/a&gt; 计算机组成与系统结构习题解答和教学指导&lt;/h2&gt;
+&lt;h3 id=&#34;数据的表示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据的表示&#34;&gt;#&lt;/a&gt; 数据的表示&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;数值数据 —— 二进制、十进制（BCD binary coded decimal）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;非数值数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据的宽度&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据的宽度&#34;&gt;#&lt;/a&gt; 数据的宽度&lt;/h3&gt;
+&lt;p&gt;数据容量和宽度&lt;/p&gt;
+&lt;p&gt;比特&lt;/p&gt;
+&lt;p&gt;字节&lt;/p&gt;
+&lt;p&gt;字（2 个 / 4 个 / 8 个 / 16 个字节）&lt;/p&gt;
+&lt;h3 id=&#34;数据的排列&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据的排列&#34;&gt;#&lt;/a&gt; 数据的排列&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;大端排列 —— 最低有效字节 LSB 存放在大地址单元中，MSB 所在地址为数据的地址&lt;/li&gt;
+&lt;li&gt;小端排列 —— 最低有效字节 LSB 存放在小地址单元中，LSB 所在地址为数据的地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据校验方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据校验方式&#34;&gt;#&lt;/a&gt; 数据校验方式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;奇偶校验&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;海明校验&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;循环冗余码校验&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
+        <updated>2022-09-22T23:41:11.000Z</updated>
+    </entry>
     <entry>
         <id>https://quas-modo.github.io/2022/09/22/cpp/105-STL/</id>
         <title>105 STL</title>
