@@ -8,7 +8,187 @@
     <author>
       <name>quas-modo</name>
     </author>
-    <updated>2022-09-22T23:41:11.000Z</updated>
+    <updated>2022-09-29T08:22:20.000Z</updated>
+    <entry>
+        <id>https://quas-modo.github.io/2022/09/29/cpp/Lecture06-%E5%87%BD%E6%95%B0/</id>
+        <title>Lecture06-函数</title>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/09/29/cpp/Lecture06-%E5%87%BD%E6%95%B0/"/>
+        <content type="html">&lt;p&gt;cpp 中的函数&lt;br /&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;lecture06-函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture06-函数&#34;&gt;#&lt;/a&gt; Lecture06 - 函数&lt;/h1&gt;
+&lt;h2 id=&#34;运行时环境-runtime-environment&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#运行时环境-runtime-environment&#34;&gt;#&lt;/a&gt; 运行时环境 runtime environment&lt;/h2&gt;
+&lt;p&gt;永远分配 full stay（？）-- 早期变量存储不分全局变量和局部变量，比较浪费空间，无法使用 recursive 递归&lt;/p&gt;
+&lt;p&gt;dynamic-- 函数调用完即刻回收，支持递归，节约空间&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;%d&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;//x 地址什么时候填入（符号表、link 时）&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;增加函数 function 需要在 stack 中付出代价 cost&lt;/p&gt;
+&lt;p&gt;stack 编译器帮助程序员做好&lt;/p&gt;
+&lt;p&gt;heap 中存储动态变量，编译器未知&lt;/p&gt;
+&lt;p&gt;Dynamic-link library DLL 动态链接库&lt;/p&gt;
+&lt;p&gt;在代码段中，以一个函数为基本单位&lt;/p&gt;
+&lt;p&gt;为什么 code、data、stack、heap 中不能 x（执行）？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;攻击（断章取义）—— 利用看似正常的代码段。攻击操作系统。从头操作则没有问题。避免攻击，取消了执行。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;name-mangling&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#name-mangling&#34;&gt;#&lt;/a&gt; name mangling&lt;/h3&gt;
+&lt;p&gt;c 中 func 不可以重载，但是 cpp 中函数可以重载（参数可以不同），func 不能够唯一指代。&lt;/p&gt;
+&lt;p&gt;cpp 中加了一些表示 --name mangling。&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;//cpp&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;func&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; d&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;//_Z4funci  &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;func&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;double&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;//_Z4funcid&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;要告诉编译器&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;extern = &amp;quot;C&amp;quot; // 编译的是 c&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;原则和执行机制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#原则和执行机制&#34;&gt;#&lt;/a&gt; 原则和执行机制&lt;/h2&gt;
+&lt;h3 id=&#34;原则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#原则&#34;&gt;#&lt;/a&gt; 原则&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;定义不允许嵌套（函数中不能有另外一个 definition）&lt;/li&gt;
+&lt;li&gt;先定义后使用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;函数的执行机制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#函数的执行机制&#34;&gt;#&lt;/a&gt; 函数的执行机制&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;建立被调用函数的栈空间&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;参数传递&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;值传递 call by value（c 中只有值传递，想要改变原值需要指针）&lt;/li&gt;
+&lt;li&gt;引用传递 call by reference（cpp 中的隐式指针）int &amp;amp;a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;保存调用函数的运行状态（回来之后还要接着执行）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将控制转交被调函数&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;EBP&lt;/strong&gt; extended base pointer&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ESP&lt;/strong&gt; extended stack pointer&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;EIP&lt;/strong&gt; is a register in x86 architectures (32bit). It holds the &amp;quot;Extended Instruction Pointer&amp;quot; for the stack. In other words, it tells the computer where to go next to execute the next command and controls the flow of a program.&lt;/p&gt;
+&lt;p&gt;stack &lt;strong&gt;从 high 到 low 增长&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;如何调用函数-以及函数付出的代价&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何调用函数-以及函数付出的代价&#34;&gt;#&lt;/a&gt; 如何调用函数 以及函数付出的代价&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;__cdecl&lt;/p&gt;
+&lt;p&gt;__stdcall&lt;/p&gt;
+&lt;p&gt;__fastcall&lt;/p&gt;
+&lt;p&gt;__thiscall&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;func&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; a&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; b&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;func&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 从右往左传递参数&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;在函数中需要初始化变量，编译器在返回时，不会主动清理 stack 中的数据&lt;/p&gt;
+&lt;h3 id=&#34;cost&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cost&#34;&gt;#&lt;/a&gt; cost&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;付出指令的开销&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;付出栈的开销&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;summary&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#summary&#34;&gt;#&lt;/a&gt; Summary&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;加载参数 (进栈)&lt;/li&gt;
+&lt;li&gt;保存上下文环境
+&lt;ul&gt;
+&lt;li&gt;保存返回地址&lt;/li&gt;
+&lt;li&gt;保存调用者基指针&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;执行函数
+&lt;ul&gt;
+&lt;li&gt;设置新的基指针&lt;/li&gt;
+&lt;li&gt;分配空间 (可选)&lt;/li&gt;
+&lt;li&gt;执行一些任务&lt;/li&gt;
+&lt;li&gt;释放空间 (如果分配了的话)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;恢复上下文环境
+&lt;ul&gt;
+&lt;li&gt;加载调用者基指针&lt;/li&gt;
+&lt;li&gt;加载返回指针&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;继续执行调用者的功能 a&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;静态成员函数和非静态成员函数的差别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#静态成员函数和非静态成员函数的差别&#34;&gt;#&lt;/a&gt; 静态成员函数和非静态成员函数的差别&lt;/h3&gt;
+&lt;p&gt;静态成员函数中没有 this，非静态成员函数有 this&lt;/p&gt;
+&lt;p&gt;静态成员函数形同于全局函数&lt;/p&gt;
+&lt;h3 id=&#34;printf和cout&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#printf和cout&#34;&gt;#&lt;/a&gt; printf 和 cout&lt;/h3&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; format&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;可变参数可被利用，进行攻击。&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;span&gt;p&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cout &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;c&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;cout 是个&lt;strong&gt;对象&lt;/strong&gt;，cout &amp;lt;&amp;lt;&amp;quot;c&amp;quot; 是一个新的对象&lt;/p&gt;
+&lt;h3 id=&#34;stdcall&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#stdcall&#34;&gt;#&lt;/a&gt; stdcall&lt;/h3&gt;
+&lt;p&gt;调用者借还参数&lt;/p&gt;
+&lt;p&gt;参数未知长度&lt;/p&gt;
+&lt;p&gt;复用次数多，消耗空间和时间&lt;/p&gt;
+&lt;h3 id=&#34;fastcall&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#fastcall&#34;&gt;#&lt;/a&gt; fastcall&lt;/h3&gt;
+&lt;p&gt;寄存器有限，如果要用更多的寄存器，就要保存更多的数据（现场）&lt;/p&gt;
+&lt;p&gt;其实最多有两个参数 move 到寄存器，再有多的参数，就需要 push 了&lt;/p&gt;
+&lt;h2 id=&#34;函数原型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#函数原型&#34;&gt;#&lt;/a&gt; 函数原型&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;原型，只需要类型&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;遵守先定义后使用原则&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;自由安排函数定义位置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;语句&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;只需参数类型，无需参数名称&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编译器检查&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;函数原型：只需要看到函数名和参数读取到即可:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;int func(int,int)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;在调用点一定要能看到接口&lt;/li&gt;
+&lt;li&gt;仅仅需要函数名和参数类型即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;函数原型应当放置在头文件中&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;函数重载&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#函数重载&#34;&gt;#&lt;/a&gt; 函数重载&lt;/h2&gt;
+&lt;p&gt;type conversion&lt;/p&gt;
+&lt;h3 id=&#34;原则-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#原则-2&#34;&gt;#&lt;/a&gt; 原则&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;名同，参数不同（个数、类型、顺序）&lt;/li&gt;
+&lt;li&gt;返回值类型不作为区别重载函数的依据&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;匹配原则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#匹配原则&#34;&gt;#&lt;/a&gt; 匹配原则&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Polymorphism 多态&lt;/strong&gt; -&amp;gt; 增强语言的丰富性和灵活性 -&amp;gt; 一名多用，并不只存在 OO programming 中&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;严格&lt;/li&gt;
+&lt;li&gt;内部转换&lt;/li&gt;
+&lt;li&gt;用户定义的转换&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;void f(long); void f(double);&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;f(10);&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;10 既可以是 int 也可以是 double，编译器会感到困惑，&lt;strong&gt;ambiguous&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;函数-默认参数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#函数-默认参数&#34;&gt;#&lt;/a&gt; 函数 - 默认参数&lt;/h2&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;func&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; b &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;默认参数的声明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#默认参数的声明&#34;&gt;#&lt;/a&gt; 默认参数的声明&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;函数&lt;strong&gt;原型&lt;/strong&gt;中给出  -&amp;gt;  &lt;strong&gt;是给使用点看的&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;先定义的函数中给出&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;默认参数的顺序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#默认参数的顺序&#34;&gt;#&lt;/a&gt; 默认参数的顺序&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;从右到左&lt;/li&gt;
+&lt;li&gt;不间断&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;默认参数与函数重载&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#默认参数与函数重载&#34;&gt;#&lt;/a&gt; 默认参数与函数重载&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;void f(int);  void f(int, int=2);&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ambiguous&lt;/strong&gt;&lt;/p&gt;
+</content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+        <updated>2022-09-29T08:22:20.000Z</updated>
+    </entry>
     <entry>
         <id>https://quas-modo.github.io/2022/09/23/COA/Lecture03-04-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E8%A1%A8%E7%A4%BA/</id>
         <title>Lecture03 04-数据的机器级表表示</title>
