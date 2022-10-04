@@ -10,8 +10,192 @@
         </author>
         <description>notes/thoughts/nonsense</description>
         <language>zh-CN</language>
-        <pubDate>Thu, 29 Sep 2022 16:22:20 +0800</pubDate>
-        <lastBuildDate>Thu, 29 Sep 2022 16:22:20 +0800</lastBuildDate>
+        <pubDate>Tue, 04 Oct 2022 20:07:08 +0800</pubDate>
+        <lastBuildDate>Tue, 04 Oct 2022 20:07:08 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://quas-modo.github.io/2022/10/04/cpp/Lecture07-%E5%87%BD%E6%95%B0%E3%80%81%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/</guid>
+            <title>Lecture07-函数、程序组织</title>
+            <link>https://quas-modo.github.io/2022/10/04/cpp/Lecture07-%E5%87%BD%E6%95%B0%E3%80%81%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+            <pubDate>Tue, 04 Oct 2022 20:07:08 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;内联函数、ROP、头文件、namespace、宏&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;lecture-07&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture-07&#34;&gt;#&lt;/a&gt; Lecture 07&lt;/h1&gt;
+&lt;h1 id=&#34;函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#函数&#34;&gt;#&lt;/a&gt; 函数&lt;/h1&gt;
+&lt;p&gt;Q1、能在不降低可读性的前提下，降低 COST 吗？&lt;/p&gt;
+&lt;p&gt;HL src ---compiler----》 machine language&lt;/p&gt;
+&lt;p&gt;程序员看到的是函数，compiler 把 block 移到调用处&lt;/p&gt;
+&lt;p&gt;问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;假设 function 有 1000 行，代码拉长，存储占用率大&lt;/li&gt;
+&lt;li&gt;不再有递归&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;程序员主动提出：在 function 前写&lt;strong&gt; inline&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Q2、使用 lib 需要注意什么？&lt;/p&gt;
+&lt;p&gt;注意区分是哪种调用方式，哪种 compiler。&lt;/p&gt;
+&lt;p&gt;c 中不允许重载，cpp 可以&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221004190900029.png&#34; alt=&#34;image-20221004190900029&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;内联函数inline&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内联函数inline&#34;&gt;#&lt;/a&gt; 内联函数 inline&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;目的:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;提高可读性&lt;/li&gt;
+&lt;li&gt;提高效率&lt;/li&gt;
+&lt;li&gt;解决了两个 cost 的问题&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对象: &lt;strong&gt;使用频率高、简单、小段代码&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;简单：没有 loop 或者 switch，不要有多个接口&lt;/p&gt;
+&lt;p&gt;例如：OO 的 class 的 constructor 函数（构造函数）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;实现方法：编译系统将为 inline 函数创建一段代码，在调用点，用相应的代码替换&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;限制：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;递归 —— 必须是非递归函数，因为已经加入主体部分了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;函数指针 —— 由编译系统控制，和编译器是完全相关的&lt;/p&gt;
+&lt;p&gt;函数指针最主要的作用为写框架（framework）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;inline 关键字 &lt;strong&gt;仅仅是请求&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;有可能是递归，无法加入&lt;/li&gt;
+&lt;li&gt;也有可能是很复杂的函数，导致无法理解 (上下文比较复杂)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提请 inline&lt;strong&gt; 被拒绝时是有代价的&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果对象的初始化 - 构造函数为明确给出，计算机会给出 inline 的构造函数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;宏: &lt;code&gt;max(a,b) (a) &amp;gt; (b) ? (a) : (b)&lt;/code&gt; ：不同于 inline 函数，一定要有括号，因为运算数据中的优先级不同&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;时间局部性&lt;/strong&gt;：是指如果程序中的某条指令一旦执行，则不久之后该指令可能再次被执行；如果某数据被访问，则不久之后该数据可能再次被访问。 空间局部性是指一旦程序访问了某个存储单元，则不久之后。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;空间局部性&lt;/strong&gt;：执行周边的代码的可能性很大，将附近的代码放到 cache 中，如果代码块过大，会造成抖动，cache 不断切换内存中的代码段。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221004191015068.png&#34; alt=&#34;image-20221004191015068&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;攻击&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#攻击&#34;&gt;#&lt;/a&gt; 攻击&lt;/h2&gt;
+&lt;h3 id=&#34;stack&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#stack&#34;&gt;#&lt;/a&gt; stack&lt;/h3&gt;
+&lt;p&gt;攻击：在 stack 中写入地址执行&lt;/p&gt;
+&lt;p&gt;解决：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;W 正交 X&lt;/li&gt;
+&lt;li&gt;禁止写入&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;code&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#code&#34;&gt;#&lt;/a&gt; code&lt;/h3&gt;
+&lt;p&gt;攻击：利用已有的代码进行攻击，比如利用 return 之前的语句&lt;/p&gt;
+&lt;p&gt;解决：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;R 正交 X&lt;/li&gt;
+&lt;li&gt;打乱顺序 load&lt;/li&gt;
+&lt;li&gt;检测，如果多次跳转 / 踩点，则可能是攻击的代码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221004191213187.png&#34; alt=&#34;image-20221004191213187&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;rop&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rop&#34;&gt;#&lt;/a&gt; ROP&lt;/h3&gt;
+&lt;h4 id=&#34;定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#定义&#34;&gt;#&lt;/a&gt; 定义&lt;/h4&gt;
+&lt;p&gt;Return-oriented programming 返回导向编程，这是一种高级的内存攻击技术可以用来绕过现代操作系统的各种通用防御（比如内存不可执行和代码签名【&lt;strong&gt;代码签名&lt;/strong&gt;是对可执行文件或脚本进行数字签名。用来确认软件的来源并保证在签名后未被修改或损坏的措施】等。&lt;/p&gt;
+&lt;p&gt;通过上一篇文章走进栈溢出，我们可以发现栈溢出的控制点是 ret 处，那么 ROP 的核心思想就是&lt;strong&gt;利用以 ret 结尾的指令序列把栈中的应该返回 EIP 的地址更改成我们需要的值&lt;/strong&gt;，从而控制程序的执行流程。&lt;/p&gt;
+&lt;p&gt;ROP 方法技巧性很强，那它能完全胜任所有攻击吗？返回语句前的指令是否会因为功能单一，而无法实施预期的攻击目标呢？业界大牛已经过充分&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RsLmFjbS5vcmcvY2l0YXRpb24uY2ZtP2RvaWQ9MTEwMjEyMC4xMTAyMTY1&#34;&gt;研究并证明&lt;/span&gt; ROP 方法是图灵完备的，换句话说， ROP 可以借用 libc 的指令实现任何逻辑功能。&lt;/p&gt;
+&lt;h1 id=&#34;程序组织&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#程序组织&#34;&gt;#&lt;/a&gt; 程序组织&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221004194251637.png&#34; alt=&#34;image-20221004194251637&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;头文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#头文件&#34;&gt;#&lt;/a&gt; 头文件&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221004194306679.png&#34; alt=&#34;image-20221004194306679&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;作用域&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#作用域&#34;&gt;#&lt;/a&gt; 作用域&lt;/h3&gt;
+&lt;p&gt;程序级&lt;/p&gt;
+&lt;p&gt;文件级&lt;/p&gt;
+&lt;p&gt;函数级&lt;/p&gt;
+&lt;p&gt;块级&lt;/p&gt;
+&lt;h3 id=&#34;生命周期&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#生命周期&#34;&gt;#&lt;/a&gt; 生命周期&lt;/h3&gt;
+&lt;p&gt;main 函数中的变量的生命周期一般是整个程序。&lt;/p&gt;
+&lt;p&gt;idle pointer&lt;/p&gt;
+&lt;h3 id=&#34;头文件中包含的内容&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#头文件中包含的内容&#34;&gt;#&lt;/a&gt; 头文件中包含的内容&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;常量定义&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221004195026698.png&#34; alt=&#34;image-20221004195026698&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;变量 / 函数定义&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221004194957282.png&#34; alt=&#34;image-20221004194957282&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编译预处理&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;类型定义（class\ 接口）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;内联函数&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;# include&amp;quot;a.h&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;井号&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;编译预处理，把头文件的&lt;strong&gt;复制&lt;/strong&gt;过来&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;static&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;只要不在头文件中，就不能更改 —— 加上&lt;strong&gt; static &lt;strong&gt;，把变量或者函数的程序级限制到&lt;/strong&gt;文件级&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;const&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;默认属性是 static&lt;/p&gt;
+&lt;p&gt;写在另外 &amp;quot;const.h&amp;quot; 文件中&lt;/p&gt;
+&lt;h2 id=&#34;namespace&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#namespace&#34;&gt;#&lt;/a&gt; namespace&lt;/h2&gt;
+&lt;h3 id=&#34;两种形式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#两种形式&#34;&gt;#&lt;/a&gt; 两种形式&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221004195211541.png&#34; alt=&#34;image-20221004195211541&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;declaration (绝对路径)&lt;/li&gt;
+&lt;li&gt;directive（批量处理）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;details&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#details&#34;&gt;#&lt;/a&gt; details&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221004200112776.png&#34; alt=&#34;image-20221004200112776&#34; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;别名&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;namespace&lt;/span&gt; American_Telephone_and_Telegraph &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;…… &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;……&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;  &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;namespace&lt;/span&gt; ATT &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; American_Telephone_and_Telegraph&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;全局&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;  a&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;namespace&lt;/span&gt; X&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;   &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; a&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;   &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; a&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;         a&lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;         X&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;a&lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;         &lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;a&lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;开放&lt;/p&gt;
+&lt;p&gt;可以在代码别的位置重新增加函数、变量&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;namespace&lt;/span&gt; A&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;   &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; a&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     ……&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;……&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;namespace&lt;/span&gt; A&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;   &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     ……&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可嵌套&lt;/p&gt;
+&lt;p&gt;软工：：三班::quasdo&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;namespace&lt;/span&gt; L1&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;   &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; a&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     ……&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     &lt;span class=&#34;token keyword&#34;&gt;namespace&lt;/span&gt; L2&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;   &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;         ……&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;……&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;L1&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;L2&lt;/span&gt;&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;namespace&lt;/span&gt; L1&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token class-name&#34;&gt;L2&lt;/span&gt;&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重载&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;namespace&lt;/span&gt; B&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;   &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     ……&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;namespace&lt;/span&gt; A&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;   &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     ……&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;namespace&lt;/span&gt; A&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   &lt;span class=&#34;token function&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;‘&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;’&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;重载 —— 有可能造成冲突和语义的错误&lt;/p&gt;
+&lt;p&gt;可能在 namespace A 和 namespace B 中均定义了同一个函数名，因此&lt;strong&gt;不建议在同一作用域两次使用 using-directive&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;编译预处理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编译预处理&#34;&gt;#&lt;/a&gt; 编译预处理&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221004195709681.png&#34; alt=&#34;image-20221004195709681&#34; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;gcc&lt;/em&gt; &lt;em&gt;-7 -&lt;strong&gt;Dsqrt&lt;/strong&gt;=rand -&lt;strong&gt;Dreturn&lt;/strong&gt;=exit&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;define sqrt rand&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;虽然编译预处理可能会造成问题，但因为难以找到更好的结构且高效的替代品，没有取缔。&lt;/p&gt;
+&lt;h2 id=&#34;宏&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#宏&#34;&gt;#&lt;/a&gt; 宏&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221004195913290.png&#34; alt=&#34;image-20221004195913290&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;while 后缺少；&lt;/p&gt;
+&lt;p&gt;形成完美的语句（不产生多余的空语句）&lt;/p&gt;
+&lt;p&gt;eight queen 八皇后问题，可用递归的方式求解&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://quas-modo.github.io/2022/09/29/cpp/Lecture06-%E5%87%BD%E6%95%B0/</guid>
             <title>Lecture06-函数</title>
