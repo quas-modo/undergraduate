@@ -10,8 +10,80 @@
         </author>
         <description>notes/thoughts/nonsense</description>
         <language>zh-CN</language>
-        <pubDate>Wed, 21 Sep 2022 20:00:27 +0800</pubDate>
-        <lastBuildDate>Wed, 21 Sep 2022 20:00:27 +0800</lastBuildDate>
+        <pubDate>Fri, 07 Oct 2022 09:38:59 +0800</pubDate>
+        <lastBuildDate>Fri, 07 Oct 2022 09:38:59 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://quas-modo.github.io/2022/10/07/internet-computer/Lecture02-%E7%89%A9%E7%90%86%E5%B1%82/</guid>
+            <title>Lecture02-物理层</title>
+            <link>https://quas-modo.github.io/2022/10/07/internet-computer/Lecture02-%E7%89%A9%E7%90%86%E5%B1%82/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+            <category term="互联网计算" scheme="https://quas-modo.github.io/categories/NJUSE/%E4%BA%92%E8%81%94%E7%BD%91%E8%AE%A1%E7%AE%97/" />
+            <category term="计网" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BD%91/" />
+            <pubDate>Fri, 07 Oct 2022 09:38:59 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;一些物理层的补充&lt;br /&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;物理层&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#物理层&#34;&gt;#&lt;/a&gt; 物理层&lt;/h1&gt;
+&lt;h2 id=&#34;局域网介质&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#局域网介质&#34;&gt;#&lt;/a&gt; 局域网介质&lt;/h2&gt;
+&lt;h3 id=&#34;utp-无屏蔽双绞线-unshielded-twisted-pair&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#utp-无屏蔽双绞线-unshielded-twisted-pair&#34;&gt;#&lt;/a&gt; UTP (无屏蔽双绞线 Unshielded Twisted Pair)&lt;/h3&gt;
+&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvaW1hZ2UtMjAyMjEwMDcwOTI3MzAxMDkucG5n&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221007092730109.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20221007092730109&amp;quot; style=&amp;quot;zoom: 67%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;p&gt;一般认为有效范围为 100m&lt;/p&gt;
+&lt;p&gt;UTP 是非屏蔽双绞线；&lt;strong&gt;STP&lt;/strong&gt; 是内每对线都包裹一层铝箔（共有 4 个单独的铝箔包裹），外编织网的双层屏蔽网线。&lt;/p&gt;
+&lt;h4 id=&#34;类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#类型&#34;&gt;#&lt;/a&gt; 类型&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;直通线&lt;/li&gt;
+&lt;li&gt;反转线&lt;/li&gt;
+&lt;li&gt;交叉电缆&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;同轴电缆-coaxial&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#同轴电缆-coaxial&#34;&gt;#&lt;/a&gt; 同轴电缆 Coaxial&lt;/h3&gt;
+&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvaW1hZ2UtMjAyMjEwMDcwOTI4MjEwMzIucG5n&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221007092821032.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20221007092821032&amp;quot; style=&amp;quot;zoom: 80%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;p&gt;有效范围 500m 左右&lt;/p&gt;
+&lt;h3 id=&#34;光缆&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#光缆&#34;&gt;#&lt;/a&gt; 光缆&lt;/h3&gt;
+&lt;h3 id=&#34;无线通信&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#无线通信&#34;&gt;#&lt;/a&gt; 无线通信&lt;/h3&gt;
+&lt;h3 id=&#34;无线传输手段&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#无线传输手段&#34;&gt;#&lt;/a&gt; 无线传输手段&lt;/h3&gt;
+&lt;p&gt;激光&lt;/p&gt;
+&lt;p&gt;红外线&lt;/p&gt;
+&lt;p&gt;收音机&lt;/p&gt;
+&lt;h2 id=&#34;介质和信号问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#介质和信号问题&#34;&gt;#&lt;/a&gt; 介质和信号问题&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221007093055656.png&#34; alt=&#34;image-20221007093055656&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;网桥、交换机、路由器可以分割冲突域。&lt;/p&gt;
+&lt;p&gt;到第二第三层 (分段后) 才能有效划分冲突域，第一层不能解决冲突问题&lt;/p&gt;
+&lt;p&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;数据通信的基础信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据通信的基础信息&#34;&gt;#&lt;/a&gt; 数据通信的基础信息&lt;/h2&gt;
+&lt;h3 id=&#34;编码方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编码方式&#34;&gt;#&lt;/a&gt; 编码方式&lt;/h3&gt;
+&lt;h4 id=&#34;5111-单极性编码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5111-单极性编码&#34;&gt;#&lt;/a&gt; 5.11.1. 单极性编码&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://spricoder.oss-cn-shanghai.aliyuncs.com/2020-Internet-computing/img/lec02/29.png&#34;&gt;&lt;img data-src=&#34;https://spricoder.oss-cn-shanghai.aliyuncs.com/2020-Internet-computing/img/lec02/29.png&#34; alt=&#34;img&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;原理：用 0 电平表示 &amp;quot;0&amp;quot;，正电平表示 &amp;quot;1&amp;quot;&lt;/p&gt;
+&lt;h4 id=&#34;5112-极化编码不归零制码nrz-non-return-to-zero&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5112-极化编码不归零制码nrz-non-return-to-zero&#34;&gt;#&lt;/a&gt; 5.11.2. 极化编码：不归零制码 (NRZ: Non-Return to Zero)&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://spricoder.oss-cn-shanghai.aliyuncs.com/2020-Internet-computing/img/lec02/18.png&#34;&gt;&lt;img data-src=&#34;https://spricoder.oss-cn-shanghai.aliyuncs.com/2020-Internet-computing/img/lec02/18.png&#34; alt=&#34;img&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;不归零电平编码，原理：用负电平表示 &amp;quot;0&amp;quot;，正电平表示 &amp;quot;1&amp;quot; (或相反)，一定的中和。&lt;/p&gt;
+&lt;h4 id=&#34;5113-极化编码归零制码rz-return-to-zero&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5113-极化编码归零制码rz-return-to-zero&#34;&gt;#&lt;/a&gt; 5.11.3. 极化编码：归零制码 (RZ: Return to Zero)&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://spricoder.oss-cn-shanghai.aliyuncs.com/2020-Internet-computing/img/lec02/19.png&#34;&gt;&lt;img data-src=&#34;https://spricoder.oss-cn-shanghai.aliyuncs.com/2020-Internet-computing/img/lec02/19.png&#34; alt=&#34;img&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;原理：用负电平表示 &amp;quot;0&amp;quot;，正电平表示 &amp;quot;1&amp;quot;(或 相反)，比特中位跳变到零电平，从而提供同步&lt;/p&gt;
+&lt;h4 id=&#34;5114-极化编码曼彻斯特码manchester&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5114-极化编码曼彻斯特码manchester&#34;&gt;#&lt;/a&gt; 5.11.4. 极化编码：曼彻斯特码 (Manchester)&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://spricoder.oss-cn-shanghai.aliyuncs.com/2020-Internet-computing/img/lec02/20.png&#34;&gt;&lt;img data-src=&#34;https://spricoder.oss-cn-shanghai.aliyuncs.com/2020-Internet-computing/img/lec02/20.png&#34; alt=&#34;img&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;原理：每一位中间都有一个跳变，从低跳到高表示 &amp;quot;0&amp;quot;，从高跳到低表示 &amp;quot;1&amp;quot;&lt;/p&gt;
+&lt;h4 id=&#34;5115-极化编码差分曼彻斯特码differential-manchester&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5115-极化编码差分曼彻斯特码differential-manchester&#34;&gt;#&lt;/a&gt; 5.11.5. 极化编码：差分曼彻斯特码 (Differential Manchester)&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://spricoder.oss-cn-shanghai.aliyuncs.com/2020-Internet-computing/img/lec02/21.png&#34;&gt;&lt;img data-src=&#34;https://spricoder.oss-cn-shanghai.aliyuncs.com/2020-Internet-computing/img/lec02/21.png&#34; alt=&#34;img&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;原理：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每一位中间跳变：表示时钟&lt;/li&gt;
+&lt;li&gt;每一位位前跳变：表示数据：有跳变表示 &amp;quot;0&amp;quot;，无跳变表示 &amp;quot;1&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;5116-双极性编码双极性传号交替反转码ami&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5116-双极性编码双极性传号交替反转码ami&#34;&gt;#&lt;/a&gt; 5.11.6. 双极性编码：双极性传号交替反转码 (AMI)&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://spricoder.oss-cn-shanghai.aliyuncs.com/2020-Internet-computing/img/lec02/22.png&#34;&gt;&lt;img data-src=&#34;https://spricoder.oss-cn-shanghai.aliyuncs.com/2020-Internet-computing/img/lec02/22.png&#34; alt=&#34;img&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;与 RZ 相同的是：采用三个电平：正、负与零&lt;/li&gt;
+&lt;li&gt;与 RZ 不同的是：零电平表示 &amp;quot;0&amp;quot;，正负电平的跃迁表示 “1”，实现对 &amp;quot;1&amp;quot; 电平的交替反转。&lt;/li&gt;
+&lt;li&gt;优点：
+&lt;ol&gt;
+&lt;li&gt;对每次出现的 &amp;quot;1&amp;quot; 交替反转，使直流分量为 0&lt;/li&gt;
+&lt;li&gt;尽管连续 &amp;quot;0&amp;quot; 不能同步，但连续 &amp;quot;1&amp;quot; 可以同步&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;这次是 1 是高点位，下一次就是低电位。&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://quas-modo.github.io/2022/09/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B/Lecture04-%E7%BD%91%E7%BB%9C%E5%B1%82%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%B9%B3%E9%9D%A2/</guid>
             <title>Lecture04-网络层：数据平面</title>
@@ -906,6 +978,9 @@ Bulter Lampson—— 在一个时刻做一件事，将他做好。一个接口�
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221007092506024.png&#34; alt=&#34;image-20221007092506024&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;hubs 总线式连接&lt;br /&gt;
+交换机 星型连接&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
