@@ -25,7 +25,7 @@
 &lt;h1 id=&#34;物理层&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#物理层&#34;&gt;#&lt;/a&gt; 物理层&lt;/h1&gt;
 &lt;h2 id=&#34;局域网介质&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#局域网介质&#34;&gt;#&lt;/a&gt; 局域网介质&lt;/h2&gt;
 &lt;h3 id=&#34;utp-无屏蔽双绞线-unshielded-twisted-pair&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#utp-无屏蔽双绞线-unshielded-twisted-pair&#34;&gt;#&lt;/a&gt; UTP (无屏蔽双绞线 Unshielded Twisted Pair)&lt;/h3&gt;
-&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvaW1hZ2UtMjAyMjEwMDcwOTI3MzAxMDkucG5n&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221007092730109.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20221007092730109&amp;quot; style=&amp;quot;zoom: 67%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvaW1hZ2UtMjAyMjEwMDcwOTI3MzAxMDkucG5n&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221007092730109.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20221007092730109&amp;quot; style=&amp;quot;zoom: 67%;&amp;quot; &amp;gt;&lt;/p&gt;
 &lt;p&gt;一般认为有效范围为 100m&lt;/p&gt;
 &lt;p&gt;UTP 是非屏蔽双绞线；&lt;strong&gt;STP&lt;/strong&gt; 是内每对线都包裹一层铝箔（共有 4 个单独的铝箔包裹），外编织网的双层屏蔽网线。&lt;/p&gt;
 &lt;h4 id=&#34;类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#类型&#34;&gt;#&lt;/a&gt; 类型&lt;/h4&gt;
@@ -35,7 +35,7 @@
 &lt;li&gt;交叉电缆&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;同轴电缆-coaxial&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#同轴电缆-coaxial&#34;&gt;#&lt;/a&gt; 同轴电缆 Coaxial&lt;/h3&gt;
-&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvaW1hZ2UtMjAyMjEwMDcwOTI4MjEwMzIucG5n&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221007092821032.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20221007092821032&amp;quot; style=&amp;quot;zoom: 80%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvaW1hZ2UtMjAyMjEwMDcwOTI4MjEwMzIucG5n&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221007092821032.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20221007092821032&amp;quot; style=&amp;quot;zoom: 80%;&amp;quot; &amp;gt;&lt;/p&gt;
 &lt;p&gt;有效范围 500m 左右&lt;/p&gt;
 &lt;h3 id=&#34;光缆&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#光缆&#34;&gt;#&lt;/a&gt; 光缆&lt;/h3&gt;
 &lt;h3 id=&#34;无线通信&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#无线通信&#34;&gt;#&lt;/a&gt; 无线通信&lt;/h3&gt;
