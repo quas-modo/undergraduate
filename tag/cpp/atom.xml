@@ -10,9 +10,9 @@
     </author>
     <updated>2022-10-04T12:07:08.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/2022/10/04/cpp/Lecture07-%E5%87%BD%E6%95%B0%E3%80%81%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/</id>
+        <id>https://quas-modo.github.io/2022/10/04/cpp/Lecture07-%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/</id>
         <title>Lecture07-程序组织</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/10/04/cpp/Lecture07-%E5%87%BD%E6%95%B0%E3%80%81%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/10/04/cpp/Lecture07-%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/"/>
         <content type="html">&lt;p&gt;内联函数、ROP、头文件、namespace、宏&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture-07&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture-07&#34;&gt;#&lt;/a&gt; Lecture 07&lt;/h1&gt;
