@@ -243,7 +243,7 @@
 &lt;p&gt;带符号整数：因为乘法的补位是根据当前最高位计算的，如果有变化，则说明有溢出&lt;/p&gt;
 &lt;p&gt;无符号整数：无符号整数应该没有 1 的出现&lt;/p&gt;
 &lt;h2 id=&#34;除法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#除法&#34;&gt;#&lt;/a&gt; 除法&lt;/h2&gt;
-&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvaW1hZ2UtMjAyMjEwMDYxNjI5NTU1NTEucG5n&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221006162955551.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20221006162955551&amp;quot; style=&amp;quot;zoom: 25%;&amp;quot; &amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221013100038320.png&#34; alt=&#34;image-20221013100038320&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;不同的高级算法对于 1/0 0/0 的计算结果处理是不同的&lt;/p&gt;
 &lt;p&gt;如在 js 中，1/0 为正无穷；c 中会报错&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221012110438424.png&#34; alt=&#34;image-20221012110438424&#34; /&gt;&lt;/p&gt;
@@ -279,7 +279,7 @@
 &lt;li&gt;1100 + 0011 为 1111 符号不变，且绝对值减小，因此可以加，且商上 1&lt;/li&gt;
 &lt;li&gt;1111 + 0011 符号改变&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvaW1hZ2UtMjAyMjEwMTAwMDMwMDE4NTgucG5n&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221010003001858.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20221010003001858&amp;quot; style=&amp;quot;zoom: 25%;&amp;quot; &amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221010003001858.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;参考黑书的话，&lt;/p&gt;
 &lt;p&gt;余数的符号 = 被除数&lt;/p&gt;
 &lt;p&gt;商的符号 = 被除数 * 除数&lt;/p&gt;
@@ -299,7 +299,7 @@
 &lt;p&gt;式中 Qi 为第 i 次所得的商，若部分余数为正，则 Qi=1，部分余数左移一位，下一次继续减除数；若部分余数为负，则 Qi=0，部分余数左移一位，下一次加除数。由于加减运算交替地进行，故称为原码加减交替法。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;补码不恢复余数除法流程图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#补码不恢复余数除法流程图&#34;&gt;#&lt;/a&gt; 补码不恢复余数除法流程图&lt;/h3&gt;
-&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvaW1hZ2UtMjAyMjEwMDYxNzI2NDYzODEucG5n&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221006172646381.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20221006172646381&amp;quot; style=&amp;quot;zoom: 25%;&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221006172646381.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221012110545429.png&#34; alt=&#34;image-20221012110545429&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;同号说明 “够大”，异号说明 “不够大”&lt;/p&gt;
 &lt;p&gt;注意不恢复余数补码除法分为两个流程，首先需要判断符号然后初始化。&lt;/p&gt;
