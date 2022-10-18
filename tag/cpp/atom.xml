@@ -8,7 +8,120 @@
     <author>
       <name>quas-modo</name>
     </author>
-    <updated>2022-10-04T12:07:08.000Z</updated>
+    <updated>2022-10-18T11:53:25.000Z</updated>
+    <entry>
+        <id>https://quas-modo.github.io/2022/10/18/cpp/Lecture08-%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/</id>
+        <title>Lecture08-数组和指针</title>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/10/18/cpp/Lecture08-%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/"/>
+        <content type="html">&lt;p&gt;一维数组、指针的指针、RAII、union、函数指针&lt;br /&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;lecture08-数组和指针&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture08-数组和指针&#34;&gt;#&lt;/a&gt; Lecture08 - 数组和指针&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011193356316.png&#34; alt=&#34;image-20221011193356316&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;数组&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数组&#34;&gt;#&lt;/a&gt; 数组&lt;/h2&gt;
+&lt;h3 id=&#34;特征&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#特征&#34;&gt;#&lt;/a&gt; 特征&lt;/h3&gt;
+&lt;p&gt;相同类型，连续存储&lt;/p&gt;
+&lt;h3 id=&#34;一维数组&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一维数组&#34;&gt;#&lt;/a&gt; 一维数组&lt;/h3&gt;
+&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvaW1hZ2UtMjAyMjEwMTExOTM2MjIxNjQucG5n&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011193622164.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20221011193622164&amp;quot; style=&amp;quot;zoom:25%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;p&gt;函数接口中，数组的长度需要显式的表达。即需要 f (int A [], int n); 其中，n 表示数组的长度。&lt;/p&gt;
+&lt;p&gt;int a[6];&lt;/p&gt;
+&lt;p&gt;a 是数组类型。&lt;/p&gt;
+&lt;p&gt;f (a) 中的 a 是地址，因为在函数中，a 变成了右值，进行了隐式的类型转换。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011194122070.png&#34; alt=&#34;image-20221011194120299&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;第二种写法是错误的&lt;br /&gt;
+栈中未初始化填充 0xCC，对应中文的烫（在 vscode 中）&lt;br /&gt;
+堆中未初始化填充 0xCSD，对应中文的屯（在 vscode 中)&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011194633177.png&#34; alt=&#34;image-20221011194633177&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;工具&lt;br /&gt;
+ / RTC1&lt;br /&gt;
+mallopt&lt;br /&gt;
+valgrind ——Valgrind 基于仿真方式对程序进行调试，它先于应用程序获取实际处理器的控制权，并在实际处理器的基础上仿真一个虚拟处理器，并使应用程序运行于这个虚拟处理器之上，从而对应用程序的运行进行监视。&lt;/p&gt;
+&lt;p&gt;debug 文件中有符号表，release 中没有。&lt;/p&gt;
+&lt;h2 id=&#34;指针&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#指针&#34;&gt;#&lt;/a&gt; 指针&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011194756090.png&#34; alt=&#34;image-20221011194756090&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;pointer literal&lt;br /&gt;
+ 指针定义为 null，保护内存。&lt;br /&gt;
+（void *）0 —— 未定义的 datatype，无法对其做解地址操作。&lt;br /&gt;
+（void *）可作为任何类型的接口。&lt;br /&gt;
+double * q;&lt;br /&gt;
+Int * p;&lt;br /&gt;
+Void * v;&lt;br /&gt;
+V = q;&lt;br /&gt;
+V = p;&lt;br /&gt;
+ 但是 q 和 p 不能赋值为 v。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011194829940.png&#34; alt=&#34;image-20221011194829940&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;void memset(void *p, int n){&lt;br /&gt;
+// 内存清空&lt;br /&gt;
+ char * q = (char &lt;em&gt;)p;&lt;br /&gt;
+For(int I = 0; i &amp;lt; n; i++)&lt;br /&gt;
+{&lt;br /&gt;
+&lt;em&gt;(q+i) = 0;	&lt;br /&gt;
+}&lt;br /&gt;
+}&lt;br /&gt;
+Int a[100];&lt;br /&gt;
+A b;&lt;br /&gt;
+memset(&amp;amp;a[0], 100&lt;/em&gt;4);&lt;br /&gt;
+Memset(&amp;amp;b, );&lt;br /&gt;
+ 可以传递进 int&lt;/em&gt; 类型，也可以传入 A 类型。&lt;/p&gt;
+&lt;h2 id=&#34;指针与数组&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#指针与数组&#34;&gt;#&lt;/a&gt; 指针与数组&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5CQUAS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221011195335516.png&#34; alt=&#34;image-20221011195335516&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;a 是一个 const，不能用 a++ 的方式改变访问&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011195419924.png&#34; alt=&#34;image-20221011195419924&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;P [i] 用指针实现动态数组&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011195822103.png&#34; alt=&#34;image-20221011195822103&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011195702881.png&#34; alt=&#34;image-20221011195702881&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;多维数组&lt;/p&gt;
+&lt;p&gt;关注不同的定义方式&lt;/p&gt;
+&lt;p&gt;using T = int [2];&lt;/p&gt;
+&lt;p&gt;ragged array——java 中并非整齐排列，可以锯齿排列。cpp 中可以自己实现。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011195308401.png&#34; alt=&#34;image-20221011195308401&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221012000657463.png&#34; alt=&#34;image-20221012000657463&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;关于如何理解取 a00 的地址和取 a0 的地址一样，并且取 q+1 的地址仍然是它自身，我的理解是，编译器识别的它的类型不一样，因此解一个指针的指针仍然是一个指针，也不存在另外存储了一个指针数组来表示。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011195953872.png&#34; alt=&#34;image-20221011195953872&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011200024133.png&#34; alt=&#34;image-20221011200024133&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;cpp 是允许数组越界的&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011200038340.png&#34; alt=&#34;image-20221011200038340&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;在传入参数的时候，先进行升维的操作，在打印地址时，再进行降维的操作。&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 思考为什么地址是这样的&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cout &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;a&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;j &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34; :&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; a&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;j&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;  &#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cout &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;a&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;j&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;k &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34; :&#34;&lt;/span&gt;  &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; a&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;j&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;k&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;  &#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 思考如何不另外计数完成每隔四个就打印一次 endl&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;j&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      cout &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;j&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;k&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      cout &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011200055610.png&#34; alt=&#34;image-20221011200055610&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;C&lt;br /&gt;
+int *p = (int &lt;em&gt;) malloc(sizeof(int) * 8);&lt;br /&gt;
+ 因为 malloc 为 void&lt;/em&gt;，需要定义 int * 来使用。&lt;/p&gt;
+&lt;p&gt;Cpp&lt;br /&gt;
+Int *p1= new int;&lt;br /&gt;
+Int *q1 = new int[8];&lt;/p&gt;
+&lt;p&gt;用 new 的时候，会强制类型转换，并一个一个调用构造函数进行构造。因为 new 知道新建的类型，但是 malloc 不知道新建的类型，无法进行调用。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018140518525.png&#34; alt=&#34;image-20221018140518525&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;delete [] 另外存储 4byte 记录空间的大小（如果是 32 位存储）&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;p &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i&lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;p&lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;//delete 的时候，无法删除且会造成归还的错误&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; p1 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; p&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 解决方案是另外开一个指针进行遍历&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;RAII&lt;/p&gt;
+&lt;p&gt;Resource Acquisition Is Initialization&lt;/p&gt;
+&lt;p&gt;RAII，也称为 “资源获取就是初始化”，是&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS9jJTJCJTJCLzk5MjcyP2Zyb21Nb2R1bGU9bGVtbWFfaW5saW5r&#34;&gt; c++&lt;/span&gt; 等编程语言常用的管理资源、避免内存泄露的方法。它保证在任何情况下，使用对象时先构造对象，最后析构对象。&lt;/p&gt;
+&lt;p&gt;compiler 帮助程序员管理资源，防止资源泄露。~auto_ptr ()&lt;/p&gt;
+&lt;p&gt;类中能够同时使用 operator * 和 operato -&amp;gt;&lt;/p&gt;
+&lt;p&gt;shared_ptr 的表示方式&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018142936362.png&#34; alt=&#34;image-20221018142936362&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018142519655.png&#34; alt=&#34;image-20221018142519655&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;struct B sizeof 不是 7，需要对齐&lt;/p&gt;
+&lt;p&gt;也许是 12，一一对齐&lt;/p&gt;
+&lt;p&gt;也许是 8【char b; short c; int a】变量的顺序也会影响内存的存放方式&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018143235958.png&#34; alt=&#34;image-20221018143235958&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Union 和 Struct 的区别是可以共享存储空间。&lt;/p&gt;
+&lt;p&gt;对于 Struct，三个赋值都有效；对于 Union 来说，只有最后一个语句有效【共享空间】&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018143001639.png&#34; alt=&#34;image-20221018143001639&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018143334428.png&#34; alt=&#34;image-20221018143334428&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;原本各开 100 个空间，耗费资源，正好时候 union 的定义【只需要 Line\Rectangle\Ellipse 中的一种】。&lt;/p&gt;
+&lt;p&gt;但是值存储 Line 或 Rectangle 或 Ellipse 不能知道是哪种，需要 tag，且每个类型都需要 tag，不然 tag 会覆盖掉别的数据。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018143902650.png&#34; alt=&#34;image-20221018143902650&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;不止 OO 中存在多态性，cpp 也可以通过 union 实现多态。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018143952177.png&#34; alt=&#34;image-20221018143952177&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018144156718.png&#34; alt=&#34;image-20221018144156718&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Struct Programming 也可以去实现 OO 的功能&lt;/p&gt;
+&lt;p&gt;OO 实际上是编译器帮助做了一些工作。&lt;/p&gt;
+</content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+        <updated>2022-10-18T11:53:25.000Z</updated>
+    </entry>
     <entry>
         <id>https://quas-modo.github.io/2022/10/04/cpp/Lecture07-%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/</id>
         <title>Lecture07-程序组织</title>

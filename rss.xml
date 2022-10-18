@@ -10,8 +10,179 @@
         </author>
         <description>notes/thoughts/nonsense</description>
         <language>zh-CN</language>
-        <pubDate>Sat, 15 Oct 2022 00:13:14 +0800</pubDate>
-        <lastBuildDate>Sat, 15 Oct 2022 00:13:14 +0800</lastBuildDate>
+        <pubDate>Tue, 18 Oct 2022 19:53:25 +0800</pubDate>
+        <lastBuildDate>Tue, 18 Oct 2022 19:53:25 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://quas-modo.github.io/2022/10/18/cpp/Lecture08-%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/</guid>
+            <title>Lecture08-数组和指针</title>
+            <link>https://quas-modo.github.io/2022/10/18/cpp/Lecture08-%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+            <pubDate>Tue, 18 Oct 2022 19:53:25 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;一维数组、指针的指针、RAII、union、函数指针&lt;br /&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;lecture08-数组和指针&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture08-数组和指针&#34;&gt;#&lt;/a&gt; Lecture08 - 数组和指针&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011193356316.png&#34; alt=&#34;image-20221011193356316&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;数组&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数组&#34;&gt;#&lt;/a&gt; 数组&lt;/h2&gt;
+&lt;h3 id=&#34;特征&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#特征&#34;&gt;#&lt;/a&gt; 特征&lt;/h3&gt;
+&lt;p&gt;相同类型，连续存储&lt;/p&gt;
+&lt;h3 id=&#34;一维数组&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一维数组&#34;&gt;#&lt;/a&gt; 一维数组&lt;/h3&gt;
+&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvaW1hZ2UtMjAyMjEwMTExOTM2MjIxNjQucG5n&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011193622164.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20221011193622164&amp;quot; style=&amp;quot;zoom:25%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;p&gt;函数接口中，数组的长度需要显式的表达。即需要 f (int A [], int n); 其中，n 表示数组的长度。&lt;/p&gt;
+&lt;p&gt;int a[6];&lt;/p&gt;
+&lt;p&gt;a 是数组类型。&lt;/p&gt;
+&lt;p&gt;f (a) 中的 a 是地址，因为在函数中，a 变成了右值，进行了隐式的类型转换。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011194122070.png&#34; alt=&#34;image-20221011194120299&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;第二种写法是错误的&lt;br /&gt;
+栈中未初始化填充 0xCC，对应中文的烫（在 vscode 中）&lt;br /&gt;
+堆中未初始化填充 0xCSD，对应中文的屯（在 vscode 中)&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011194633177.png&#34; alt=&#34;image-20221011194633177&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;工具&lt;br /&gt;
+ / RTC1&lt;br /&gt;
+mallopt&lt;br /&gt;
+valgrind ——Valgrind 基于仿真方式对程序进行调试，它先于应用程序获取实际处理器的控制权，并在实际处理器的基础上仿真一个虚拟处理器，并使应用程序运行于这个虚拟处理器之上，从而对应用程序的运行进行监视。&lt;/p&gt;
+&lt;p&gt;debug 文件中有符号表，release 中没有。&lt;/p&gt;
+&lt;h2 id=&#34;指针&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#指针&#34;&gt;#&lt;/a&gt; 指针&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011194756090.png&#34; alt=&#34;image-20221011194756090&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;pointer literal&lt;br /&gt;
+ 指针定义为 null，保护内存。&lt;br /&gt;
+（void *）0 —— 未定义的 datatype，无法对其做解地址操作。&lt;br /&gt;
+（void *）可作为任何类型的接口。&lt;br /&gt;
+double * q;&lt;br /&gt;
+Int * p;&lt;br /&gt;
+Void * v;&lt;br /&gt;
+V = q;&lt;br /&gt;
+V = p;&lt;br /&gt;
+ 但是 q 和 p 不能赋值为 v。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011194829940.png&#34; alt=&#34;image-20221011194829940&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;void memset(void *p, int n){&lt;br /&gt;
+// 内存清空&lt;br /&gt;
+ char * q = (char &lt;em&gt;)p;&lt;br /&gt;
+For(int I = 0; i &amp;lt; n; i++)&lt;br /&gt;
+{&lt;br /&gt;
+&lt;em&gt;(q+i) = 0;	&lt;br /&gt;
+}&lt;br /&gt;
+}&lt;br /&gt;
+Int a[100];&lt;br /&gt;
+A b;&lt;br /&gt;
+memset(&amp;amp;a[0], 100&lt;/em&gt;4);&lt;br /&gt;
+Memset(&amp;amp;b, );&lt;br /&gt;
+ 可以传递进 int&lt;/em&gt; 类型，也可以传入 A 类型。&lt;/p&gt;
+&lt;h2 id=&#34;指针与数组&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#指针与数组&#34;&gt;#&lt;/a&gt; 指针与数组&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5CQUAS%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221011195335516.png&#34; alt=&#34;image-20221011195335516&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;a 是一个 const，不能用 a++ 的方式改变访问&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011195419924.png&#34; alt=&#34;image-20221011195419924&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;P [i] 用指针实现动态数组&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011195822103.png&#34; alt=&#34;image-20221011195822103&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011195702881.png&#34; alt=&#34;image-20221011195702881&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;多维数组&lt;/p&gt;
+&lt;p&gt;关注不同的定义方式&lt;/p&gt;
+&lt;p&gt;using T = int [2];&lt;/p&gt;
+&lt;p&gt;ragged array——java 中并非整齐排列，可以锯齿排列。cpp 中可以自己实现。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011195308401.png&#34; alt=&#34;image-20221011195308401&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221012000657463.png&#34; alt=&#34;image-20221012000657463&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;关于如何理解取 a00 的地址和取 a0 的地址一样，并且取 q+1 的地址仍然是它自身，我的理解是，编译器识别的它的类型不一样，因此解一个指针的指针仍然是一个指针，也不存在另外存储了一个指针数组来表示。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011195953872.png&#34; alt=&#34;image-20221011195953872&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011200024133.png&#34; alt=&#34;image-20221011200024133&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;cpp 是允许数组越界的&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011200038340.png&#34; alt=&#34;image-20221011200038340&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;在传入参数的时候，先进行升维的操作，在打印地址时，再进行降维的操作。&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 思考为什么地址是这样的&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cout &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;a&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;j &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34; :&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; a&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;j&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;  &#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cout &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;a&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;j&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;k &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34; :&#34;&lt;/span&gt;  &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; a&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;j&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;k&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;  &#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 思考如何不另外计数完成每隔四个就打印一次 endl&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;j&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      cout &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;j&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;k&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      cout &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221011200055610.png&#34; alt=&#34;image-20221011200055610&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;C&lt;br /&gt;
+int *p = (int &lt;em&gt;) malloc(sizeof(int) * 8);&lt;br /&gt;
+ 因为 malloc 为 void&lt;/em&gt;，需要定义 int * 来使用。&lt;/p&gt;
+&lt;p&gt;Cpp&lt;br /&gt;
+Int *p1= new int;&lt;br /&gt;
+Int *q1 = new int[8];&lt;/p&gt;
+&lt;p&gt;用 new 的时候，会强制类型转换，并一个一个调用构造函数进行构造。因为 new 知道新建的类型，但是 malloc 不知道新建的类型，无法进行调用。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018140518525.png&#34; alt=&#34;image-20221018140518525&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;delete [] 另外存储 4byte 记录空间的大小（如果是 32 位存储）&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;p &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i&lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;p&lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;//delete 的时候，无法删除且会造成归还的错误&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; p1 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; p&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 解决方案是另外开一个指针进行遍历&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;RAII&lt;/p&gt;
+&lt;p&gt;Resource Acquisition Is Initialization&lt;/p&gt;
+&lt;p&gt;RAII，也称为 “资源获取就是初始化”，是&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS9jJTJCJTJCLzk5MjcyP2Zyb21Nb2R1bGU9bGVtbWFfaW5saW5r&#34;&gt; c++&lt;/span&gt; 等编程语言常用的管理资源、避免内存泄露的方法。它保证在任何情况下，使用对象时先构造对象，最后析构对象。&lt;/p&gt;
+&lt;p&gt;compiler 帮助程序员管理资源，防止资源泄露。~auto_ptr ()&lt;/p&gt;
+&lt;p&gt;类中能够同时使用 operator * 和 operato -&amp;gt;&lt;/p&gt;
+&lt;p&gt;shared_ptr 的表示方式&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018142936362.png&#34; alt=&#34;image-20221018142936362&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018142519655.png&#34; alt=&#34;image-20221018142519655&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;struct B sizeof 不是 7，需要对齐&lt;/p&gt;
+&lt;p&gt;也许是 12，一一对齐&lt;/p&gt;
+&lt;p&gt;也许是 8【char b; short c; int a】变量的顺序也会影响内存的存放方式&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018143235958.png&#34; alt=&#34;image-20221018143235958&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Union 和 Struct 的区别是可以共享存储空间。&lt;/p&gt;
+&lt;p&gt;对于 Struct，三个赋值都有效；对于 Union 来说，只有最后一个语句有效【共享空间】&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018143001639.png&#34; alt=&#34;image-20221018143001639&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018143334428.png&#34; alt=&#34;image-20221018143334428&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;原本各开 100 个空间，耗费资源，正好时候 union 的定义【只需要 Line\Rectangle\Ellipse 中的一种】。&lt;/p&gt;
+&lt;p&gt;但是值存储 Line 或 Rectangle 或 Ellipse 不能知道是哪种，需要 tag，且每个类型都需要 tag，不然 tag 会覆盖掉别的数据。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018143902650.png&#34; alt=&#34;image-20221018143902650&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;不止 OO 中存在多态性，cpp 也可以通过 union 实现多态。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018143952177.png&#34; alt=&#34;image-20221018143952177&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018144156718.png&#34; alt=&#34;image-20221018144156718&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Struct Programming 也可以去实现 OO 的功能&lt;/p&gt;
+&lt;p&gt;OO 实际上是编译器帮助做了一些工作。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://quas-modo.github.io/2022/10/18/COA/Lecture06-%E5%8A%A0%E5%87%8F%E6%B3%95%E5%8D%81%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA/</guid>
+            <title>Lecture06-加减法十进制表示</title>
+            <link>https://quas-modo.github.io/2022/10/18/COA/Lecture06-%E5%8A%A0%E5%87%8F%E6%B3%95%E5%8D%81%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+            <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+            <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
+            <pubDate>Tue, 18 Oct 2022 19:50:47 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;十进制表示的加减法&lt;br /&gt;
+ &amp;lt;!--more&amp;gt;&lt;/p&gt;
+&lt;h1 id=&#34;lecture06-加减法十进制数表示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture06-加减法十进制数表示&#34;&gt;#&lt;/a&gt; Lecture06 加减法十进制数表示&lt;/h1&gt;
+&lt;h2 id=&#34;回顾二进制编码的十进制表示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#回顾二进制编码的十进制表示&#34;&gt;#&lt;/a&gt; 回顾：二进制编码的十进制表示&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018161625312.png&#34; alt=&#34;image-20221018161625312&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;回顾补码表示整数的加减法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#回顾补码表示整数的加减法&#34;&gt;#&lt;/a&gt; 回顾：补码表示整数的加减法&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018161749133.png&#34; alt=&#34;image-20221018161749133&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;加法溢出判定&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#加法溢出判定&#34;&gt;#&lt;/a&gt; 加法溢出判定&lt;/h3&gt;
+&lt;p&gt;正负 进位&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018162304448.png&#34; alt=&#34;image-20221018162304448&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;加法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#加法&#34;&gt;#&lt;/a&gt; 加法&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018162440184.png&#34; alt=&#34;image-20221018162440184&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;25-31-56&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#25-31-56&#34;&gt;#&lt;/a&gt; 25 + 31 = 56&lt;/h3&gt;
+&lt;p&gt;用 0010 表示 2，用 0101 表示 5&lt;/p&gt;
+&lt;p&gt;用 0011 表示 3，用 0001 表示 1&lt;/p&gt;
+&lt;p&gt;个位数和十位数的和均小于 9&lt;/p&gt;
+&lt;h3 id=&#34;28-39-67&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#28-39-67&#34;&gt;#&lt;/a&gt; 28 + 39 = 67&lt;/h3&gt;
+&lt;p&gt;0001 要再加上一个 0110 等于 0111&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;为什么加上 6？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;二进制 10000 的第 5 位表示 16，但在十进制中实际上表示的是 10，少进了 6，所以在个位还需要再加上 6。&lt;/p&gt;
+&lt;h3 id=&#34;&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#&#34;&gt;#&lt;/a&gt; &lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018163500884.png&#34; alt=&#34;image-20221018163500884&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;左边表格分别表示 10-19 的数，右边为实际的硬件实现。&lt;/p&gt;
+&lt;p&gt;C4 表达式的意思是，如果（S1 和 S3 为 1）或者（S2 和 S3 为 1）则肯定大于 10，若 C4 * 为 1，则肯定大于 16。【公式中的 S1、2、3 应该有星号）&lt;/p&gt;
+&lt;p&gt;C4 作为输出的同时，也对 S2 和 S1 的真正输出产生了影响。&lt;/p&gt;
+&lt;h2 id=&#34;减法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#减法&#34;&gt;#&lt;/a&gt; 减法&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018164311877.png&#34; alt=&#34;image-20221018164311877&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;9-x 不会出现借位的情况。&lt;/p&gt;
+&lt;h3 id=&#34;反转数字&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#反转数字&#34;&gt;#&lt;/a&gt; “反转” 数字：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;按位反转，并添加 &lt;code&gt;1010&lt;/code&gt; （10）&lt;/li&gt;
+&lt;li&gt;添加 &lt;code&gt;0110&lt;/code&gt; （6），并按位反转&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018190527126.png&#34; alt=&#34;image-20221018190527126&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;结果调整&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#结果调整&#34;&gt;#&lt;/a&gt; 结果调整&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018164745084.png&#34; alt=&#34;image-20221018164745084&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;309-125184有进位舍弃进位&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#309-125184有进位舍弃进位&#34;&gt;#&lt;/a&gt; 309-125=184 (有进位，舍弃进位)&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018194656730.png&#34; alt=&#34;image-20221018194656730&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;当得到的结果在 &lt;code&gt;10~19&lt;/code&gt;  时，都需要进行修正。 &lt;code&gt;10~15&lt;/code&gt;  时，加上 6 进行修正。&lt;/p&gt;
+&lt;p&gt;例如，1110 + 0110 进 1 得到 0100. 即 13+6-16 (-10) 得到 3。&lt;/p&gt;
+&lt;p&gt;有进位相当于，a-b 的时候 a&amp;gt;b，所以 a-b = a + (999 - b) + 1 - 1000。&lt;/p&gt;
+&lt;h4 id=&#34;125-309-184无进位取反加1符号位设为负&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#125-309-184无进位取反加1符号位设为负&#34;&gt;#&lt;/a&gt; 125-309 = -184（无进位，取反加 1，符号位设为负）&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018194641391.png&#34; alt=&#34;image-20221018194641391&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;相当于此时 a &amp;lt; b&lt;/p&gt;
+&lt;p&gt;a - b =  -[1000 - [a + (999 - b) + 1]]&lt;/p&gt;
+&lt;p&gt;【以上部分可参考 Lecture05 中，尾数的原码加法示例，是一样的道理】&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018164912432.png&#34; alt=&#34;image-20221018164912432&#34; /&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://quas-modo.github.io/2022/10/15/thoughts/to-the-moon/</guid>
             <title>to the moon</title>
@@ -56,7 +227,7 @@ River：“真老土。”&lt;/p&gt;
             <pubDate>Fri, 14 Oct 2022 10:57:07 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;浮点数的加减乘除。&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;lecture08-浮点数运算&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture08-浮点数运算&#34;&gt;#&lt;/a&gt; Lecture08 - 浮点数运算&lt;/h1&gt;
+&lt;h1 id=&#34;lecture05-浮点数运算&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture05-浮点数运算&#34;&gt;#&lt;/a&gt; Lecture05 - 浮点数运算&lt;/h1&gt;
 &lt;h2 id=&#34;回顾&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#回顾&#34;&gt;#&lt;/a&gt; 回顾&lt;/h2&gt;
 &lt;p&gt;记忆 1+8+23 的（符号位移码原码）&lt;/p&gt;
 &lt;p&gt;记忆各种情况对应的表示&lt;/p&gt;
@@ -98,6 +269,7 @@ River：“真老土。”&lt;/p&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;异常&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#异常&#34;&gt;#&lt;/a&gt; 异常&lt;/h3&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221014093204887.png&#34; alt=&#34;image-20221014093204887&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;关于&lt;strong&gt;数太小&lt;/strong&gt;阶下溢的问题，在 cpp 中，如果是单精度浮点数，会用非规格化数表示，如果是双精度浮点数，会直接用 0 表示。&lt;/p&gt;
 &lt;h3 id=&#34;原码的加法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#原码的加法&#34;&gt;#&lt;/a&gt; 原码的加法&lt;/h3&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221013165531300.png&#34; alt=&#34;image-20221013165531300&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221013165721396.png&#34; alt=&#34;image-20221013165721396&#34; /&gt;&lt;/p&gt;
@@ -145,8 +317,23 @@ River：“真老土。”&lt;/p&gt;
 &lt;p&gt;x == (int)(float) x&lt;/p&gt;
 &lt;p&gt;int 型有 32 位，但是 float 精度只能保存 24 位，会有精度的损失。&lt;/p&gt;
 &lt;p&gt;x * x &amp;gt;=  0 否&lt;/p&gt;
-&lt;p&gt;(D + F)  - D == F&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(D + F)  - D == F 什么时候不成立？&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;右边计算出来为 double 型，左边是 float&lt;/p&gt;
+&lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;float&lt;/span&gt; f &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1.0f&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; i&lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;double&lt;/span&gt; d &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;pow&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;d &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; f &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; d&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; f&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        cout &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; endl&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;对于此例情况，当&lt;strong&gt; i 大于 53 或等于 - 53&lt;/strong&gt; 时，会输出。&lt;/p&gt;
+&lt;p&gt;因为此时 f 相对于 d 较小，相当于 0。&lt;/p&gt;
+&lt;p&gt;补充：双精度 64（1+11+52）小数部分有 &lt;code&gt;52&lt;/code&gt;  位。别的情况，i 会有不同的值对应。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;i 大于 53 的情况&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018190250710.png&#34; alt=&#34;image-20221018190250710&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;舍入位虽然是 10，但前置位已经是 0（偶数），因此不进位，所以有精度的丢失。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;i 等于 - 53 的情况&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018190243583.png&#34; alt=&#34;image-20221018190243583&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;​		舍入位是 10，前置位是 1，因此要进位，从而造成了误差。&lt;/p&gt;
 &lt;p&gt;只要有精度的丢失，就是 “否”&lt;/p&gt;
  ]]></description>
         </item>
@@ -2229,313 +2416,6 @@ Bulter Lampson—— 在一个时刻做一件事，将他做好。一个接口�
 &lt;h4 id=&#34;拥塞避免&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拥塞避免&#34;&gt;#&lt;/a&gt; 拥塞避免&lt;/h4&gt;
 &lt;p&gt;线性增长，无论何时到达一个新的确认，就将 cwnd 增加一个 MSS 字节&lt;/p&gt;
 &lt;h4 id=&#34;快速恢复&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#快速恢复&#34;&gt;#&lt;/a&gt; 快速恢复&lt;/h4&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2022/09/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B/Lecture02-%E5%BA%94%E7%94%A8%E5%B1%82/</guid>
-            <title>Lecture02-应用层</title>
-            <link>https://quas-modo.github.io/2022/09/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B/Lecture02-%E5%BA%94%E7%94%A8%E5%B1%82/</link>
-            <category term="专业书籍" scheme="https://quas-modo.github.io/categories/%E4%B8%93%E4%B8%9A%E4%B9%A6%E7%B1%8D/" />
-            <category term="计算机网络自顶向下" scheme="https://quas-modo.github.io/categories/%E4%B8%93%E4%B8%9A%E4%B9%A6%E7%B1%8D/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B/" />
-            <category term="计网" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BD%91/" />
-            <pubDate>Sun, 11 Sep 2022 00:20:37 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;TCP 和 UDP 编程相关总结暂缺。&lt;br /&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;第二章-应用层&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第二章-应用层&#34;&gt;#&lt;/a&gt; 第二章 应用层&lt;/h1&gt;
-&lt;h2 id=&#34;应用层协议原理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应用层协议原理&#34;&gt;#&lt;/a&gt; 应用层协议原理&lt;/h2&gt;
-&lt;h3 id=&#34;网络应用程序体系结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络应用程序体系结构&#34;&gt;#&lt;/a&gt; 网络应用程序体系结构&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;客户 - 服务器体系结构&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;P2P 体系结构&lt;/p&gt;
-&lt;p&gt;主机为对等方，具有自扩展性&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;C/S 和 P2P 体系结构的混合体&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;进程通信&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#进程通信&#34;&gt;#&lt;/a&gt; 进程通信&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;客户端与服务器的进程&lt;/p&gt;
-&lt;p&gt;发起通信的进程被识别为客户，在会话开始时等待联系的进程是服务器&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;进程与计算机网络之间的接口&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;套接字&lt;/strong&gt;接口，也成为应用程序编程接口，是同一台主机内应用层与运输层直接的接口。&lt;/p&gt;
-&lt;p&gt;层间接口必须要携带：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;传什么（要传输的报文）&lt;/li&gt;
-&lt;li&gt;谁传的（IP + 端口号）&lt;/li&gt;
-&lt;li&gt;传给谁（IP + 端口号）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;进程寻址&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;TCP 四元组（源 IP、源端口号、目标 IP、目标端口号）&lt;/li&gt;
-&lt;li&gt;UDP 二元组&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;可供应用程序使用的运输服务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可供应用程序使用的运输服务&#34;&gt;#&lt;/a&gt; 可供应用程序使用的运输服务&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;可靠的数据传输&lt;/li&gt;
-&lt;li&gt;吞吐量&lt;/li&gt;
-&lt;li&gt;定时&lt;/li&gt;
-&lt;li&gt;安全性&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;因特网提供的运输服务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#因特网提供的运输服务&#34;&gt;#&lt;/a&gt; 因特网提供的运输服务&lt;/h3&gt;
-&lt;h4 id=&#34;tcp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp&#34;&gt;#&lt;/a&gt; TCP&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;面向连接的服务&lt;/li&gt;
-&lt;li&gt;可靠的数据传送服务&lt;/li&gt;
-&lt;li&gt;拥塞控制&lt;/li&gt;
-&lt;li&gt;流量控制&lt;/li&gt;
-&lt;li&gt;SSL 加密&lt;/li&gt;
-&lt;li&gt;不保证吞吐量和定时&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;udp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#udp&#34;&gt;#&lt;/a&gt; UDP&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;可以区分进程，无需建立链接&lt;/li&gt;
-&lt;li&gt;不可靠&lt;/li&gt;
-&lt;li&gt;没有拥塞、流量控制，不保证吞吐量和定时&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;web和http&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web和http&#34;&gt;#&lt;/a&gt; Web 和 HTTP&lt;/h2&gt;
-&lt;h3 id=&#34;http概况&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http概况&#34;&gt;#&lt;/a&gt; HTTP 概况&lt;/h3&gt;
-&lt;p&gt;HyperText Transfer Protocal, HTTP 超文本传输协议&lt;/p&gt;
-&lt;p&gt;HTTP 定义了 Web 客户向 Web 服务器请求 Web 页面的方式，以及服务器向客户传送 Web 页面的方式。&lt;/p&gt;
-&lt;p&gt;HTTP 使用 TCP 作为它的支撑运输协议。&lt;/p&gt;
-&lt;p&gt;HTTP 是一个无状态协议，因为 HTTP 不保存关于客户的任何信息。&lt;/p&gt;
-&lt;h3 id=&#34;非持续性连接和持续连接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#非持续性连接和持续连接&#34;&gt;#&lt;/a&gt; 非持续性连接和持续连接&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;非持续连接：每个请求 / 相应对是经一个单独的 TCP 连接发送，HTTP/1.0 使用非持久连接&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;持续连接：所有的请求及其相应经相同的 TCP 连接发送，HTTP/1.1 默认使用持久连接&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;非流水方式的持久 HTTP（客户端在收到前一个请求的相应之后再发出下一个请求）&lt;/li&gt;
-&lt;li&gt;流水方式的持久 HTTP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;http报文格式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#http报文格式&#34;&gt;#&lt;/a&gt; HTTP 报文格式&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;HTTP 请求报文
-&lt;ul&gt;
-&lt;li&gt;请求行&lt;/li&gt;
-&lt;li&gt;首部行&lt;/li&gt;
-&lt;li&gt;空行&lt;/li&gt;
-&lt;li&gt;实体体&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;HTTP 响应报文
-&lt;ul&gt;
-&lt;li&gt;状态行&lt;/li&gt;
-&lt;li&gt;首部行&lt;/li&gt;
-&lt;li&gt;空行&lt;/li&gt;
-&lt;li&gt;实体体&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;cookie&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cookie&#34;&gt;#&lt;/a&gt; Cookie&lt;/h3&gt;
-&lt;p&gt;提高 Web 服务器的性能，希望把内容和用户身份联系起来。&lt;/p&gt;
-&lt;p&gt;cookie 的技术有 4 个组件：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;在 HTTP 响应报文中有一个 cookie 首部行&lt;/li&gt;
-&lt;li&gt;在 HTTP 请求报文中有一个 cookie 的首部行&lt;/li&gt;
-&lt;li&gt;在用户端系统中存有 cookie 组件，并由用户的浏览器进行管理&lt;/li&gt;
-&lt;li&gt;位于 Web 站点的一个后端数据库&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;web缓存&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web缓存&#34;&gt;#&lt;/a&gt; Web 缓存&lt;/h3&gt;
-&lt;p&gt;web 缓存器也叫代理服务器&lt;/p&gt;
-&lt;h3 id=&#34;get方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#get方法&#34;&gt;#&lt;/a&gt; Get 方法&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;缓存是为了性能，清除是为了更新&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;因特网中的电子邮件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#因特网中的电子邮件&#34;&gt;#&lt;/a&gt; 因特网中的电子邮件&lt;/h2&gt;
-&lt;p&gt;SMTP&lt;/p&gt;
-&lt;p&gt;POP3 - 本地管理文件夹&lt;/p&gt;
-&lt;p&gt;IMAP - 远程管理文件夹&lt;/p&gt;
-&lt;h2 id=&#34;dns因特网的目录服务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dns因特网的目录服务&#34;&gt;#&lt;/a&gt; DNS：因特网的目录服务&lt;/h2&gt;
-&lt;p&gt;DNS - Domain Name System 域名系统&lt;/p&gt;
-&lt;p&gt;DNS 协议运行在 UDP 之上，使用 53 号端口。&lt;/p&gt;
-&lt;h3 id=&#34;目的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#目的&#34;&gt;#&lt;/a&gt; 目的&lt;/h3&gt;
-&lt;p&gt;实现域名和 IP 地址的转换&lt;/p&gt;
-&lt;p&gt;主机别名&lt;/p&gt;
-&lt;p&gt;邮件服务器别名&lt;/p&gt;
-&lt;p&gt;负载分配&lt;/p&gt;
-&lt;h3 id=&#34;集中式设计&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#集中式设计&#34;&gt;#&lt;/a&gt; 集中式设计&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;单点故障&lt;/li&gt;
-&lt;li&gt;通信容量&lt;/li&gt;
-&lt;li&gt;远距离的集中式数据库&lt;/li&gt;
-&lt;li&gt;维护&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;分布式-层次数据库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分布式-层次数据库&#34;&gt;#&lt;/a&gt; 分布式、层次数据库&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;根 DNS 服务器&lt;/li&gt;
-&lt;li&gt;顶级域 DNS 服务器&lt;/li&gt;
-&lt;li&gt;权威 DNS 服务器&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;域与物理划分无关，是逻辑的划分&lt;/p&gt;
-&lt;h3 id=&#34;查询&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查询&#34;&gt;#&lt;/a&gt; 查询&lt;/h3&gt;
-&lt;p&gt;迭代查询&lt;/p&gt;
-&lt;p&gt;递归查询&lt;/p&gt;
-&lt;h3 id=&#34;报文&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#报文&#34;&gt;#&lt;/a&gt; 报文&lt;/h3&gt;
-&lt;p&gt;DNS 查询和响应的报文格式相同&lt;/p&gt;
-&lt;h2 id=&#34;p2p文件分发&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#p2p文件分发&#34;&gt;#&lt;/a&gt; P2P 文件分发&lt;/h2&gt;
-&lt;p&gt;可扩展性好，随着用户数增加，最短分配时间上升得较慢&lt;/p&gt;
-&lt;p&gt;BitTorrent 是一种用于文件分发的流行的 P2P 协议，参与一个特定文件夹分发的所有对等方的集合被称为一个洪流。&lt;/p&gt;
-&lt;h3 id=&#34;最稀缺优先&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#最稀缺优先&#34;&gt;#&lt;/a&gt; 最稀缺优先&lt;/h3&gt;
-&lt;p&gt;首先请求最稀缺的块&lt;/p&gt;
-&lt;h3 id=&#34;一报还一报&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一报还一报&#34;&gt;#&lt;/a&gt; 一报还一报&lt;/h3&gt;
-&lt;p&gt;向给自己提供最大宽带的服务发送块&lt;/p&gt;
-&lt;p&gt;每个 30s，随机选择其他 peer 发送块&lt;/p&gt;
-&lt;h3 id=&#34;结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#结构&#34;&gt;#&lt;/a&gt; 结构&lt;/h3&gt;
-&lt;p&gt;集中&lt;/p&gt;
-&lt;p&gt;分散&lt;/p&gt;
-&lt;p&gt;半分散&lt;/p&gt;
-&lt;h2 id=&#34;视频流和内容分发网&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#视频流和内容分发网&#34;&gt;#&lt;/a&gt; 视频流和内容分发网&lt;/h2&gt;
-&lt;h3 id=&#34;dash&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dash&#34;&gt;#&lt;/a&gt; DASH&lt;/h3&gt;
-&lt;p&gt;Dynamic Adaptive Streaming over HTTP 经 HTTP 的动态适应性流&lt;/p&gt;
-&lt;p&gt;服务器：将视频文件分割成多个块，每个块独立存储，编码于不同码率，告示文件提供不同块的 URL&lt;/p&gt;
-&lt;p&gt;客户端：获取告示文件，测量服务器到客户端的带宽，选择合适的码率的编码块&lt;/p&gt;
-&lt;h3 id=&#34;内容分发网cdn&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内容分发网cdn&#34;&gt;#&lt;/a&gt; 内容分发网 CDN&lt;/h3&gt;
-&lt;p&gt;Content Distribution Network CDN&lt;/p&gt;
-&lt;p&gt;做一些 copy&lt;/p&gt;
-&lt;h2 id=&#34;套接字编程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#套接字编程&#34;&gt;#&lt;/a&gt; 套接字编程&lt;/h2&gt;
-&lt;h3 id=&#34;tcp编程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp编程&#34;&gt;#&lt;/a&gt; TCP 编程&lt;/h3&gt;
-&lt;h3 id=&#34;udp编程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#udp编程&#34;&gt;#&lt;/a&gt; UDP 编程&lt;/h3&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2022/09/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B/Lecture01/</guid>
-            <title>Lecture01</title>
-            <link>https://quas-modo.github.io/2022/09/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B/Lecture01/</link>
-            <category term="专业书籍" scheme="https://quas-modo.github.io/categories/%E4%B8%93%E4%B8%9A%E4%B9%A6%E7%B1%8D/" />
-            <category term="计算机网络自顶向下" scheme="https://quas-modo.github.io/categories/%E4%B8%93%E4%B8%9A%E4%B9%A6%E7%B1%8D/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B/" />
-            <category term="计网" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BD%91/" />
-            <pubDate>Fri, 09 Sep 2022 09:54:05 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;本系列参考中科大郑铨老师网课和《计算机网络：自顶向下》整理。&lt;/p&gt;
-&lt;p&gt;因为是听完课很久之后整理的，所以只整理了纲要（趴&lt;/p&gt;
-&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;第一章-概论&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第一章-概论&#34;&gt;#&lt;/a&gt; 第一章 概论&lt;/h1&gt;
-&lt;h2 id=&#34;什么是internet&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是internet&#34;&gt;#&lt;/a&gt; 什么是 Internet？&lt;/h2&gt;
-&lt;h3 id=&#34;从构成因特网的基本硬件和软件组件理解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#从构成因特网的基本硬件和软件组件理解&#34;&gt;#&lt;/a&gt; 从构成因特网的基本硬件和软件组件理解&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;节点&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;主机及其上运行的应用程序&lt;/li&gt;
-&lt;li&gt;路由器、交换机等网络交换设备&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;边&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;接入网链路：主机连接到互联网的链路&lt;/li&gt;
-&lt;li&gt;主干链路：路由器间的链路&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;协议&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;从服务角度-分布式应用提供服务的联网基础设施理解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#从服务角度-分布式应用提供服务的联网基础设施理解&#34;&gt;#&lt;/a&gt; 从服务角度、分布式应用提供服务的联网基础设施理解&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;使用通信设施进行通信的分布式应用&lt;/li&gt;
-&lt;li&gt;通信基础设施为 apps 提供编程接口（通信服务）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;什么是协议&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#什么是协议&#34;&gt;#&lt;/a&gt; 什么是协议？&lt;/h2&gt;
-&lt;p&gt;协议定义了在两个或多个通信实体之间交换的报文的&lt;strong&gt;格式和顺序&lt;/strong&gt;，以及报文发送和 / 或接收一条报文或其他事件所采取的&lt;strong&gt;动作&lt;/strong&gt;。&lt;/p&gt;
-&lt;h2 id=&#34;网络结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络结构&#34;&gt;#&lt;/a&gt; 网络结构&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;网络边缘&lt;/p&gt;
-&lt;p&gt;端系统&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;客户端 / 服务器模式&lt;/li&gt;
-&lt;li&gt;对等（peer-peer）模式&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;网络核心&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;电路交换&lt;/p&gt;
-&lt;p&gt;频分复用（FDM，Frequency-Division Multiplexing）和时分复用（TDM, Time-Division Multiplexing）&lt;/p&gt;
-&lt;p&gt;独享资源，不共享，用于电话，不适合计算机之间的通信&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;分组交换&lt;/p&gt;
-&lt;p&gt;储存和转发、时延（节点处理时延、排队时延、传输时延、传播时延）和分组丢失、转发表和路由选择协议&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;数据报网络&lt;/li&gt;
-&lt;li&gt;虚电路网络&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;接入网&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;家庭接入：DSL（数字用户线）、电缆、FTTH（光纤到户）、拨号和卫星&lt;/li&gt;
-&lt;li&gt;企业（和家庭）接入：以太网和 WiFi&lt;/li&gt;
-&lt;li&gt;广域无线接入：3G 和 LTE&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;物理媒体&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;导引型媒体
-&lt;ul&gt;
-&lt;li&gt;双绞铜线&lt;/li&gt;
-&lt;li&gt;同轴电缆&lt;/li&gt;
-&lt;li&gt;光纤&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;非导引型媒体
-&lt;ul&gt;
-&lt;li&gt;陆地无线电信道&lt;/li&gt;
-&lt;li&gt;卫星无线电信道&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;internet结构和isp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#internet结构和isp&#34;&gt;#&lt;/a&gt; Internet 结构和 ISP&lt;/h2&gt;
-&lt;p&gt;互联网络结构：网络的网络&lt;/p&gt;
-&lt;p&gt;端系统通过接入 ISPs（Internet Service Providers）连接到互联网中&lt;/p&gt;
-&lt;p&gt;因特网内容服务商（ICP, Internet Content Providers）会构建自己的网络&lt;/p&gt;
-&lt;h2 id=&#34;协议层次及其服务模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#协议层次及其服务模型&#34;&gt;#&lt;/a&gt; 协议层次及其服务模型&lt;/h2&gt;
-&lt;p&gt;上层依赖下层提供的服务，并创造新的服务和功能&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;应用层&lt;/p&gt;
-&lt;p&gt;为人类用户或者其他用户进程提供网络应用服务&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;运输层&lt;/p&gt;
-&lt;p&gt;主机和主机的数据传输&lt;/p&gt;
-&lt;p&gt;细分网络层的服务，进程到进程（port）&lt;/p&gt;
-&lt;p&gt;将不可靠的通信变成可靠的通信&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;网络层&lt;/p&gt;
-&lt;p&gt;为数据报从源到目的选择路由&lt;/p&gt;
-&lt;p&gt;主机主机之间的通信，端到端通信，不可靠&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;链路层&lt;/p&gt;
-&lt;p&gt;point to point 相邻网络节点间的数据传输&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;物理层&lt;/p&gt;
-&lt;p&gt;在线路上传送 bit&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
  ]]></description>
         </item>
     </channel>
