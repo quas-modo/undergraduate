@@ -8,7 +8,107 @@
     <author>
       <name>quas-modo</name>
     </author>
-    <updated>2022-10-18T11:50:47.000Z</updated>
+    <updated>2022-10-24T05:30:15.000Z</updated>
+    <entry>
+        <id>https://quas-modo.github.io/2022/10/24/COA/Lecture07-%E5%AD%98%E5%82%A8%E5%99%A8/</id>
+        <title>Lecture07-存储器</title>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/10/24/COA/Lecture07-%E5%AD%98%E5%82%A8%E5%99%A8/"/>
+        <content type="html">&lt;p&gt;存储器相关，聚焦于半导体存储器，主要分为读写存储器、只读存储器以及读为主的存储器。接着叙述芯片逻辑，以及芯片优化。&lt;/p&gt;
+&lt;h2 id=&#34;回顾存储器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#回顾存储器&#34;&gt;#&lt;/a&gt; 回顾：存储器&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221020163158122.png&#34; alt=&#34;image-20221020163158122&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;1Byte（字节） = 8 bit（比特）&lt;/p&gt;
+&lt;p&gt;1 字 可能是 4 字节，也可能是 8 字节。根据计算机是 32 位还是 64 位有所不同，不同计算机有不同的字长。&lt;/p&gt;
+&lt;h2 id=&#34;存储器层次结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#存储器层次结构&#34;&gt;#&lt;/a&gt; 存储器层次结构&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221021202852887.png&#34; alt=&#34;image-20221021202852887&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;半导体存储器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#半导体存储器&#34;&gt;#&lt;/a&gt; 半导体存储器&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024124316886.png&#34; alt=&#34;image-20221024124316886&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;半导体&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;位元 存储 1 位数据&lt;/p&gt;
+&lt;h3 id=&#34;半导体存储器类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#半导体存储器类型&#34;&gt;#&lt;/a&gt; 半导体存储器类型&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024124432370.png&#34; alt=&#34;image-20221024124432370&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;表中列出的而&lt;strong&gt;所有类型的存储器都是随机存取&lt;/strong&gt;的。&lt;/p&gt;
+&lt;p&gt;快闪 flash——U 盘是其中的一种。&lt;/p&gt;
+&lt;h3 id=&#34;读-写存储器随机存取存储器ram&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#读-写存储器随机存取存储器ram&#34;&gt;#&lt;/a&gt; 读 - 写存储器 —— 随机存取存储器 RAM&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024124536588.png&#34; alt=&#34;image-20221024124536588&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;RAM 的明显特征是，可以&lt;strong&gt;方便快捷&lt;/strong&gt;地从存储器读取数据和向存储器写入新数据，且读写操作都是通过使用&lt;strong&gt;电信号&lt;/strong&gt;来实现的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;易失&lt;/strong&gt; —— 必须持续供电，一旦断电，数据就会丢失。&lt;/p&gt;
+&lt;h4 id=&#34;sram-静态ram&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sram-静态ram&#34;&gt;#&lt;/a&gt; SRAM 静态 RAM&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024124554411.png&#34; alt=&#34;image-20221024124554411&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;CS 片送&lt;/p&gt;
+&lt;p&gt;RW 控制读写&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024124714978.png&#34; alt=&#34;image-20221024124714978&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;推导过程&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024130157726.png&#34; alt=&#34;image-20221024130157726&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;dram-动态ram&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dram-动态ram&#34;&gt;#&lt;/a&gt; DRAM 动态 RAM&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024124958784.png&#34; alt=&#34;image-20221024124958784&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;通过电容充电来存储数据。&lt;/p&gt;
+&lt;p&gt;电容器有漏电趋势，动态 RAM 需要周期地充电刷新来维持数据的存储。&lt;/p&gt;
+&lt;p&gt;动态一词就是在描述存储电荷丢失的趋势，即使电源一直在供电。&lt;/p&gt;
+&lt;h4 id=&#34;sram与dram的对比&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sram与dram的对比&#34;&gt;#&lt;/a&gt; SRAM 与 DRAM 的对比&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024125105338.png&#34; alt=&#34;image-20221024125105338&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;DRAM 密度高，价格便宜，趋向于满足大容量存储器的要求。但是 SRAM 更快。&lt;/p&gt;
+&lt;p&gt;SRAM 一般用于 cache 存储器（片上或者片外的）【CPU 中】，而 DRAM 则用于主存储器中。&lt;/p&gt;
+&lt;h3 id=&#34;只读存储器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#只读存储器&#34;&gt;#&lt;/a&gt; 只读存储器&lt;/h3&gt;
+&lt;h4 id=&#34;rom-只读存储器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rom-只读存储器&#34;&gt;#&lt;/a&gt; ROM 只读存储器&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024130516422.png&#34; alt=&#34;image-20221024130516422&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;问题补充：固化数据需要较大的固定成本，无论是制造一片或者复制上千片特殊的 ROM。但是可以通过批量生产降低单片芯片的成本。&lt;/p&gt;
+&lt;h4 id=&#34;可编程romprom&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可编程romprom&#34;&gt;#&lt;/a&gt; 可编程 ROM（PROM）&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024130821252.png&#34; alt=&#34;image-20221024130821252&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;需要少量的存储特定内容的 ROM 芯片，可以选择较为廉价的可编程 PROM&lt;/p&gt;
+&lt;p&gt;可由供应商或者用户在芯片出厂后写入一次、&lt;/p&gt;
+&lt;h3 id=&#34;主要进行读操作的存储器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#主要进行读操作的存储器&#34;&gt;#&lt;/a&gt; 主要进行读操作的存储器&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131021140.png&#34; alt=&#34;image-20221024131021140&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;eprom&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#eprom&#34;&gt;#&lt;/a&gt; EPROM&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131047438.png&#34; alt=&#34;image-20221024131047438&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;使芯片暴露在紫外线辐射下使所有的存储位元都被擦除，没有办法做到很精确，因此是芯片级的可擦除性。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131226634.png&#34; alt=&#34;image-20221024131226634&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;eeprom&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#eeprom&#34;&gt;#&lt;/a&gt; EEPROM&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131245626.png&#34; alt=&#34;image-20221024131245626&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;任何时候都可以写入，无需擦除原先内容，只更新寻址到的一个或多个字节。&lt;/p&gt;
+&lt;p&gt;将非易失性和数据修改灵活的优点结合起来。修改数据只需要使用常规的控制、地址和地址总线。&lt;/p&gt;
+&lt;h4 id=&#34;快闪存储器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#快闪存储器&#34;&gt;#&lt;/a&gt; 快闪存储器&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131457113.png&#34; alt=&#34;image-20221024131457113&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;NAND Flash 共用一条线 —— 外部存储器&lt;/p&gt;
+&lt;h3 id=&#34;各类rom对比&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#各类rom对比&#34;&gt;#&lt;/a&gt; 各类 ROM 对比&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131557564.png&#34; alt=&#34;image-20221024131557564&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;芯片逻辑&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#芯片逻辑&#34;&gt;#&lt;/a&gt; 芯片逻辑&lt;/h2&gt;
+&lt;h3 id=&#34;从位元到主存&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#从位元到主存&#34;&gt;#&lt;/a&gt; 从位元到主存&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131723140.png&#34; alt=&#34;image-20221024131723140&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131744592.png&#34; alt=&#34;image-20221024131744592&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131758270.png&#34; alt=&#34;image-20221024131758270&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131957375.png&#34; alt=&#34;image-20221024131957375&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024132007925.png&#34; alt=&#34;image-20221024132007925&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;如何寻址地址译码器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何寻址地址译码器&#34;&gt;#&lt;/a&gt; 如何寻址：地址译码器&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131851948.png&#34; alt=&#34;image-20221024131851948&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131815432.png&#34; alt=&#34;image-20221024131815432&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;DRAM 不用刷新，采用行列复用 —— 用 11 位分别计算出行地址和列地址进行访问， 因为 DRAM 的存储空间较大，且行列复用耗时较高，所以只在 DRAM 中使用。&lt;/p&gt;
+&lt;p&gt;SRAM 且没有 RAS（行地址选通）和 CAS（列地址选通）&lt;/p&gt;
+&lt;p&gt;WE 写允许&lt;/p&gt;
+&lt;p&gt;OE 输出允许&lt;/p&gt;
+&lt;h3 id=&#34;如何刷新&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何刷新&#34;&gt;#&lt;/a&gt; 如何刷新&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131911336.png&#34; alt=&#34;image-20221024131911336&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;集中式刷新会造成死区，影响使用，因此开发分散式刷新和异步刷新进行优化。&lt;/p&gt;
+&lt;h2 id=&#34;高级的dram架构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#高级的dram架构&#34;&gt;#&lt;/a&gt; 高级的 DRAM 架构&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024132123622.png&#34; alt=&#34;image-20221024132123622&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;同步dramsynchorounous-dram-sdram&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#同步dramsynchorounous-dram-sdram&#34;&gt;#&lt;/a&gt; 同步 DRAM (Synchorounous DRAM, SDRAM)&lt;/h3&gt;
+&lt;h3 id=&#34;双频率sdramdouble-data-rate-sdram&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#双频率sdramdouble-data-rate-sdram&#34;&gt;#&lt;/a&gt; 双频率 SDRAM (Double-Data-Rate SDRAM)&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024132312999.png&#34; alt=&#34;image-20221024132312999&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;SDRAM&lt;/p&gt;
+&lt;p&gt;需要做预充电&lt;/p&gt;
+&lt;p&gt;在时钟上升沿才能发数据&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024132326001.png&#34; alt=&#34;image-20221024132326001&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;DDR SDRAM&lt;/p&gt;
+&lt;p&gt;在时钟下升沿也可以发数据&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024132335364.png&#34; alt=&#34;image-20221024132335364&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;核心频率无法改变 —— 电容很难提升&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024132047639.png&#34; alt=&#34;image-20221024132047639&#34; /&gt;&lt;/p&gt;
+</content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
+        <updated>2022-10-24T05:30:15.000Z</updated>
+    </entry>
     <entry>
         <id>https://quas-modo.github.io/2022/10/18/COA/Lecture06-%E5%8A%A0%E5%87%8F%E6%B3%95%E5%8D%81%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA/</id>
         <title>Lecture06-加减法十进制表示</title>
