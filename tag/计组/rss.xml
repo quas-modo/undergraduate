@@ -20,11 +20,14 @@
             <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
             <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
             <pubDate>Mon, 24 Oct 2022 13:30:15 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;存储器相关，聚焦于半导体存储器，主要分为读写存储器、只读存储器以及读为主的存储器。接着叙述芯片逻辑，以及芯片优化。&lt;/p&gt;
+            <description><![CDATA[ &lt;p&gt;存储器相关，聚焦于半导体存储器，主要分为读写存储器、只读存储器以及读为主的存储器。接着叙述芯片逻辑，以及芯片优化。&lt;br /&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&#34;回顾存储器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#回顾存储器&#34;&gt;#&lt;/a&gt; 回顾：存储器&lt;/h2&gt;
+&lt;h2 id=&#34;回顾存储器-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#回顾存储器-2&#34;&gt;#&lt;/a&gt; 回顾：存储器&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221020163158122.png&#34; alt=&#34;image-20221020163158122&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;1Byte（字节） = 8 bit（比特）&lt;/p&gt;
 &lt;p&gt;1 字 可能是 4 字节，也可能是 8 字节。根据计算机是 32 位还是 64 位有所不同，不同计算机有不同的字长。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101171557660.png&#34; alt=&#34;image-20221101171557660&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;存储器层次结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#存储器层次结构&#34;&gt;#&lt;/a&gt; 存储器层次结构&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221021202852887.png&#34; alt=&#34;image-20221021202852887&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;半导体存储器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#半导体存储器&#34;&gt;#&lt;/a&gt; 半导体存储器&lt;/h2&gt;
@@ -73,6 +76,7 @@
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131245626.png&#34; alt=&#34;image-20221024131245626&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;任何时候都可以写入，无需擦除原先内容，只更新寻址到的一个或多个字节。&lt;/p&gt;
 &lt;p&gt;将非易失性和数据修改灵活的优点结合起来。修改数据只需要使用常规的控制、地址和地址总线。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;电写入，从 1 变成 0； 电擦除，从 0 变成 1。&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&#34;快闪存储器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#快闪存储器&#34;&gt;#&lt;/a&gt; 快闪存储器&lt;/h4&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131457113.png&#34; alt=&#34;image-20221024131457113&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;NAND Flash 共用一条线 —— 外部存储器&lt;/p&gt;
@@ -84,30 +88,43 @@
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131744592.png&#34; alt=&#34;image-20221024131744592&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131758270.png&#34; alt=&#34;image-20221024131758270&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131957375.png&#34; alt=&#34;image-20221024131957375&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;位扩展，从 1bit 增加到 8bit，需要增加 7 根线。&lt;/p&gt;
+&lt;p&gt;字扩展，从 16K 变成 64K，16K 需要 7 根线，64K 需要 8 根线【因为行列复用】，只需要增加一根线，就可以实现 16K 到 64K。&lt;/p&gt;
+&lt;p&gt;1K = 2 &lt;sup&gt;10&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;有多少位数据，就需要有多少根数据线。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101172926489.png&#34; alt=&#34;image-20221101172926489&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024132007925.png&#34; alt=&#34;image-20221024132007925&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;如何寻址地址译码器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何寻址地址译码器&#34;&gt;#&lt;/a&gt; 如何寻址：地址译码器&lt;/h3&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131851948.png&#34; alt=&#34;image-20221024131851948&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131815432.png&#34; alt=&#34;image-20221024131815432&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;DRAM 不用刷新，采用行列复用 —— 用 11 位分别计算出行地址和列地址进行访问， 因为 DRAM 的存储空间较大，且行列复用耗时较高，所以只在 DRAM 中使用。&lt;/p&gt;
-&lt;p&gt;SRAM 且没有 RAS（行地址选通）和 CAS（列地址选通）&lt;/p&gt;
+&lt;p&gt;SRAM 且没有 RAS（行地址选通）和 CAS（列地址选通），也没有数据输入输出缓冲器，SRAM 常作为缓存，需要更快的速度。&lt;/p&gt;
 &lt;p&gt;WE 写允许&lt;/p&gt;
 &lt;p&gt;OE 输出允许&lt;/p&gt;
 &lt;h3 id=&#34;如何刷新&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何刷新&#34;&gt;#&lt;/a&gt; 如何刷新&lt;/h3&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024131911336.png&#34; alt=&#34;image-20221024131911336&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;集中式刷新会造成死区，影响使用，因此开发分散式刷新和异步刷新进行优化。&lt;/p&gt;
+&lt;p&gt;译码阶段不需要进行缓存，每行的刷新相对独立，不需要按照顺序。&lt;/p&gt;
 &lt;h2 id=&#34;高级的dram架构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#高级的dram架构&#34;&gt;#&lt;/a&gt; 高级的 DRAM 架构&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024132123622.png&#34; alt=&#34;image-20221024132123622&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;同步dramsynchorounous-dram-sdram&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#同步dramsynchorounous-dram-sdram&#34;&gt;#&lt;/a&gt; 同步 DRAM (Synchorounous DRAM, SDRAM)&lt;/h3&gt;
 &lt;h3 id=&#34;双频率sdramdouble-data-rate-sdram&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#双频率sdramdouble-data-rate-sdram&#34;&gt;#&lt;/a&gt; 双频率 SDRAM (Double-Data-Rate SDRAM)&lt;/h3&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024132312999.png&#34; alt=&#34;image-20221024132312999&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;SDRAM&lt;/p&gt;
-&lt;p&gt;需要做预充电&lt;/p&gt;
+&lt;p&gt;在每一次行选之前，都需要做预充电&lt;/p&gt;
+&lt;p&gt;如果下一次仍然是同一行的数据，不需要行选。&lt;/p&gt;
 &lt;p&gt;在时钟上升沿才能发数据&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024132326001.png&#34; alt=&#34;image-20221024132326001&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;DDR SDRAM&lt;/p&gt;
 &lt;p&gt;在时钟下升沿也可以发数据&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024132335364.png&#34; alt=&#34;image-20221024132335364&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;核心频率无法改变 —— 电容很难提升&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101162647755.png&#34; alt=&#34;image-20221101162647755&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101162656519.png&#34; alt=&#34;image-20221101162656519&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;寄存器基本原理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#寄存器基本原理&#34;&gt;#&lt;/a&gt; 寄存器基本原理&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101164208668.png&#34; alt=&#34;image-20221101164208668&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;边沿 D 触发器，RS 锁存器以及增加了 input 和 clock（？&lt;/p&gt;
+&lt;p&gt;寄存器和 CPU 的时钟同步&lt;/p&gt;
 &lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024132047639.png&#34; alt=&#34;image-20221024132047639&#34; /&gt;&lt;/p&gt;
  ]]></description>
