@@ -10,8 +10,163 @@
         </author>
         <description>notes/thoughts/nonsense</description>
         <language>zh-CN</language>
-        <pubDate>Tue, 01 Nov 2022 20:42:02 +0800</pubDate>
-        <lastBuildDate>Tue, 01 Nov 2022 20:42:02 +0800</lastBuildDate>
+        <pubDate>Thu, 03 Nov 2022 21:03:21 +0800</pubDate>
+        <lastBuildDate>Thu, 03 Nov 2022 21:03:21 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://quas-modo.github.io/2022/11/03/COA/Lecture08-cache/</guid>
+            <title>Lecture08-cache</title>
+            <link>https://quas-modo.github.io/2022/11/03/COA/Lecture08-cache/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+            <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+            <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
+            <pubDate>Thu, 03 Nov 2022 21:03:21 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;cache 缓存器，解决内存墙问题，是主存部分的副本，设计要素有地址、容量、映射功能、替换算法、写策略、行大小、cache 数目。&lt;/p&gt;
+&lt;h1 id=&#34;lecture08-cache&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture08-cache&#34;&gt;#&lt;/a&gt; Lecture08-cache&lt;/h1&gt;
+&lt;h2 id=&#34;cache简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cache简介&#34;&gt;#&lt;/a&gt; cache 简介&lt;/h2&gt;
+&lt;h3 id=&#34;存储器层次结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#存储器层次结构&#34;&gt;#&lt;/a&gt; 存储器层次结构&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101164918401.png&#34; alt=&#34;image-20221101164918401&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;随着层次的下降，每位价格下降，容量增大，存取时间变长，处理器访问存储器的频率降低。&lt;/p&gt;
+&lt;p&gt;cache（高速缓存）存储器的目的是使存储器的速度逼近可用的最快存储器的速度。&lt;/p&gt;
+&lt;p&gt;多级 cache 一般标注为 L1、L2，通常由动态随机存取存储器（DRAM）构成。&lt;/p&gt;
+&lt;h3 id=&#34;cache存在的意义解决内存墙的问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cache存在的意义解决内存墙的问题&#34;&gt;#&lt;/a&gt; cache 存在的意义：解决内存墙的问题&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101165310897.png&#34; alt=&#34;image-20221101165310897&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101165325716.png&#34; alt=&#34;image-20221101165325716&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;cache的基本思路&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cache的基本思路&#34;&gt;#&lt;/a&gt; cache 的基本思路&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101164904882.png&#34; alt=&#34;image-20221101164904882&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;只是主存&lt;strong&gt;部分&lt;/strong&gt;信息的&lt;strong&gt;副本&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101170441990.png&#34; alt=&#34;image-20221101170441990&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;cache主存系统的结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cache主存系统的结构&#34;&gt;#&lt;/a&gt; cache / 主存系统的结构&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101205028927.png&#34; alt=&#34;image-20221101205028927&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;主存系统中 ——M 个块，每块有 K 个字&lt;/p&gt;
+&lt;p&gt;cache 中 ——m 个块，称作行【控制为 + 标记 + K 个字】&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;行的数量远远小于主存储器块的数目 m &amp;lt;&amp;lt; M&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101170954954.png&#34; alt=&#34;image-20221101170954954&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;传入地址 RA， 最后红线框处的两步为并行操作。&lt;/p&gt;
+&lt;h2 id=&#34;cache的工作流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cache的工作流程&#34;&gt;#&lt;/a&gt; cache 的工作流程&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101165017905.png&#34; alt=&#34;image-20221101165017905&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hit—— 传送的是&lt;strong&gt;字&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Miss—— 读入 cache 的是&lt;strong&gt;块&lt;/strong&gt;，传入 CPU 的是&lt;strong&gt;字&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题&#34;&gt;#&lt;/a&gt; 问题&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101165200894.png&#34; alt=&#34;image-20221101165200894&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;命中还是未命中&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#命中还是未命中&#34;&gt;#&lt;/a&gt; 命中还是未命中？&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101165513269.png&#34; alt=&#34;image-20221101165513269&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;CPU、cache、主存如何建立地址的一一对应关系？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;标记&lt;/strong&gt;是什么？&lt;/p&gt;
+&lt;h3 id=&#34;为什么从内存中读入一个块&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#为什么从内存中读入一个块&#34;&gt;#&lt;/a&gt; 为什么从内存中读入一个块？&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101165809967.png&#34; alt=&#34;image-20221101165809967&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101171223532.png&#34; alt=&#34;image-20221101171223532&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101171836956.png&#34; alt=&#34;image-20221101171836956&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101172138850.png&#34; alt=&#34;image-20221101172138850&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;利用空间局限性，所以把块传入 cache 当中。&lt;/p&gt;
+&lt;p&gt;块在 cache 中，则字在 cache 中。&lt;/p&gt;
+&lt;p&gt;标记和内存地址之间的关系？&lt;/p&gt;
+&lt;h3 id=&#34;使用cache需要更多的操作为什么还可以节省时间&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用cache需要更多的操作为什么还可以节省时间&#34;&gt;#&lt;/a&gt; 使用 cache 需要更多的操作，为什么还可以节省时间？&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101173524901.png&#34; alt=&#34;image-20221101173524901&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Tm 是未命中惩罚&lt;/p&gt;
+&lt;p&gt;两个式子都需要理解，下面的式子更方便做题。&lt;/p&gt;
+&lt;p&gt;降低 cache 的访问时间与提高命中率矛盾 —— 存的东西多，提高命中率，但是降低了 cache 的访问时间。&lt;/p&gt;
+&lt;h4 id=&#34;避免cache未命中提高命中率&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#避免cache未命中提高命中率&#34;&gt;#&lt;/a&gt; 避免 cache 未命中，提高命中率&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101173558232.png&#34; alt=&#34;image-20221101173558232&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;容量失效 —— 涉及映射规则和替代原则的问题&lt;/p&gt;
+&lt;p&gt;冲突失效 —— 例如直接映射中的冲突&lt;/p&gt;
+&lt;h2 id=&#34;cache的设计要素&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cache的设计要素&#34;&gt;#&lt;/a&gt; cache 的设计要素&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101173743177.png&#34; alt=&#34;image-20221101173743177&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;cache地址&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cache地址&#34;&gt;#&lt;/a&gt; cache 地址&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101174037678.png&#34; alt=&#34;image-20221101174037678&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;物理 cache 和逻辑 cache 的比较&lt;/p&gt;
+&lt;p&gt;逻辑 cache 访问速度快，但是需要 cache 的每一行增加额外的几位来标记与该地址相关的虚拟地址。&lt;/p&gt;
+&lt;h3 id=&#34;cache容量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cache容量&#34;&gt;#&lt;/a&gt; cache 容量&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101174233373.png&#34; alt=&#34;image-20221101174233373&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;1k 涨到 16k，命中率有明显的上升，可以解决一些容量失效的额问题，但是再往后，命中率的上升近乎达到峰值。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101174537594.png&#34; alt=&#34;image-20221101174537594&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101174552006.png&#34; alt=&#34;image-20221101174552006&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;映射功能&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#映射功能&#34;&gt;#&lt;/a&gt; 映射功能&lt;/h3&gt;
+&lt;h4 id=&#34;直接映射&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#直接映射&#34;&gt;#&lt;/a&gt; 直接映射&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101174930231.png&#34; alt=&#34;image-20221101174930231&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;左边的映射方式可能会造成容量失效的问题。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101175153621.png&#34; alt=&#34;image-20221101175153621&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;000H 和 080H 对应一个 cache 的行，每隔 8 个就会共用一个 cache 的行。&lt;/p&gt;
+&lt;p&gt;稍微真实一点的示例，一个块里面有 16 个字，每个地址差 10H（即为 16）。&lt;/p&gt;
+&lt;p&gt;H 是 16 进制的意思。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101175330724.png&#34; alt=&#34;image-20221101175330724&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;M = 主存的块数&lt;/p&gt;
+&lt;p&gt;i = cache 行号（在 cache 中对应的行数）&lt;/p&gt;
+&lt;p&gt;j = 主存储器的块号&lt;/p&gt;
+&lt;p&gt;C = cache 的行数（cache 总共的行数）&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101210831620.png&#34; alt=&#34;image-20221101210831620&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101175648891.png&#34; alt=&#34;image-20221101175648891&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101213351613.png&#34; alt=&#34;image-20221101213351613&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101213323009.png&#34; alt=&#34;image-20221101213323009&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;全相联映射关联映射&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#全相联映射关联映射&#34;&gt;#&lt;/a&gt; 全相联映射（关联映射）&lt;/h4&gt;
+&lt;p&gt;标记域 + 字域（s+w）位，cache 中的行号不由地址格式决定&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103162237911.png&#34; alt=&#34;image-20221103162237911&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221101213419743.png&#34; alt=&#34;image-20221101213419743&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103163021051.png&#34; alt=&#34;image-20221103163021051&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103163033660.png&#34; alt=&#34;image-20221103163033660&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;组关联映射&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组关联映射&#34;&gt;#&lt;/a&gt; 组关联映射&lt;/h4&gt;
+&lt;p&gt;折中方法，体现了直接映射和全相联映射的优点，又避免了两者的缺点。&lt;/p&gt;
+&lt;p&gt;标记 + 组（v = 2 &lt;sup&gt;d&lt;/sup&gt;）+ 字（块大小 ）。&lt;/p&gt;
+&lt;p&gt;一组中有 K 行。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103163817034.png&#34; alt=&#34;image-20221103163817034&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103163951991.png&#34; alt=&#34;image-20221103163951991&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103164015137.png&#34; alt=&#34;image-20221103164015137&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103164147269.png&#34; alt=&#34;image-20221103164147269&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;小容量适合全关联映射&lt;/p&gt;
+&lt;p&gt;大容量适合直接映射&lt;/p&gt;
+&lt;p&gt;K 路组关联映射处于两者之间&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103172751908.png&#34; alt=&#34;image-20221103172751908&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103172808723.png&#34; alt=&#34;image-20221103172808723&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103172844027.png&#34; alt=&#34;image-20221103172844027&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;两个映射到同一 cache 组的块不可能具有相同的标记数。&lt;/p&gt;
+&lt;p&gt;每组两行 (v = m/2, k = 2) 是最常用的组相联结构，与直接映射相比，它明显地提高了命中率。&lt;/p&gt;
+&lt;h4 id=&#34;三种映射方式比较&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三种映射方式比较&#34;&gt;#&lt;/a&gt; 三种映射方式比较&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103164308172.png&#34; alt=&#34;image-20221103164308172&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103164318953.png&#34; alt=&#34;image-20221103164318953&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;关联度越低，命中率越低，判断是否命中的时间越短，标记所占额外空间开销越小。【关联度小，其他三个都小】&lt;/p&gt;
+&lt;h3 id=&#34;替换算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#替换算法&#34;&gt;#&lt;/a&gt; 替换算法&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103164810384.png&#34; alt=&#34;image-20221103164810384&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;常用的替换算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常用的替换算法&#34;&gt;#&lt;/a&gt; 常用的替换算法&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103165206857.png&#34; alt=&#34;image-20221103165206857&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;最近最少使用算法lru&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#最近最少使用算法lru&#34;&gt;#&lt;/a&gt; 最近最少使用算法 LRU&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103165310688.png&#34; alt=&#34;image-20221103165310688&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;USE 位为 0，不代表没有数据&lt;/p&gt;
+&lt;p&gt;由前文，可以看到，两路组关联映射是最常用的方法，这个实现是很有现实意义的举例。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103165326712.png&#34; alt=&#34;image-20221103165326712&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;最后一个 1110 的替换，LRU 最大为 3 的位置被替换，其他得未被访问的行的 LRU 自增 1。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BpYW9waWFvbGFuZ2h1YS9hcnRpY2xlL2RldGFpbHMvOTM4NDA0Mw==&#34;&gt;https://blog.csdn.net/piaopiaolanghua/article/details/9384043&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;为什么是 log (K!)—— 排列组合的问题&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103165404094.png&#34; alt=&#34;image-20221103165404094&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;LRU 的命中率可能没有想象中那么高&lt;/p&gt;
+&lt;h4 id=&#34;先进先出算法fifo&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#先进先出算法fifo&#34;&gt;#&lt;/a&gt; 先进先出算法 FIFO&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103165417670.png&#34; alt=&#34;image-20221103165417670&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103165432556.png&#34; alt=&#34;image-20221103165432556&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;最不经常使用算法lfu&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#最不经常使用算法lfu&#34;&gt;#&lt;/a&gt; 最不经常使用算法 LFU&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103165447852.png&#34; alt=&#34;image-20221103165447852&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;所需要的额外的硬件实现太多，不能够支持。&lt;/p&gt;
+&lt;h4 id=&#34;随机替换算法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#随机替换算法&#34;&gt;#&lt;/a&gt; 随机替换算法&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103165504705.png&#34; alt=&#34;image-20221103165504705&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;随机替换算法是一种基线【或者说底线】，随机替换算法在性能上只稍逊于使用其他替换算法，也就说明其他随机替换算法没有那么好。&lt;/p&gt;
+&lt;h3 id=&#34;写策略&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#写策略&#34;&gt;#&lt;/a&gt; 写策略&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103172948799.png&#34; alt=&#34;image-20221103172948799&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;缓存命中时的写策略写直达write-through&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#缓存命中时的写策略写直达write-through&#34;&gt;#&lt;/a&gt; 缓存命中时的写策略：写直达 Write Through&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103173037433.png&#34; alt=&#34;image-20221103173037433&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;缓存命中时的写策略写回法write-back&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#缓存命中时的写策略写回法write-back&#34;&gt;#&lt;/a&gt; 缓存命中时的写策略：写回法 Write Back&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103173052648.png&#34; alt=&#34;image-20221103173052648&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;缺点的解决方法：每次 I/O 模块存取的时候先和 cache 做一个同步&lt;/p&gt;
+&lt;h4 id=&#34;缓存未命中的写策略写不分配写分配&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#缓存未命中的写策略写不分配写分配&#34;&gt;#&lt;/a&gt; 缓存未命中的写策略：写不分配 / 写分配&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103173811474.png&#34; alt=&#34;image-20221103173811474&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;行大小&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#行大小&#34;&gt;#&lt;/a&gt; 行大小&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103174054409.png&#34; alt=&#34;image-20221103174054409&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;不是违反时间和空间关系，而是影响局部性（？&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103180046644.png&#34; alt=&#34;image-20221103180046644&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;cache数目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cache数目&#34;&gt;#&lt;/a&gt; cache 数目&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103174453746.png&#34; alt=&#34;image-20221103174453746&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;通常，会有片内和片外的 cache。片内 cache 为第一级（L1），外部 cache 为第二级（L2）。L2cache 大小至少为 L1cache 大小的两倍时，才对提高总命中率有明显的作用。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103174504972.png&#34; alt=&#34;image-20221103174504972&#34; /&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://quas-modo.github.io/2022/11/01/cpp/Lecture09-%E6%8C%87%E9%92%88/</guid>
             <title>Lecture09-指针</title>
@@ -2538,90 +2693,6 @@ Bulter Lampson—— 在一个时刻做一件事，将他做好。一个接口�
 &lt;p&gt;你说他们懒散、堕落、一身穷病，其实未尝不是一种对生活的对抗。都说码农薪酬高，其实是拿命换，谁喜欢 996、007 的生活呢，更期待悠闲一点放松一点的生活。细想自己，未尝不喜欢堕落，下坡总是比上坡要容易很多的。只不过在时常警醒自己，平常人家出身的孩子，没有什么背景，没有什么支撑，唯一能靠的是自己的实力，并不能常常放松，也时时害怕、时时惊惶。&lt;/p&gt;
 &lt;p&gt;光影的切换，现实与曹的故事、小波的手机屏幕的转换，父母的反转饰演，穿插的歌舞，不同的方言，与观众的互动倒是给《三和》增加了不少趣味。&lt;/p&gt;
 &lt;p&gt;希望下次可以和朋友一起去看剧 ww&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2022/09/15/COA/Lecture02-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
-            <title>Lecture02-计算机体系结构的问题及解决方案</title>
-            <link>https://quas-modo.github.io/2022/09/15/COA/Lecture02-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
-            <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
-            <pubDate>Thu, 15 Sep 2022 18:01:24 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;讲述了六个计算机体系结构的问题以及解决方案&lt;br /&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&#34;冯诺依曼最重要的思想存储程序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#冯诺依曼最重要的思想存储程序&#34;&gt;#&lt;/a&gt; 冯诺依曼最重要的思想 —— 存储程序&lt;/h2&gt;
-&lt;p&gt;任何要计算机完成的工作都要先被编写成程序，然后将&lt;strong&gt;程序和原始数据送入主存&lt;/strong&gt;并启动执行。一旦程序被启动，计算机应能在不需要操作人员干预下，自动完成逐条取出指令和执行指令的任务。&lt;/p&gt;
-&lt;p&gt;区分中央处理单元（CPU）和处理器。&lt;/p&gt;
-&lt;p&gt;CPU 的制作工艺逐渐在提高，几乎不变的是 CPU 的大小，一直在增加的是晶体管的数量。&lt;/p&gt;
-&lt;p&gt;目前，苹果 M2 以及可以集成 200 亿的晶体管。&lt;/p&gt;
-&lt;h2 id=&#34;问题与解决思路&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题与解决思路&#34;&gt;#&lt;/a&gt; 问题与解决思路&lt;/h2&gt;
-&lt;h3 id=&#34;可以通过无限增加cpu的大小来增加性能嘛&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可以通过无限增加cpu的大小来增加性能嘛&#34;&gt;#&lt;/a&gt; 可以通过无限增加 CPU 的大小来增加性能嘛？&lt;/h3&gt;
-&lt;p&gt;不可以，面积越大，意味着&lt;strong&gt;互联延迟&lt;/strong&gt;越大。一个时钟周期需要大于最长互联延迟。存在物理极限。&lt;/p&gt;
-&lt;h3 id=&#34;问题1cpu的频率不能无限提高&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题1cpu的频率不能无限提高&#34;&gt;#&lt;/a&gt; 问题 1：CPU 的频率不能无限提高&lt;/h3&gt;
-&lt;p&gt;MOS 管开关、脉冲通过门电路需要时间&lt;/p&gt;
-&lt;p&gt;为了信号同步，每个脉冲信号需要持续一定的时间&lt;/p&gt;
-&lt;p&gt;面积大，连线延迟大；&lt;/p&gt;
-&lt;p&gt;频率越高，开关损耗高，CPU 耗电和散热提高；&lt;/p&gt;
-&lt;h3 id=&#34;解决1改变cpu芯片结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决1改变cpu芯片结构&#34;&gt;#&lt;/a&gt; 解决 1：改变 CPU 芯片结构&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;采用各种技术，对芯片体系结构进行优化：指令流水线、每周期多条指令、cache、更长流水线和双速算术&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;领域定制，如面向人工智能的芯片&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;问题2内存墙的存在-memory-wall&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题2内存墙的存在-memory-wall&#34;&gt;#&lt;/a&gt; 问题 2：内存墙的存在 memory wall&lt;/h3&gt;
-&lt;p&gt;主存和 CPU 之间传输数据的速度跟不上 CPU 的速度&lt;/p&gt;
-&lt;h3 id=&#34;解决2采用高速缓存cache&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决2采用高速缓存cache&#34;&gt;#&lt;/a&gt; 解决 2：采用高速缓存（cache）&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;添加一级或多级缓存以减少存储器访问频率并提高数据传输速率&lt;/li&gt;
-&lt;li&gt;增大总线的数据宽度，来增加每次所能取出的位数&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;问题3cpu等待io传输数据&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题3cpu等待io传输数据&#34;&gt;#&lt;/a&gt; 问题 3：CPU 等待 I/O 传输数据&lt;/h3&gt;
-&lt;p&gt;CPU 在等待 I/O 设备时保持空闲&lt;/p&gt;
-&lt;h3 id=&#34;解决3中断&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决3中断&#34;&gt;#&lt;/a&gt; 解决 3：中断&lt;/h3&gt;
-&lt;p&gt;其他模块（例如 IO）可以中断正常处理顺序的机制&lt;/p&gt;
-&lt;p&gt;中断周期加入指令周期中&lt;/p&gt;
-&lt;p&gt;多重中断：顺序中断处理、嵌套中断处理&lt;/p&gt;
-&lt;h3 id=&#34;问题4兼顾存储容量-速度和成本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题4兼顾存储容量-速度和成本&#34;&gt;#&lt;/a&gt; 问题 4：兼顾存储容量、速度和成本&lt;/h3&gt;
-&lt;p&gt;约束&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;容量：越大越好&lt;/li&gt;
-&lt;li&gt;速度：跟上处理器&lt;/li&gt;
-&lt;li&gt;成本：相较于其他组件合理&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;约束之间的关系&lt;/p&gt;
-&lt;p&gt;​	更短的访问时间，更高的每比特成本&lt;/p&gt;
-&lt;h3 id=&#34;解决4层次式存储结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决4层次式存储结构&#34;&gt;#&lt;/a&gt; 解决 4：层次式存储结构&lt;/h3&gt;
-&lt;p&gt;需求&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;大容量数据存储&lt;/li&gt;
-&lt;li&gt;高速性能&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;解决方案&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;使用存储器层次结构而不是依赖单个存储器组件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;寄存器 ——cache—— 主存 —— 磁盘 —— 磁带&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;存储量越来越大，速度越来越慢，离 CPU 越来越远&lt;/p&gt;
-&lt;h3 id=&#34;问题5io设备传输速率差异大&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题5io设备传输速率差异大&#34;&gt;#&lt;/a&gt; 问题 5：I/O 设备传输速率差异大&lt;/h3&gt;
-&lt;p&gt;I/O 性能跟不上 CPU 速度的提升&lt;/p&gt;
-&lt;h3 id=&#34;解决5采用缓冲区和改进io操作技术&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决5采用缓冲区和改进io操作技术&#34;&gt;#&lt;/a&gt; 解决 5：采用缓冲区和改进 I/O 操作技术&lt;/h3&gt;
-&lt;p&gt;设立缓存区&lt;/p&gt;
-&lt;h3 id=&#34;问题6计算机部件互连复杂&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题6计算机部件互连复杂&#34;&gt;#&lt;/a&gt; 问题 6：计算机部件互连复杂&lt;/h3&gt;
-&lt;h3 id=&#34;解决6采用总线&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决6采用总线&#34;&gt;#&lt;/a&gt; 解决 6：采用总线&lt;/h3&gt;
-&lt;h4 id=&#34;总线&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总线&#34;&gt;#&lt;/a&gt; 总线&lt;/h4&gt;
-&lt;p&gt;目前，对通用计算机而言，各种点对点互连结构逐渐取代总线互连的方式。但是总线结构依然普遍用于嵌入式系统。&lt;/p&gt;
-&lt;h5 id=&#34;共享&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#共享&#34;&gt;#&lt;/a&gt; 共享&lt;/h5&gt;
-&lt;p&gt;所有部件都通过总线传递数据&lt;/p&gt;
-&lt;h5 id=&#34;分时&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分时&#34;&gt;#&lt;/a&gt; 分时&lt;/h5&gt;
-&lt;p&gt;只有一个部件能够传输数据&lt;/p&gt;
-&lt;h5 id=&#34;功能组&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#功能组&#34;&gt;#&lt;/a&gt; 功能组&lt;/h5&gt;
-&lt;p&gt;&lt;strong&gt;控制线&lt;/strong&gt; —— 控制对数据线路与地址线路的访问和使用，控制信号传递&lt;strong&gt;命令和定时信息&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;地址线&lt;/strong&gt; —— 指定数据总线上数据的源或目的，地址总线的宽度决定了系统可能的&lt;strong&gt;最大内存容量&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;数据线&lt;/strong&gt; —— 为系统模块之间的数据传输提供路径，一般而言，线路的条数决定了&lt;strong&gt;一次能传输的位数&lt;/strong&gt;，数据总线的宽度是决定系统整体性能的一个关键因素&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
