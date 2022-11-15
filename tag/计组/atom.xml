@@ -8,7 +8,242 @@
     <author>
       <name>quas-modo</name>
     </author>
-    <updated>2022-11-03T13:03:21.000Z</updated>
+    <updated>2022-11-15T14:18:59.000Z</updated>
+    <entry>
+        <id>https://quas-modo.github.io/2022/11/15/COA/Lecture10-%E6%A3%80%E9%94%99%E4%B8%8E%E7%BA%A0%E9%94%99/</id>
+        <title>Lecture10-检错与纠错</title>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/11/15/COA/Lecture10-%E6%A3%80%E9%94%99%E4%B8%8E%E7%BA%A0%E9%94%99/"/>
+        <content type="html">&lt;p&gt;奇偶检验、海明码检验、循环冗余检验 CRC&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;lecture10-校验码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture10-校验码&#34;&gt;#&lt;/a&gt; Lecture10 - 校验码&lt;/h1&gt;
+&lt;h2 id=&#34;差错&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#差错&#34;&gt;#&lt;/a&gt; 差错&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110172321805.png&#34; alt=&#34;image-20221110172321805&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;纠错&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#纠错&#34;&gt;#&lt;/a&gt; 纠错&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110173954538.png&#34; alt=&#34;image-20221110173954538&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110174007085.png&#34; alt=&#34;image-20221110174007085&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;奇偶校验码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#奇偶校验码&#34;&gt;#&lt;/a&gt; 奇偶校验码&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110174244153.png&#34; alt=&#34;image-20221110174244153&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;奇校验和偶校验的代价和应用场景不同&lt;/p&gt;
+&lt;p&gt;偶校验位的产生直接对待发送的数据依次做异或运算就可以得到，而产生奇校验位还要在偶校验电路的输出取非，相对而言，产生&lt;strong&gt;奇校验位的代价高&lt;/strong&gt;，速度也相对慢（慢一个逻辑门的时延）&lt;/p&gt;
+&lt;p&gt;如果被传输的数据为全 0，此时采用奇校验时，接收端至少会收到 1 个 1，很容易&lt;strong&gt;判断确实有传送发生&lt;/strong&gt;；如果采用偶校验，此时收发双方都是 0，不容易判断是否有信号传来。而对于异步传输，因为有停止位的缘故，采用偶校验，接收方也至少能收到 1 个 1，当然，此时采用奇校验也是可以的；&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110175031448.png&#34; alt=&#34;image-20221110175031448&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;汉明码海明码hamming-code&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#汉明码海明码hamming-code&#34;&gt;#&lt;/a&gt; 汉明码 / 海明码 Hamming code&lt;/h3&gt;
+&lt;h4 id=&#34;基本思想和处理过程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本思想和处理过程&#34;&gt;#&lt;/a&gt; 基本思想和处理过程&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110175242990.png&#34; alt=&#34;image-20221110175242990&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;C D 通过传输得到 C‘ D’&lt;/p&gt;
+&lt;p&gt;在接收端，用 D‘得到 C&#39;&#39;，和 C’异或，生成故障字。&lt;/p&gt;
+&lt;h4 id=&#34;校验码长度&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#校验码长度&#34;&gt;#&lt;/a&gt; 校验码长度&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110175746481.png&#34; alt=&#34;image-20221110175746481&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;校验码要能够 cover 数据位一位出错、校验位一位出错和没有差错的情况&lt;/p&gt;
+&lt;h4 id=&#34;故障字的作用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#故障字的作用&#34;&gt;#&lt;/a&gt; 故障字的作用&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115163421156.png&#34; alt=&#34;image-20221115163421156&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;数据位的划分&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据位的划分&#34;&gt;#&lt;/a&gt; 数据位的划分&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115163637665.png&#34; alt=&#34;image-20221115163637665&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;规定 C1-C4 所对应的情况。再排好 D1-D8 的位置。&lt;/p&gt;
+&lt;p&gt;例如，1100 对应 C4 和 C3，则就在 C3 和 C4 中取异或。&lt;/p&gt;
+&lt;h4 id=&#34;位安排&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#位安排&#34;&gt;#&lt;/a&gt; 位安排&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115163906975.png&#34; alt=&#34;image-20221115163906975&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;实例&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#实例&#34;&gt;#&lt;/a&gt; 实例&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115164310763.png&#34; alt=&#34;image-20221115164310763&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115164322978.png&#34; alt=&#34;image-20221115164322978&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;0110  &lt;strong&gt;0&lt;/strong&gt;101  &lt;strong&gt;0&lt;/strong&gt;0&lt;strong&gt;11&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;0111  &lt;strong&gt;0&lt;/strong&gt;101  &lt;strong&gt;0&lt;/strong&gt;0&lt;strong&gt;11&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;0110  &lt;strong&gt;1&lt;/strong&gt;101  &lt;strong&gt;0&lt;/strong&gt;0&lt;strong&gt;11&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;码距和纠错理论&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#码距和纠错理论&#34;&gt;#&lt;/a&gt; 码距和纠错理论&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115163224140.png&#34; alt=&#34;image-20221115163224140&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;合法编码&lt;/strong&gt;是正确的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;纠错理论&lt;/strong&gt;： &lt;code&gt;L - 1 = D + C, D &amp;gt;= C&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;奇偶校验：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果 D 一位发生变化，C 就发生了变化。如果两位发生了变化，则码距已经超过了 2。奇偶校验不具备检测两位错误的能力。&lt;/li&gt;
+&lt;li&gt;D 是 1 位，C 是 0 位。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;汉明码校验：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;D 是 1 位，C 也是 1 位&lt;/li&gt;
+&lt;li&gt;可以 2 位检测、0 位纠错吗？不可以，用海明码检测基于 “只有一位出现错误” 的假设。比如，如果 1、2 位出现了差错，那么可以对应与 D3 的情况。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115220739021.png&#34; alt=&#34;image-20221115220739021&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;补充阅读sec-d-ec&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#补充阅读sec-d-ec&#34;&gt;#&lt;/a&gt; 补充阅读：SEC-D-EC&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115164644225.png&#34; alt=&#34;image-20221115164644225&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;在海明码中，除了 D4 和 D7 之外，都会影响两位的校验码。&lt;/p&gt;
+&lt;p&gt;L - 1 = D + C&lt;/p&gt;
+&lt;p&gt;L - 1=  2 + 1&lt;/p&gt;
+&lt;p&gt;为了实现两位的检错，需要将码距增加到 4【即添加一个额外的校验位，让数据对应的校验码位数增加到 3 位】&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115165141136.png&#34; alt=&#34;image-20221115165141136&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;D1 和 D2 有问题，C3 和 D5 有问题是同一种显示。&lt;/p&gt;
+&lt;p&gt;如何计算单纠错 / 单检错需要的校验位？ 2&lt;sup&gt;k&lt;/sup&gt; &amp;gt;= M + K + 1&lt;/p&gt;
+&lt;p&gt;如何计算单纠错 / 双检错需要的校验位？2&lt;sup&gt;k-1&lt;/sup&gt; &amp;gt;= M + K + 1&lt;/p&gt;
+&lt;p&gt;如何计算双纠错 / 双检错需要的校验位？2 &lt;sup&gt;k&lt;/sup&gt; &amp;gt;= C&lt;sub&gt;(M+K)&lt;/sub&gt;&lt;sup&gt;2&lt;/sup&gt; + M + K + 1&lt;/p&gt;
+&lt;h3 id=&#34;循环冗余校验crc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#循环冗余校验crc&#34;&gt;#&lt;/a&gt; 循环冗余校验 CRC&lt;/h3&gt;
+&lt;h4 id=&#34;优点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#优点&#34;&gt;#&lt;/a&gt; 优点&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115171249746.png&#34; alt=&#34;image-20221115171249746&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;无论是奇偶校验还是海明码，需要的代价都很高。海明码也是以奇偶检测为手段的。&lt;/p&gt;
+&lt;h4 id=&#34;基本思想和实现&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本思想和实现&#34;&gt;#&lt;/a&gt; 基本思想和实现&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115171316315.png&#34; alt=&#34;image-20221115171316315&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115221430300.png&#34; alt=&#34;image-20221115221430300&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;实例-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#实例-2&#34;&gt;#&lt;/a&gt; 实例&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115171421174.png&#34; alt=&#34;image-20221115171421174&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;接收方也对 1001 做模 2 运算，余数为 0 则无误。【余数为 111，相等于原来的数加上 111 就能够整除 1001】&lt;/p&gt;
+&lt;p&gt;1001（x&lt;sup&gt;3&lt;/sup&gt; + 1)&lt;/p&gt;
+&lt;p&gt;无借位减，等价于&lt;strong&gt;异或运算&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115172153954.png&#34; alt=&#34;image-20221115172153954&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115214420096.png&#34; alt=&#34;image-20221115214420096&#34; /&gt;&lt;/p&gt;
+</content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
+        <updated>2022-11-15T14:18:59.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://quas-modo.github.io/2022/11/15/COA/Lecture09-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/</id>
+        <title>Lecture09-外部存储器</title>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/11/15/COA/Lecture09-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/"/>
+        <content type="html">&lt;p&gt;外部存储器，主要介绍磁盘存储器（结构、读写、数据组织），略带介绍光盘、磁带、快闪存储器。&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;lecture09-外部存储器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture09-外部存储器&#34;&gt;#&lt;/a&gt; Lecture09 - 外部存储器&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109140148221.png&#34; alt=&#34;image-20221109140148221&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;外部存储器简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#外部存储器简介&#34;&gt;#&lt;/a&gt; 外部存储器简介&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109140744633.png&#34; alt=&#34;image-20221109140744633&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;磁盘存储器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#磁盘存储器&#34;&gt;#&lt;/a&gt; 磁盘存储器&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109140910784.png&#34; alt=&#34;image-20221109140910784&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;磁盘是一种由&lt;strong&gt;非磁性材料&lt;/strong&gt;制成称为衬底（基材）的圆盘，其上涂有一层&lt;strong&gt;磁性材料&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;磁可以保持稳定。&lt;/p&gt;
+&lt;p&gt;玻璃基材有很多优点。&lt;/p&gt;
+&lt;p&gt;飞行高度 —— 磁头并不直接接触磁道。飞行高度更低，面对的数据（面积）更小，电磁感应更强，更利于读写数据。磁盘读取很快，如果直接接触，会导致较大的摩擦力，会毁坏磁盘。&lt;/p&gt;
+&lt;p&gt;坏道，在无尘环境中修复。（唱片）的针扫到 “灰尘”，会有吱呀吱呀的声音。&lt;/p&gt;
+&lt;h3 id=&#34;磁盘存储器类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#磁盘存储器类型&#34;&gt;#&lt;/a&gt; 磁盘存储器类型&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109142404842.png&#34; alt=&#34;image-20221109142404842&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;软盘（读写头在读或写操作时实际地物理接触磁表面，其容量小、使用灵活和价格便宜）&lt;/p&gt;
+&lt;h3 id=&#34;硬磁盘存储器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#硬磁盘存储器&#34;&gt;#&lt;/a&gt; 硬磁盘存储器&lt;/h3&gt;
+&lt;h4 id=&#34;结构轴盘头臂&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#结构轴盘头臂&#34;&gt;#&lt;/a&gt; 结构 —— 轴盘头臂&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109142416824.png&#34; alt=&#34;image-20221109142416824&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;多个盘片，盘间相隔约 1 英寸。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109142429153.png&#34; alt=&#34;image-20221109142429153&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;大多数磁盘是两面都有可磁化的涂层，称为双面磁盘。&lt;/p&gt;
+&lt;p&gt;在上图中，共有 10 个面，有 6 个磁头，中间 4 个是双面的。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109143416494.png&#34; alt=&#34;image-20221109143416494&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;温彻斯特磁盘（温氏磁盘）&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109143604481.png&#34; alt=&#34;image-20221109143604481&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;读写机制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#读写机制&#34;&gt;#&lt;/a&gt; 读写机制&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109143651520.png&#34; alt=&#34;image-20221109143651520&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109143935791.png&#34; alt=&#34;image-20221109143935791&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;读写速度由电磁感应的物理速度限制。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109143951017.png&#34; alt=&#34;image-20221109143951017&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;MR magnetoresistive 磁阻&lt;/p&gt;
+&lt;p&gt;红框应该框中 MR 敏感器，MR 敏感器是为了满足更高的读速度的要求而出现。MR 敏感器对磁场较为敏感，需要做&lt;strong&gt;屏蔽机制&lt;/strong&gt;，防止周围的磁场造成影响。&lt;/p&gt;
+&lt;h4 id=&#34;数据组织磁道-扇区&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据组织磁道-扇区&#34;&gt;#&lt;/a&gt; 数据组织 —— 磁道、扇区&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109144841491.png&#34; alt=&#34;image-20221109144841491&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;每个盘面上有上千个磁道。&lt;/p&gt;
+&lt;p&gt;相邻磁道间隙 —— 防止或至少可以减少由于磁头为对准或磁域干扰所引起的错误。&lt;/p&gt;
+&lt;p&gt;相邻扇区间隙 —— 避免对系统提出不合理的定位精度要求。&lt;/p&gt;
+&lt;p&gt;扇区默认大小为&lt;strong&gt; 512B&lt;/strong&gt;。（如果题目中没有说明，则采用默认值 512B）&lt;/p&gt;
+&lt;p&gt;编号&lt;strong&gt;从外向里&lt;/strong&gt;递增。&lt;/p&gt;
+&lt;h5 id=&#34;cav-constant-angular-velocity-恒定角速度&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cav-constant-angular-velocity-恒定角速度&#34;&gt;#&lt;/a&gt; CAV constant angular velocity 恒定角速度&lt;/h5&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109145031875.png&#34; alt=&#34;image-20221109145031875&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;优点：直接寻址&lt;/p&gt;
+&lt;p&gt;缺点：容量限制&lt;/p&gt;
+&lt;h5 id=&#34;multiple-zone-recording-多重区域记录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#multiple-zone-recording-多重区域记录&#34;&gt;#&lt;/a&gt; Multiple zone recording 多重区域记录&lt;/h5&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109145505507.png&#34; alt=&#34;image-20221109145505507&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;同一个区域以相同的角速度转，不同的区域以不同的角速度转。区域可以包含多个磁道（相邻磁道之间的周长相差不大，所以需要隔一些磁道进行分组）&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109150942979.png&#34; alt=&#34;image-20221109150942979&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;格式化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#格式化&#34;&gt;#&lt;/a&gt; 格式化&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109151053633.png&#34; alt=&#34;image-20221109151053633&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;图中，每个扇区有 600 字节，包含 512 字节的数据和磁盘控制器使用的控制信息。&lt;/p&gt;
+&lt;p&gt;同步字节 ——ID 域开始特定的 01 序列&lt;/p&gt;
+&lt;p&gt;扇区间隙 —— 没有被磁化，既不表示 0，也不表示 1。有延时。&lt;/p&gt;
+&lt;p&gt;数据域 ——4096 是主流标准，512 是之前的标准，因为之前需要存储的程序和数据较小，存储大小大会造成碎片化问题。混用的时候，把 4096 分为 8 个区域，共享同一个 ID。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109151105554.png&#34; alt=&#34;image-20221109151105554&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;快速格式化并没有清除数据，而是标注可写。&lt;/p&gt;
+&lt;h4 id=&#34;io访问时间&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#io访问时间&#34;&gt;#&lt;/a&gt; IO 访问时间&lt;/h4&gt;
+&lt;h5 id=&#34;寻道时间-旋转延迟-传送时间&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#寻道时间-旋转延迟-传送时间&#34;&gt;#&lt;/a&gt; 寻道时间、旋转延迟、传送时间&lt;/h5&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109152850127.png&#34; alt=&#34;image-20221109152850127&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;旋转延迟 —— 可能刚好到，也可能刚好错过，取平均为&lt;strong&gt;半周&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;访问时间 = 寻道时间（如果有） + 旋转延迟 【是到达读写位置所需的时间】&lt;/p&gt;
+&lt;p&gt;rpm 转速常用单位 resolution per minute&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109153121081.png&#34; alt=&#34;image-20221109153121081&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;寻道时间只考虑第一个磁道 —— 访问相邻的磁道，磁道很窄、移动时间可以忽略不计&lt;/p&gt;
+&lt;h5 id=&#34;案例&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#案例&#34;&gt;#&lt;/a&gt; 案例&lt;/h5&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109153318387.png&#34; alt=&#34;image-20221109153318387&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109153631766.png&#34; alt=&#34;image-20221109153631766&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;1 / (2 * 15000 / 60) = 0.002 s = 2ms【注意单位的统一】&lt;/p&gt;
+&lt;p&gt;500 / (500 * 15000 / 60) = 4ms&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109153643053.png&#34; alt=&#34;image-20221109153643053&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;磁头寻道-磁盘调度&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#磁头寻道-磁盘调度&#34;&gt;#&lt;/a&gt; 磁头寻道、磁盘调度&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109153937260.png&#34; alt=&#34;image-20221109153937260&#34; /&gt;&lt;/p&gt;
+&lt;h5 id=&#34;先来先服务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#先来先服务&#34;&gt;#&lt;/a&gt; 先来先服务&lt;/h5&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109154019777.png&#34; alt=&#34;image-20221109154019777&#34; /&gt;&lt;/p&gt;
+&lt;h5 id=&#34;最短寻道时间优先&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#最短寻道时间优先&#34;&gt;#&lt;/a&gt; 最短寻道时间优先&lt;/h5&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109154112018.png&#34; alt=&#34;image-20221109154112018&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;最短寻道时间优先 (SSTF) 算法会导致 “饥饿” 现象发生，因为&lt;strong&gt;只要不断有新进程的请求到达，且其所要访问的磁道与磁头当前所在磁道的距离较近&lt;/strong&gt;，这种新进程的 I/O 请求必然优先满足（也就是距离磁头当前所在磁道的距离较远的磁道总是得不到访问）。&lt;/p&gt;
+&lt;h5 id=&#34;扫描电梯scan&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#扫描电梯scan&#34;&gt;#&lt;/a&gt; 扫描 / 电梯 SCAN&lt;/h5&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109154319022.png&#34; alt=&#34;image-20221109154319022&#34; /&gt;&lt;/p&gt;
+&lt;h5 id=&#34;循环扫描c-scan&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#循环扫描c-scan&#34;&gt;#&lt;/a&gt; 循环扫描 C-SCAN&lt;/h5&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109154329283.png&#34; alt=&#34;image-20221109154329283&#34; /&gt;&lt;/p&gt;
+&lt;h5 id=&#34;lookscan算法的升级&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lookscan算法的升级&#34;&gt;#&lt;/a&gt; LOOK (SCAN 算法的升级)&lt;/h5&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109154745626.png&#34; alt=&#34;image-20221109154745626&#34; /&gt;&lt;/p&gt;
+&lt;h5 id=&#34;c-lookc-scan算法的改进&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#c-lookc-scan算法的改进&#34;&gt;#&lt;/a&gt; C-LOOK（C-SCAN 算法的改进）&lt;/h5&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221109154917267.png&#34; alt=&#34;image-20221109154917267&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;光存储器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#光存储器&#34;&gt;#&lt;/a&gt; 光存储器&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110163221804.png&#34; alt=&#34;image-20221110163221804&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110162427440.png&#34; alt=&#34;image-20221110162427440&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;cd和cd-rom&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cd和cd-rom&#34;&gt;#&lt;/a&gt; CD 和 CD-ROM&lt;/h3&gt;
+&lt;h4 id=&#34;制造方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#制造方法&#34;&gt;#&lt;/a&gt; 制造方法&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110162711863.png&#34; alt=&#34;image-20221110162711863&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;在&lt;strong&gt;凹坑&lt;/strong&gt;表面镀上一层高反射材料（一般采用铝，HQCD 采用银合金）&lt;/p&gt;
+&lt;h4 id=&#34;读取&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#读取&#34;&gt;#&lt;/a&gt; 读取&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110163548903.png&#34; alt=&#34;image-20221110163548903&#34; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;光传感器检测凹坑与台之间的反射光强弱变化，并将其转换成数字信号。传感器以规整的间隔检测表面。 一个凹坑的开始或结束表示一个 1；间隔之间无标高变动出现时，记录为一个 0。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;单螺旋式轨道 —— 凹坑被激光以恒定线速度（&lt;strong&gt;CLV&lt;/strong&gt;，constant linear velocity）读出&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CD-ROM 块格式&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110164457816.png&#34; alt=&#34;image-20221110164457816&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110164510136.png&#34; alt=&#34;image-20221110164510136&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;优缺点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#优缺点&#34;&gt;#&lt;/a&gt; 优缺点&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110164245961.png&#34; alt=&#34;image-20221110164245961&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;cd-r和cd-rw&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cd-r和cd-rw&#34;&gt;#&lt;/a&gt; CD-R 和 CD-RW&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110164727597.png&#34; alt=&#34;image-20221110164727597&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;cd-r&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cd-r&#34;&gt;#&lt;/a&gt; CD-R&lt;/h4&gt;
+&lt;p&gt;可刻录 CD—— 一写多读&lt;/p&gt;
+&lt;h4 id=&#34;cd-rw&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cd-rw&#34;&gt;#&lt;/a&gt; CD-RW&lt;/h4&gt;
+&lt;p&gt;可重写盘 —— 多写&lt;/p&gt;
+&lt;p&gt;使用了&lt;strong&gt;光致相变材料&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;dvd数字多功能光盘&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dvd数字多功能光盘&#34;&gt;#&lt;/a&gt; DVD 数字多功能光盘&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110165211317.png&#34; alt=&#34;image-20221110165211317&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;高清晰光盘&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#高清晰光盘&#34;&gt;#&lt;/a&gt; 高清晰光盘&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110165245610.png&#34; alt=&#34;image-20221110165245610&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;衍射极限公式：&lt;/p&gt;
+&lt;p&gt;波长 lambda 和分辨两点的最小距离 D 正相关&lt;/p&gt;
+&lt;h2 id=&#34;磁带&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#磁带&#34;&gt;#&lt;/a&gt; 磁带&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110165638182.png&#34; alt=&#34;image-20221110165638182&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;磁性材料，有许多磁针，根据磁场方向发生变化。&lt;/p&gt;
+&lt;p&gt;磁带顺序读取 —— 依次读取，想要读取前面的必须倒带&lt;/p&gt;
+&lt;p&gt;直接存取 —— 不需要顺序读取磁盘上的所有扇区&lt;/p&gt;
+&lt;p&gt;并行记录（parallel recording）读写蛇形&lt;/p&gt;
+&lt;p&gt;串行记录（serial recording）（蛇形记录 serpentine recording 时串行记录的典型记录技术）&lt;/p&gt;
+&lt;p&gt;6-14(a)&lt;/p&gt;
+&lt;p&gt;6-14 (b) 为了提高速度，读 - 写头能同时对几个相邻磁道进行读写操作&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110171608725.png&#34; alt=&#34;image-20221110171608725&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;快闪存储器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#快闪存储器&#34;&gt;#&lt;/a&gt; 快闪存储器&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110171635494.png&#34; alt=&#34;image-20221110171635494&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;u盘和固态硬盘&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#u盘和固态硬盘&#34;&gt;#&lt;/a&gt; U 盘和固态硬盘&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110171653977.png&#34; alt=&#34;image-20221110171653977&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110171711344.png&#34; alt=&#34;image-20221110171711344&#34; /&gt;&lt;/p&gt;
+</content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
+        <updated>2022-11-15T12:56:09.000Z</updated>
+    </entry>
     <entry>
         <id>https://quas-modo.github.io/2022/11/03/COA/Lecture08-cache/</id>
         <title>Lecture08-cache</title>
