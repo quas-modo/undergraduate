@@ -10,8 +10,96 @@
         </author>
         <description>notes/thoughts/nonsense</description>
         <language>zh-CN</language>
-        <pubDate>Tue, 15 Nov 2022 22:18:59 +0800</pubDate>
-        <lastBuildDate>Tue, 15 Nov 2022 22:18:59 +0800</lastBuildDate>
+        <pubDate>Mon, 21 Nov 2022 14:06:58 +0800</pubDate>
+        <lastBuildDate>Mon, 21 Nov 2022 14:06:58 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://quas-modo.github.io/2022/11/21/COA/Lecture11-RAID/</guid>
+            <title>Lecture11-RAID</title>
+            <link>https://quas-modo.github.io/2022/11/21/COA/Lecture11-RAID/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+            <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+            <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
+            <pubDate>Mon, 21 Nov 2022 14:06:58 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;RAID0-6&lt;br /&gt;
+ 条带、镜像、并行存取（海明码、位交错奇偶校验）、独立存取（块交错奇偶检验、块级分布式奇偶检验、双冗余度）&lt;/p&gt;
+&lt;p&gt;并行存取的大数据传输率高，独立存取的 IO 请求快。&lt;/p&gt;
+&lt;h1 id=&#34;lecture11-raid&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture11-raid&#34;&gt;#&lt;/a&gt; Lecture11-RAID&lt;/h1&gt;
+&lt;p&gt;区分高数据传输率和高速 IO 请求&lt;/p&gt;
+&lt;h2 id=&#34;raid冗余磁盘阵列简介redundant-arrays-of-independent-disks&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#raid冗余磁盘阵列简介redundant-arrays-of-independent-disks&#34;&gt;#&lt;/a&gt; RAID 冗余磁盘阵列简介 ——Redundant Arrays of Independent Disks&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117161456782.png&#34; alt=&#34;image-20221117161456782&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Redundant 冗余 —— 进行错误恢复以提高系统可靠性&lt;/p&gt;
+&lt;h2 id=&#34;raid分类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#raid分类&#34;&gt;#&lt;/a&gt; RAID 分类&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117161543752.png&#34; alt=&#34;image-20221117161543752&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;0-6 都是条带式的&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117163203515.png&#34; alt=&#34;image-20221117163203515&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117163224833.png&#34; alt=&#34;image-20221117163224833&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117163240540.png&#34; alt=&#34;image-20221117163240540&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;raid0-不是raid成员&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#raid0-不是raid成员&#34;&gt;#&lt;/a&gt; RAID0 - 不是 RAID 成员&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117161726563.png&#34; alt=&#34;image-20221117161726563&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221121125725716.png&#34; alt=&#34;image-20221121125725716&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;如果单个 IO 请求有多个逻辑相邻的条带组成，则多达对 n 个条带的请求可以并行处理，这样大大地减少了 IO 传输时间。&lt;/p&gt;
+&lt;h3 id=&#34;raid1-镜像&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#raid1-镜像&#34;&gt;#&lt;/a&gt; RAID1 - 镜像&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117161806501.png&#34; alt=&#34;image-20221117161806501&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117161823895.png&#34; alt=&#34;image-20221117161823895&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117161835837.png&#34; alt=&#34;image-20221117161835837&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;大批读请求，速度较快；写请求，与 RAID0 类似。&lt;/p&gt;
+&lt;h3 id=&#34;raid01-vs-raid10&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#raid01-vs-raid10&#34;&gt;#&lt;/a&gt; RAID01 VS RAID10&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117161936601.png&#34; alt=&#34;image-20221117161936601&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;如果disk-0和disk-3坏了会怎么样&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如果disk-0和disk-3坏了会怎么样&#34;&gt;#&lt;/a&gt; 如果 Disk 0 和 Disk 3 坏了会怎么样？&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;对于 RAID01 来说&lt;/p&gt;
+&lt;p&gt;Disk1 损坏，左边的 RAID 0 报废；Disk3 损坏，右边的 RAID 0 报废，整体的 RAID 1 报废&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对于 RAID10 来说&lt;/p&gt;
+&lt;p&gt;Disk1 损坏，左边的 RAID 1 仍能够使用；Disk3 损坏，右边的 RAID 1 仍能够使用，整体的 RAID1 仍能够使用&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;​	对于同样的出错，RAID10 仍能够正常运行，但是 RAID1 无法使用，所以 RAID10&lt;strong&gt; 容错率更高&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;raid2-并行存取&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#raid2-并行存取&#34;&gt;#&lt;/a&gt; RAID2 - 并行存取&lt;/h3&gt;
+&lt;p&gt;并行存取 —— 所有磁盘成员都参与每个 IO 请求的执行，各个驱动器的轴是&lt;strong&gt;同步旋转&lt;/strong&gt;的。&lt;/p&gt;
+&lt;p&gt;RAID2 和 RAID3 的&lt;strong&gt;条带非常小&lt;/strong&gt;，经常小到一个字节或一个字。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117162002788.png&#34; alt=&#34;image-20221117162002788&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;读写时，都需要进行校验，读操作要访问所有磁盘，写操作要访问所有数据盘和校验盘。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117162035002.png&#34; alt=&#34;image-20221117162035002&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;需要时间开销处理海明码&lt;/p&gt;
+&lt;h3 id=&#34;raid3-并行存取&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#raid3-并行存取&#34;&gt;#&lt;/a&gt; RAID3 - 并行存取&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117162051620.png&#34; alt=&#34;image-20221117162051620&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117163754445.png&#34; alt=&#34;image-20221117163754445&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117163718019.png&#34; alt=&#34;image-20221117163718019&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;并行存取&lt;/p&gt;
+&lt;p&gt;四个盘同时读写&lt;/p&gt;
+&lt;p&gt;数据传输率 —— 任何 IO 请求将包含所有数据盘的并行数据传送，对于大量传送，性能改善特别明显。&lt;/p&gt;
+&lt;p&gt;面对多个事务 —— 但是一次只能执行一个 IO 请求，在面向事务的环境中，性能将受损。&lt;/p&gt;
+&lt;h3 id=&#34;raid4-独立存取&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#raid4-独立存取&#34;&gt;#&lt;/a&gt; RAID4 - 独立存取&lt;/h3&gt;
+&lt;p&gt;独立存取阵列更适合与需要高速 IO 请求的应用，而相对较少用于需要高数据传输率的场合。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117163553896.png&#34; alt=&#34;image-20221117163553896&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117163604760.png&#34; alt=&#34;image-20221117163604760&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117164749605.png&#34; alt=&#34;image-20221117164749605&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;独立存取，每个磁盘的操作都是独立的。&lt;/p&gt;
+&lt;p&gt;写损失 —— 既要修改数据盘，也要修改校验盘。&lt;/p&gt;
+&lt;p&gt;一次写入 包括&lt;strong&gt;两读两写&lt;/strong&gt; —— 两次读操作（数据盘、校验盘）、两次写操作（数据盘、校验盘）&lt;/p&gt;
+&lt;h3 id=&#34;raid5-独立存取&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#raid5-独立存取&#34;&gt;#&lt;/a&gt; RAID5 - 独立存取&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117163643553.png&#34; alt=&#34;image-20221117163643553&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;避免潜在的 IO 瓶颈问题 —— 校验条带分开了可以同时读取 (&lt;/p&gt;
+&lt;p&gt;读没有影响，写受到限制（还是两读两写&lt;/p&gt;
+&lt;h3 id=&#34;raid50&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#raid50&#34;&gt;#&lt;/a&gt; RAID50&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117165428182.png&#34; alt=&#34;image-20221117165428182&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;raid6-独立存取-两种不同的奇偶校验码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#raid6-独立存取-两种不同的奇偶校验码&#34;&gt;#&lt;/a&gt; RAID6 - 独立存取 - 两种不同的奇偶校验码&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117165615475.png&#34; alt=&#34;image-20221117165615475&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;raid比较&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#raid比较&#34;&gt;#&lt;/a&gt; RAID 比较&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117165842161.png&#34; alt=&#34;image-20221117165842161&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;基本需求 —— 快、可用性&lt;/p&gt;
+&lt;p&gt;0 和 1 没有达到兼顾&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117165949394.png&#34; alt=&#34;image-20221117165949394&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117170009169.png&#34; alt=&#34;image-20221117170009169&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117170031768.png&#34; alt=&#34;image-20221117170031768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;一些 callback&lt;/p&gt;
+&lt;p&gt;3 和 4 的区别在于，是不是一起转的&lt;/p&gt;
+&lt;p&gt;5 和 6 各有优劣&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://quas-modo.github.io/2022/11/15/COA/Lecture10-%E6%A3%80%E9%94%99%E4%B8%8E%E7%BA%A0%E9%94%99/</guid>
             <title>Lecture10-检错与纠错</title>
