@@ -14,6 +14,7 @@
         <title>Lecture14-指令系统</title>
         <link rel="alternate" href="https://quas-modo.github.io/2022/12/02/COA/Lecture14-%E6%8C%87%E4%BB%A4/"/>
         <content type="html">&lt;p&gt;操作码、操作数、寻址方式&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture14-指令系统&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture14-指令系统&#34;&gt;#&lt;/a&gt; Lecture14 - 指令系统&lt;/h1&gt;
 &lt;p&gt;对应教材&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221202131829598.png&#34; alt=&#34;image-20221202131829598&#34; /&gt;&lt;/p&gt;
@@ -173,7 +174,8 @@
         <id>https://quas-modo.github.io/2022/12/02/COA/Lecture13-%E6%80%BB%E7%BA%BF/</id>
         <title>Lecture13-总线</title>
         <link rel="alternate" href="https://quas-modo.github.io/2022/12/02/COA/Lecture13-%E6%80%BB%E7%BA%BF/"/>
-        <content type="html">&lt;p&gt;总线类型、仲裁、带宽、传输速率、层次结构&lt;/p&gt;
+        <content type="html">&lt;p&gt;总线类型、仲裁、带宽、传输速率、层次结构&lt;br /&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture13-总线&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture13-总线&#34;&gt;#&lt;/a&gt; Lecture13 - 总线&lt;/h1&gt;
 &lt;h2 id=&#34;类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#类型&#34;&gt;#&lt;/a&gt; 类型&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221129164542001.png&#34; alt=&#34;image-20221129164542001&#34; /&gt;&lt;/p&gt;
@@ -381,6 +383,7 @@
         <content type="html">&lt;p&gt;RAID0-6&lt;br /&gt;
  条带、镜像、并行存取（海明码、位交错奇偶校验）、独立存取（块交错奇偶检验、块级分布式奇偶检验、双冗余度）&lt;/p&gt;
 &lt;p&gt;并行存取的大数据传输率高，独立存取的 IO 请求快。&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture11-raid&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture11-raid&#34;&gt;#&lt;/a&gt; Lecture11-RAID&lt;/h1&gt;
 &lt;p&gt;区分高数据传输率和高速 IO 请求&lt;/p&gt;
 &lt;h2 id=&#34;raid冗余磁盘阵列简介redundant-arrays-of-independent-disks&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#raid冗余磁盘阵列简介redundant-arrays-of-independent-disks&#34;&gt;#&lt;/a&gt; RAID 冗余磁盘阵列简介 ——Redundant Arrays of Independent Disks&lt;/h2&gt;
