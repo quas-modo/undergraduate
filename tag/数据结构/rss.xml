@@ -16,7 +16,8 @@
             <guid isPermalink="true">https://quas-modo.github.io/2022/12/05/dataStructure/Lecture06-PriorityQueue/</guid>
             <title>Lecture06-PriorityQueue</title>
             <link>https://quas-modo.github.io/2022/12/05/dataStructure/Lecture06-PriorityQueue/</link>
-            <category term="数据结构" scheme="https://quas-modo.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" />
+            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+            <category term="数据结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" />
             <category term="数据结构" scheme="https://quas-modo.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" />
             <pubDate>Mon, 05 Dec 2022 16:26:39 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;最大堆、最小堆、堆排序、代码实现。&lt;/p&gt;
@@ -196,7 +197,8 @@
             <guid isPermalink="true">https://quas-modo.github.io/2022/12/05/dataStructure/Lecture05-Hash/</guid>
             <title>Lecture05-Hash</title>
             <link>https://quas-modo.github.io/2022/12/05/dataStructure/Lecture05-Hash/</link>
-            <category term="数据结构" scheme="https://quas-modo.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" />
+            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+            <category term="数据结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" />
             <category term="数据结构" scheme="https://quas-modo.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" />
             <pubDate>Mon, 05 Dec 2022 16:26:21 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;不同的散列方式。&lt;br /&gt;
