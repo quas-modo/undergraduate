@@ -5063,7 +5063,7 @@
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221129164211629.png&#34; alt=&#34;image-20221129164211629&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;约定好，第一个时刻取地址，第二个时刻取数据，etc……&lt;/p&gt;
 &lt;p&gt;快的迁就慢的&lt;/p&gt;
-&lt;h5 id=&#34;异步时序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#异步时序&#34;&gt;#&lt;/a&gt; 异步时序&lt;/h5&gt;
+&lt;h4 id=&#34;异步时序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#异步时序&#34;&gt;#&lt;/a&gt; 异步时序&lt;/h4&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221130000246383.png&#34; alt=&#34;image-20221130000246383&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Ready: 你可以来拿了&lt;/p&gt;
 &lt;p&gt;Ack: 我已经拿好了&lt;/p&gt;
@@ -5082,10 +5082,10 @@
 &lt;p&gt;7 存储器释放 Ready 信号&lt;/p&gt;
 &lt;p&gt;8 CPU 释放 Ack 信号&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221129165321583.png&#34; alt=&#34;image-20221129165321583&#34; /&gt;&lt;/p&gt;
-&lt;h5 id=&#34;半同步时序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#半同步时序&#34;&gt;#&lt;/a&gt; 半同步时序&lt;/h5&gt;
+&lt;h4 id=&#34;半同步时序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#半同步时序&#34;&gt;#&lt;/a&gt; 半同步时序&lt;/h4&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221129171706250.png&#34; alt=&#34;image-20221129171706250&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;发生在时钟上升沿才认为是有效的&lt;/p&gt;
-&lt;h5 id=&#34;分离事务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分离事务&#34;&gt;#&lt;/a&gt; 分离事务&lt;/h5&gt;
+&lt;h4 id=&#34;分离事务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#分离事务&#34;&gt;#&lt;/a&gt; 分离事务&lt;/h4&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221129171714657.png&#34; alt=&#34;image-20221129171714657&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;中间过程释放给其他设备使用，数据需要准备时间，数据准备好再请求。&lt;/p&gt;
 &lt;h3 id=&#34;总线带宽和数据传输速率&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总线带宽和数据传输速率&#34;&gt;#&lt;/a&gt; 总线带宽和数据传输速率&lt;/h3&gt;
