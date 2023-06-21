@@ -10,9 +10,9 @@
     </author>
     <updated>2023-06-21T06:49:06.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/2023/06/21/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%AE%80%E7%AD%94%E6%95%B4%E7%90%86/</id>
+        <id>https://quas-modo.github.io/2023/06/21/NJU/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%AE%80%E7%AD%94%E6%95%B4%E7%90%86/</id>
         <title>数据管理基础简答整理</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2023/06/21/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%AE%80%E7%AD%94%E6%95%B4%E7%90%86/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/06/21/NJU/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%AE%80%E7%AD%94%E6%95%B4%E7%90%86/"/>
         <content type="html">&lt;p&gt;数据库简答题押题整理，主要来源是课后习题。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&#34;数据管理基础简答题整理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据管理基础简答题整理&#34;&gt;#&lt;/a&gt; 《数据管理基础》简答题整理&lt;/h2&gt;
@@ -486,7 +486,9 @@
         <id>https://quas-modo.github.io/2023/06/14/NJU/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
         <title>数据管理基础期末复习</title>
         <link rel="alternate" href="https://quas-modo.github.io/2023/06/14/NJU/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
-        <content type="html">&lt;h1 id=&#34;第1章-绪论&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第1章-绪论&#34;&gt;#&lt;/a&gt; 第 1 章 绪论&lt;/h1&gt;
+        <content type="html">&lt;p&gt;结合 pjz 学长的笔记做了一些删改。&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;第1章-绪论&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第1章-绪论&#34;&gt;#&lt;/a&gt; 第 1 章 绪论&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;ppt 01-07&lt;/p&gt;
 &lt;/blockquote&gt;

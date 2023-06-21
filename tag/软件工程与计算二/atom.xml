@@ -15,6 +15,7 @@
         <link rel="alternate" href="https://quas-modo.github.io/2023/06/21/NJU/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97%E4%BA%8C%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html">&lt;p&gt;整理了软工二除了名词解释以外的重点 ww&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;by 陈欣怡&lt;/p&gt;
 &lt;h2 id=&#34;软件工程发展历史&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软件工程发展历史&#34;&gt;#&lt;/a&gt; 软件工程发展历史&lt;/h2&gt;
 &lt;p&gt;1950s：科学计算；以机器为中心进行编程；像生产硬件一样生产软件。&lt;/p&gt;
 &lt;p&gt;1960s：业务应用 (批量数据处理和事物计算)；软件不同于硬件；用软件工艺的方式生产软件。&lt;/p&gt;
@@ -56,7 +57,7 @@
 &lt;li&gt;状态报告：反映当前的配置状态。&lt;/li&gt;
 &lt;li&gt;软件发布管理：将配置项发布到开发活动之外，例如发布给客户。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;需求层次需求类型1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#需求层次需求类型1&#34;&gt;#&lt;/a&gt; 需求层次 / 需求类型，1&lt;/h2&gt;
+&lt;h2 id=&#34;需求层次需求类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#需求层次需求类型&#34;&gt;#&lt;/a&gt; 需求层次 / 需求类型&lt;/h2&gt;
 &lt;h3 id=&#34;如何书写用例&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如何书写用例&#34;&gt;#&lt;/a&gt; 如何书写用例&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;用例正常流程：在常见和符合预期的条件下，系统与外界的行为交互序列&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230617182637596.png&#34; alt=&#34;image-20230617182637596&#34; /&gt;&lt;/p&gt;
@@ -312,7 +313,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;需求题1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#需求题1&#34;&gt;#&lt;/a&gt; 需求题，1&lt;/h2&gt;
+&lt;h2 id=&#34;需求题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#需求题&#34;&gt;#&lt;/a&gt; 需求题&lt;/h2&gt;
 &lt;h3 id=&#34;知识点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#知识点&#34;&gt;#&lt;/a&gt; 知识点&lt;/h3&gt;
 &lt;h4 id=&#34;用例图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用例图&#34;&gt;#&lt;/a&gt; 用例图&lt;/h4&gt;
 &lt;p&gt;用例、参与者、关系、系统边界&lt;/p&gt;
@@ -429,7 +430,7 @@
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230617144909928.png&#34; alt=&#34;image-20230617144909928&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvaW1hZ2UtMjAyMzA2MTkyMTM3MTU4MjUucG5n&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230619213715825.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20230619213715825&amp;quot; style=&amp;quot;zoom: 33%;&amp;quot; /&amp;gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230617194537437.png&#34; alt=&#34;image-20230617194537437&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;软件设计1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软件设计1&#34;&gt;#&lt;/a&gt; 软件设计，1&lt;/h2&gt;
+&lt;h2 id=&#34;软件设计&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软件设计&#34;&gt;#&lt;/a&gt; 软件设计&lt;/h2&gt;
 &lt;h3 id=&#34;软件设计的核心思想&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软件设计的核心思想&#34;&gt;#&lt;/a&gt; 软件设计的核心思想&lt;/h3&gt;
 &lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvaW1hZ2UtMjAyMzA2MTkxODA5MTY4MzEucG5n&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230619180916831.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20230619180916831&amp;quot; style=&amp;quot;zoom:50%;&amp;quot; /&amp;gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;抽象&lt;/strong&gt;：横向上将系统分解为几个相对简单的子系统以及各子系统之间的关系&lt;/p&gt;
@@ -674,7 +675,7 @@
 &lt;p&gt;展示层和逻辑层的数据交互用 VO，函数名诸如 &lt;code&gt;addXXXX&lt;/code&gt;   &lt;code&gt;getXXXXbyId&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;逻辑层和数据层的交互用 PO，函数名诸如 &lt;code&gt;get&lt;/code&gt; 、 &lt;code&gt;insert&lt;/code&gt; 、 &lt;code&gt;find&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;（都是我猜的）&lt;/p&gt;
-&lt;h2 id=&#34;人机交互界面设计1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#人机交互界面设计1&#34;&gt;#&lt;/a&gt; 人机交互（界面设计），1&lt;/h2&gt;
+&lt;h2 id=&#34;人机交互界面设计&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#人机交互界面设计&#34;&gt;#&lt;/a&gt; 人机交互（界面设计）&lt;/h2&gt;
 &lt;h3 id=&#34;知识点-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#知识点-2&#34;&gt;#&lt;/a&gt; 知识点&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -845,7 +846,7 @@
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230619185109209.png&#34; alt=&#34;image-20230619185109209&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/46232BBCC2798A511945CAF26C596D3C.jpg&#34; alt=&#34;46232BBCC2798A511945CAF26C596D3C&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;例题-4&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#例题-4&#34;&gt;#&lt;/a&gt; 例题&lt;/h3&gt;
-&lt;h2 id=&#34;耦合内聚1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#耦合内聚1&#34;&gt;#&lt;/a&gt; 耦合 / 内聚，1&lt;/h2&gt;
+&lt;h2 id=&#34;耦合内聚&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#耦合内聚&#34;&gt;#&lt;/a&gt; 耦合 / 内聚&lt;/h2&gt;
 &lt;h3 id=&#34;知识点-4&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#知识点-4&#34;&gt;#&lt;/a&gt; 知识点&lt;/h3&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230617144725911.png&#34; alt=&#34;image-20230617144725911&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230617144738739.png&#34; alt=&#34;image-20230617144738739&#34; /&gt;&lt;/p&gt;
@@ -932,7 +933,7 @@
 &lt;h3 id=&#34;例题-5&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#例题-5&#34;&gt;#&lt;/a&gt; 例题&lt;/h3&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/AgAABYrp6Svfn23qG8RFnZ9oI5VWkE5E.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;View 负责了展示，Logic 负责了统计求和。Data 负责各个数据的存储。&lt;/p&gt;
-&lt;h2 id=&#34;设计规则1例题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#设计规则1例题&#34;&gt;#&lt;/a&gt; 设计规则，1，例题&lt;/h2&gt;
+&lt;h2 id=&#34;设计规则&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#设计规则&#34;&gt;#&lt;/a&gt; 设计规则&lt;/h2&gt;
 &lt;h3 id=&#34;规则罗列及详解&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#规则罗列及详解&#34;&gt;#&lt;/a&gt; 规则罗列及详解&lt;/h3&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230617232303090.png&#34; alt=&#34;image-20230617232303090&#34; /&gt;&lt;/p&gt;
 &lt;h4 id=&#34;降低隐式耦合&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#降低隐式耦合&#34;&gt;#&lt;/a&gt; 降低隐式耦合&lt;/h4&gt;
@@ -1074,7 +1075,7 @@
 &lt;h3 id=&#34;迭代器模式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#迭代器模式&#34;&gt;#&lt;/a&gt; 迭代器模式&lt;/h3&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230617220719437.png&#34; alt=&#34;image-20230617220719437&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230617220949398.png&#34; alt=&#34;image-20230617220949398&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;构造1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#构造1&#34;&gt;#&lt;/a&gt; 构造，1&lt;/h2&gt;
+&lt;h2 id=&#34;构造&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#构造&#34;&gt;#&lt;/a&gt; 构造&lt;/h2&gt;
 &lt;h3 id=&#34;构造包含的活动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#构造包含的活动&#34;&gt;#&lt;/a&gt; 构造包含的活动&lt;/h3&gt;
 &lt;p&gt;详细设计、编程、测试、调试、代码评审、集成与构建、构造管理&lt;/p&gt;
 &lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvaW1hZ2UtMjAyMzA2MTkxNzQ4MjY2MDgucG5n&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230619174826608.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20230619174826608&amp;quot; style=&amp;quot;zoom:25%;&amp;quot; /&amp;gt;&lt;/p&gt;
@@ -1146,7 +1147,7 @@
 &lt;li&gt;直接通过字符串来返回结果，硬编码不利于修改，复用。&lt;/li&gt;
 &lt;li&gt;即使使用字符串是合理，也应该在 ifelse 中设置 output 的值。再统一调用 writer.print (output)。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;测试1其他&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#测试1其他&#34;&gt;#&lt;/a&gt; 测试，1，其他&lt;/h2&gt;
+&lt;h2 id=&#34;测试&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#测试&#34;&gt;#&lt;/a&gt; 测试&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230616110350978.png&#34; alt=&#34;image-20230616110350978&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;书写格式：ID 输入 输出&lt;/strong&gt;&lt;/p&gt;
 &lt;h3 id=&#34;黑盒测试&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#黑盒测试&#34;&gt;#&lt;/a&gt; 黑盒测试&lt;/h3&gt;
