@@ -51,13 +51,13 @@
 &lt;pre&gt;&lt;code&gt;lsblk | grep nbd
 sudo mkfs.ext4 /dev/nbd0
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;![Pasted image 20230708104729](&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvUGFzdGVk&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/Pasted&lt;/span&gt; image 20230708104729.png)&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230714002629888.png&#34; alt=&#34;image-20230714002629888&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;使用playground&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用playground&#34;&gt;#&lt;/a&gt; 使用 playground&lt;/h2&gt;
-&lt;p&gt;![Pasted image 20230708105046](&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvUGFzdGVk&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/Pasted&lt;/span&gt; image 20230708105046.png)&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230714002641430.png&#34; alt=&#34;image-20230714002641430&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;可以像使用本地磁盘一样去使用它，在这里我们将它格式化成 ext4 文件系统，并挂载到指定目录：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo mkfs.ext4 /dev/nbd0  # 这里我们假定映射的是 nbd0 设备sudo mount /dev/nbd0 /path/to/mount
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;![Pasted image 20230708105256](&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvUGFzdGVk&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/Pasted&lt;/span&gt; image 20230708105256.png)&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230714002651049.png&#34; alt=&#34;image-20230714002651049&#34; /&gt;&lt;/p&gt;
 </content>
         <category term="ospp" scheme="https://quas-modo.github.io/categories/ospp/" />
         <category term="ospp" scheme="https://quas-modo.github.io/tags/ospp/" />
