@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://quas-modo.github.io</id>
+    <title>Carpe diem</title>
+    <subtitle>pluck the day</subtitle>
+    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io" />
+    <author>
+      <name>quas-modo</name>
+    </author>
+    <updated>2023-07-13T16:06:33.000Z</updated>
+    <entry>
+        <id>https://quas-modo.github.io/2023/07/14/ospp/%E4%B8%80%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8BCurve/</id>
+        <title>一分钟快速上手Curve</title>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/07/14/ospp/%E4%B8%80%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8BCurve/"/>
+        <content type="html">&lt;p&gt;利用 CurveAdm 快速部署一个单机集群 CurveBS.&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Curve 是云原生计算基金会 (CNCF) Sandbox 项目，是网易自研和开源的高性能、易运维、云原生的分布式存储系统，由块存储 CurveBS 和文件系统 CurveFS 两部分组成。&lt;/p&gt;
+&lt;h2 id=&#34;软硬件准备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#软硬件准备&#34;&gt;#&lt;/a&gt; 软硬件准备&lt;/h2&gt;
+&lt;p&gt;操作系统：Ubuntu22.04&lt;/p&gt;
+&lt;h2 id=&#34;环境准备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#环境准备&#34;&gt;#&lt;/a&gt; 环境准备&lt;/h2&gt;
+&lt;p&gt;CurveBS 客户端依赖内核 nbd 模块&lt;/p&gt;
+&lt;p&gt;需要加载 nbd 模块&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;modprobe nbd
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;并且检测一下&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo lsmod | grep nbd
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230714001141641.png&#34; alt=&#34;image-20230714001141641&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;nbd 是什么？Network Block Device，让用户通过网络访问到某个块设备，或者镜像设备。nfs (Network File System) 可以实现通过网络挂在各种文件系统并进行访问，nbd 可以进行分区，管理到块设备层。&lt;/p&gt;
+&lt;h2 id=&#34;安装依赖&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装依赖&#34;&gt;#&lt;/a&gt; 安装依赖&lt;/h2&gt;
+&lt;p&gt;CurveBS/CurveFS 所有服务都运行在 Docker 容器内，运行以下命令来检测，确保 Docker Daemon 已经运行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo docker run --rm hello-world
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个命令会下载一个测试映像，并在容器中运行它。当容器运行时，它打印一条消息并退出。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230714001830404.png&#34; alt=&#34;image-20230714001830404&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装curveadm&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装curveadm&#34;&gt;#&lt;/a&gt; 安装 CurveAdm&lt;/h2&gt;
+&lt;p&gt;安装在用户主目录下的 .curveadm 目录，即～/.curveadm&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230714001900772.png&#34; alt=&#34;image-20230714001900772&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;启动playground集群&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#启动playground集群&#34;&gt;#&lt;/a&gt; 启动 playground 集群&lt;/h2&gt;
+&lt;p&gt;操作容器并且有挂卸载的操作需要 root 权限，否则命令将一直在等待权限认证，通过运行以下命令来验证当前用户是否有 sudo 权限：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo ls
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在这里执行原教程指令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curveadm playground run --kind curvebs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;遇到了 630001 的问题，原因是访问了私有库，需要重新定向公开仓库。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curveadm playground run --kind curvebs -i opencurvedocker/curvebs:playground
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;执行以下命令可一键启动一个 CurveBS 的 playground，该命令可能需要几十秒的耗时，可以通过换源 docker 等加快速度&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;lsblk | grep nbd
+sudo mkfs.ext4 /dev/nbd0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;![Pasted image 20230708104729](&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvUGFzdGVk&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/Pasted&lt;/span&gt; image 20230708104729.png)&lt;/p&gt;
+&lt;h2 id=&#34;使用playground&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用playground&#34;&gt;#&lt;/a&gt; 使用 playground&lt;/h2&gt;
+&lt;p&gt;![Pasted image 20230708105046](&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvUGFzdGVk&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/Pasted&lt;/span&gt; image 20230708105046.png)&lt;/p&gt;
+&lt;p&gt;可以像使用本地磁盘一样去使用它，在这里我们将它格式化成 ext4 文件系统，并挂载到指定目录：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo mkfs.ext4 /dev/nbd0  # 这里我们假定映射的是 nbd0 设备sudo mount /dev/nbd0 /path/to/mount
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;![Pasted image 20230708105256](&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9xdWFzZG8ub3NzLWNuLWhhbmd6aG91LmFsaXl1bmNzLmNvbS9pbWcvUGFzdGVk&#34;&gt;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/Pasted&lt;/span&gt; image 20230708105256.png)&lt;/p&gt;
+</content>
+        <category term="ospp" scheme="https://quas-modo.github.io/categories/ospp/" />
+        <category term="ospp" scheme="https://quas-modo.github.io/tags/ospp/" />
+        <updated>2023-07-13T16:06:33.000Z</updated>
+    </entry>
+</feed>
