@@ -10,9 +10,9 @@
     </author>
     <updated>2023-02-26T14:01:29.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/2023/02/26/dataStructure/Lecture8-Graph/</id>
+        <id>https://quas-modo.github.io/2023/02/26/NJUSE/dataStructure/Lecture8-Graph/</id>
         <title>Lecture8-Graph</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2023/02/26/dataStructure/Lecture8-Graph/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/02/26/NJUSE/dataStructure/Lecture8-Graph/"/>
         <content type="html">&lt;h1 id=&#34;lecture8-图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture8-图&#34;&gt;#&lt;/a&gt; Lecture8 - 图&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -649,9 +649,9 @@
         <updated>2023-02-26T14:01:29.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2023/02/26/dataStructure/Lecture07-Sorting/</id>
+        <id>https://quas-modo.github.io/2023/02/26/NJUSE/dataStructure/Lecture07-Sorting/</id>
         <title>Lecture07-Sorting</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2023/02/26/dataStructure/Lecture07-Sorting/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/02/26/NJUSE/dataStructure/Lecture07-Sorting/"/>
         <content type="html">&lt;h1 id=&#34;lecture07-sorting&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture07-sorting&#34;&gt;#&lt;/a&gt; Lecture07-Sorting&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;所有算法都要求掌握并理解算法过程
@@ -1217,9 +1217,9 @@ List&amp;lt;Type&amp;gt; &amp;amp; merge (List&amp;lt;Type&amp;gt; &amp;amp;L1, 
         <updated>2023-02-26T08:13:10.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2023/02/26/dataStructure/Lecture07-1-DisjointSet/</id>
+        <id>https://quas-modo.github.io/2023/02/26/NJUSE/dataStructure/Lecture07-1-DisjointSet/</id>
         <title>Lecture07.1-DisjointSet</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2023/02/26/dataStructure/Lecture07-1-DisjointSet/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/02/26/NJUSE/dataStructure/Lecture07-1-DisjointSet/"/>
         <content type="html">&lt;h1 id=&#34;lecture071-disjointseet&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture071-disjointseet&#34;&gt;#&lt;/a&gt; Lecture07.1-DisjointSEet&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;有很多时候是不考的&lt;/li&gt;
@@ -1335,9 +1335,9 @@ List&amp;lt;Type&amp;gt; &amp;amp; merge (List&amp;lt;Type&amp;gt; &amp;amp;L1, 
         <updated>2023-02-26T08:13:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2022/12/05/dataStructure/Lecture06-PriorityQueue/</id>
+        <id>https://quas-modo.github.io/2022/12/05/NJUSE/dataStructure/Lecture06-PriorityQueue/</id>
         <title>Lecture06-PriorityQueue</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/12/05/dataStructure/Lecture06-PriorityQueue/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/12/05/NJUSE/dataStructure/Lecture06-PriorityQueue/"/>
         <content type="html">&lt;p&gt;最大堆、最小堆、堆排序、代码实现。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture06-proiority-queues优先级队列&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture06-proiority-queues优先级队列&#34;&gt;#&lt;/a&gt; Lecture06-Proiority Queues 优先级队列&lt;/h1&gt;
@@ -1516,9 +1516,9 @@ List&amp;lt;Type&amp;gt; &amp;amp; merge (List&amp;lt;Type&amp;gt; &amp;amp;L1, 
         <updated>2022-12-05T08:26:39.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2022/12/05/dataStructure/Lecture05-Hash/</id>
+        <id>https://quas-modo.github.io/2022/12/05/NJUSE/dataStructure/Lecture05-Hash/</id>
         <title>Lecture05-Hash</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/12/05/dataStructure/Lecture05-Hash/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/12/05/NJUSE/dataStructure/Lecture05-Hash/"/>
         <content type="html">&lt;p&gt;不同的散列方式。&lt;br /&gt;
 取余法、平方取中法、乘法杂凑法、线性探测法 linear probing、二次探测法 quadratic probing、双散列函数 double hashing、分离链接法 separate chainging。&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -1597,9 +1597,9 @@ List&amp;lt;Type&amp;gt; &amp;amp; merge (List&amp;lt;Type&amp;gt; &amp;amp;L1, 
         <updated>2022-12-05T08:26:21.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2022/12/01/dataStructure/Lecture04-1-%E7%89%B9%E6%AE%8A%E6%A0%91/</id>
+        <id>https://quas-modo.github.io/2022/12/01/NJUSE/dataStructure/Lecture04-1-%E7%89%B9%E6%AE%8A%E6%A0%91/</id>
         <title>Lecture04.1-特殊树</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/12/01/dataStructure/Lecture04-1-%E7%89%B9%E6%AE%8A%E6%A0%91/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/12/01/NJUSE/dataStructure/Lecture04-1-%E7%89%B9%E6%AE%8A%E6%A0%91/"/>
         <content type="html">&lt;h1 id=&#34;lecture041-特殊树&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture041-特殊树&#34;&gt;#&lt;/a&gt; Lecture04.1 - 特殊树&lt;/h1&gt;
 &lt;p&gt;考点&lt;/p&gt;
 &lt;ul&gt;
@@ -1849,9 +1849,9 @@ List&amp;lt;Type&amp;gt; &amp;amp; merge (List&amp;lt;Type&amp;gt; &amp;amp;L1, 
         <updated>2022-12-01T14:01:12.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2022/12/01/dataStructure/Lecture04-%E6%A0%91/</id>
+        <id>https://quas-modo.github.io/2022/12/01/NJUSE/dataStructure/Lecture04-%E6%A0%91/</id>
         <title>Lecture04-树</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/12/01/dataStructure/Lecture04-%E6%A0%91/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/12/01/NJUSE/dataStructure/Lecture04-%E6%A0%91/"/>
         <content type="html">&lt;h1 id=&#34;树&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#树&#34;&gt;#&lt;/a&gt; 树&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;概念：选择填空&lt;/li&gt;
@@ -2182,9 +2182,9 @@ List&amp;lt;Type&amp;gt; &amp;amp; merge (List&amp;lt;Type&amp;gt; &amp;amp;L1, 
         <updated>2022-12-01T14:00:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2022/12/01/dataStructure/Lecture03-%E7%BA%BF%E6%80%A7%E8%A1%A8/</id>
+        <id>https://quas-modo.github.io/2022/12/01/NJUSE/dataStructure/Lecture03-%E7%BA%BF%E6%80%A7%E8%A1%A8/</id>
         <title>Lecture03-线性表</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/12/01/dataStructure/Lecture03-%E7%BA%BF%E6%80%A7%E8%A1%A8/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/12/01/NJUSE/dataStructure/Lecture03-%E7%BA%BF%E6%80%A7%E8%A1%A8/"/>
         <content type="html">&lt;h1 id=&#34;lecture3-线性表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture3-线性表&#34;&gt;#&lt;/a&gt; Lecture3 - 线性表&lt;/h1&gt;
 &lt;p&gt;本章考点：&lt;/p&gt;
 &lt;ul&gt;
@@ -2433,9 +2433,9 @@ List&amp;lt;Type&amp;gt; &amp;amp; merge (List&amp;lt;Type&amp;gt; &amp;amp;L1, 
         <updated>2022-12-01T14:00:44.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2022/12/01/dataStructure/Lecture2-%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</id>
+        <id>https://quas-modo.github.io/2022/12/01/NJUSE/dataStructure/Lecture2-%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</id>
         <title>Lecture2-时间复杂度</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/12/01/dataStructure/Lecture2-%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/12/01/NJUSE/dataStructure/Lecture2-%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
         <content type="html">&lt;h1 id=&#34;lecture2-算法分析&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture2-算法分析&#34;&gt;#&lt;/a&gt; Lecture2 - 算法分析&lt;/h1&gt;
 &lt;p&gt;本章考点：&lt;/p&gt;
 &lt;ul&gt;
@@ -2519,9 +2519,9 @@ List&amp;lt;Type&amp;gt; &amp;amp; merge (List&amp;lt;Type&amp;gt; &amp;amp;L1, 
         <updated>2022-12-01T14:00:32.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2022/12/01/dataStructure/Lecture01-%E5%AF%BC%E8%A8%80/</id>
+        <id>https://quas-modo.github.io/2022/12/01/NJUSE/dataStructure/Lecture01-%E5%AF%BC%E8%A8%80/</id>
         <title>Lecture01-导言</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/12/01/dataStructure/Lecture01-%E5%AF%BC%E8%A8%80/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/12/01/NJUSE/dataStructure/Lecture01-%E5%AF%BC%E8%A8%80/"/>
         <content type="html">&lt;h1 id=&#34;lecture1-序言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture1-序言&#34;&gt;#&lt;/a&gt; Lecture1 - 序言&lt;/h1&gt;
 &lt;p&gt;本章考点：&lt;/p&gt;
 &lt;ul&gt;

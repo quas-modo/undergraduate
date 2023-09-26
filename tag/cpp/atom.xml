@@ -10,9 +10,9 @@
     </author>
     <updated>2023-02-08T09:49:10.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/2023/02/08/cpp/Lecture14-%E6%A8%A1%E6%9D%BF/</id>
+        <id>https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture14-%E6%A8%A1%E6%9D%BF/</id>
         <title>Lecture14-模板</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2023/02/08/cpp/Lecture14-%E6%A8%A1%E6%9D%BF/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture14-%E6%A8%A1%E6%9D%BF/"/>
         <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221213140245554.png&#34; alt=&#34;image-20221213140245554&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221213140325903.png&#34; alt=&#34;image-20221213140325903&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221213140639104.png&#34; alt=&#34;image-20221213140639104&#34; /&gt;&lt;/p&gt;
@@ -65,9 +65,9 @@
         <updated>2023-02-08T09:49:10.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2023/02/08/cpp/Lecture13-newdelete/</id>
+        <id>https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture13-newdelete/</id>
         <title>Lecture13-newdelete</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2023/02/08/cpp/Lecture13-newdelete/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture13-newdelete/"/>
         <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221208152207062.png&#34; alt=&#34;image-20221208152207062&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221208152217123.png&#34; alt=&#34;image-20221208152217123&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221208152525691.png&#34; alt=&#34;image-20221208152525691&#34; /&gt;&lt;/p&gt;
@@ -91,9 +91,9 @@
         <updated>2023-02-08T09:49:01.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2023/02/08/cpp/Lecture12-%E5%A4%9A%E6%80%81/</id>
+        <id>https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture12-%E5%A4%9A%E6%80%81/</id>
         <title>Lecture12-多态</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2023/02/08/cpp/Lecture12-%E5%A4%9A%E6%80%81/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture12-%E5%A4%9A%E6%80%81/"/>
         <content type="html">&lt;h1 id=&#34;lecture12-多态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture12-多态&#34;&gt;#&lt;/a&gt; Lecture12 - 多态&lt;/h1&gt;
 &lt;p&gt;&amp;amp; 引用就是某一变量（目标）的一个别名，对引用的操作与对变量直接操作完全一样。&lt;/p&gt;
 &lt;p&gt;引用的声明方法：类型标识符 &amp;amp; 引用名 = 目标变量名；&lt;/p&gt;
@@ -254,9 +254,9 @@
         <updated>2023-02-08T09:48:46.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2023/02/08/cpp/Lecture11-%E7%BB%A7%E6%89%BF%E3%80%81%E8%99%9A%E5%87%BD%E6%95%B0/</id>
+        <id>https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture11-%E7%BB%A7%E6%89%BF%E3%80%81%E8%99%9A%E5%87%BD%E6%95%B0/</id>
         <title>Lecture11-继承、虚函数</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2023/02/08/cpp/Lecture11-%E7%BB%A7%E6%89%BF%E3%80%81%E8%99%9A%E5%87%BD%E6%95%B0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture11-%E7%BB%A7%E6%89%BF%E3%80%81%E8%99%9A%E5%87%BD%E6%95%B0/"/>
         <content type="html">&lt;h1 id=&#34;lecture11-继承-虚函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture11-继承-虚函数&#34;&gt;#&lt;/a&gt; Lecture11 - 继承、虚函数&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;能声明成 const 就声明成 const&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115142752636.png&#34; alt=&#34;image-20221115142752636&#34; /&gt;&lt;/p&gt;
@@ -447,9 +447,9 @@
         <updated>2023-02-08T09:47:48.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2022/11/21/cpp/Homework4-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</id>
+        <id>https://quas-modo.github.io/2022/11/21/NJUSE/cpp/Homework4-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</id>
         <title>Homework4-内存管理</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/11/21/cpp/Homework4-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/11/21/NJUSE/cpp/Homework4-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
         <content type="html">&lt;p&gt;深拷贝、shared_ptr、memory context&lt;br /&gt;
 map、pair 的应用&lt;br /&gt;
 收获很大的一次作业 qvq&lt;br /&gt;
@@ -626,9 +626,9 @@ free（）：在 tcache 2 中检测到双空闲，在执行程序的过程中对
         <updated>2022-11-20T17:01:58.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2022/11/02/cpp/Lecture10-OOP/</id>
+        <id>https://quas-modo.github.io/2022/11/02/NJUSE/cpp/Lecture10-OOP/</id>
         <title>Lecture10-OOP</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/11/02/cpp/Lecture10-OOP/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/11/02/NJUSE/cpp/Lecture10-OOP/"/>
         <content type="html">&lt;p&gt;OOP 相关&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture10-oop&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture10-oop&#34;&gt;#&lt;/a&gt; Lecture10-OOP&lt;/h1&gt;
@@ -1050,9 +1050,9 @@ free（）：在 tcache 2 中检测到双空闲，在执行程序的过程中对
         <updated>2022-11-02T12:40:09.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2022/11/01/cpp/Lecture09-%E6%8C%87%E9%92%88/</id>
+        <id>https://quas-modo.github.io/2022/11/01/NJUSE/cpp/Lecture09-%E6%8C%87%E9%92%88/</id>
         <title>Lecture09-指针</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/11/01/cpp/Lecture09-%E6%8C%87%E9%92%88/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/11/01/NJUSE/cpp/Lecture09-%E6%8C%87%E9%92%88/"/>
         <content type="html">&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture09-指针&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture09-指针&#34;&gt;#&lt;/a&gt; Lecture09 - 指针&lt;/h1&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018144621124.png&#34; alt=&#34;image-20221018144621124&#34; /&gt;&lt;/p&gt;
@@ -1089,9 +1089,9 @@ free（）：在 tcache 2 中检测到双空闲，在执行程序的过程中对
         <updated>2022-11-01T12:42:02.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2022/10/18/cpp/Lecture08-%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/</id>
+        <id>https://quas-modo.github.io/2022/10/18/NJUSE/cpp/Lecture08-%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/</id>
         <title>Lecture08-数组和指针</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/10/18/cpp/Lecture08-%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/10/18/NJUSE/cpp/Lecture08-%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/"/>
         <content type="html">&lt;p&gt;一维数组、指针的指针、RAII、union、函数指针&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture08-数组和指针&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture08-数组和指针&#34;&gt;#&lt;/a&gt; Lecture08 - 数组和指针&lt;/h1&gt;
@@ -1202,9 +1202,9 @@ Int *q1 = new int[8];&lt;/p&gt;
         <updated>2022-10-18T11:53:25.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2022/10/04/cpp/Lecture07-%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/</id>
+        <id>https://quas-modo.github.io/2022/10/04/NJUSE/cpp/Lecture07-%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/</id>
         <title>Lecture07-程序组织</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/10/04/cpp/Lecture07-%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/10/04/NJUSE/cpp/Lecture07-%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/"/>
         <content type="html">&lt;p&gt;内联函数、ROP、头文件、namespace、宏&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture-07&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture-07&#34;&gt;#&lt;/a&gt; Lecture 07&lt;/h1&gt;
@@ -1298,9 +1298,9 @@ Int *q1 = new int[8];&lt;/p&gt;
         <updated>2022-10-04T12:07:08.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2022/09/29/cpp/Lecture06-%E5%87%BD%E6%95%B0/</id>
+        <id>https://quas-modo.github.io/2022/09/29/NJUSE/cpp/Lecture06-%E5%87%BD%E6%95%B0/</id>
         <title>Lecture06-函数</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/09/29/cpp/Lecture06-%E5%87%BD%E6%95%B0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/09/29/NJUSE/cpp/Lecture06-%E5%87%BD%E6%95%B0/"/>
         <content type="html">&lt;p&gt;cpp 中的函数&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture06-函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture06-函数&#34;&gt;#&lt;/a&gt; Lecture06 - 函数&lt;/h1&gt;
@@ -1566,9 +1566,9 @@ Int *q1 = new int[8];&lt;/p&gt;
         <updated>2022-09-29T08:22:20.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2022/09/22/cpp/105-STL/</id>
+        <id>https://quas-modo.github.io/2022/09/22/NJUSE/cpp/105-STL/</id>
         <title>105 STL</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/09/22/cpp/105-STL/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/09/22/NJUSE/cpp/105-STL/"/>
         <content type="html">&lt;p&gt;STL 算法概述&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;stl-standard-template-library&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#stl-standard-template-library&#34;&gt;#&lt;/a&gt; STL Standard Template Library&lt;/h1&gt;
@@ -1701,9 +1701,9 @@ Search_n&lt;br /&gt;
         <updated>2022-09-21T23:56:44.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2022/09/21/cpp/Lecture04-%E7%AC%AC%E4%B8%80%E6%AC%A1cpp%E7%BC%96%E7%A8%8B/</id>
+        <id>https://quas-modo.github.io/2022/09/21/NJUSE/cpp/Lecture04-%E7%AC%AC%E4%B8%80%E6%AC%A1cpp%E7%BC%96%E7%A8%8B/</id>
         <title>Lecture04-第一次cpp编程</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/09/21/cpp/Lecture04-%E7%AC%AC%E4%B8%80%E6%AC%A1cpp%E7%BC%96%E7%A8%8B/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/09/21/NJUSE/cpp/Lecture04-%E7%AC%AC%E4%B8%80%E6%AC%A1cpp%E7%BC%96%E7%A8%8B/"/>
         <content type="html">&lt;p&gt;主要整理了第一次 cpp 作业的问题和想法，以及一些函数和 io。&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture04&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture04&#34;&gt;#&lt;/a&gt; Lecture04&lt;/h1&gt;
@@ -1867,9 +1867,9 @@ Search_n&lt;br /&gt;
         <updated>2022-09-21T15:02:26.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2022/09/15/cpp/Lecture03-%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</id>
+        <id>https://quas-modo.github.io/2022/09/15/NJUSE/cpp/Lecture03-%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</id>
         <title>Lecture03-结构化程序设计</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/09/15/cpp/Lecture03-%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/09/15/NJUSE/cpp/Lecture03-%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
         <content type="html">&lt;p&gt;cpp 第三讲&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture03-结构化程序设计&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture03-结构化程序设计&#34;&gt;#&lt;/a&gt; Lecture03 - 结构化程序设计&lt;/h1&gt;
