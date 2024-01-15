@@ -1,0 +1,34 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Carpe diem",
+    "subtitle": "pluck the day",
+    "icon": "https://quas-modo.github.io/images/favicon.ico",
+    "description": "notes/thoughts/nonsense",
+    "home_page_url": "https://quas-modo.github.io",
+    "items": [
+        {
+            "id": "https://quas-modo.github.io/2024/01/15/NJUSE/devops%E5%9B%9E%E5%BF%86/",
+            "url": "https://quas-modo.github.io/2024/01/15/NJUSE/devops%E5%9B%9E%E5%BF%86/",
+            "title": "devops-2023fall回忆",
+            "date_published": "2024-01-15T04:10:49.000Z",
+            "content_html": "<p>南京大学软件学院 devops 回忆。<br />\n<span id=\"more\"></span><br />\nby hw nyb</p>\n<p>名词解释</p>\n<ol>\n<li>ab 测试</li>\n<li>ci/cd</li>\n<li>Docker<br />\n 主观题</li>\n<li>devops 的流水线有哪些工具，各举一例</li>\n<li>价值流动优先还是资源效率优先，为什么</li>\n<li>three ways 及对应实践</li>\n<li>为什么互联网时代下要选择微服务架构</li>\n<li>devsecops 的常见工具举两类，每个举一个具体例子</li>\n<li>kubernetes 的四种发布方法有哪些，优缺点，使用场合</li>\n<li>云计算、雾计算和边缘计算的优缺点和使用场合</li>\n<li>DDD 的含义，有什么作用</li>\n<li>Xaas 区别</li>\n<li>云计算时代下的运维有哪些挑战</li>\n</ol>\n",
+            "tags": [
+                "NJUSE",
+                "Devops",
+                "Devops"
+            ]
+        },
+        {
+            "id": "https://quas-modo.github.io/2024/01/15/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/",
+            "url": "https://quas-modo.github.io/2024/01/15/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/",
+            "title": "devops期末复习",
+            "date_published": "2024-01-15T04:08:50.000Z",
+            "content_html": "",
+            "tags": [
+                "NJUSE",
+                "Devops",
+                "Devops"
+            ]
+        }
+    ]
+}

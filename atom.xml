@@ -10,45 +10,304 @@
     </author>
     <updated>2024-01-15T04:11:31.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</id>
+        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</id>
         <title>移动端2023期末回忆</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/"/>
-        <content type="html"></content>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/"/>
+        <content type="html">&lt;p&gt;南京大学软件学院移动互联网期末回忆。&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;by cxy xbf&lt;/p&gt;
+&lt;p&gt;一堆英文，软件工程方法 4 个&lt;/p&gt;
+&lt;p&gt;极氪汽车和小米汽车用户画像、前景、宣传策略&lt;/p&gt;
+&lt;p&gt;小米 HyperOS 和华为鸿蒙系统架构，异同，特别是分布式能力的不同&lt;/p&gt;
+&lt;p&gt;结合作业凤凰商城单体、k8s、istio 谈谈如何实现云原生，Devops，k8s&lt;/p&gt;
+&lt;p&gt;根据某小组的大作业架构，来谈谈如何实现基本功能和做高可用高并发的&lt;/p&gt;
+&lt;p&gt;多模态 UI 的优秀案例、前景、准则&lt;/p&gt;
+&lt;p&gt;跨平台技术&lt;/p&gt;
+</content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="移动端开发" scheme="https://quas-modo.github.io/categories/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <category term="移动端开发" scheme="https://quas-modo.github.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" />
         <updated>2024-01-15T04:11:31.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</id>
+        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</id>
         <title>服务端2023期末回忆</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/"/>
-        <content type="html"></content>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/"/>
+        <content type="html">&lt;p&gt;南京大学软件学院服务端开发回忆。&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;by cxy nyb dsy&lt;/p&gt;
+&lt;h2 id=&#34;选择题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#选择题&#34;&gt;#&lt;/a&gt; 选择题&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;横切关注点类型
+&lt;ol&gt;
+&lt;li&gt;日志&lt;/li&gt;
+&lt;li&gt;安全&lt;/li&gt;
+&lt;li&gt;事务&lt;/li&gt;
+&lt;li&gt;缓存&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;aop 概念
+&lt;ol&gt;
+&lt;li&gt;通知 (Advice)：切面做什么？什么时候做？代表了切面的逻辑。&lt;/li&gt;
+&lt;li&gt;切点 (Pointcut)：指定通知存放的位置，定义要改的方法和参数。&lt;/li&gt;
+&lt;li&gt;切面 (Aspect)：通知 + 切点&lt;/li&gt;
+&lt;li&gt;连接点：通知 + 切点的实例化：也就是和业务代码连接的地方&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Bean 的作用域
+&lt;ol&gt;
+&lt;li&gt;Singleton，单例，在整个应用中，只创建 bean 的一个实例&lt;/li&gt;
+&lt;li&gt;Prototype，原型，每次注入或者通过 Spring 应用上下文获取的时候，都会创建一个新 bean 实例&lt;/li&gt;
+&lt;li&gt;Session，会话，在 Web 应用中，为每个会话创建一个 bean 实例&lt;/li&gt;
+&lt;li&gt;Request，请求，在 Web 应用中，为每个请求创建一个 bean 实例&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Redis 的数据类型
+&lt;ol&gt;
+&lt;li&gt;String&lt;/li&gt;
+&lt;li&gt;List&lt;/li&gt;
+&lt;li&gt;Hash&lt;/li&gt;
+&lt;li&gt;Set&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;属性来源
+&lt;ol&gt;
+&lt;li&gt;&lt;img data-src=&#34;https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjQyOTNlY2E1MzE0MjVhMzFhZjBiOTY3NzIyYzJjNmRfU2Y5OXdYd0dkZ1lFUENjVmdBZVpTcnB2UXQ0RWhKem1fVG9rZW46R3N0NGJKcHdMb29MN1J4RkN1SmNDaFoxbkFjXzE3MDUyOTI0OTU6MTcwNTI5NjA5NV9WNA&#34; alt=&#34;img&#34; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;配置日志
+&lt;ol&gt;
+&lt;li&gt;默认使用 logback，日志配置文件 logback.xml&lt;/li&gt;
+&lt;li&gt;默认日志级别&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;属于消息中间件的
+&lt;ol&gt;
+&lt;li&gt;Rabbit MQ&lt;/li&gt;
+&lt;li&gt;Active MQ&lt;/li&gt;
+&lt;li&gt;Active Artemis&lt;/li&gt;
+&lt;li&gt;Kafka&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Kubernetes 调度的最小单元：pod&lt;/li&gt;
+&lt;li&gt;创建新资源的状态码：201&lt;/li&gt;
+&lt;li&gt;Docker compose 命令
+&lt;ol&gt;
+&lt;li&gt;Docker-compose logs -f [services]&lt;/li&gt;
+&lt;li&gt;Docker-compose up&lt;/li&gt;
+&lt;li&gt;Docker-compose stop&lt;/li&gt;
+&lt;li&gt;Docker-compose build?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;acuator 相关
+&lt;ol&gt;
+&lt;li&gt;哪个包？&lt;/li&gt;
+&lt;li&gt;供许多&lt;strong&gt;端点 (endpoints)&lt;/strong&gt;, 监测程序运行情况
+&lt;ul&gt;
+&lt;li&gt;/actuator，查询所有暴露端点&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/actuator/configprops&lt;/strong&gt;，查询配置属性&lt;/li&gt;
+&lt;li&gt;/actuator/health，健康检查&lt;/li&gt;
+&lt;li&gt;/actuator/beans，包含 bean 依赖关系&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;想要获得更多端点如何配置： &lt;code&gt;include: &amp;quot;*&amp;quot;&lt;/code&gt;  暴露所有端口，否则只暴露 &lt;code&gt;/actuator/health&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;docker 命令？&lt;/li&gt;
+&lt;li&gt;Spring 集成流的组件
+&lt;ol&gt;
+&lt;li&gt;Channels&lt;/li&gt;
+&lt;li&gt;Routers&lt;/li&gt;
+&lt;li&gt;Gateways&lt;/li&gt;
+&lt;li&gt;Filters&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;哪些是请求映射的注解
+&lt;ol&gt;
+&lt;li&gt;RequestMapping&lt;/li&gt;
+&lt;li&gt;GetMapping&lt;/li&gt;
+&lt;li&gt;PostMapping&lt;/li&gt;
+&lt;li&gt;PutMapping&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;JPA 的 DSL
+&lt;ol&gt;
+&lt;li&gt;Read&lt;/li&gt;
+&lt;li&gt;Count&lt;/li&gt;
+&lt;li&gt;Find&lt;/li&gt;
+&lt;li&gt;Get&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;DOCKERFILE 最佳实践
+&lt;ol&gt;
+&lt;li&gt;容器只运行&lt;strong&gt;单个应用&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;每个 RUN 指令后删除多余文件&lt;/li&gt;
+&lt;li&gt;基础镜像的标签不要用 latest&lt;/li&gt;
+&lt;li&gt;每个 RUN 指令后删除多余文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;镜像分层
+&lt;ol&gt;
+&lt;li&gt;最上面一层可读写，下面只读&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Git 本地工作区 - 暂存区的命令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;简答题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简答题&#34;&gt;#&lt;/a&gt; 简答题&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;分层架构&lt;/li&gt;
+&lt;li&gt;security 自己要实现的四个方面&lt;/li&gt;
+&lt;li&gt;反应式编程的四个接口，以及它们之间的关系？&lt;/li&gt;
+&lt;li&gt;docker 组成部分&lt;/li&gt;
+&lt;li&gt;数据库初始化的时机&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="服务端开发" scheme="https://quas-modo.github.io/categories/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <category term="服务端开发" scheme="https://quas-modo.github.io/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
         <updated>2024-01-15T04:11:17.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952023%E5%9B%9E%E5%BF%86/</id>
+        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952023%E5%9B%9E%E5%BF%86/</id>
         <title>软件测试2023回忆</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952023%E5%9B%9E%E5%BF%86/"/>
-        <content type="html"></content>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952023%E5%9B%9E%E5%BF%86/"/>
+        <content type="html">&lt;p&gt;南京大学软件学院软件测试回忆。&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;by cxy nyb&lt;/p&gt;
+&lt;h2 id=&#34;选择题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#选择题&#34;&gt;#&lt;/a&gt; 选择题&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;基于生成的模糊测试容易破坏输入的结构、产生无效输入；生成的大部分输入都无法通过语义检查（x，是基于变异）&lt;/li&gt;
+&lt;li&gt;这是隐式预言&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=NjM2ZTBjYzdhZmZjYzliMjM1ZDIzYjNhNmIwM2NkZmZfRmc4N0pyRTN0S3VLYmtPMXBaYTVBSEQ0QmRRVFFVTHBfVG9rZW46TVdOSGJOcEltb2J6NlB4WEYzT2N4Tk1ZbmZnXzE3MDUyOTI2Mzk6MTcwNTI5NjIzOV9WNA&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;非病灶区域要扩增吗？（要的）
+&lt;ol&gt;
+&lt;li&gt;&lt;img data-src=&#34;https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=NjRiMzUxNmYyZjc5M2MwZTk0OTBkNjY3YWJlNmZiYmJfbllnZWQ2bWxSWDFYOWIzMFFwSkxrUXZWZUFIcVEwOUlfVG9rZW46SWp1UmJvSmFibzZBQ3J4TmpYWGNId1NvbjVlXzE3MDUyOTI2Mzk6MTcwNTI5NjIzOV9WNA&#34; alt=&#34;img&#34; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;简答题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简答题&#34;&gt;#&lt;/a&gt; 简答题&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;举一例测试用例优先级排序&lt;/li&gt;
+&lt;li&gt;举例说明差分测试及其适用场景&lt;/li&gt;
+&lt;li&gt;简述一种基于文字识别和图像识别的测试用例选择方法&lt;/li&gt;
+&lt;li&gt;有人说：软件测试的唯一目的就是为了找缺陷，对此你的看法是？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;应用题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应用题&#34;&gt;#&lt;/a&gt; 应用题&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;测试优先级
+&lt;ol&gt;
+&lt;li&gt;贪心算法&lt;/li&gt;
+&lt;li&gt;增量贪心，并计算 APFD&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;函数：X，Y 两个字符串求最长公共字符串
+&lt;ol&gt;
+&lt;li&gt;设计蜕变测试规则&lt;/li&gt;
+&lt;li&gt;根据规则写出测试用例及预期结果&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;语音识别系统，设计模糊测试（要求至少 1 个种子选择策略，3 个变异方式、2 个评估标准）&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="软件测试" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
+        <category term="软件测试" scheme="https://quas-modo.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
         <updated>2024-01-15T04:11:03.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/devops%E5%9B%9E%E5%BF%86/</id>
-        <title>devops回忆</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/devops%E5%9B%9E%E5%BF%86/"/>
-        <content type="html"></content>
+        <id>https://quas-modo.github.io/2024/01/15/NJUSE/devops%E5%9B%9E%E5%BF%86/</id>
+        <title>devops-2023fall回忆</title>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/devops%E5%9B%9E%E5%BF%86/"/>
+        <content type="html">&lt;p&gt;南京大学软件学院 devops 回忆。&lt;br /&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
+by hw nyb&lt;/p&gt;
+&lt;p&gt;名词解释&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ab 测试&lt;/li&gt;
+&lt;li&gt;ci/cd&lt;/li&gt;
+&lt;li&gt;Docker&lt;br /&gt;
+ 主观题&lt;/li&gt;
+&lt;li&gt;devops 的流水线有哪些工具，各举一例&lt;/li&gt;
+&lt;li&gt;价值流动优先还是资源效率优先，为什么&lt;/li&gt;
+&lt;li&gt;three ways 及对应实践&lt;/li&gt;
+&lt;li&gt;为什么互联网时代下要选择微服务架构&lt;/li&gt;
+&lt;li&gt;devsecops 的常见工具举两类，每个举一个具体例子&lt;/li&gt;
+&lt;li&gt;kubernetes 的四种发布方法有哪些，优缺点，使用场合&lt;/li&gt;
+&lt;li&gt;云计算、雾计算和边缘计算的优缺点和使用场合&lt;/li&gt;
+&lt;li&gt;DDD 的含义，有什么作用&lt;/li&gt;
+&lt;li&gt;Xaas 区别&lt;/li&gt;
+&lt;li&gt;云计算时代下的运维有哪些挑战&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="Devops" scheme="https://quas-modo.github.io/categories/NJUSE/Devops/" />
+        <category term="Devops" scheme="https://quas-modo.github.io/tags/Devops/" />
         <updated>2024-01-15T04:10:49.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/%E9%9C%80%E6%B1%822023%E5%9B%9E%E5%BF%86/</id>
+        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E9%9C%80%E6%B1%822023%E5%9B%9E%E5%BF%86/</id>
         <title>需求2023回忆</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/%E9%9C%80%E6%B1%822023%E5%9B%9E%E5%BF%86/"/>
-        <content type="html"></content>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E9%9C%80%E6%B1%822023%E5%9B%9E%E5%BF%86/"/>
+        <content type="html">&lt;p&gt;南京大学软件学院回忆。&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;by cxy nyb&lt;/p&gt;
+&lt;p&gt;以盒马鲜生为背景材料，&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;盒马鲜生，以信息化的供应链、冷链和物流，做新零售。&lt;/li&gt;
+&lt;li&gt;做了一系列试点，如盒马 mini 等二十多种，均失败。&lt;/li&gt;
+&lt;li&gt;X 会员，提供新奇、网红商品、8 折折扣、送货等特权。&lt;/li&gt;
+&lt;li&gt;2022 年，更多的客户青睐性价比，盒马鲜生提出了 “硬折扣”，753，对于一些大品牌零售（如可口可乐等），要是市场价的 7 折，盒马自己的要是 5 折，临期 3 折。在 2023 年取消了 X 会员，将损失之前积累的付费用户。&lt;/li&gt;
+&lt;li&gt;和山姆掰手腕，模仿同类零售的一些爆款，并且比他们价格更低。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;题目：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;画出商业画布，写出约束的三大来源，并举出材料中一个约束的例子。&lt;/li&gt;
+&lt;li&gt;简述免费增值模式，写出核心资源和核心业务。盒马为什么要果断取消 X 会员（言之有理即可）&lt;/li&gt;
+&lt;li&gt;视觉化思考中，便利贴的重要性（主要是关于画布）以及三个指导原则。画出 “五道口 “（盒马一开始提出的早饭、午饭、下午茶、晚饭、夜宵）中其中的晚饭和夜宵，要求符合之前的指导原则。&lt;/li&gt;
+&lt;li&gt;以 2024 年之后的盒马生鲜（放弃 X 会员，做硬折扣）做蓝海战略。要求写出蓝海战略的四项基本行动和三个方向。并分析这样的改革属于哪个方向？试着分析，言之有理即可。&lt;/li&gt;
+&lt;li&gt;盒马线上线下运营，阿里提出要线上销售量比线下高，随着客户量的增加，线上运营的成本增高，线下的成本却基本保持不变，硬折扣吸引了大批用户，但是线上不仅价格高、还有运费、派送时长的限制，引起了大量用户的不满。
+&lt;ol&gt;
+&lt;li&gt;结合指定局部材料，考察盒马线上线下结合的目标模型（画图），指出哪些目标冲突？哪些目标支持？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;材料是硬折扣遭到了很多供应商的反对，盒马做出了应对，两个角度：供应商（免除租金，推出爆款）、用户（高质平价体验），Power interest 和 power attitude 模型，先默上教材上的模型，然后结合题给材料分析。&lt;/li&gt;
+&lt;li&gt;盒马小镇的介绍，45-55 岁中年女性，很少使用盒马，请根据第一次面谈的要求，设计问题列表，关于盒马小镇的推广（说明问题、目的、解决方法）&lt;/li&gt;
+&lt;li&gt;侯毅尝试了二十多种业态，fail cheap, fail fast，最后还是硬折扣，请简述需求验证除了自动化分析之外的五个手段，需求管理的三个任务，请结合你的回答和材料谈谈你对盒马尝试二十多种业态的看法，言之有理即可。&lt;/li&gt;
+&lt;li&gt;侯毅先生不喜欢社区团购，2021 的疫情盒马还是推出了盒马集市，最后合并到了淘宝买菜。请简述需求分析的四项基本活动，并基于回答说明这属于哪项活动，&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="需求" scheme="https://quas-modo.github.io/categories/NJUSE/%E9%9C%80%E6%B1%82/" />
+        <category term="需求" scheme="https://quas-modo.github.io/tags/%E9%9C%80%E6%B1%82/" />
         <updated>2024-01-15T04:10:37.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/%E4%BA%BA%E6%9C%BA2023%E5%9B%9E%E5%BF%86/</id>
-        <title>人机2023回忆</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/%E4%BA%BA%E6%9C%BA2023%E5%9B%9E%E5%BF%86/"/>
-        <content type="html"></content>
+        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA2023%E5%9B%9E%E5%BF%86/</id>
+        <title>人机交互-2023fall回忆</title>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA2023%E5%9B%9E%E5%BF%86/"/>
+        <content type="html">&lt;p&gt;南京大学软件学院人机交互回忆。&lt;br /&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
+by hw nyb&lt;/p&gt;
+&lt;p&gt;选择 20 题，均为 mooc 和往年卷原题&lt;br /&gt;
+选择 10 空，2 分一空，考了人类处理机等&lt;br /&gt;
+简答&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ai 飞速发展的今天，使用了哪些人机交互技术&lt;/li&gt;
+&lt;li&gt;用户填写问卷时，通常会不太好意思指出错误，应该怎么解决&lt;/li&gt;
+&lt;li&gt;简化设计的四种策略并且简述&lt;/li&gt;
+&lt;li&gt;某设计团队对某个设计问题方案争执不休，最终由公司管理层出面确定了最终方案，请分析他们的做法是否正确，如果不正确请给出你的建议。&lt;br /&gt;
+大题&lt;/li&gt;
+&lt;li&gt;十条启发式原则分析界面。&lt;/li&gt;
+&lt;li&gt;层次化任务分析，多人会议制定&lt;/li&gt;
+&lt;li&gt;KLM 击键层次模型，考了大写和拉拽，挺复杂的&lt;/li&gt;
+&lt;li&gt;选择实验分配方式：组间、组内还是裂区&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="人机交互" scheme="https://quas-modo.github.io/categories/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
+        <category term="人机交互" scheme="https://quas-modo.github.io/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
         <updated>2024-01-15T04:10:26.000Z</updated>
     </entry>
     <entry>
@@ -56,6 +315,9 @@
         <title>服务端期末复习</title>
         <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html"></content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="服务端开发" scheme="https://quas-modo.github.io/categories/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <category term="服务端开发" scheme="https://quas-modo.github.io/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
         <updated>2024-01-15T04:10:11.000Z</updated>
     </entry>
     <entry>
@@ -63,6 +325,9 @@
         <title>软件测试期末复习</title>
         <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html"></content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="软件测试" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
+        <category term="软件测试" scheme="https://quas-modo.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
         <updated>2024-01-15T04:09:12.000Z</updated>
     </entry>
     <entry>
@@ -70,6 +335,9 @@
         <title>devops期末复习</title>
         <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html"></content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="Devops" scheme="https://quas-modo.github.io/categories/NJUSE/Devops/" />
+        <category term="Devops" scheme="https://quas-modo.github.io/tags/Devops/" />
         <updated>2024-01-15T04:08:50.000Z</updated>
     </entry>
     <entry>
@@ -77,6 +345,9 @@
         <title>需求期末复习</title>
         <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/%E9%9C%80%E6%B1%82%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html"></content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="需求" scheme="https://quas-modo.github.io/categories/NJUSE/%E9%9C%80%E6%B1%82/" />
+        <category term="需求" scheme="https://quas-modo.github.io/tags/%E9%9C%80%E6%B1%82/" />
         <updated>2024-01-15T04:08:31.000Z</updated>
     </entry>
     <entry>

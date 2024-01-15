@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://quas-modo.github.io</id>
+    <title>Carpe diem</title>
+    <subtitle>pluck the day</subtitle>
+    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io" />
+    <author>
+      <name>quas-modo</name>
+    </author>
+    <updated>2024-01-15T04:11:17.000Z</updated>
+    <entry>
+        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</id>
+        <title>服务端2023期末回忆</title>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/"/>
+        <content type="html">&lt;p&gt;南京大学软件学院服务端开发回忆。&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;by cxy nyb dsy&lt;/p&gt;
+&lt;h2 id=&#34;选择题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#选择题&#34;&gt;#&lt;/a&gt; 选择题&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;横切关注点类型
+&lt;ol&gt;
+&lt;li&gt;日志&lt;/li&gt;
+&lt;li&gt;安全&lt;/li&gt;
+&lt;li&gt;事务&lt;/li&gt;
+&lt;li&gt;缓存&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;aop 概念
+&lt;ol&gt;
+&lt;li&gt;通知 (Advice)：切面做什么？什么时候做？代表了切面的逻辑。&lt;/li&gt;
+&lt;li&gt;切点 (Pointcut)：指定通知存放的位置，定义要改的方法和参数。&lt;/li&gt;
+&lt;li&gt;切面 (Aspect)：通知 + 切点&lt;/li&gt;
+&lt;li&gt;连接点：通知 + 切点的实例化：也就是和业务代码连接的地方&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Bean 的作用域
+&lt;ol&gt;
+&lt;li&gt;Singleton，单例，在整个应用中，只创建 bean 的一个实例&lt;/li&gt;
+&lt;li&gt;Prototype，原型，每次注入或者通过 Spring 应用上下文获取的时候，都会创建一个新 bean 实例&lt;/li&gt;
+&lt;li&gt;Session，会话，在 Web 应用中，为每个会话创建一个 bean 实例&lt;/li&gt;
+&lt;li&gt;Request，请求，在 Web 应用中，为每个请求创建一个 bean 实例&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Redis 的数据类型
+&lt;ol&gt;
+&lt;li&gt;String&lt;/li&gt;
+&lt;li&gt;List&lt;/li&gt;
+&lt;li&gt;Hash&lt;/li&gt;
+&lt;li&gt;Set&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;属性来源
+&lt;ol&gt;
+&lt;li&gt;&lt;img data-src=&#34;https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjQyOTNlY2E1MzE0MjVhMzFhZjBiOTY3NzIyYzJjNmRfU2Y5OXdYd0dkZ1lFUENjVmdBZVpTcnB2UXQ0RWhKem1fVG9rZW46R3N0NGJKcHdMb29MN1J4RkN1SmNDaFoxbkFjXzE3MDUyOTI0OTU6MTcwNTI5NjA5NV9WNA&#34; alt=&#34;img&#34; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;配置日志
+&lt;ol&gt;
+&lt;li&gt;默认使用 logback，日志配置文件 logback.xml&lt;/li&gt;
+&lt;li&gt;默认日志级别&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;属于消息中间件的
+&lt;ol&gt;
+&lt;li&gt;Rabbit MQ&lt;/li&gt;
+&lt;li&gt;Active MQ&lt;/li&gt;
+&lt;li&gt;Active Artemis&lt;/li&gt;
+&lt;li&gt;Kafka&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Kubernetes 调度的最小单元：pod&lt;/li&gt;
+&lt;li&gt;创建新资源的状态码：201&lt;/li&gt;
+&lt;li&gt;Docker compose 命令
+&lt;ol&gt;
+&lt;li&gt;Docker-compose logs -f [services]&lt;/li&gt;
+&lt;li&gt;Docker-compose up&lt;/li&gt;
+&lt;li&gt;Docker-compose stop&lt;/li&gt;
+&lt;li&gt;Docker-compose build?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;acuator 相关
+&lt;ol&gt;
+&lt;li&gt;哪个包？&lt;/li&gt;
+&lt;li&gt;供许多&lt;strong&gt;端点 (endpoints)&lt;/strong&gt;, 监测程序运行情况
+&lt;ul&gt;
+&lt;li&gt;/actuator，查询所有暴露端点&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/actuator/configprops&lt;/strong&gt;，查询配置属性&lt;/li&gt;
+&lt;li&gt;/actuator/health，健康检查&lt;/li&gt;
+&lt;li&gt;/actuator/beans，包含 bean 依赖关系&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;想要获得更多端点如何配置： &lt;code&gt;include: &amp;quot;*&amp;quot;&lt;/code&gt;  暴露所有端口，否则只暴露 &lt;code&gt;/actuator/health&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;docker 命令？&lt;/li&gt;
+&lt;li&gt;Spring 集成流的组件
+&lt;ol&gt;
+&lt;li&gt;Channels&lt;/li&gt;
+&lt;li&gt;Routers&lt;/li&gt;
+&lt;li&gt;Gateways&lt;/li&gt;
+&lt;li&gt;Filters&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;哪些是请求映射的注解
+&lt;ol&gt;
+&lt;li&gt;RequestMapping&lt;/li&gt;
+&lt;li&gt;GetMapping&lt;/li&gt;
+&lt;li&gt;PostMapping&lt;/li&gt;
+&lt;li&gt;PutMapping&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;JPA 的 DSL
+&lt;ol&gt;
+&lt;li&gt;Read&lt;/li&gt;
+&lt;li&gt;Count&lt;/li&gt;
+&lt;li&gt;Find&lt;/li&gt;
+&lt;li&gt;Get&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;DOCKERFILE 最佳实践
+&lt;ol&gt;
+&lt;li&gt;容器只运行&lt;strong&gt;单个应用&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;每个 RUN 指令后删除多余文件&lt;/li&gt;
+&lt;li&gt;基础镜像的标签不要用 latest&lt;/li&gt;
+&lt;li&gt;每个 RUN 指令后删除多余文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;镜像分层
+&lt;ol&gt;
+&lt;li&gt;最上面一层可读写，下面只读&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Git 本地工作区 - 暂存区的命令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;简答题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简答题&#34;&gt;#&lt;/a&gt; 简答题&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;分层架构&lt;/li&gt;
+&lt;li&gt;security 自己要实现的四个方面&lt;/li&gt;
+&lt;li&gt;反应式编程的四个接口，以及它们之间的关系？&lt;/li&gt;
+&lt;li&gt;docker 组成部分&lt;/li&gt;
+&lt;li&gt;数据库初始化的时机&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="服务端开发" scheme="https://quas-modo.github.io/categories/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <category term="服务端开发" scheme="https://quas-modo.github.io/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <updated>2024-01-15T04:11:17.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://quas-modo.github.io/2024/01/15/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+        <title>服务端期末复习</title>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+        <content type="html"></content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="服务端开发" scheme="https://quas-modo.github.io/categories/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <category term="服务端开发" scheme="https://quas-modo.github.io/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <updated>2024-01-15T04:10:11.000Z</updated>
+    </entry>
+</feed>

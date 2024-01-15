@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Carpe diem</title>
+        <subtitle>pluck the day</subtitle>
+        <icon>https://quas-modo.github.io/images/favicon.ico</icon>
+        <link>https://quas-modo.github.io</link>
+        <author>
+          <name>quas-modo</name>
+        </author>
+        <description>notes/thoughts/nonsense</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 15 Jan 2024 12:11:03 +0800</pubDate>
+        <lastBuildDate>Mon, 15 Jan 2024 12:11:03 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://quas-modo.github.io/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952023%E5%9B%9E%E5%BF%86/</guid>
+            <title>软件测试2023回忆</title>
+            <link>https://quas-modo.github.io/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952023%E5%9B%9E%E5%BF%86/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+            <category term="软件测试" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
+            <category term="软件测试" scheme="https://quas-modo.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
+            <pubDate>Mon, 15 Jan 2024 12:11:03 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;南京大学软件学院软件测试回忆。&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;by cxy nyb&lt;/p&gt;
+&lt;h2 id=&#34;选择题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#选择题&#34;&gt;#&lt;/a&gt; 选择题&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;基于生成的模糊测试容易破坏输入的结构、产生无效输入；生成的大部分输入都无法通过语义检查（x，是基于变异）&lt;/li&gt;
+&lt;li&gt;这是隐式预言&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=NjM2ZTBjYzdhZmZjYzliMjM1ZDIzYjNhNmIwM2NkZmZfRmc4N0pyRTN0S3VLYmtPMXBaYTVBSEQ0QmRRVFFVTHBfVG9rZW46TVdOSGJOcEltb2J6NlB4WEYzT2N4Tk1ZbmZnXzE3MDUyOTI2Mzk6MTcwNTI5NjIzOV9WNA&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;非病灶区域要扩增吗？（要的）
+&lt;ol&gt;
+&lt;li&gt;&lt;img data-src=&#34;https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=NjRiMzUxNmYyZjc5M2MwZTk0OTBkNjY3YWJlNmZiYmJfbllnZWQ2bWxSWDFYOWIzMFFwSkxrUXZWZUFIcVEwOUlfVG9rZW46SWp1UmJvSmFibzZBQ3J4TmpYWGNId1NvbjVlXzE3MDUyOTI2Mzk6MTcwNTI5NjIzOV9WNA&#34; alt=&#34;img&#34; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;简答题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#简答题&#34;&gt;#&lt;/a&gt; 简答题&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;举一例测试用例优先级排序&lt;/li&gt;
+&lt;li&gt;举例说明差分测试及其适用场景&lt;/li&gt;
+&lt;li&gt;简述一种基于文字识别和图像识别的测试用例选择方法&lt;/li&gt;
+&lt;li&gt;有人说：软件测试的唯一目的就是为了找缺陷，对此你的看法是？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;应用题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应用题&#34;&gt;#&lt;/a&gt; 应用题&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;测试优先级
+&lt;ol&gt;
+&lt;li&gt;贪心算法&lt;/li&gt;
+&lt;li&gt;增量贪心，并计算 APFD&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;函数：X，Y 两个字符串求最长公共字符串
+&lt;ol&gt;
+&lt;li&gt;设计蜕变测试规则&lt;/li&gt;
+&lt;li&gt;根据规则写出测试用例及预期结果&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;语音识别系统，设计模糊测试（要求至少 1 个种子选择策略，3 个变异方式、2 个评估标准）&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://quas-modo.github.io/2024/01/15/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</guid>
+            <title>软件测试期末复习</title>
+            <link>https://quas-modo.github.io/2024/01/15/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+            <category term="软件测试" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
+            <category term="软件测试" scheme="https://quas-modo.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
+            <pubDate>Mon, 15 Jan 2024 12:09:12 +0800</pubDate>
+            <description><![CDATA[  ]]></description>
+        </item>
+    </channel>
+</rss>

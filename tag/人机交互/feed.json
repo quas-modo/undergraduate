@@ -7,6 +7,18 @@
     "home_page_url": "https://quas-modo.github.io",
     "items": [
         {
+            "id": "https://quas-modo.github.io/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA2023%E5%9B%9E%E5%BF%86/",
+            "url": "https://quas-modo.github.io/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA2023%E5%9B%9E%E5%BF%86/",
+            "title": "人机交互-2023fall回忆",
+            "date_published": "2024-01-15T04:10:26.000Z",
+            "content_html": "<p>南京大学软件学院人机交互回忆。<br />\n<span id=\"more\"></span><br />\nby hw nyb</p>\n<p>选择 20 题，均为 mooc 和往年卷原题<br />\n选择 10 空，2 分一空，考了人类处理机等<br />\n简答</p>\n<ol>\n<li>ai 飞速发展的今天，使用了哪些人机交互技术</li>\n<li>用户填写问卷时，通常会不太好意思指出错误，应该怎么解决</li>\n<li>简化设计的四种策略并且简述</li>\n<li>某设计团队对某个设计问题方案争执不休，最终由公司管理层出面确定了最终方案，请分析他们的做法是否正确，如果不正确请给出你的建议。<br />\n大题</li>\n<li>十条启发式原则分析界面。</li>\n<li>层次化任务分析，多人会议制定</li>\n<li>KLM 击键层次模型，考了大写和拉拽，挺复杂的</li>\n<li>选择实验分配方式：组间、组内还是裂区</li>\n</ol>\n",
+            "tags": [
+                "NJUSE",
+                "人机交互",
+                "人机交互"
+            ]
+        },
+        {
             "id": "https://quas-modo.github.io/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/",
             "url": "https://quas-modo.github.io/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/",
             "title": "人机交互期末复习",

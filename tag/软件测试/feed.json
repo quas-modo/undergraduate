@@ -1,0 +1,34 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Carpe diem",
+    "subtitle": "pluck the day",
+    "icon": "https://quas-modo.github.io/images/favicon.ico",
+    "description": "notes/thoughts/nonsense",
+    "home_page_url": "https://quas-modo.github.io",
+    "items": [
+        {
+            "id": "https://quas-modo.github.io/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952023%E5%9B%9E%E5%BF%86/",
+            "url": "https://quas-modo.github.io/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952023%E5%9B%9E%E5%BF%86/",
+            "title": "软件测试2023回忆",
+            "date_published": "2024-01-15T04:11:03.000Z",
+            "content_html": "<p>南京大学软件学院软件测试回忆。</p>\n<p><span id=\"more\"></span></p>\n<p>by cxy nyb</p>\n<h2 id=\"选择题\"><a class=\"anchor\" href=\"#选择题\">#</a> 选择题</h2>\n<ol>\n<li>基于生成的模糊测试容易破坏输入的结构、产生无效输入；生成的大部分输入都无法通过语义检查（x，是基于变异）</li>\n<li>这是隐式预言</li>\n</ol>\n<p><img data-src=\"https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=NjM2ZTBjYzdhZmZjYzliMjM1ZDIzYjNhNmIwM2NkZmZfRmc4N0pyRTN0S3VLYmtPMXBaYTVBSEQ0QmRRVFFVTHBfVG9rZW46TVdOSGJOcEltb2J6NlB4WEYzT2N4Tk1ZbmZnXzE3MDUyOTI2Mzk6MTcwNTI5NjIzOV9WNA\" alt=\"img\" /></p>\n<ol>\n<li>非病灶区域要扩增吗？（要的）\n<ol>\n<li><img data-src=\"https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=NjRiMzUxNmYyZjc5M2MwZTk0OTBkNjY3YWJlNmZiYmJfbllnZWQ2bWxSWDFYOWIzMFFwSkxrUXZWZUFIcVEwOUlfVG9rZW46SWp1UmJvSmFibzZBQ3J4TmpYWGNId1NvbjVlXzE3MDUyOTI2Mzk6MTcwNTI5NjIzOV9WNA\" alt=\"img\" /></li>\n</ol>\n</li>\n</ol>\n<h2 id=\"简答题\"><a class=\"anchor\" href=\"#简答题\">#</a> 简答题</h2>\n<ol>\n<li>举一例测试用例优先级排序</li>\n<li>举例说明差分测试及其适用场景</li>\n<li>简述一种基于文字识别和图像识别的测试用例选择方法</li>\n<li>有人说：软件测试的唯一目的就是为了找缺陷，对此你的看法是？</li>\n</ol>\n<h2 id=\"应用题\"><a class=\"anchor\" href=\"#应用题\">#</a> 应用题</h2>\n<ol>\n<li>测试优先级\n<ol>\n<li>贪心算法</li>\n<li>增量贪心，并计算 APFD</li>\n</ol>\n</li>\n<li>函数：X，Y 两个字符串求最长公共字符串\n<ol>\n<li>设计蜕变测试规则</li>\n<li>根据规则写出测试用例及预期结果</li>\n</ol>\n</li>\n<li>语音识别系统，设计模糊测试（要求至少 1 个种子选择策略，3 个变异方式、2 个评估标准）</li>\n</ol>\n",
+            "tags": [
+                "NJUSE",
+                "软件测试",
+                "软件测试"
+            ]
+        },
+        {
+            "id": "https://quas-modo.github.io/2024/01/15/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/",
+            "url": "https://quas-modo.github.io/2024/01/15/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/",
+            "title": "软件测试期末复习",
+            "date_published": "2024-01-15T04:09:12.000Z",
+            "content_html": "",
+            "tags": [
+                "NJUSE",
+                "软件测试",
+                "软件测试"
+            ]
+        }
+    ]
+}

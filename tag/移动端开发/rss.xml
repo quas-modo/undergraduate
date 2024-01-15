@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Carpe diem</title>
+        <subtitle>pluck the day</subtitle>
+        <icon>https://quas-modo.github.io/images/favicon.ico</icon>
+        <link>https://quas-modo.github.io</link>
+        <author>
+          <name>quas-modo</name>
+        </author>
+        <description>notes/thoughts/nonsense</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 15 Jan 2024 12:11:31 +0800</pubDate>
+        <lastBuildDate>Mon, 15 Jan 2024 12:11:31 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://quas-modo.github.io/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</guid>
+            <title>移动端2023期末回忆</title>
+            <link>https://quas-modo.github.io/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+            <category term="移动端开发" scheme="https://quas-modo.github.io/categories/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+            <category term="移动端开发" scheme="https://quas-modo.github.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+            <pubDate>Mon, 15 Jan 2024 12:11:31 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;南京大学软件学院移动互联网期末回忆。&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;by cxy xbf&lt;/p&gt;
+&lt;p&gt;一堆英文，软件工程方法 4 个&lt;/p&gt;
+&lt;p&gt;极氪汽车和小米汽车用户画像、前景、宣传策略&lt;/p&gt;
+&lt;p&gt;小米 HyperOS 和华为鸿蒙系统架构，异同，特别是分布式能力的不同&lt;/p&gt;
+&lt;p&gt;结合作业凤凰商城单体、k8s、istio 谈谈如何实现云原生，Devops，k8s&lt;/p&gt;
+&lt;p&gt;根据某小组的大作业架构，来谈谈如何实现基本功能和做高可用高并发的&lt;/p&gt;
+&lt;p&gt;多模态 UI 的优秀案例、前景、准则&lt;/p&gt;
+&lt;p&gt;跨平台技术&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

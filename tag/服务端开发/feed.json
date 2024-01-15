@@ -1,0 +1,34 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Carpe diem",
+    "subtitle": "pluck the day",
+    "icon": "https://quas-modo.github.io/images/favicon.ico",
+    "description": "notes/thoughts/nonsense",
+    "home_page_url": "https://quas-modo.github.io",
+    "items": [
+        {
+            "id": "https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/",
+            "url": "https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/",
+            "title": "服务端2023期末回忆",
+            "date_published": "2024-01-15T04:11:17.000Z",
+            "content_html": "<p>南京大学软件学院服务端开发回忆。</p>\n<p><span id=\"more\"></span></p>\n<p>by cxy nyb dsy</p>\n<h2 id=\"选择题\"><a class=\"anchor\" href=\"#选择题\">#</a> 选择题</h2>\n<ol>\n<li>横切关注点类型\n<ol>\n<li>日志</li>\n<li>安全</li>\n<li>事务</li>\n<li>缓存</li>\n</ol>\n</li>\n<li>aop 概念\n<ol>\n<li>通知 (Advice)：切面做什么？什么时候做？代表了切面的逻辑。</li>\n<li>切点 (Pointcut)：指定通知存放的位置，定义要改的方法和参数。</li>\n<li>切面 (Aspect)：通知 + 切点</li>\n<li>连接点：通知 + 切点的实例化：也就是和业务代码连接的地方</li>\n</ol>\n</li>\n<li>Bean 的作用域\n<ol>\n<li>Singleton，单例，在整个应用中，只创建 bean 的一个实例</li>\n<li>Prototype，原型，每次注入或者通过 Spring 应用上下文获取的时候，都会创建一个新 bean 实例</li>\n<li>Session，会话，在 Web 应用中，为每个会话创建一个 bean 实例</li>\n<li>Request，请求，在 Web 应用中，为每个请求创建一个 bean 实例</li>\n</ol>\n</li>\n<li>Redis 的数据类型\n<ol>\n<li>String</li>\n<li>List</li>\n<li>Hash</li>\n<li>Set</li>\n</ol>\n</li>\n<li>属性来源\n<ol>\n<li><img data-src=\"https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjQyOTNlY2E1MzE0MjVhMzFhZjBiOTY3NzIyYzJjNmRfU2Y5OXdYd0dkZ1lFUENjVmdBZVpTcnB2UXQ0RWhKem1fVG9rZW46R3N0NGJKcHdMb29MN1J4RkN1SmNDaFoxbkFjXzE3MDUyOTI0OTU6MTcwNTI5NjA5NV9WNA\" alt=\"img\" /></li>\n</ol>\n</li>\n<li>配置日志\n<ol>\n<li>默认使用 logback，日志配置文件 logback.xml</li>\n<li>默认日志级别</li>\n</ol>\n</li>\n<li>属于消息中间件的\n<ol>\n<li>Rabbit MQ</li>\n<li>Active MQ</li>\n<li>Active Artemis</li>\n<li>Kafka</li>\n</ol>\n</li>\n<li>Kubernetes 调度的最小单元：pod</li>\n<li>创建新资源的状态码：201</li>\n<li>Docker compose 命令\n<ol>\n<li>Docker-compose logs -f [services]</li>\n<li>Docker-compose up</li>\n<li>Docker-compose stop</li>\n<li>Docker-compose build?</li>\n</ol>\n</li>\n<li>acuator 相关\n<ol>\n<li>哪个包？</li>\n<li>供许多<strong>端点 (endpoints)</strong>, 监测程序运行情况\n<ul>\n<li>/actuator，查询所有暴露端点</li>\n<li><strong>/actuator/configprops</strong>，查询配置属性</li>\n<li>/actuator/health，健康检查</li>\n<li>/actuator/beans，包含 bean 依赖关系</li>\n</ul>\n</li>\n<li>想要获得更多端点如何配置： <code>include: &quot;*&quot;</code>  暴露所有端口，否则只暴露 <code>/actuator/health</code></li>\n</ol>\n</li>\n<li>docker 命令？</li>\n<li>Spring 集成流的组件\n<ol>\n<li>Channels</li>\n<li>Routers</li>\n<li>Gateways</li>\n<li>Filters</li>\n</ol>\n</li>\n<li>哪些是请求映射的注解\n<ol>\n<li>RequestMapping</li>\n<li>GetMapping</li>\n<li>PostMapping</li>\n<li>PutMapping</li>\n</ol>\n</li>\n<li>JPA 的 DSL\n<ol>\n<li>Read</li>\n<li>Count</li>\n<li>Find</li>\n<li>Get</li>\n</ol>\n</li>\n<li>DOCKERFILE 最佳实践\n<ol>\n<li>容器只运行<strong>单个应用</strong></li>\n<li>每个 RUN 指令后删除多余文件</li>\n<li>基础镜像的标签不要用 latest</li>\n<li>每个 RUN 指令后删除多余文件</li>\n</ol>\n</li>\n<li>镜像分层\n<ol>\n<li>最上面一层可读写，下面只读</li>\n</ol>\n</li>\n<li>Git 本地工作区 - 暂存区的命令</li>\n</ol>\n<h2 id=\"简答题\"><a class=\"anchor\" href=\"#简答题\">#</a> 简答题</h2>\n<ol>\n<li>分层架构</li>\n<li>security 自己要实现的四个方面</li>\n<li>反应式编程的四个接口，以及它们之间的关系？</li>\n<li>docker 组成部分</li>\n<li>数据库初始化的时机</li>\n</ol>\n",
+            "tags": [
+                "NJUSE",
+                "服务端开发",
+                "服务端开发"
+            ]
+        },
+        {
+            "id": "https://quas-modo.github.io/2024/01/15/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/",
+            "url": "https://quas-modo.github.io/2024/01/15/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/",
+            "title": "服务端期末复习",
+            "date_published": "2024-01-15T04:10:11.000Z",
+            "content_html": "",
+            "tags": [
+                "NJUSE",
+                "服务端开发",
+                "服务端开发"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://quas-modo.github.io</id>
+    <title>Carpe diem</title>
+    <subtitle>pluck the day</subtitle>
+    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io" />
+    <author>
+      <name>quas-modo</name>
+    </author>
+    <updated>2024-01-15T04:10:49.000Z</updated>
+    <entry>
+        <id>https://quas-modo.github.io/2024/01/15/NJUSE/devops%E5%9B%9E%E5%BF%86/</id>
+        <title>devops-2023fall回忆</title>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/devops%E5%9B%9E%E5%BF%86/"/>
+        <content type="html">&lt;p&gt;南京大学软件学院 devops 回忆。&lt;br /&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
+by hw nyb&lt;/p&gt;
+&lt;p&gt;名词解释&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ab 测试&lt;/li&gt;
+&lt;li&gt;ci/cd&lt;/li&gt;
+&lt;li&gt;Docker&lt;br /&gt;
+ 主观题&lt;/li&gt;
+&lt;li&gt;devops 的流水线有哪些工具，各举一例&lt;/li&gt;
+&lt;li&gt;价值流动优先还是资源效率优先，为什么&lt;/li&gt;
+&lt;li&gt;three ways 及对应实践&lt;/li&gt;
+&lt;li&gt;为什么互联网时代下要选择微服务架构&lt;/li&gt;
+&lt;li&gt;devsecops 的常见工具举两类，每个举一个具体例子&lt;/li&gt;
+&lt;li&gt;kubernetes 的四种发布方法有哪些，优缺点，使用场合&lt;/li&gt;
+&lt;li&gt;云计算、雾计算和边缘计算的优缺点和使用场合&lt;/li&gt;
+&lt;li&gt;DDD 的含义，有什么作用&lt;/li&gt;
+&lt;li&gt;Xaas 区别&lt;/li&gt;
+&lt;li&gt;云计算时代下的运维有哪些挑战&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="Devops" scheme="https://quas-modo.github.io/categories/NJUSE/Devops/" />
+        <category term="Devops" scheme="https://quas-modo.github.io/tags/Devops/" />
+        <updated>2024-01-15T04:10:49.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://quas-modo.github.io/2024/01/15/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+        <title>devops期末复习</title>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+        <content type="html"></content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="Devops" scheme="https://quas-modo.github.io/categories/NJUSE/Devops/" />
+        <category term="Devops" scheme="https://quas-modo.github.io/tags/Devops/" />
+        <updated>2024-01-15T04:08:50.000Z</updated>
+    </entry>
+</feed>
