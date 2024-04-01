@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://quas-modo.github.io</id>
+    <title>Carpe diem</title>
+    <subtitle>pluck the day</subtitle>
+    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io" />
+    <author>
+      <name>quas-modo</name>
+    </author>
+    <updated>2024-04-01T15:40:56.000Z</updated>
+    <entry>
+        <id>https://quas-modo.github.io/2024/04/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%86%B3%E7%AD%96%E6%A0%91/</id>
+        <title>决策树</title>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/04/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%86%B3%E7%AD%96%E6%A0%91/"/>
+        <content type="html">&lt;p&gt;根据西瓜书《决策树》章节和李沐 b 站相关视频整理。&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;决策树&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#决策树&#34;&gt;#&lt;/a&gt; 决策树&lt;/h1&gt;
+&lt;h2 id=&#34;西瓜书&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#西瓜书&#34;&gt;#&lt;/a&gt; 西瓜书&lt;/h2&gt;
+&lt;h3 id=&#34;基本流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本流程&#34;&gt;#&lt;/a&gt; 基本流程&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240401234738414.png&#34; alt=&#34;image-20240401234738414&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;什么情况下不需要继续往下分了？三种停止递归条件如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;已全为同一种类别 -&amp;gt; 叶节点&lt;/li&gt;
+&lt;li&gt;已没有更多的属性往下分（西瓜色泽、敲声、根蒂，无其他属性）-&amp;gt; 谁多当做谁&lt;/li&gt;
+&lt;li&gt;遇到了未出现的属性值 -&amp;gt; 父节点谁多当做谁&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;最重要的是找到最优的划分属性&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;名词解释&lt;/p&gt;
+&lt;p&gt;先验分布：基于过去研究、专家经验等&lt;/p&gt;
+&lt;p&gt;后验分布：先验分布 + 观测数据&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划分选择&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#划分选择&#34;&gt;#&lt;/a&gt; 划分选择&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240401234759543.png&#34; alt=&#34;image-20240401234759543&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;分散的类别越多、概率越小，信息熵越大&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240401234808225.png&#34; alt=&#34;image-20240401234808225&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;信息增益越大，意味着使用属性 a 来进行划分所获得的纯度提升越大。每一次选取能够获得最大信息增益的属性进行划分，直到不能划分为止。&lt;/p&gt;
+&lt;h4 id=&#34;增益率&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#增益率&#34;&gt;#&lt;/a&gt; 增益率&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240401234827256.png&#34; alt=&#34;image-20240401234827256&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;C4.5 决策树算法&lt;/p&gt;
+&lt;p&gt;增益越大越好，属性可选择值（分支数量）越小越好。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;规范化：把不可直接比较的东西，变得可以比较。&lt;/p&gt;
+&lt;p&gt;归一化：规范化到 0-1 之间。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;基尼指数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基尼指数&#34;&gt;#&lt;/a&gt; 基尼指数&lt;/h4&gt;
+&lt;p&gt;CART 决策树学习算法&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240401234840889.png&#34; alt=&#34;image-20240401234840889&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;剪枝处理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#剪枝处理&#34;&gt;#&lt;/a&gt; 剪枝处理&lt;/h3&gt;
+&lt;p&gt;剪枝是决策树对付 “过拟合” 的主要手段！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;过拟合：学习了数据集中不该学习的特性，学多了；不是一般规律，而是少量样本有的特性&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;预剪枝&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#预剪枝&#34;&gt;#&lt;/a&gt; 预剪枝&lt;/h4&gt;
+&lt;p&gt;提前终止某些分支的生长。&lt;/p&gt;
+&lt;p&gt;在生成树的时候就进行评估。如果划分后，精度增加，就划分；若精度无提升，就剪枝。&lt;/p&gt;
+&lt;p&gt;但在有些情况下，后续划分可能带来性能显著提高，基于 “贪心” 的预剪枝可能会造成欠拟合。&lt;/p&gt;
+&lt;h4 id=&#34;后剪枝&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#后剪枝&#34;&gt;#&lt;/a&gt; 后剪枝&lt;/h4&gt;
+&lt;p&gt;生成一颗完全树，再 “回头 “剪枝&lt;/p&gt;
+&lt;p&gt;后剪枝可以减少欠拟合的风险，但是训练开销较大。&lt;/p&gt;
+&lt;h3 id=&#34;连续与缺失值&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#连续与缺失值&#34;&gt;#&lt;/a&gt; 连续与缺失值&lt;/h3&gt;
+&lt;h4 id=&#34;连续值处理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#连续值处理&#34;&gt;#&lt;/a&gt; 连续值处理&lt;/h4&gt;
+&lt;p&gt;最简单的处理策略是二分法。&lt;/p&gt;
+&lt;p&gt;候选点集是连续属性之间的中位点，挑选增益率最高的二分点。&lt;/p&gt;
+&lt;h4 id=&#34;缺失值处理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#缺失值处理&#34;&gt;#&lt;/a&gt; 缺失值处理&lt;/h4&gt;
+&lt;p&gt;仅使用无缺失的样例，是对数据的极大浪费。&lt;/p&gt;
+&lt;p&gt;那么如何使用缺失值？基本思路：&lt;strong&gt;样本赋权、权重划分&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;如何划分属性选择？&lt;/li&gt;
+&lt;li&gt;给定划分属性，若样本在该属性上的值确实，如何进行划分？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;解决方案、思路：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240401234853075.png&#34; alt=&#34;image-20240401234853075&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;回答问题一：如何划分属性选择？&lt;/p&gt;
+&lt;p&gt;信息熵的计算增加权重，通过属性权重（非缺失样本概率）与子集的增益率，权衡选择。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240401234907588.png&#34; alt=&#34;image-20240401234907588&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;回答问题二：给定划分属性，若样本在该属性上的值确实，如何进行划分？&lt;/p&gt;
+&lt;p&gt;将已知的后验概率作为未知的先验概率进行处理，&lt;strong&gt;缺失值样本将同时进入三个分支&lt;/strong&gt;，但在进入分支时，以权重为概率进行划分。&lt;/p&gt;
+&lt;h3 id=&#34;多变量决策树&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#多变量决策树&#34;&gt;#&lt;/a&gt; 多变量决策树&lt;/h3&gt;
+&lt;p&gt;每个节点的决策不再依赖于单一属性，而是找到合适的线性分类器。&lt;/p&gt;
+&lt;h2 id=&#34;李沐&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#李沐&#34;&gt;#&lt;/a&gt; 李沐&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;两个例子&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240401234932374.png&#34; alt=&#34;image-20240401234932374&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;怎么用决策树来做分类：拿一个数据，看一下这个数据在节点上是应该往哪个方向走，一直往下走，走到叶子节点，就会得到数据所对应的标号&lt;/li&gt;
+&lt;li&gt;用决策树做回归：与上面那个例子不同的是，叶节点不是一个具体的类而是一个实数值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;决策树的好与坏&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#决策树的好与坏&#34;&gt;#&lt;/a&gt; &lt;strong&gt;决策树的好与坏&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;好处：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以解释（可以让人看到对数据处理的过程）【常用于银行业保险业】；&lt;/li&gt;
+&lt;li&gt;可以处理数值类和类别类的特征；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;坏处：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不稳定（数据产生一定的噪音之后，整棵树构建出的样子可能会不一样）【使用集成学习 (ensemble learning) 可以解决】&lt;/li&gt;
+&lt;li&gt;数据过于复杂会生成过于复杂的树，会导致过拟合【把决策树的枝剪掉一些（在训练时觉得太复杂了就停下来，或在训练之后把特往下的节点给剪掉）】&lt;/li&gt;
+&lt;li&gt;大量的判断语句（太顺序化），不太好并行【在性能上会吃亏】&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;让决策树稳定的方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#让决策树稳定的方法&#34;&gt;#&lt;/a&gt; &lt;strong&gt;让决策树稳定的方法&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;随机森林&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#随机森林&#34;&gt;#&lt;/a&gt; 随机森林&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;训练多个决策树来提升稳定性：&lt;/li&gt;
+&lt;li&gt;每棵树会独立的进行训练，训练之后这些树一起作用得出结果；&lt;/li&gt;
+&lt;li&gt;分类的话，可以用投票（少数服从多数）；&lt;/li&gt;
+&lt;li&gt;回归的话，实数值可以时每棵树的结果求平均；&lt;/li&gt;
+&lt;li&gt;随机来自以下两种情况：
+&lt;ul&gt;
+&lt;li&gt;Bagging：在训练集中随机采样一些样本出来（放回，可重复）；&lt;/li&gt;
+&lt;li&gt;在 bagging 出来的数字中，再随机采样一些特征出来，不用整个特征；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;boosting&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#boosting&#34;&gt;#&lt;/a&gt; &lt;strong&gt;Boosting&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240401234948093.png&#34; alt=&#34;image-20240401234948093&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;顺序完成多个树的训练（之前是独立的完成）&lt;/li&gt;
+&lt;li&gt;例子说的是，利用训练好的树与真实值做残差来训练新的树，训练好了之后再与之前的树相加&lt;/li&gt;
+&lt;li&gt;残差 等价于 取了一个平均均方误差（预测值与真实值的）再求梯度乘上个负号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; &lt;strong&gt;总结：&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;​     树模型在工业界用的比较多【简单，训练算法简单，没有太多的超参数，结果还不错】（不用调参结果还不错）&lt;/p&gt;
+&lt;p&gt;​      树模型能够用的时候，通常是第一选择。&lt;/p&gt;
+</content>
+        <category term="nlp" scheme="https://quas-modo.github.io/categories/nlp/" />
+        <category term="机器学习基础" scheme="https://quas-modo.github.io/categories/nlp/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/" />
+        <category term="AI" scheme="https://quas-modo.github.io/tags/AI/" />
+        <category term="机器学习" scheme="https://quas-modo.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
+        <updated>2024-04-01T15:40:56.000Z</updated>
+    </entry>
+</feed>

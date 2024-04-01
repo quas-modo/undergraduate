@@ -8,7 +8,127 @@
     <author>
       <name>quas-modo</name>
     </author>
-    <updated>2024-01-15T04:11:31.000Z</updated>
+    <updated>2024-04-01T15:40:56.000Z</updated>
+    <entry>
+        <id>https://quas-modo.github.io/2024/04/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%86%B3%E7%AD%96%E6%A0%91/</id>
+        <title>决策树</title>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/04/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%86%B3%E7%AD%96%E6%A0%91/"/>
+        <content type="html">&lt;p&gt;根据西瓜书《决策树》章节和李沐 b 站相关视频整理。&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;决策树&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#决策树&#34;&gt;#&lt;/a&gt; 决策树&lt;/h1&gt;
+&lt;h2 id=&#34;西瓜书&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#西瓜书&#34;&gt;#&lt;/a&gt; 西瓜书&lt;/h2&gt;
+&lt;h3 id=&#34;基本流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本流程&#34;&gt;#&lt;/a&gt; 基本流程&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240401234738414.png&#34; alt=&#34;image-20240401234738414&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;什么情况下不需要继续往下分了？三种停止递归条件如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;已全为同一种类别 -&amp;gt; 叶节点&lt;/li&gt;
+&lt;li&gt;已没有更多的属性往下分（西瓜色泽、敲声、根蒂，无其他属性）-&amp;gt; 谁多当做谁&lt;/li&gt;
+&lt;li&gt;遇到了未出现的属性值 -&amp;gt; 父节点谁多当做谁&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;最重要的是找到最优的划分属性&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;名词解释&lt;/p&gt;
+&lt;p&gt;先验分布：基于过去研究、专家经验等&lt;/p&gt;
+&lt;p&gt;后验分布：先验分布 + 观测数据&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;划分选择&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#划分选择&#34;&gt;#&lt;/a&gt; 划分选择&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240401234759543.png&#34; alt=&#34;image-20240401234759543&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;分散的类别越多、概率越小，信息熵越大&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240401234808225.png&#34; alt=&#34;image-20240401234808225&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;信息增益越大，意味着使用属性 a 来进行划分所获得的纯度提升越大。每一次选取能够获得最大信息增益的属性进行划分，直到不能划分为止。&lt;/p&gt;
+&lt;h4 id=&#34;增益率&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#增益率&#34;&gt;#&lt;/a&gt; 增益率&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240401234827256.png&#34; alt=&#34;image-20240401234827256&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;C4.5 决策树算法&lt;/p&gt;
+&lt;p&gt;增益越大越好，属性可选择值（分支数量）越小越好。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;规范化：把不可直接比较的东西，变得可以比较。&lt;/p&gt;
+&lt;p&gt;归一化：规范化到 0-1 之间。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;基尼指数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基尼指数&#34;&gt;#&lt;/a&gt; 基尼指数&lt;/h4&gt;
+&lt;p&gt;CART 决策树学习算法&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240401234840889.png&#34; alt=&#34;image-20240401234840889&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;剪枝处理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#剪枝处理&#34;&gt;#&lt;/a&gt; 剪枝处理&lt;/h3&gt;
+&lt;p&gt;剪枝是决策树对付 “过拟合” 的主要手段！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;过拟合：学习了数据集中不该学习的特性，学多了；不是一般规律，而是少量样本有的特性&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;预剪枝&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#预剪枝&#34;&gt;#&lt;/a&gt; 预剪枝&lt;/h4&gt;
+&lt;p&gt;提前终止某些分支的生长。&lt;/p&gt;
+&lt;p&gt;在生成树的时候就进行评估。如果划分后，精度增加，就划分；若精度无提升，就剪枝。&lt;/p&gt;
+&lt;p&gt;但在有些情况下，后续划分可能带来性能显著提高，基于 “贪心” 的预剪枝可能会造成欠拟合。&lt;/p&gt;
+&lt;h4 id=&#34;后剪枝&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#后剪枝&#34;&gt;#&lt;/a&gt; 后剪枝&lt;/h4&gt;
+&lt;p&gt;生成一颗完全树，再 “回头 “剪枝&lt;/p&gt;
+&lt;p&gt;后剪枝可以减少欠拟合的风险，但是训练开销较大。&lt;/p&gt;
+&lt;h3 id=&#34;连续与缺失值&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#连续与缺失值&#34;&gt;#&lt;/a&gt; 连续与缺失值&lt;/h3&gt;
+&lt;h4 id=&#34;连续值处理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#连续值处理&#34;&gt;#&lt;/a&gt; 连续值处理&lt;/h4&gt;
+&lt;p&gt;最简单的处理策略是二分法。&lt;/p&gt;
+&lt;p&gt;候选点集是连续属性之间的中位点，挑选增益率最高的二分点。&lt;/p&gt;
+&lt;h4 id=&#34;缺失值处理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#缺失值处理&#34;&gt;#&lt;/a&gt; 缺失值处理&lt;/h4&gt;
+&lt;p&gt;仅使用无缺失的样例，是对数据的极大浪费。&lt;/p&gt;
+&lt;p&gt;那么如何使用缺失值？基本思路：&lt;strong&gt;样本赋权、权重划分&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;如何划分属性选择？&lt;/li&gt;
+&lt;li&gt;给定划分属性，若样本在该属性上的值确实，如何进行划分？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;解决方案、思路：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240401234853075.png&#34; alt=&#34;image-20240401234853075&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;回答问题一：如何划分属性选择？&lt;/p&gt;
+&lt;p&gt;信息熵的计算增加权重，通过属性权重（非缺失样本概率）与子集的增益率，权衡选择。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240401234907588.png&#34; alt=&#34;image-20240401234907588&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;回答问题二：给定划分属性，若样本在该属性上的值确实，如何进行划分？&lt;/p&gt;
+&lt;p&gt;将已知的后验概率作为未知的先验概率进行处理，&lt;strong&gt;缺失值样本将同时进入三个分支&lt;/strong&gt;，但在进入分支时，以权重为概率进行划分。&lt;/p&gt;
+&lt;h3 id=&#34;多变量决策树&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#多变量决策树&#34;&gt;#&lt;/a&gt; 多变量决策树&lt;/h3&gt;
+&lt;p&gt;每个节点的决策不再依赖于单一属性，而是找到合适的线性分类器。&lt;/p&gt;
+&lt;h2 id=&#34;李沐&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#李沐&#34;&gt;#&lt;/a&gt; 李沐&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;两个例子&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240401234932374.png&#34; alt=&#34;image-20240401234932374&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;怎么用决策树来做分类：拿一个数据，看一下这个数据在节点上是应该往哪个方向走，一直往下走，走到叶子节点，就会得到数据所对应的标号&lt;/li&gt;
+&lt;li&gt;用决策树做回归：与上面那个例子不同的是，叶节点不是一个具体的类而是一个实数值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;决策树的好与坏&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#决策树的好与坏&#34;&gt;#&lt;/a&gt; &lt;strong&gt;决策树的好与坏&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;好处：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以解释（可以让人看到对数据处理的过程）【常用于银行业保险业】；&lt;/li&gt;
+&lt;li&gt;可以处理数值类和类别类的特征；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;坏处：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不稳定（数据产生一定的噪音之后，整棵树构建出的样子可能会不一样）【使用集成学习 (ensemble learning) 可以解决】&lt;/li&gt;
+&lt;li&gt;数据过于复杂会生成过于复杂的树，会导致过拟合【把决策树的枝剪掉一些（在训练时觉得太复杂了就停下来，或在训练之后把特往下的节点给剪掉）】&lt;/li&gt;
+&lt;li&gt;大量的判断语句（太顺序化），不太好并行【在性能上会吃亏】&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;让决策树稳定的方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#让决策树稳定的方法&#34;&gt;#&lt;/a&gt; &lt;strong&gt;让决策树稳定的方法&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;随机森林&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#随机森林&#34;&gt;#&lt;/a&gt; 随机森林&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;训练多个决策树来提升稳定性：&lt;/li&gt;
+&lt;li&gt;每棵树会独立的进行训练，训练之后这些树一起作用得出结果；&lt;/li&gt;
+&lt;li&gt;分类的话，可以用投票（少数服从多数）；&lt;/li&gt;
+&lt;li&gt;回归的话，实数值可以时每棵树的结果求平均；&lt;/li&gt;
+&lt;li&gt;随机来自以下两种情况：
+&lt;ul&gt;
+&lt;li&gt;Bagging：在训练集中随机采样一些样本出来（放回，可重复）；&lt;/li&gt;
+&lt;li&gt;在 bagging 出来的数字中，再随机采样一些特征出来，不用整个特征；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;boosting&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#boosting&#34;&gt;#&lt;/a&gt; &lt;strong&gt;Boosting&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240401234948093.png&#34; alt=&#34;image-20240401234948093&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;顺序完成多个树的训练（之前是独立的完成）&lt;/li&gt;
+&lt;li&gt;例子说的是，利用训练好的树与真实值做残差来训练新的树，训练好了之后再与之前的树相加&lt;/li&gt;
+&lt;li&gt;残差 等价于 取了一个平均均方误差（预测值与真实值的）再求梯度乘上个负号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; &lt;strong&gt;总结：&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;​     树模型在工业界用的比较多【简单，训练算法简单，没有太多的超参数，结果还不错】（不用调参结果还不错）&lt;/p&gt;
+&lt;p&gt;​      树模型能够用的时候，通常是第一选择。&lt;/p&gt;
+</content>
+        <category term="nlp" scheme="https://quas-modo.github.io/categories/nlp/" />
+        <category term="机器学习基础" scheme="https://quas-modo.github.io/categories/nlp/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/" />
+        <category term="AI" scheme="https://quas-modo.github.io/tags/AI/" />
+        <category term="机器学习" scheme="https://quas-modo.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
+        <updated>2024-04-01T15:40:56.000Z</updated>
+    </entry>
     <entry>
         <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</id>
         <title>移动端2023期末回忆</title>
@@ -311,9 +431,9 @@ by hw nyb&lt;/p&gt;
         <updated>2024-01-15T04:10:26.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
         <title>服务端期末复习</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html">&lt;p&gt;南京大学软件学院服务端开发期末整理。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;多选题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#多选题&#34;&gt;#&lt;/a&gt; 多选题&lt;/h1&gt;
@@ -1220,9 +1340,9 @@ by hw nyb&lt;/p&gt;
         <updated>2024-01-15T04:10:11.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
         <title>软件测试期末复习</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html">&lt;p&gt;南京大学软件学院软件测试期末复习。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;devops渊源&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#devops渊源&#34;&gt;#&lt;/a&gt; Devops 渊源&lt;/h1&gt;
@@ -1929,9 +2049,9 @@ by hw nyb&lt;/p&gt;
         <updated>2024-01-15T04:09:12.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+        <id>https://quas-modo.github.io/2024/01/15/NJUSE/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
         <title>devops期末复习</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html">&lt;p&gt;南京大学软件大学 devops 期末复习。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;devops渊源&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#devops渊源&#34;&gt;#&lt;/a&gt; Devops 渊源&lt;/h1&gt;
@@ -2638,9 +2758,9 @@ by hw nyb&lt;/p&gt;
         <updated>2024-01-15T04:08:50.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/%E9%9C%80%E6%B1%82%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E9%9C%80%E6%B1%82%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
         <title>需求期末复习</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/%E9%9C%80%E6%B1%82%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E9%9C%80%E6%B1%82%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html">&lt;p&gt;南京大学软件学院需求期末复习。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=OGFmNTBlZjdiZjU5NTNmZjI4MDk2NmE5MWYwODNjMWRfZ0tKNDlBQ0gxdnZ2bVBmbkQzMVlzdVlTQjZDd0NOYjNfVG9rZW46Tm5uZWJCVXpXb2NNb2N4TmI3bWNRTlpxbmRiXzE3MDUyOTMwMjQ6MTcwNTI5NjYyNF9WNA&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
@@ -13319,47 +13439,5 @@ ROLLBACK; # 事务回滚到开始时的状态
         <category term="数据管理基础" scheme="https://quas-modo.github.io/categories/NJUSE/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/" />
         <category term="数据管理基础" scheme="https://quas-modo.github.io/tags/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/" />
         <updated>2023-06-14T12:14:57.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://quas-modo.github.io/2023/05/25/%E6%AF%94%E8%B5%9B/%E6%9F%90%E5%A4%A7%E5%AD%A6-vivo%E7%BC%96%E7%A8%8B%E9%A9%AC%E6%8B%89%E6%9D%BE%E5%A4%A7%E8%B5%9B%E5%86%B3%E8%B5%9B%E8%AE%B0%E5%BD%95/</id>
-        <title>某大学-vivo编程马拉松大赛决赛记录</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2023/05/25/%E6%AF%94%E8%B5%9B/%E6%9F%90%E5%A4%A7%E5%AD%A6-vivo%E7%BC%96%E7%A8%8B%E9%A9%AC%E6%8B%89%E6%9D%BE%E5%A4%A7%E8%B5%9B%E5%86%B3%E8%B5%9B%E8%AE%B0%E5%BD%95/"/>
-        <content type="html">&lt;p&gt;极限开发 24 小时，题目为 “发现世界的美 “。&lt;/p&gt;
-&lt;h2 id=&#34;项目构思&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#项目构思&#34;&gt;#&lt;/a&gt; 项目构思&lt;/h2&gt;
-&lt;p&gt;我们小组经过一系列头脑风暴，想到过摄影、旅游、文字之美、代码之美等主题，最终选择了音乐之美作为主题。&lt;/p&gt;
-&lt;p&gt;我们小组的构想是做一个将音乐具象化的项目，我们有两个主要想法。&lt;/p&gt;
-&lt;p&gt;一个是音乐地图，将不同曲风的音乐赋予不同的颜色，根据音乐来源国家的经纬度标记在地图上。形成一幅新的五彩斑斓的地图。用户可以点击地图上的色点播放音乐，访问音乐的相关信息。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230524233510106.png&#34; alt=&#34;image-20230524233510106&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;另一个是音乐涂鸦墙，&amp;quot;音乐涂鸦墙&amp;quot; 是一个基于 Web 的互动艺术项目，让用户能够在虚拟的 &amp;quot;墙&amp;quot; 上 &amp;quot;涂鸦&amp;quot;，但不是使用颜色或图像，而是使用音乐。浏览的用户也可以将鼠标移到某个区域，然后会自动播放那个区域的音乐。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230524233816520.png&#34; alt=&#34;image-20230524233816520&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;项目实现&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#项目实现&#34;&gt;#&lt;/a&gt; 项目实现&lt;/h2&gt;
-&lt;h3 id=&#34;功能&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#功能&#34;&gt;#&lt;/a&gt; 功能&lt;/h3&gt;
-&lt;h4 id=&#34;搜索&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#搜索&#34;&gt;#&lt;/a&gt; 搜索&lt;/h4&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230524233923408.png&#34; alt=&#34;image-20230524233923408&#34; /&gt;&lt;/p&gt;
-&lt;h4 id=&#34;3d地球标注&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3d地球标注&#34;&gt;#&lt;/a&gt; 3D 地球标注&lt;/h4&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230524234134694.png&#34; alt=&#34;image-20230524234134694&#34; /&gt;&lt;/p&gt;
-&lt;h4 id=&#34;色点音乐播放&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#色点音乐播放&#34;&gt;#&lt;/a&gt; 色点音乐播放&lt;/h4&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230524233959057.png&#34; alt=&#34;image-20230524233959057&#34; /&gt;&lt;/p&gt;
-&lt;h4 id=&#34;基于地图的随机类别云图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基于地图的随机类别云图&#34;&gt;#&lt;/a&gt; 基于地图的随机类别云图&lt;/h4&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230524234029157.png&#34; alt=&#34;image-20230524234029157&#34; /&gt;&lt;/p&gt;
-&lt;h3 id=&#34;前端&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前端&#34;&gt;#&lt;/a&gt; 前端&lt;/h3&gt;
-&lt;p&gt;本人在尝试了找区域边界经纬度数据集 + konva（JavaScript 2d canvas library）绘制图，调用 Echarts 的好看的地图实现无果，没有 visa 注册 google map， 觉得高德地图 api 不是很好看后，无奈求助队友（给吴神磕一个），最终是调用了 mapbox 的 api 制作 3D 地图和 echarts 制作了云图。&lt;/p&gt;
-&lt;h3 id=&#34;后端&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#后端&#34;&gt;#&lt;/a&gt; 后端&lt;/h3&gt;
-&lt;p&gt;后端使用自定义 @RateLimit 注解完成对高并发访问量的限制&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230524234923145.png&#34; alt=&#34;image-20230524234923145&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230524234918177.png&#34; alt=&#34;image-20230524234918177&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;完成了高覆盖率的单元测试和集成测试&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230524235000474.png&#34; alt=&#34;image-20230524235000474&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230524235012320.png&#34; alt=&#34;image-20230524235012320&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;采取 SonarLint 实时代码质量检测&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230524235026802.png&#34; alt=&#34;image-20230524235026802&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;写在最后&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#写在最后&#34;&gt;#&lt;/a&gt; 写在最后&lt;/h2&gt;
-&lt;p&gt;虽然最后的实现和最初的构想差得比较大，但是很喜欢这次组队，感觉团队氛围很好，以及被吴神和耿佬带飞了对吗。因为赶工，大家晚上基本只睡了两三个小时，实在撑不住了在桌上趴一会。&lt;/p&gt;
-&lt;p&gt;感觉极限开发还是很考验平时的积累和功底的，自己以前没有完整地负责过一个具体项目的前端和后端，也没有上千行 / 上万行的开发经验积累，所以这次在黑客松比赛中比较吃力，有些愧疚自己拖了后腿。感觉也只有在真实的开发和负责实现中，才能真实地提高自己，光跟一些教程和官方文档只是杯水车薪。我知道我现在的技术还很弱很弱，不值一提。&lt;/p&gt;
-&lt;p&gt;因为最后负责答辩，偷偷跑出去准备了很久 pre，没有心思听其他很多小组的实现，不过就我听的几组来说，有很多很敢说、很有答辩技巧的发言，有很多值得学习的地方。&lt;/p&gt;
-&lt;p&gt;一次很独特的通宵体验，说着不想再经历这样的折磨了，不过可能等攒攒实力还是会再参加参加，挑战一下自己的极限吧。&lt;/p&gt;
-</content>
-        <category term="比赛" scheme="https://quas-modo.github.io/categories/%E6%AF%94%E8%B5%9B/" />
-        <updated>2023-05-24T16:04:43.000Z</updated>
     </entry>
 </feed>
