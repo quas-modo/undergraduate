@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://quas-modo.github.io</id>
+    <title>Carpe diem</title>
+    <subtitle>pluck the day</subtitle>
+    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io" />
+    <author>
+      <name>quas-modo</name>
+    </author>
+    <updated>2024-04-01T16:35:41.000Z</updated>
+    <entry>
+        <id>https://quas-modo.github.io/2024/04/02/jyyos/02-%E5%BA%94%E7%94%A8%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</id>
+        <title>02-应用视角下的操作系统</title>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/04/02/jyyos/02-%E5%BA%94%E7%94%A8%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+        <content type="html">&lt;p&gt;蒋岩炎老师 2024spring 操作系统第二课。&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;如何用一行代码破坏不好的 oj：无限长的随机数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;#include &amp;quot;/dev/urandom&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;指令集里没有一条关闭计算机的指令，如何关闭计算机？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;由电路操控&lt;/p&gt;
+&lt;p&gt;syscall 指令，状态机完全交给计算机&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;任何程序 = minimal.s = 状态机&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;应用程序 = 计算 + 操作系统 API&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;操作系统，从应用程序的视角来看，就是 syscall，提供各种系统的 api&lt;/p&gt;
+&lt;p&gt;操作系统的职责：提供令应用程序舒适的抽象（对象 + api）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;C 语言是怎么变成二进制代码的？
+&lt;ol&gt;
+&lt;li&gt;预处理&lt;/li&gt;
+&lt;li&gt;编译，代码 -&amp;gt; 汇编语言&lt;/li&gt;
+&lt;li&gt;汇编，汇编语言 -&amp;gt; 机器代码&lt;/li&gt;
+&lt;li&gt;链接，将目标文件和所需库文件合并 -&amp;gt; 可执行文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;【汉诺塔：递归版本到非递归版本的实现】&lt;/p&gt;
+&lt;h2 id=&#34;编程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编程&#34;&gt;#&lt;/a&gt; 编程&lt;/h2&gt;
+&lt;h3 id=&#34;minimal&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#minimal&#34;&gt;#&lt;/a&gt; Minimal&lt;/h3&gt;
+&lt;p&gt;早期 C 语言由于资源限制和编译器限制，允许程序员做调用 “未声明的函数”&lt;/p&gt;
+&lt;p&gt;但在现代编译器中， &lt;code&gt;-Wimplicit-function-declaration&lt;/code&gt;  是一个在 C 语言编译过程中使用的编译器选项，这个选项的作用是让编译器发出警告，如果源代码中有函数被调用却没有事先声明，就会触发这个警告。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240402003629676.png&#34; alt=&#34;image-20240402003629676&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;#include&lt;/code&gt;  只是做了一个复制粘贴的动作。&lt;/p&gt;
+&lt;p&gt;比如说，你可以使用 &lt;code&gt;#include &#39;/dev/urandom&#39;&lt;/code&gt;  来轰炸 oj&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;objdump -d a.out | less&lt;/code&gt;  查看二进制文件，但太过复杂&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;file a.out&lt;/code&gt;  确定文件的类型&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;gcc 的一些用法：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;gcc hello.c -static&lt;/code&gt;  静态链接库&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;gcc --verbose hello.c&lt;/code&gt;  啰嗦一点&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;gcc -c hello.c&lt;/code&gt;   compile and assemble, but do not link 生成 &lt;code&gt;hello.o&lt;/code&gt;  文件&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ld hello.o&lt;/code&gt;  尝试链接中间产物（经过编译器编译，但是没有链接的中间产物，目标文件包含了源代码编译后的机器语言代码）&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240402003653374.png&#34; alt=&#34;image-20240402003653374&#34; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;objdump -d hello.o
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;gdb 的一些用法：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Shell&#34;&gt;gdb a.out
+starti
+layout asm
+layout src
+si
+q
+info re
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;为什么以下程序编译的时候出现了 segmentation fault？&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;int main() &amp;#123;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240402003713140.png&#34; alt=&#34;image-20240402003713140&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vYmFuZ2VybGVlL2FyY2hpdmUvMjAxMi8wNS8yMi8yNTA4NzcyLmh0bWw=&#34;&gt;https://www.cnblogs.com/bangerlee/archive/2012/05/22/2508772.html&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;也许你会问：咦？以上 disassemble 的输出不是 main 函数的汇编指令吗，怎么输出中也有上面两条指令？难道 main 也是一个 “被调函数”？&lt;/p&gt;
+&lt;p&gt;是的，皆因 main 并不是程序拉起后第一个被执行的函数，它被_start 函数调用，更详细的资料参看&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2xlYXJuLmFrYWUuY24vbWVkaWEvY2gxOXMwMi5odG1s&#34;&gt;这里&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;retq 相当于：popq % rip； retq 对应的是 callq，相当于：pushq % rip【% rip 存的是它永远指向下一条即将执行的地址。】&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240402003733663.png&#34; alt=&#34;image-20240402003733663&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;加了 &lt;code&gt;#include&amp;lt;stdio.h&amp;gt;&lt;/code&gt;  之后，从 main 函数返回的地址不再是 0&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最小汇编：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;make minimal
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;strace 命令的使用：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;strace -f gcc -o hello hello.c
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如何化简 strace 的命令输出，gcc 打开的文件比较重要，编译汇编命令在哪里：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;strace -f gcc -o hello hello.c 2&amp;gt;&amp;amp;1 | vim -&lt;/code&gt; ：将输入输出给 vim 编辑&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%!grep -v -e &#39;-1&#39;&lt;/code&gt;  在编辑器里面进行筛选， &lt;code&gt;!&lt;/code&gt;  表示执行外部指令，  &lt;code&gt;-v&lt;/code&gt;  表示反向选择&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%!grep -e read&lt;/code&gt;  正向选择， &lt;code&gt;-e&lt;/code&gt;  表示正则筛选&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;非递归汉诺塔&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#非递归汉诺塔&#34;&gt;#&lt;/a&gt; 非递归汉诺塔&lt;/h3&gt;
+&lt;p&gt;（todo）&lt;/p&gt;
+</content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="OS" scheme="https://quas-modo.github.io/categories/NJUSE/OS/" />
+        <category term="OS" scheme="https://quas-modo.github.io/tags/OS/" />
+        <updated>2024-04-01T16:35:41.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://quas-modo.github.io/2024/04/02/jyyos/01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</id>
+        <title>01-操作系统概述</title>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/04/02/jyyos/01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/"/>
+        <content type="html">&lt;p&gt;蒋岩炎老师 2024spring 操作系统第一课。&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&#34;课后教材阅读&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课后教材阅读&#34;&gt;#&lt;/a&gt; 课后教材阅读&lt;/h2&gt;
+&lt;h3 id=&#34;preface-前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#preface-前言&#34;&gt;#&lt;/a&gt; Preface 前言&lt;/h3&gt;
+&lt;p&gt;Virtualization, concurrency and persistence&lt;/p&gt;
+&lt;p&gt;虚拟化，并发和持久性&lt;/p&gt;
+&lt;p&gt;Learning new things is fun, right? At least, it (usually) should be.【yepppp！】&lt;/p&gt;
+&lt;p&gt;Crux of the problem, timelines&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240402003403641.png&#34; alt=&#34;image-20240402003403641&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Education is not the filling of a pail but the lighting of a fire.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;很喜欢这段话，&lt;strong&gt;the real point of education is to get you interested in something, to learn something more about the subject matter on your own and not just what you have to digest to get a good grede in some class.&lt;/strong&gt;  说实话，国内教授走上讲台之前都应该思考一下 “什么是教育”，毫不客气地说，有一半以上的大学老师并非合格的老师。&lt;/p&gt;
+&lt;h3 id=&#34;第-1-章-dialogue-on-the-book&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第-1-章-dialogue-on-the-book&#34;&gt;#&lt;/a&gt; 第 1 章 - Dialogue on the Book&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240402003413903.png&#34; alt=&#34;image-20240402003413903&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;第-2-章-introduction-to-operating-systems&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第-2-章-introduction-to-operating-systems&#34;&gt;#&lt;/a&gt; 第 2 章 - Introduction to Operating Systems&lt;/h3&gt;
+&lt;p&gt;虚拟化：操作系统将物理资源转化成更易使用的虚拟资源&lt;/p&gt;
+&lt;p&gt;从应用程序的角度看，操作系统提供了各种 api；从物理资源的角度看，操作系统完成了资源（内存、磁盘、处理器等）的调度&lt;/p&gt;
+&lt;h4 id=&#34;虚拟化-cpu&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#虚拟化-cpu&#34;&gt;#&lt;/a&gt; 虚拟化 - cpu&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240402003421487.png&#34; alt=&#34;image-20240402003421487&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-Wall&lt;/code&gt;  参数表示编译后显示所有警告&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Shell&#34;&gt;ps aux | grep &#39;./cpu&#39;
+kill PID    
+kill $(pgrep -f &#39;./cpu&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240402003428819.png&#34; alt=&#34;image-20240402003428819&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;电脑不是只有一个 cpu（也许不止），怎么能同时运行 4 个程序的？&lt;/p&gt;
+&lt;p&gt;如果两个程序都要在一个特定的时间运行怎么办？&lt;/p&gt;
+&lt;h4 id=&#34;虚拟化-内存&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#虚拟化-内存&#34;&gt;#&lt;/a&gt; 虚拟化 - 内存&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240402003438110.png&#34; alt=&#34;image-20240402003438110&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;为什么，看上去是同时修改了统一 addr 的值？&lt;/p&gt;
+&lt;h4 id=&#34;并发&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#并发&#34;&gt;#&lt;/a&gt; 并发&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Shell&#34;&gt;gcc -o threads threads.c -Wall -pthread
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里的 &lt;code&gt;-pthread&lt;/code&gt;  是使用 GCC 编译器编译包含 POSIX 线程（pthread）的 C 或 C++ 程序时使用。这个选项告诉编译器链接程序时要包含 POSIX 线程库。&lt;/p&gt;
+&lt;p&gt;POSIX 线程（Portable Operating System Interface for uniX，POSIX Threads），简称为 Pthreads，是一个线程标准，定义了一套跨平台的线程相关的 API&lt;/p&gt;
+&lt;h4 id=&#34;持久化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#持久化&#34;&gt;#&lt;/a&gt; 持久化&lt;/h4&gt;
+&lt;p&gt;和 CPU 与内存不一样，OS 并没有创建私有、虚拟的磁盘为每一个应用。相反，他们需要共享文件。&lt;/p&gt;
+</content>
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="OS" scheme="https://quas-modo.github.io/categories/NJUSE/OS/" />
+        <category term="OS" scheme="https://quas-modo.github.io/tags/OS/" />
+        <updated>2024-04-01T16:32:26.000Z</updated>
+    </entry>
+</feed>
