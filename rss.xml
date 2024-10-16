@@ -3,8 +3,8 @@
     <channel>
         <title>Carpe diem</title>
         <subtitle>pluck the day</subtitle>
-        <icon>https://quas-modo.github.io/images/favicon.ico</icon>
-        <link>https://quas-modo.github.io</link>
+        <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
+        <link>https://quas-modo.github.io/undergraduate</link>
         <author>
           <name>quas-modo</name>
         </author>
@@ -13,9 +13,9 @@
         <pubDate>Wed, 16 Oct 2024 11:12:39 +0800</pubDate>
         <lastBuildDate>Wed, 16 Oct 2024 11:12:39 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2024/10/16/%E5%81%9C%E7%AB%99%E5%85%AC%E5%91%8A/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2024/10/16/%E5%81%9C%E7%AB%99%E5%85%AC%E5%91%8A/</guid>
             <title>停站公告</title>
-            <link>https://quas-modo.github.io/2024/10/16/%E5%81%9C%E7%AB%99%E5%85%AC%E5%91%8A/</link>
+            <link>https://quas-modo.github.io/undergraduate/2024/10/16/%E5%81%9C%E7%AB%99%E5%85%AC%E5%91%8A/</link>
             <pubDate>Wed, 16 Oct 2024 11:12:39 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;本博客网站于 2024 年 10 月 16 日停止更新。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -24,13 +24,13 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2024/04/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E5%90%84%E7%A7%8D%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2024/04/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E5%90%84%E7%A7%8D%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid>
             <title>快速了解各种神经网络</title>
-            <link>https://quas-modo.github.io/2024/04/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E5%90%84%E7%A7%8D%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
-            <category term="nlp" scheme="https://quas-modo.github.io/categories/nlp/" />
-            <category term="机器学习基础" scheme="https://quas-modo.github.io/categories/nlp/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/" />
-            <category term="AI" scheme="https://quas-modo.github.io/tags/AI/" />
-            <category term="机器学习" scheme="https://quas-modo.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
+            <link>https://quas-modo.github.io/undergraduate/2024/04/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E5%90%84%E7%A7%8D%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
+            <category term="nlp" scheme="https://quas-modo.github.io/undergraduate/categories/nlp/" />
+            <category term="机器学习基础" scheme="https://quas-modo.github.io/undergraduate/categories/nlp/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/" />
+            <category term="AI" scheme="https://quas-modo.github.io/undergraduate/tags/AI/" />
+            <category term="机器学习" scheme="https://quas-modo.github.io/undergraduate/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
             <pubDate>Thu, 04 Apr 2024 14:09:20 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;根据李沐 stanford 课程第三章梳理。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -89,12 +89,12 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2024/04/02/jyyos/02-%E5%BA%94%E7%94%A8%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2024/04/02/jyyos/02-%E5%BA%94%E7%94%A8%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
             <title>02-应用视角下的操作系统</title>
-            <link>https://quas-modo.github.io/2024/04/02/jyyos/02-%E5%BA%94%E7%94%A8%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="OS" scheme="https://quas-modo.github.io/categories/NJUSE/OS/" />
-            <category term="OS" scheme="https://quas-modo.github.io/tags/OS/" />
+            <link>https://quas-modo.github.io/undergraduate/2024/04/02/jyyos/02-%E5%BA%94%E7%94%A8%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="OS" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/OS/" />
+            <category term="OS" scheme="https://quas-modo.github.io/undergraduate/tags/OS/" />
             <pubDate>Tue, 02 Apr 2024 00:35:41 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;蒋岩炎老师 2024spring 操作系统第二课。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -179,12 +179,12 @@ info re
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2024/04/02/jyyos/01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2024/04/02/jyyos/01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</guid>
             <title>01-操作系统概述</title>
-            <link>https://quas-modo.github.io/2024/04/02/jyyos/01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="OS" scheme="https://quas-modo.github.io/categories/NJUSE/OS/" />
-            <category term="OS" scheme="https://quas-modo.github.io/tags/OS/" />
+            <link>https://quas-modo.github.io/undergraduate/2024/04/02/jyyos/01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="OS" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/OS/" />
+            <category term="OS" scheme="https://quas-modo.github.io/undergraduate/tags/OS/" />
             <pubDate>Tue, 02 Apr 2024 00:32:26 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;蒋岩炎老师 2024spring 操作系统第一课。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -225,13 +225,13 @@ kill $(pgrep -f &#39;./cpu&#39;)
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2024/04/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%86%B3%E7%AD%96%E6%A0%91/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2024/04/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%86%B3%E7%AD%96%E6%A0%91/</guid>
             <title>决策树</title>
-            <link>https://quas-modo.github.io/2024/04/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%86%B3%E7%AD%96%E6%A0%91/</link>
-            <category term="nlp" scheme="https://quas-modo.github.io/categories/nlp/" />
-            <category term="机器学习基础" scheme="https://quas-modo.github.io/categories/nlp/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/" />
-            <category term="AI" scheme="https://quas-modo.github.io/tags/AI/" />
-            <category term="机器学习" scheme="https://quas-modo.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
+            <link>https://quas-modo.github.io/undergraduate/2024/04/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%86%B3%E7%AD%96%E6%A0%91/</link>
+            <category term="nlp" scheme="https://quas-modo.github.io/undergraduate/categories/nlp/" />
+            <category term="机器学习基础" scheme="https://quas-modo.github.io/undergraduate/categories/nlp/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/" />
+            <category term="AI" scheme="https://quas-modo.github.io/undergraduate/tags/AI/" />
+            <category term="机器学习" scheme="https://quas-modo.github.io/undergraduate/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
             <pubDate>Mon, 01 Apr 2024 23:40:56 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;根据西瓜书《决策树》章节和李沐 b 站相关视频整理。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -345,12 +345,12 @@ kill $(pgrep -f &#39;./cpu&#39;)
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</guid>
             <title>移动端2023期末回忆</title>
-            <link>https://quas-modo.github.io/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="移动端开发" scheme="https://quas-modo.github.io/categories/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" />
-            <category term="移动端开发" scheme="https://quas-modo.github.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+            <link>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="移动端开发" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+            <category term="移动端开发" scheme="https://quas-modo.github.io/undergraduate/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" />
             <pubDate>Mon, 15 Jan 2024 12:11:31 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;南京大学软件学院移动互联网期末回忆。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -365,12 +365,12 @@ kill $(pgrep -f &#39;./cpu&#39;)
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</guid>
             <title>服务端2023期末回忆</title>
-            <link>https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="服务端开发" scheme="https://quas-modo.github.io/categories/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
-            <category term="服务端开发" scheme="https://quas-modo.github.io/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+            <link>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="服务端开发" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+            <category term="服务端开发" scheme="https://quas-modo.github.io/undergraduate/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
             <pubDate>Mon, 15 Jan 2024 12:11:17 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;南京大学软件学院服务端开发回忆。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -503,12 +503,12 @@ kill $(pgrep -f &#39;./cpu&#39;)
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952023%E5%9B%9E%E5%BF%86/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952023%E5%9B%9E%E5%BF%86/</guid>
             <title>软件测试2023回忆</title>
-            <link>https://quas-modo.github.io/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952023%E5%9B%9E%E5%BF%86/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="软件测试" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
-            <category term="软件测试" scheme="https://quas-modo.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
+            <link>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952023%E5%9B%9E%E5%BF%86/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="软件测试" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
+            <category term="软件测试" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
             <pubDate>Mon, 15 Jan 2024 12:11:03 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;南京大学软件学院软件测试回忆。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -552,12 +552,12 @@ kill $(pgrep -f &#39;./cpu&#39;)
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2024/01/15/NJUSE/devops%E5%9B%9E%E5%BF%86/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/devops%E5%9B%9E%E5%BF%86/</guid>
             <title>devops-2023fall回忆</title>
-            <link>https://quas-modo.github.io/2024/01/15/NJUSE/devops%E5%9B%9E%E5%BF%86/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="Devops" scheme="https://quas-modo.github.io/categories/NJUSE/Devops/" />
-            <category term="Devops" scheme="https://quas-modo.github.io/tags/Devops/" />
+            <link>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/devops%E5%9B%9E%E5%BF%86/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="Devops" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/Devops/" />
+            <category term="Devops" scheme="https://quas-modo.github.io/undergraduate/tags/Devops/" />
             <pubDate>Mon, 15 Jan 2024 12:10:49 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;南京大学软件学院 devops 回忆。&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
@@ -582,12 +582,12 @@ by hw nyb&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2024/01/15/NJUSE/%E9%9C%80%E6%B1%822023%E5%9B%9E%E5%BF%86/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E9%9C%80%E6%B1%822023%E5%9B%9E%E5%BF%86/</guid>
             <title>需求2023回忆</title>
-            <link>https://quas-modo.github.io/2024/01/15/NJUSE/%E9%9C%80%E6%B1%822023%E5%9B%9E%E5%BF%86/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="需求" scheme="https://quas-modo.github.io/categories/NJUSE/%E9%9C%80%E6%B1%82/" />
-            <category term="需求" scheme="https://quas-modo.github.io/tags/%E9%9C%80%E6%B1%82/" />
+            <link>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E9%9C%80%E6%B1%822023%E5%9B%9E%E5%BF%86/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="需求" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E9%9C%80%E6%B1%82/" />
+            <category term="需求" scheme="https://quas-modo.github.io/undergraduate/tags/%E9%9C%80%E6%B1%82/" />
             <pubDate>Mon, 15 Jan 2024 12:10:37 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;南京大学软件学院回忆。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -619,12 +619,12 @@ by hw nyb&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA2023%E5%9B%9E%E5%BF%86/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA2023%E5%9B%9E%E5%BF%86/</guid>
             <title>人机交互-2023fall回忆</title>
-            <link>https://quas-modo.github.io/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA2023%E5%9B%9E%E5%BF%86/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="人机交互" scheme="https://quas-modo.github.io/categories/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
-            <category term="人机交互" scheme="https://quas-modo.github.io/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
+            <link>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA2023%E5%9B%9E%E5%BF%86/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="人机交互" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
+            <category term="人机交互" scheme="https://quas-modo.github.io/undergraduate/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
             <pubDate>Mon, 15 Jan 2024 12:10:26 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;南京大学软件学院人机交互回忆。&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
@@ -646,12 +646,12 @@ by hw nyb&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</guid>
             <title>服务端期末复习</title>
-            <link>https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="服务端开发" scheme="https://quas-modo.github.io/categories/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
-            <category term="服务端开发" scheme="https://quas-modo.github.io/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+            <link>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="服务端开发" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+            <category term="服务端开发" scheme="https://quas-modo.github.io/undergraduate/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
             <pubDate>Mon, 15 Jan 2024 12:10:11 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;南京大学软件学院服务端开发期末整理。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -1555,12 +1555,12 @@ by hw nyb&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</guid>
             <title>软件测试期末复习</title>
-            <link>https://quas-modo.github.io/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="软件测试" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
-            <category term="软件测试" scheme="https://quas-modo.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
+            <link>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="软件测试" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
+            <category term="软件测试" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
             <pubDate>Mon, 15 Jan 2024 12:09:12 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;南京大学软件学院软件测试期末复习。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -2592,12 +2592,12 @@ by hw nyb&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2024/01/15/NJUSE/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</guid>
             <title>devops期末复习</title>
-            <link>https://quas-modo.github.io/2024/01/15/NJUSE/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="Devops" scheme="https://quas-modo.github.io/categories/NJUSE/Devops/" />
-            <category term="Devops" scheme="https://quas-modo.github.io/tags/Devops/" />
+            <link>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="Devops" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/Devops/" />
+            <category term="Devops" scheme="https://quas-modo.github.io/undergraduate/tags/Devops/" />
             <pubDate>Mon, 15 Jan 2024 12:08:50 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;南京大学软件大学 devops 期末复习。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -3301,12 +3301,12 @@ by hw nyb&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2024/01/15/NJUSE/%E9%9C%80%E6%B1%82%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E9%9C%80%E6%B1%82%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</guid>
             <title>需求期末复习</title>
-            <link>https://quas-modo.github.io/2024/01/15/NJUSE/%E9%9C%80%E6%B1%82%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="需求" scheme="https://quas-modo.github.io/categories/NJUSE/%E9%9C%80%E6%B1%82/" />
-            <category term="需求" scheme="https://quas-modo.github.io/tags/%E9%9C%80%E6%B1%82/" />
+            <link>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E9%9C%80%E6%B1%82%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="需求" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E9%9C%80%E6%B1%82/" />
+            <category term="需求" scheme="https://quas-modo.github.io/undergraduate/tags/%E9%9C%80%E6%B1%82/" />
             <pubDate>Mon, 15 Jan 2024 12:08:31 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;南京大学软件学院需求期末复习。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -5505,12 +5505,12 @@ by hw nyb&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</guid>
             <title>人机交互期末复习</title>
-            <link>https://quas-modo.github.io/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="人机交互" scheme="https://quas-modo.github.io/categories/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
-            <category term="人机交互" scheme="https://quas-modo.github.io/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
+            <link>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="人机交互" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
+            <category term="人机交互" scheme="https://quas-modo.github.io/undergraduate/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
             <pubDate>Mon, 15 Jan 2024 12:08:05 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;南京大学软件学院 2023fall 人机交互期末复习整理。&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -8799,11 +8799,11 @@ by hw nyb&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2023/09/27/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9A%E4%BB%A5%E4%BA%BA%E4%B8%BA%E6%9C%AC%E7%9A%84%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E5%8F%AF%E9%9D%A0%E3%80%81%E5%AE%89%E5%85%A8%E3%80%81%E5%8F%AF%E4%BF%A1/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2023/09/27/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9A%E4%BB%A5%E4%BA%BA%E4%B8%BA%E6%9C%AC%E7%9A%84%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E5%8F%AF%E9%9D%A0%E3%80%81%E5%AE%89%E5%85%A8%E3%80%81%E5%8F%AF%E4%BF%A1/</guid>
             <title>论文阅读：以人为本的人工智能：可靠、安全、可信</title>
-            <link>https://quas-modo.github.io/2023/09/27/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9A%E4%BB%A5%E4%BA%BA%E4%B8%BA%E6%9C%AC%E7%9A%84%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E5%8F%AF%E9%9D%A0%E3%80%81%E5%AE%89%E5%85%A8%E3%80%81%E5%8F%AF%E4%BF%A1/</link>
-            <category term="论文阅读" scheme="https://quas-modo.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" />
-            <category term="人机交互" scheme="https://quas-modo.github.io/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
+            <link>https://quas-modo.github.io/undergraduate/2023/09/27/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9A%E4%BB%A5%E4%BA%BA%E4%B8%BA%E6%9C%AC%E7%9A%84%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E5%8F%AF%E9%9D%A0%E3%80%81%E5%AE%89%E5%85%A8%E3%80%81%E5%8F%AF%E4%BF%A1/</link>
+            <category term="论文阅读" scheme="https://quas-modo.github.io/undergraduate/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" />
+            <category term="人机交互" scheme="https://quas-modo.github.io/undergraduate/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
             <pubDate>Wed, 27 Sep 2023 17:35:36 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;总结自论文 Human-Centered Artificial Intelligence: Reliable, Safe &amp;amp; Trustworthy&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -8908,11 +8908,11 @@ RST 的设计将包括一个医院控制中心，用于监控数百个 PCA 设�
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2023/09/26/%E6%AF%94%E8%B5%9B/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%BC%96%E8%AF%91%E5%99%A8-1-%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2023/09/26/%E6%AF%94%E8%B5%9B/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%BC%96%E8%AF%91%E5%99%A8-1-%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF/</guid>
             <title>如何手搓一个简易编译器(1)——前端</title>
-            <link>https://quas-modo.github.io/2023/09/26/%E6%AF%94%E8%B5%9B/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%BC%96%E8%AF%91%E5%99%A8-1-%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF/</link>
-            <category term="比赛" scheme="https://quas-modo.github.io/tags/%E6%AF%94%E8%B5%9B/" />
-            <category term="华为毕昇杯" scheme="https://quas-modo.github.io/tags/%E5%8D%8E%E4%B8%BA%E6%AF%95%E6%98%87%E6%9D%AF/" />
+            <link>https://quas-modo.github.io/undergraduate/2023/09/26/%E6%AF%94%E8%B5%9B/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%BC%96%E8%AF%91%E5%99%A8-1-%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF/</link>
+            <category term="比赛" scheme="https://quas-modo.github.io/undergraduate/tags/%E6%AF%94%E8%B5%9B/" />
+            <category term="华为毕昇杯" scheme="https://quas-modo.github.io/undergraduate/tags/%E5%8D%8E%E4%B8%BA%E6%AF%95%E6%98%87%E6%9D%AF/" />
             <pubDate>Tue, 26 Sep 2023 10:15:24 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;本篇依托于 2023 年华为毕昇杯 CompilerBagel 组参赛作品和本院 lab 教程。&lt;/p&gt;
 &lt;p&gt;受比赛时间限制，性能优化做得比较少，只先考虑满足正确性。&lt;/p&gt;
@@ -8955,10 +8955,10 @@ RST 的设计将包括一个医院控制中心，用于监控数百个 PCA 设�
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2023/07/16/nlp-summer-camp/%E5%A4%9A%E6%A8%A1%E6%80%81%E4%BF%A1%E6%81%AF%E6%8C%87%E5%AF%BC%E7%9A%84%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2023/07/16/nlp-summer-camp/%E5%A4%9A%E6%A8%A1%E6%80%81%E4%BF%A1%E6%81%AF%E6%8C%87%E5%AF%BC%E7%9A%84%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/</guid>
             <title>多模态信息指导的开放世界小样本图像识别</title>
-            <link>https://quas-modo.github.io/2023/07/16/nlp-summer-camp/%E5%A4%9A%E6%A8%A1%E6%80%81%E4%BF%A1%E6%81%AF%E6%8C%87%E5%AF%BC%E7%9A%84%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/</link>
-            <category term="nlp" scheme="https://quas-modo.github.io/categories/nlp/" />
+            <link>https://quas-modo.github.io/undergraduate/2023/07/16/nlp-summer-camp/%E5%A4%9A%E6%A8%A1%E6%80%81%E4%BF%A1%E6%81%AF%E6%8C%87%E5%AF%BC%E7%9A%84%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/</link>
+            <category term="nlp" scheme="https://quas-modo.github.io/undergraduate/categories/nlp/" />
             <pubDate>Sun, 16 Jul 2023 23:24:41 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;Few-shot learning (FSL) 在机器学习领域具有重大意义和挑战性，是否拥有从少量样本中学习和概括的能力。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -9011,11 +9011,11 @@ RST 的设计将包括一个医院控制中心，用于监控数百个 PCA 设�
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2023/07/14/ospp/%E4%B8%80%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8BCurve/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2023/07/14/ospp/%E4%B8%80%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8BCurve/</guid>
             <title>一分钟快速上手Curve</title>
-            <link>https://quas-modo.github.io/2023/07/14/ospp/%E4%B8%80%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8BCurve/</link>
-            <category term="ospp" scheme="https://quas-modo.github.io/categories/ospp/" />
-            <category term="ospp" scheme="https://quas-modo.github.io/tags/ospp/" />
+            <link>https://quas-modo.github.io/undergraduate/2023/07/14/ospp/%E4%B8%80%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8BCurve/</link>
+            <category term="ospp" scheme="https://quas-modo.github.io/undergraduate/categories/ospp/" />
+            <category term="ospp" scheme="https://quas-modo.github.io/undergraduate/tags/ospp/" />
             <pubDate>Fri, 14 Jul 2023 00:06:33 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;利用 CurveAdm 快速部署一个单机集群 CurveBS.&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;

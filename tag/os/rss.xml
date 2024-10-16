@@ -3,8 +3,8 @@
     <channel>
         <title>Carpe diem</title>
         <subtitle>pluck the day</subtitle>
-        <icon>https://quas-modo.github.io/images/favicon.ico</icon>
-        <link>https://quas-modo.github.io</link>
+        <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
+        <link>https://quas-modo.github.io/undergraduate</link>
         <author>
           <name>quas-modo</name>
         </author>
@@ -13,12 +13,12 @@
         <pubDate>Tue, 02 Apr 2024 00:35:41 +0800</pubDate>
         <lastBuildDate>Tue, 02 Apr 2024 00:35:41 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2024/04/02/jyyos/02-%E5%BA%94%E7%94%A8%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2024/04/02/jyyos/02-%E5%BA%94%E7%94%A8%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
             <title>02-应用视角下的操作系统</title>
-            <link>https://quas-modo.github.io/2024/04/02/jyyos/02-%E5%BA%94%E7%94%A8%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="OS" scheme="https://quas-modo.github.io/categories/NJUSE/OS/" />
-            <category term="OS" scheme="https://quas-modo.github.io/tags/OS/" />
+            <link>https://quas-modo.github.io/undergraduate/2024/04/02/jyyos/02-%E5%BA%94%E7%94%A8%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="OS" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/OS/" />
+            <category term="OS" scheme="https://quas-modo.github.io/undergraduate/tags/OS/" />
             <pubDate>Tue, 02 Apr 2024 00:35:41 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;蒋岩炎老师 2024spring 操作系统第二课。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -103,12 +103,12 @@ info re
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2024/04/02/jyyos/01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2024/04/02/jyyos/01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</guid>
             <title>01-操作系统概述</title>
-            <link>https://quas-modo.github.io/2024/04/02/jyyos/01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="OS" scheme="https://quas-modo.github.io/categories/NJUSE/OS/" />
-            <category term="OS" scheme="https://quas-modo.github.io/tags/OS/" />
+            <link>https://quas-modo.github.io/undergraduate/2024/04/02/jyyos/01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="OS" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/OS/" />
+            <category term="OS" scheme="https://quas-modo.github.io/undergraduate/tags/OS/" />
             <pubDate>Tue, 02 Apr 2024 00:32:26 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;蒋岩炎老师 2024spring 操作系统第一课。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;

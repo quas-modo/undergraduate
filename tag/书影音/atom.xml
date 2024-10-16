@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://quas-modo.github.io</id>
+    <id>https://quas-modo.github.io/undergraduate</id>
     <title>Carpe diem</title>
     <subtitle>pluck the day</subtitle>
-    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
-    <link href="https://quas-modo.github.io" />
+    <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io/undergraduate" />
     <author>
       <name>quas-modo</name>
     </author>
     <updated>2022-09-07T07:18:58.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/2022/09/07/thoughts/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/</id>
+        <id>https://quas-modo.github.io/undergraduate/2022/09/07/thoughts/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/</id>
         <title>欢迎来到我的世界</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/09/07/thoughts/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/09/07/thoughts/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/"/>
         <content type="html">&lt;h1 id=&#34;欢迎朋友们来到我的世界~&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#欢迎朋友们来到我的世界~&#34;&gt;#&lt;/a&gt; 欢迎朋友们来到我的世界～&lt;/h1&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;会在这里&lt;s&gt;不定期&lt;/s&gt;（希望是定期）更新课程笔记、专业书籍笔记整理、书影音杂感以及一些胡言乱语&lt;/p&gt;
@@ -20,10 +20,10 @@
 &lt;p&gt;欢迎加友链&lt;/p&gt;
 &lt;p&gt;（逃&lt;/p&gt;
 </content>
-        <category term="杂谈" scheme="https://quas-modo.github.io/categories/%E6%9D%82%E8%B0%88/" />
-        <category term="书影音" scheme="https://quas-modo.github.io/categories/%E6%9D%82%E8%B0%88/%E4%B9%A6%E5%BD%B1%E9%9F%B3/" />
-        <category term="杂谈" scheme="https://quas-modo.github.io/tags/%E6%9D%82%E8%B0%88/" />
-        <category term="书影音" scheme="https://quas-modo.github.io/tags/%E4%B9%A6%E5%BD%B1%E9%9F%B3/" />
+        <category term="杂谈" scheme="https://quas-modo.github.io/undergraduate/categories/%E6%9D%82%E8%B0%88/" />
+        <category term="书影音" scheme="https://quas-modo.github.io/undergraduate/categories/%E6%9D%82%E8%B0%88/%E4%B9%A6%E5%BD%B1%E9%9F%B3/" />
+        <category term="杂谈" scheme="https://quas-modo.github.io/undergraduate/tags/%E6%9D%82%E8%B0%88/" />
+        <category term="书影音" scheme="https://quas-modo.github.io/undergraduate/tags/%E4%B9%A6%E5%BD%B1%E9%9F%B3/" />
         <updated>2022-09-07T07:18:58.000Z</updated>
     </entry>
 </feed>

@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://quas-modo.github.io</id>
+    <id>https://quas-modo.github.io/undergraduate</id>
     <title>Carpe diem</title>
     <subtitle>pluck the day</subtitle>
-    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
-    <link href="https://quas-modo.github.io" />
+    <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io/undergraduate" />
     <author>
       <name>quas-modo</name>
     </author>
     <updated>2024-01-15T04:10:37.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E9%9C%80%E6%B1%822023%E5%9B%9E%E5%BF%86/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E9%9C%80%E6%B1%822023%E5%9B%9E%E5%BF%86/</id>
         <title>需求2023回忆</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E9%9C%80%E6%B1%822023%E5%9B%9E%E5%BF%86/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E9%9C%80%E6%B1%822023%E5%9B%9E%E5%BF%86/"/>
         <content type="html">&lt;p&gt;南京大学软件学院回忆。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;by cxy nyb&lt;/p&gt;
@@ -41,15 +41,15 @@
 &lt;li&gt;侯毅先生不喜欢社区团购，2021 的疫情盒马还是推出了盒马集市，最后合并到了淘宝买菜。请简述需求分析的四项基本活动，并基于回答说明这属于哪项活动，&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="需求" scheme="https://quas-modo.github.io/categories/NJUSE/%E9%9C%80%E6%B1%82/" />
-        <category term="需求" scheme="https://quas-modo.github.io/tags/%E9%9C%80%E6%B1%82/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="需求" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E9%9C%80%E6%B1%82/" />
+        <category term="需求" scheme="https://quas-modo.github.io/undergraduate/tags/%E9%9C%80%E6%B1%82/" />
         <updated>2024-01-15T04:10:37.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E9%9C%80%E6%B1%82%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E9%9C%80%E6%B1%82%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
         <title>需求期末复习</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E9%9C%80%E6%B1%82%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E9%9C%80%E6%B1%82%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html">&lt;p&gt;南京大学软件学院需求期末复习。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=OGFmNTBlZjdiZjU5NTNmZjI4MDk2NmE5MWYwODNjMWRfZ0tKNDlBQ0gxdnZ2bVBmbkQzMVlzdVlTQjZDd0NOYjNfVG9rZW46Tm5uZWJCVXpXb2NNb2N4TmI3bWNRTlpxbmRiXzE3MDUyOTMwMjQ6MTcwNTI5NjYyNF9WNA&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
@@ -2245,9 +2245,9 @@
 &lt;/ol&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=NTVmYzY3MzZlNmJjYTU3MGVlZDEwZTc0Y2M4MjUzMzhfZnR2aWUzMzF1ZlpYWXNTSTlOeFNhZ2tjNjBwa005MWtfVG9rZW46UmtZTGJnd3Fqb3NFMGR4aURZMmM1NnQ4blp5XzE3MDUyOTMwMjQ6MTcwNTI5NjYyNF9WNA&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="需求" scheme="https://quas-modo.github.io/categories/NJUSE/%E9%9C%80%E6%B1%82/" />
-        <category term="需求" scheme="https://quas-modo.github.io/tags/%E9%9C%80%E6%B1%82/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="需求" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E9%9C%80%E6%B1%82/" />
+        <category term="需求" scheme="https://quas-modo.github.io/undergraduate/tags/%E9%9C%80%E6%B1%82/" />
         <updated>2024-01-15T04:08:31.000Z</updated>
     </entry>
 </feed>
