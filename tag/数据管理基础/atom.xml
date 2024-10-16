@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://quas-modo.github.io/undergraduate</id>
+    <id>https://quas-modo.github.io</id>
     <title>Carpe diem</title>
     <subtitle>pluck the day</subtitle>
-    <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
-    <link href="https://quas-modo.github.io/undergraduate" />
+    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io" />
     <author>
       <name>quas-modo</name>
     </author>
     <updated>2023-06-21T06:49:06.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2023/06/21/NJUSE/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%AE%80%E7%AD%94%E6%95%B4%E7%90%86/</id>
+        <id>https://quas-modo.github.io/2023/06/21/NJUSE/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%AE%80%E7%AD%94%E6%95%B4%E7%90%86/</id>
         <title>数据管理基础简答整理</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2023/06/21/NJUSE/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%AE%80%E7%AD%94%E6%95%B4%E7%90%86/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/06/21/NJUSE/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E7%AE%80%E7%AD%94%E6%95%B4%E7%90%86/"/>
         <content type="html">&lt;p&gt;数据库简答题押题整理，主要来源是课后习题。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&#34;数据管理基础简答题整理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数据管理基础简答题整理&#34;&gt;#&lt;/a&gt; 《数据管理基础》简答题整理&lt;/h2&gt;
@@ -477,15 +477,15 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="数据管理基础" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/" />
-        <category term="数据管理基础" scheme="https://quas-modo.github.io/undergraduate/tags/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="数据管理基础" scheme="https://quas-modo.github.io/categories/NJUSE/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/" />
+        <category term="数据管理基础" scheme="https://quas-modo.github.io/tags/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/" />
         <updated>2023-06-21T06:49:06.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2023/06/14/NJUSE/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+        <id>https://quas-modo.github.io/2023/06/14/NJUSE/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
         <title>数据管理基础期末复习</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2023/06/14/NJUSE/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/06/14/NJUSE/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html">&lt;p&gt;结合 pjz 学长的笔记做了一些删改。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;第1章-绪论&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第1章-绪论&#34;&gt;#&lt;/a&gt; 第 1 章 绪论&lt;/h1&gt;
@@ -2476,9 +2476,9 @@ ROLLBACK; # 事务回滚到开始时的状态
 &lt;/ul&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://peng-img.oss-cn-shanghai.aliyuncs.com/markdown-img/image-20220619225729150.png&#34; alt=&#34;image-20220619225729150&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="数据管理基础" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/" />
-        <category term="数据管理基础" scheme="https://quas-modo.github.io/undergraduate/tags/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="数据管理基础" scheme="https://quas-modo.github.io/categories/NJUSE/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/" />
+        <category term="数据管理基础" scheme="https://quas-modo.github.io/tags/%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E7%A1%80/" />
         <updated>2023-06-14T12:14:57.000Z</updated>
     </entry>
 </feed>

@@ -3,8 +3,8 @@
     <channel>
         <title>Carpe diem</title>
         <subtitle>pluck the day</subtitle>
-        <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
-        <link>https://quas-modo.github.io/undergraduate</link>
+        <icon>https://quas-modo.github.io/images/favicon.ico</icon>
+        <link>https://quas-modo.github.io</link>
         <author>
           <name>quas-modo</name>
         </author>
@@ -13,11 +13,11 @@
         <pubDate>Fri, 14 Jul 2023 00:06:33 +0800</pubDate>
         <lastBuildDate>Fri, 14 Jul 2023 00:06:33 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2023/07/14/ospp/%E4%B8%80%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8BCurve/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/2023/07/14/ospp/%E4%B8%80%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8BCurve/</guid>
             <title>一分钟快速上手Curve</title>
-            <link>https://quas-modo.github.io/undergraduate/2023/07/14/ospp/%E4%B8%80%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8BCurve/</link>
-            <category term="ospp" scheme="https://quas-modo.github.io/undergraduate/categories/ospp/" />
-            <category term="ospp" scheme="https://quas-modo.github.io/undergraduate/tags/ospp/" />
+            <link>https://quas-modo.github.io/2023/07/14/ospp/%E4%B8%80%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8BCurve/</link>
+            <category term="ospp" scheme="https://quas-modo.github.io/categories/ospp/" />
+            <category term="ospp" scheme="https://quas-modo.github.io/tags/ospp/" />
             <pubDate>Fri, 14 Jul 2023 00:06:33 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;利用 CurveAdm 快速部署一个单机集群 CurveBS.&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;

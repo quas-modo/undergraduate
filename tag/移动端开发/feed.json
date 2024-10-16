@@ -2,13 +2,13 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "Carpe diem",
     "subtitle": "pluck the day",
-    "icon": "https://quas-modo.github.io/undergraduate/images/favicon.ico",
+    "icon": "https://quas-modo.github.io/images/favicon.ico",
     "description": "notes/thoughts/nonsense",
-    "home_page_url": "https://quas-modo.github.io/undergraduate",
+    "home_page_url": "https://quas-modo.github.io",
     "items": [
         {
-            "id": "https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/",
-            "url": "https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/",
+            "id": "https://quas-modo.github.io/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/",
+            "url": "https://quas-modo.github.io/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/",
             "title": "移动端2023期末回忆",
             "date_published": "2024-01-15T04:11:31.000Z",
             "content_html": "<p>南京大学软件学院移动互联网期末回忆。</p>\n<p><span id=\"more\"></span></p>\n<p>by cxy xbf</p>\n<p>一堆英文，软件工程方法 4 个</p>\n<p>极氪汽车和小米汽车用户画像、前景、宣传策略</p>\n<p>小米 HyperOS 和华为鸿蒙系统架构，异同，特别是分布式能力的不同</p>\n<p>结合作业凤凰商城单体、k8s、istio 谈谈如何实现云原生，Devops，k8s</p>\n<p>根据某小组的大作业架构，来谈谈如何实现基本功能和做高可用高并发的</p>\n<p>多模态 UI 的优秀案例、前景、准则</p>\n<p>跨平台技术</p>\n",

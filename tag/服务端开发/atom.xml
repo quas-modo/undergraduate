@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://quas-modo.github.io/undergraduate</id>
+    <id>https://quas-modo.github.io</id>
     <title>Carpe diem</title>
     <subtitle>pluck the day</subtitle>
-    <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
-    <link href="https://quas-modo.github.io/undergraduate" />
+    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io" />
     <author>
       <name>quas-modo</name>
     </author>
     <updated>2024-01-15T04:11:17.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</id>
+        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</id>
         <title>服务端2023期末回忆</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/"/>
         <content type="html">&lt;p&gt;南京大学软件学院服务端开发回忆。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;by cxy nyb dsy&lt;/p&gt;
@@ -142,15 +142,15 @@
 &lt;li&gt;数据库初始化的时机&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="服务端开发" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
-        <category term="服务端开发" scheme="https://quas-modo.github.io/undergraduate/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="服务端开发" scheme="https://quas-modo.github.io/categories/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <category term="服务端开发" scheme="https://quas-modo.github.io/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
         <updated>2024-01-15T04:11:17.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
         <title>服务端期末复习</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html">&lt;p&gt;南京大学软件学院服务端开发期末整理。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;多选题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#多选题&#34;&gt;#&lt;/a&gt; 多选题&lt;/h1&gt;
@@ -1051,9 +1051,9 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=N2VkNWZjNmQ2YWUyODUyNjM5ZTkyMWNhYTAxMWYwOGJfUkpWV29ud0F5NjV6SHBCYmFQNEJFTFh4TjJBQXVOSmdfVG9rZW46SWxkc2JLY2Jnb3J5RUt4MTZJOWNyNnc1bmtnXzE3MDUyOTMzMTM6MTcwNTI5NjkxM19WNA&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="服务端开发" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
-        <category term="服务端开发" scheme="https://quas-modo.github.io/undergraduate/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="服务端开发" scheme="https://quas-modo.github.io/categories/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <category term="服务端开发" scheme="https://quas-modo.github.io/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
         <updated>2024-01-15T04:10:11.000Z</updated>
     </entry>
 </feed>

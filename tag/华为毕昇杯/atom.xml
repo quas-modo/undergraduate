@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://quas-modo.github.io/undergraduate</id>
+    <id>https://quas-modo.github.io</id>
     <title>Carpe diem</title>
     <subtitle>pluck the day</subtitle>
-    <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
-    <link href="https://quas-modo.github.io/undergraduate" />
+    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io" />
     <author>
       <name>quas-modo</name>
     </author>
     <updated>2023-09-26T02:15:24.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2023/09/26/%E6%AF%94%E8%B5%9B/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%BC%96%E8%AF%91%E5%99%A8-1-%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF/</id>
+        <id>https://quas-modo.github.io/2023/09/26/%E6%AF%94%E8%B5%9B/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%BC%96%E8%AF%91%E5%99%A8-1-%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF/</id>
         <title>如何手搓一个简易编译器(1)——前端</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2023/09/26/%E6%AF%94%E8%B5%9B/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%BC%96%E8%AF%91%E5%99%A8-1-%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/09/26/%E6%AF%94%E8%B5%9B/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%BC%96%E8%AF%91%E5%99%A8-1-%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF/"/>
         <content type="html">&lt;p&gt;本篇依托于 2023 年华为毕昇杯 CompilerBagel 组参赛作品和本院 lab 教程。&lt;/p&gt;
 &lt;p&gt;受比赛时间限制，性能优化做得比较少，只先考虑满足正确性。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -52,8 +52,8 @@
 &lt;p&gt;虽然编译原理课程并不完整，比如没有教更多后端和性能优化的内容，但是没有前端积累的 lab 经验，我们就没有信心走完剩下的全部，在此感谢蚂蚁和 fy 老师的悉心教导，也希望你软 byyl 课越来越好～&lt;/p&gt;
 &lt;p&gt;下一篇来聊聊如何手搓后端。&lt;/p&gt;
 </content>
-        <category term="比赛" scheme="https://quas-modo.github.io/undergraduate/tags/%E6%AF%94%E8%B5%9B/" />
-        <category term="华为毕昇杯" scheme="https://quas-modo.github.io/undergraduate/tags/%E5%8D%8E%E4%B8%BA%E6%AF%95%E6%98%87%E6%9D%AF/" />
+        <category term="比赛" scheme="https://quas-modo.github.io/tags/%E6%AF%94%E8%B5%9B/" />
+        <category term="华为毕昇杯" scheme="https://quas-modo.github.io/tags/%E5%8D%8E%E4%B8%BA%E6%AF%95%E6%98%87%E6%9D%AF/" />
         <updated>2023-09-26T02:15:24.000Z</updated>
     </entry>
 </feed>

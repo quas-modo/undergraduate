@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://quas-modo.github.io/undergraduate</id>
+    <id>https://quas-modo.github.io</id>
     <title>Carpe diem</title>
     <subtitle>pluck the day</subtitle>
-    <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
-    <link href="https://quas-modo.github.io/undergraduate" />
+    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io" />
     <author>
       <name>quas-modo</name>
     </author>
     <updated>2023-06-21T06:43:47.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2023/06/21/NJUSE/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+        <id>https://quas-modo.github.io/2023/06/21/NJUSE/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
         <title>计算机操作系统期末复习</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2023/06/21/NJUSE/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/06/21/NJUSE/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html">&lt;p&gt;整理了一些 os 的选择题知识点、大题的重要知识点，还有一些简答的梳理。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&#34;单元1-操作系统概论&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#单元1-操作系统概论&#34;&gt;#&lt;/a&gt; 单元 1 操作系统概论&lt;/h2&gt;
@@ -1201,9 +1201,9 @@
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230620173226806.png&#34; alt=&#34;image-20230620173226806&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230620183150718.png&#34; alt=&#34;image-20230620183150718&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="计算机操作系统" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" />
-        <category term="计算机操作系统" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机操作系统" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" />
+        <category term="计算机操作系统" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" />
         <updated>2023-06-21T06:43:47.000Z</updated>
     </entry>
 </feed>

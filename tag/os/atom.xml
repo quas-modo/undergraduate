@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://quas-modo.github.io/undergraduate</id>
+    <id>https://quas-modo.github.io</id>
     <title>Carpe diem</title>
     <subtitle>pluck the day</subtitle>
-    <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
-    <link href="https://quas-modo.github.io/undergraduate" />
+    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io" />
     <author>
       <name>quas-modo</name>
     </author>
     <updated>2024-04-01T16:35:41.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2024/04/02/jyyos/02-%E5%BA%94%E7%94%A8%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</id>
+        <id>https://quas-modo.github.io/2024/04/02/jyyos/02-%E5%BA%94%E7%94%A8%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</id>
         <title>02-应用视角下的操作系统</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/04/02/jyyos/02-%E5%BA%94%E7%94%A8%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/04/02/jyyos/02-%E5%BA%94%E7%94%A8%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
         <content type="html">&lt;p&gt;蒋岩炎老师 2024spring 操作系统第二课。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -94,15 +94,15 @@ info re
 &lt;h3 id=&#34;非递归汉诺塔&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#非递归汉诺塔&#34;&gt;#&lt;/a&gt; 非递归汉诺塔&lt;/h3&gt;
 &lt;p&gt;（todo）&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="OS" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/OS/" />
-        <category term="OS" scheme="https://quas-modo.github.io/undergraduate/tags/OS/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="OS" scheme="https://quas-modo.github.io/categories/NJUSE/OS/" />
+        <category term="OS" scheme="https://quas-modo.github.io/tags/OS/" />
         <updated>2024-04-01T16:35:41.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2024/04/02/jyyos/01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</id>
+        <id>https://quas-modo.github.io/2024/04/02/jyyos/01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</id>
         <title>01-操作系统概述</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/04/02/jyyos/01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2024/04/02/jyyos/01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/"/>
         <content type="html">&lt;p&gt;蒋岩炎老师 2024spring 操作系统第一课。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&#34;课后教材阅读&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课后教材阅读&#34;&gt;#&lt;/a&gt; 课后教材阅读&lt;/h2&gt;
@@ -140,9 +140,9 @@ kill $(pgrep -f &#39;./cpu&#39;)
 &lt;h4 id=&#34;持久化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#持久化&#34;&gt;#&lt;/a&gt; 持久化&lt;/h4&gt;
 &lt;p&gt;和 CPU 与内存不一样，OS 并没有创建私有、虚拟的磁盘为每一个应用。相反，他们需要共享文件。&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="OS" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/OS/" />
-        <category term="OS" scheme="https://quas-modo.github.io/undergraduate/tags/OS/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="OS" scheme="https://quas-modo.github.io/categories/NJUSE/OS/" />
+        <category term="OS" scheme="https://quas-modo.github.io/tags/OS/" />
         <updated>2024-04-01T16:32:26.000Z</updated>
     </entry>
 </feed>

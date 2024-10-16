@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://quas-modo.github.io/undergraduate</id>
+    <id>https://quas-modo.github.io</id>
     <title>Carpe diem</title>
     <subtitle>pluck the day</subtitle>
-    <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
-    <link href="https://quas-modo.github.io/undergraduate" />
+    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io" />
     <author>
       <name>quas-modo</name>
     </author>
     <updated>2023-02-08T09:49:10.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2023/02/08/NJUSE/cpp/Lecture14-%E6%A8%A1%E6%9D%BF/</id>
+        <id>https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture14-%E6%A8%A1%E6%9D%BF/</id>
         <title>Lecture14-模板</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2023/02/08/NJUSE/cpp/Lecture14-%E6%A8%A1%E6%9D%BF/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture14-%E6%A8%A1%E6%9D%BF/"/>
         <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221213140245554.png&#34; alt=&#34;image-20221213140245554&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221213140325903.png&#34; alt=&#34;image-20221213140325903&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221213140639104.png&#34; alt=&#34;image-20221213140639104&#34; /&gt;&lt;/p&gt;
@@ -59,15 +59,15 @@
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221220142011316.png&#34; alt=&#34;image-20221220142011316&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221220142028306.png&#34; alt=&#34;image-20221220142028306&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
         <updated>2023-02-08T09:49:10.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2023/02/08/NJUSE/cpp/Lecture13-newdelete/</id>
+        <id>https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture13-newdelete/</id>
         <title>Lecture13-newdelete</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2023/02/08/NJUSE/cpp/Lecture13-newdelete/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture13-newdelete/"/>
         <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221208152207062.png&#34; alt=&#34;image-20221208152207062&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221208152217123.png&#34; alt=&#34;image-20221208152217123&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221208152525691.png&#34; alt=&#34;image-20221208152525691&#34; /&gt;&lt;/p&gt;
@@ -85,15 +85,15 @@
 &lt;p&gt;这样可以减少 new 和 delete 的次数&lt;/p&gt;
 &lt;p&gt;使用 template 推广到其他使用场景。&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
         <updated>2023-02-08T09:49:01.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2023/02/08/NJUSE/cpp/Lecture12-%E5%A4%9A%E6%80%81/</id>
+        <id>https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture12-%E5%A4%9A%E6%80%81/</id>
         <title>Lecture12-多态</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2023/02/08/NJUSE/cpp/Lecture12-%E5%A4%9A%E6%80%81/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture12-%E5%A4%9A%E6%80%81/"/>
         <content type="html">&lt;h1 id=&#34;lecture12-多态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture12-多态&#34;&gt;#&lt;/a&gt; Lecture12 - 多态&lt;/h1&gt;
 &lt;p&gt;&amp;amp; 引用就是某一变量（目标）的一个别名，对引用的操作与对变量直接操作完全一样。&lt;/p&gt;
 &lt;p&gt;引用的声明方法：类型标识符 &amp;amp; 引用名 = 目标变量名；&lt;/p&gt;
@@ -248,15 +248,15 @@
 &lt;p&gt;可以自己在栈上申请一块内存，反复新建和销毁 A。好处是，效率高（？&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221208151134563.png&#34; alt=&#34;image-20221208151134563&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
         <updated>2023-02-08T09:48:46.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2023/02/08/NJUSE/cpp/Lecture11-%E7%BB%A7%E6%89%BF%E3%80%81%E8%99%9A%E5%87%BD%E6%95%B0/</id>
+        <id>https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture11-%E7%BB%A7%E6%89%BF%E3%80%81%E8%99%9A%E5%87%BD%E6%95%B0/</id>
         <title>Lecture11-继承、虚函数</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2023/02/08/NJUSE/cpp/Lecture11-%E7%BB%A7%E6%89%BF%E3%80%81%E8%99%9A%E5%87%BD%E6%95%B0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture11-%E7%BB%A7%E6%89%BF%E3%80%81%E8%99%9A%E5%87%BD%E6%95%B0/"/>
         <content type="html">&lt;h1 id=&#34;lecture11-继承-虚函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture11-继承-虚函数&#34;&gt;#&lt;/a&gt; Lecture11 - 继承、虚函数&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;能声明成 const 就声明成 const&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115142752636.png&#34; alt=&#34;image-20221115142752636&#34; /&gt;&lt;/p&gt;
@@ -441,15 +441,15 @@
 &lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token macro property&#34;&gt;&lt;span class=&#34;token directive-hash&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;token directive keyword&#34;&gt;include&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&amp;lt;iostream&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;namespace&lt;/span&gt; std&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;setX&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; px&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; px&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getX&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    cout &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;D&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token base-clause&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;B&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;setX&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;setX&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; px&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token class-name&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setX&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;px&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  D &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; pb &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; D&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  pb&lt;span class=&#34;token operator&#34;&gt;-&gt;&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setX&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;// 这里多了参数&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  pb&lt;span class=&#34;token operator&#34;&gt;-&gt;&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getX&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 打印出来是 10&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;4&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4&#34;&gt;#&lt;/a&gt; 4&lt;/h2&gt;
 &lt;figure class=&#34;highlight cpp&#34;&gt;&lt;figcaption data-lang=&#34;C++&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token macro property&#34;&gt;&lt;span class=&#34;token directive-hash&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;token directive keyword&#34;&gt;include&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&amp;lt;iostream&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;namespace&lt;/span&gt; std&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;setX&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; px&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; px&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getX&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    cout &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;D&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token base-clause&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;B&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;setX&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;setX&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; px&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token class-name&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;token double-colon punctuation&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setX&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;px&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  B &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; pb &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; D&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;// 这里声明为 B&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  pb&lt;span class=&#34;token operator&#34;&gt;-&gt;&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setX&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;//B 中没有无参数的 setX 函数&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  pb&lt;span class=&#34;token operator&#34;&gt;-&gt;&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getX&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115153218615.png&#34; alt=&#34;image-20221115153218615&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
         <updated>2023-02-08T09:47:48.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/11/21/NJUSE/cpp/Homework4-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</id>
+        <id>https://quas-modo.github.io/2022/11/21/NJUSE/cpp/Homework4-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</id>
         <title>Homework4-内存管理</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/11/21/NJUSE/cpp/Homework4-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/11/21/NJUSE/cpp/Homework4-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
         <content type="html">&lt;p&gt;深拷贝、shared_ptr、memory context&lt;br /&gt;
 map、pair 的应用&lt;br /&gt;
 收获很大的一次作业 qvq&lt;br /&gt;
@@ -620,15 +620,15 @@ free（）：在 tcache 2 中检测到双空闲，在执行程序的过程中对
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221117152152036.png&#34; alt=&#34;image-20221117152152036&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BhdWxrZzEyL2FydGljbGUvZGV0YWlscy84NTE5ODYyNA==&#34;&gt;https://blog.csdn.net/paulkg12/article/details/85198624&lt;/span&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
         <updated>2022-11-20T17:01:58.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/11/02/NJUSE/cpp/Lecture10-OOP/</id>
+        <id>https://quas-modo.github.io/2022/11/02/NJUSE/cpp/Lecture10-OOP/</id>
         <title>Lecture10-OOP</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/11/02/NJUSE/cpp/Lecture10-OOP/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/11/02/NJUSE/cpp/Lecture10-OOP/"/>
         <content type="html">&lt;p&gt;OOP 相关&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture10-oop&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture10-oop&#34;&gt;#&lt;/a&gt; Lecture10-OOP&lt;/h1&gt;
@@ -1044,15 +1044,15 @@ free（）：在 tcache 2 中检测到双空闲，在执行程序的过程中对
 &lt;p&gt;迪米特法则的目的在于降低类之间的耦合。由于每个类尽量减少对其他类的依赖，因此，很容易使得系统的功能模块功能独立，相互之间不存在（或很少有）依赖关系。&lt;/p&gt;
 &lt;p&gt;迪米特法则不希望类之间建立直接的联系。如果真的有需要建立联系，也希望能通过它的友元类来转达。因此，应用迪米特法则有可能造成的一个后果就是：系统中存在大量的中介类，这些类之所以存在完全是为了传递类之间的相互调用关系 —— 这在一定程度上增加了系统的复杂度。&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
         <updated>2022-11-02T12:40:09.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/11/01/NJUSE/cpp/Lecture09-%E6%8C%87%E9%92%88/</id>
+        <id>https://quas-modo.github.io/2022/11/01/NJUSE/cpp/Lecture09-%E6%8C%87%E9%92%88/</id>
         <title>Lecture09-指针</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/11/01/NJUSE/cpp/Lecture09-%E6%8C%87%E9%92%88/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/11/01/NJUSE/cpp/Lecture09-%E6%8C%87%E9%92%88/"/>
         <content type="html">&lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture09-指针&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture09-指针&#34;&gt;#&lt;/a&gt; Lecture09 - 指针&lt;/h1&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018144621124.png&#34; alt=&#34;image-20221018144621124&#34; /&gt;&lt;/p&gt;
@@ -1083,15 +1083,15 @@ free（）：在 tcache 2 中检测到双空闲，在执行程序的过程中对
 &lt;p&gt;char 数组型不可以&lt;/p&gt;
 &lt;p&gt;只能用 copy&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
         <updated>2022-11-01T12:42:02.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/10/18/NJUSE/cpp/Lecture08-%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/</id>
+        <id>https://quas-modo.github.io/2022/10/18/NJUSE/cpp/Lecture08-%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/</id>
         <title>Lecture08-数组和指针</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/10/18/NJUSE/cpp/Lecture08-%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/10/18/NJUSE/cpp/Lecture08-%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/"/>
         <content type="html">&lt;p&gt;一维数组、指针的指针、RAII、union、函数指针&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture08-数组和指针&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture08-数组和指针&#34;&gt;#&lt;/a&gt; Lecture08 - 数组和指针&lt;/h1&gt;
@@ -1196,15 +1196,15 @@ Int *q1 = new int[8];&lt;/p&gt;
 &lt;p&gt;Struct Programming 也可以去实现 OO 的功能&lt;/p&gt;
 &lt;p&gt;OO 实际上是编译器帮助做了一些工作。&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
         <updated>2022-10-18T11:53:25.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/10/04/NJUSE/cpp/Lecture07-%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/</id>
+        <id>https://quas-modo.github.io/2022/10/04/NJUSE/cpp/Lecture07-%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/</id>
         <title>Lecture07-程序组织</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/10/04/NJUSE/cpp/Lecture07-%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/10/04/NJUSE/cpp/Lecture07-%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/"/>
         <content type="html">&lt;p&gt;内联函数、ROP、头文件、namespace、宏&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture-07&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture-07&#34;&gt;#&lt;/a&gt; Lecture 07&lt;/h1&gt;
@@ -1292,15 +1292,15 @@ Int *q1 = new int[8];&lt;/p&gt;
 &lt;p&gt;形成完美的语句（不产生多余的空语句）&lt;/p&gt;
 &lt;p&gt;eight queen 八皇后问题，可用递归的方式求解&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
         <updated>2022-10-04T12:07:08.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/09/29/NJUSE/cpp/Lecture06-%E5%87%BD%E6%95%B0/</id>
+        <id>https://quas-modo.github.io/2022/09/29/NJUSE/cpp/Lecture06-%E5%87%BD%E6%95%B0/</id>
         <title>Lecture06-函数</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/09/29/NJUSE/cpp/Lecture06-%E5%87%BD%E6%95%B0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/09/29/NJUSE/cpp/Lecture06-%E5%87%BD%E6%95%B0/"/>
         <content type="html">&lt;p&gt;cpp 中的函数&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture06-函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture06-函数&#34;&gt;#&lt;/a&gt; Lecture06 - 函数&lt;/h1&gt;
@@ -1560,15 +1560,15 @@ Int *q1 = new int[8];&lt;/p&gt;
 &lt;p&gt;通过上一篇文章走进栈溢出，我们可以发现栈溢出的控制点是 ret 处，那么 ROP 的核心思想就是&lt;strong&gt;利用以 ret 结尾的指令序列把栈中的应该返回 EIP 的地址更改成我们需要的值&lt;/strong&gt;，从而控制程序的执行流程。&lt;/p&gt;
 &lt;p&gt;ROP 方法技巧性很强，那它能完全胜任所有攻击吗？返回语句前的指令是否会因为功能单一，而无法实施预期的攻击目标呢？业界大牛已经过充分&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RsLmFjbS5vcmcvY2l0YXRpb24uY2ZtP2RvaWQ9MTEwMjEyMC4xMTAyMTY1&#34;&gt;研究并证明&lt;/span&gt; ROP 方法是图灵完备的，换句话说， ROP 可以借用 libc 的指令实现任何逻辑功能。&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
         <updated>2022-09-29T08:22:20.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/09/22/NJUSE/cpp/105-STL/</id>
+        <id>https://quas-modo.github.io/2022/09/22/NJUSE/cpp/105-STL/</id>
         <title>105 STL</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/09/22/NJUSE/cpp/105-STL/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/09/22/NJUSE/cpp/105-STL/"/>
         <content type="html">&lt;p&gt;STL 算法概述&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;stl-standard-template-library&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#stl-standard-template-library&#34;&gt;#&lt;/a&gt; STL Standard Template Library&lt;/h1&gt;
@@ -1695,15 +1695,15 @@ Fill_n&lt;br /&gt;
 Search_n&lt;br /&gt;
 …&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
         <updated>2022-09-21T23:56:44.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/09/21/NJUSE/cpp/Lecture04-%E7%AC%AC%E4%B8%80%E6%AC%A1cpp%E7%BC%96%E7%A8%8B/</id>
+        <id>https://quas-modo.github.io/2022/09/21/NJUSE/cpp/Lecture04-%E7%AC%AC%E4%B8%80%E6%AC%A1cpp%E7%BC%96%E7%A8%8B/</id>
         <title>Lecture04-第一次cpp编程</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/09/21/NJUSE/cpp/Lecture04-%E7%AC%AC%E4%B8%80%E6%AC%A1cpp%E7%BC%96%E7%A8%8B/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/09/21/NJUSE/cpp/Lecture04-%E7%AC%AC%E4%B8%80%E6%AC%A1cpp%E7%BC%96%E7%A8%8B/"/>
         <content type="html">&lt;p&gt;主要整理了第一次 cpp 作业的问题和想法，以及一些函数和 io。&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture04&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture04&#34;&gt;#&lt;/a&gt; Lecture04&lt;/h1&gt;
@@ -1861,15 +1861,15 @@ Search_n&lt;br /&gt;
 &lt;p&gt;复习各种数据结构的基本函数&lt;/p&gt;
 &lt;p&gt;学习 template 等 cpp 中不懂的名词（孩子一无所知&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
         <updated>2022-09-21T15:02:26.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/09/15/NJUSE/cpp/Lecture03-%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</id>
+        <id>https://quas-modo.github.io/2022/09/15/NJUSE/cpp/Lecture03-%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</id>
         <title>Lecture03-结构化程序设计</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/09/15/NJUSE/cpp/Lecture03-%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/09/15/NJUSE/cpp/Lecture03-%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
         <content type="html">&lt;p&gt;cpp 第三讲&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture03-结构化程序设计&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture03-结构化程序设计&#34;&gt;#&lt;/a&gt; Lecture03 - 结构化程序设计&lt;/h1&gt;
@@ -1955,9 +1955,9 @@ Search_n&lt;br /&gt;
 &lt;p&gt;顺序、选择、重复&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;switch case 中只用整型表达式&lt;/strong&gt; 还可以搭配 enum 语句使用，这样可以更方便阅读，也不用在文件中硬编码，可以存到文件当中。&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
-        <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
+        <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
         <updated>2022-09-15T08:12:37.000Z</updated>
     </entry>
 </feed>

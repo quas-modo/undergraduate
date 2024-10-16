@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://quas-modo.github.io/undergraduate</id>
+    <id>https://quas-modo.github.io</id>
     <title>Carpe diem</title>
     <subtitle>pluck the day</subtitle>
-    <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
-    <link href="https://quas-modo.github.io/undergraduate" />
+    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io" />
     <author>
       <name>quas-modo</name>
     </author>
     <updated>2023-02-10T02:30:00.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2023/02/10/NJUSE/COA/Lecture17-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</id>
+        <id>https://quas-modo.github.io/2023/02/10/NJUSE/COA/Lecture17-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</id>
         <title>Lecture17-输入输出</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2023/02/10/NJUSE/COA/Lecture17-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/02/10/NJUSE/COA/Lecture17-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"/>
         <content type="html">&lt;h1 id=&#34;lecture17-输入输出&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture17-输入输出&#34;&gt;#&lt;/a&gt; Lecture17 - 输入输出&lt;/h1&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221215162138827.png&#34; alt=&#34;image-20221215162138827&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;外围设备外设-peripheral-device&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#外围设备外设-peripheral-device&#34;&gt;#&lt;/a&gt; 外围设备（外设） peripheral device&lt;/h2&gt;
@@ -120,15 +120,15 @@
 &lt;h2 id=&#34;io模块的演变&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#io模块的演变&#34;&gt;#&lt;/a&gt; IO 模块的演变&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221215174200623.png&#34; alt=&#34;image-20221215174200623&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
-        <category term="计组" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%AE%A1%E7%BB%84/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
         <updated>2023-02-10T02:30:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2023/02/10/NJUSE/COA/Lecture16-%E6%8E%A7%E5%88%B6%E5%99%A8/</id>
+        <id>https://quas-modo.github.io/2023/02/10/NJUSE/COA/Lecture16-%E6%8E%A7%E5%88%B6%E5%99%A8/</id>
         <title>Lecture16-控制器</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2023/02/10/NJUSE/COA/Lecture16-%E6%8E%A7%E5%88%B6%E5%99%A8/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/02/10/NJUSE/COA/Lecture16-%E6%8E%A7%E5%88%B6%E5%99%A8/"/>
         <content type="html">&lt;h1 id=&#34;lecture16-控制器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture16-控制器&#34;&gt;#&lt;/a&gt; Lecture16 - 控制器&lt;/h1&gt;
 &lt;h2 id=&#34;处理器结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#处理器结构&#34;&gt;#&lt;/a&gt; 处理器结构&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221214082920259.png&#34; alt=&#34;image-20221214082920259&#34; /&gt;&lt;/p&gt;
@@ -262,15 +262,15 @@
 &lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221214104225289.png&#34; alt=&#34;image-20221214104225289&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
-        <category term="计组" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%AE%A1%E7%BB%84/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
         <updated>2023-02-10T02:29:47.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2023/02/10/NJUSE/COA/Lecture15-%E5%91%A8%E6%9C%9F/</id>
+        <id>https://quas-modo.github.io/2023/02/10/NJUSE/COA/Lecture15-%E5%91%A8%E6%9C%9F/</id>
         <title>Lecture15-周期</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2023/02/10/NJUSE/COA/Lecture15-%E5%91%A8%E6%9C%9F/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2023/02/10/NJUSE/COA/Lecture15-%E5%91%A8%E6%9C%9F/"/>
         <content type="html">&lt;h1 id=&#34;lecture15-指令周期&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture15-指令周期&#34;&gt;#&lt;/a&gt; Lecture15 - 指令周期&lt;/h1&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221202123948768.png&#34; alt=&#34;image-20221202123948768&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;指令周期状态图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#指令周期状态图&#34;&gt;#&lt;/a&gt; 指令周期：状态图&lt;/h2&gt;
@@ -414,15 +414,15 @@
 &lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221208171817588.png&#34; alt=&#34;image-20221208171817588&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
-        <category term="计组" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%AE%A1%E7%BB%84/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
         <updated>2023-02-10T02:28:23.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/12/02/NJUSE/COA/Lecture14-%E6%8C%87%E4%BB%A4/</id>
+        <id>https://quas-modo.github.io/2022/12/02/NJUSE/COA/Lecture14-%E6%8C%87%E4%BB%A4/</id>
         <title>Lecture14-指令系统</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/12/02/NJUSE/COA/Lecture14-%E6%8C%87%E4%BB%A4/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/12/02/NJUSE/COA/Lecture14-%E6%8C%87%E4%BB%A4/"/>
         <content type="html">&lt;p&gt;操作码、操作数、寻址方式&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture14-指令系统&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture14-指令系统&#34;&gt;#&lt;/a&gt; Lecture14 - 指令系统&lt;/h1&gt;
@@ -575,15 +575,15 @@
 &lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221202141817797.png&#34; alt=&#34;image-20221202141817797&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
-        <category term="计组" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%AE%A1%E7%BB%84/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
         <updated>2022-12-02T06:35:51.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/12/02/NJUSE/COA/Lecture13-%E6%80%BB%E7%BA%BF/</id>
+        <id>https://quas-modo.github.io/2022/12/02/NJUSE/COA/Lecture13-%E6%80%BB%E7%BA%BF/</id>
         <title>Lecture13-总线</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/12/02/NJUSE/COA/Lecture13-%E6%80%BB%E7%BA%BF/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/12/02/NJUSE/COA/Lecture13-%E6%80%BB%E7%BA%BF/"/>
         <content type="html">&lt;p&gt;总线类型、仲裁、带宽、传输速率、层次结构&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture13-总线&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture13-总线&#34;&gt;#&lt;/a&gt; Lecture13 - 总线&lt;/h1&gt;
@@ -717,15 +717,15 @@
 &lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221129173013477.png&#34; alt=&#34;image-20221129173013477&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
-        <category term="计组" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%AE%A1%E7%BB%84/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
         <updated>2022-12-02T06:35:26.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/12/02/NJUSE/COA/Lecture12-%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/</id>
+        <id>https://quas-modo.github.io/2022/12/02/NJUSE/COA/Lecture12-%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/</id>
         <title>Lecture12-虚拟存储器</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/12/02/NJUSE/COA/Lecture12-%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/12/02/NJUSE/COA/Lecture12-%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/"/>
         <content type="html">&lt;p&gt;资源调度&lt;br /&gt;
 分区方式、分页方式&lt;br /&gt;
 虚拟存储器（分页式、分段式、段页式）&lt;/p&gt;
@@ -781,15 +781,15 @@
 &lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221128113710641.png&#34; alt=&#34;image-20221128113710641&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
-        <category term="计组" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%AE%A1%E7%BB%84/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
         <updated>2022-12-02T06:34:56.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/11/21/NJUSE/COA/Lecture11-RAID/</id>
+        <id>https://quas-modo.github.io/2022/11/21/NJUSE/COA/Lecture11-RAID/</id>
         <title>Lecture11-RAID</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/11/21/NJUSE/COA/Lecture11-RAID/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/11/21/NJUSE/COA/Lecture11-RAID/"/>
         <content type="html">&lt;p&gt;RAID0-6&lt;br /&gt;
  条带、镜像、并行存取（海明码、位交错奇偶校验）、独立存取（块交错奇偶检验、块级分布式奇偶检验、双冗余度）&lt;/p&gt;
 &lt;p&gt;并行存取的大数据传输率高，独立存取的 IO 请求快。&lt;/p&gt;
@@ -872,15 +872,15 @@
 &lt;p&gt;3 和 4 的区别在于，是不是一起转的&lt;/p&gt;
 &lt;p&gt;5 和 6 各有优劣&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
-        <category term="计组" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%AE%A1%E7%BB%84/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
         <updated>2022-11-21T06:06:58.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/11/15/NJUSE/COA/Lecture10-%E6%A3%80%E9%94%99%E4%B8%8E%E7%BA%A0%E9%94%99/</id>
+        <id>https://quas-modo.github.io/2022/11/15/NJUSE/COA/Lecture10-%E6%A3%80%E9%94%99%E4%B8%8E%E7%BA%A0%E9%94%99/</id>
         <title>Lecture10-检错与纠错</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/11/15/NJUSE/COA/Lecture10-%E6%A3%80%E9%94%99%E4%B8%8E%E7%BA%A0%E9%94%99/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/11/15/NJUSE/COA/Lecture10-%E6%A3%80%E9%94%99%E4%B8%8E%E7%BA%A0%E9%94%99/"/>
         <content type="html">&lt;p&gt;奇偶检验、海明码检验、循环冗余检验 CRC&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture10-校验码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture10-校验码&#34;&gt;#&lt;/a&gt; Lecture10 - 校验码&lt;/h1&gt;
@@ -959,15 +959,15 @@
 &lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221115214420096.png&#34; alt=&#34;image-20221115214420096&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
-        <category term="计组" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%AE%A1%E7%BB%84/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
         <updated>2022-11-15T14:18:59.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/11/15/NJUSE/COA/Lecture09-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/</id>
+        <id>https://quas-modo.github.io/2022/11/15/NJUSE/COA/Lecture09-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/</id>
         <title>Lecture09-外部存储器</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/11/15/NJUSE/COA/Lecture09-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/11/15/NJUSE/COA/Lecture09-%E5%A4%96%E9%83%A8%E5%AD%98%E5%82%A8%E5%99%A8/"/>
         <content type="html">&lt;p&gt;外部存储器，主要介绍磁盘存储器（结构、读写、数据组织），略带介绍光盘、磁带、快闪存储器。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture09-外部存储器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture09-外部存储器&#34;&gt;#&lt;/a&gt; Lecture09 - 外部存储器&lt;/h1&gt;
@@ -1107,15 +1107,15 @@
 &lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221110171711344.png&#34; alt=&#34;image-20221110171711344&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
-        <category term="计组" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%AE%A1%E7%BB%84/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
         <updated>2022-11-15T12:56:09.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/11/03/NJUSE/COA/Lecture08-cache/</id>
+        <id>https://quas-modo.github.io/2022/11/03/NJUSE/COA/Lecture08-cache/</id>
         <title>Lecture08-cache</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/11/03/NJUSE/COA/Lecture08-cache/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/11/03/NJUSE/COA/Lecture08-cache/"/>
         <content type="html">&lt;p&gt;cache 缓存器，解决内存墙问题，是主存部分的副本，设计要素有地址、容量、映射功能、替换算法、写策略、行大小、cache 数目。&lt;/p&gt;
 &lt;h1 id=&#34;lecture08-cache&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture08-cache&#34;&gt;#&lt;/a&gt; Lecture08-cache&lt;/h1&gt;
 &lt;h2 id=&#34;cache简介&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cache简介&#34;&gt;#&lt;/a&gt; cache 简介&lt;/h2&gt;
@@ -1262,15 +1262,15 @@
 &lt;p&gt;通常，会有片内和片外的 cache。片内 cache 为第一级（L1），外部 cache 为第二级（L2）。L2cache 大小至少为 L1cache 大小的两倍时，才对提高总命中率有明显的作用。&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221103174504972.png&#34; alt=&#34;image-20221103174504972&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
-        <category term="计组" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%AE%A1%E7%BB%84/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
         <updated>2022-11-03T13:03:21.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/10/24/NJUSE/COA/Lecture07-%E5%AD%98%E5%82%A8%E5%99%A8/</id>
+        <id>https://quas-modo.github.io/2022/10/24/NJUSE/COA/Lecture07-%E5%AD%98%E5%82%A8%E5%99%A8/</id>
         <title>Lecture07-存储器</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/10/24/NJUSE/COA/Lecture07-%E5%AD%98%E5%82%A8%E5%99%A8/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/10/24/NJUSE/COA/Lecture07-%E5%AD%98%E5%82%A8%E5%99%A8/"/>
         <content type="html">&lt;p&gt;存储器相关，聚焦于半导体存储器，主要分为读写存储器、只读存储器以及读为主的存储器。接着叙述芯片逻辑，以及芯片优化。&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&#34;回顾存储器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#回顾存储器&#34;&gt;#&lt;/a&gt; 回顾：存储器&lt;/h2&gt;
@@ -1379,15 +1379,15 @@
 &lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221024132047639.png&#34; alt=&#34;image-20221024132047639&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
-        <category term="计组" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%AE%A1%E7%BB%84/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
         <updated>2022-10-24T05:30:15.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/10/18/NJUSE/COA/Lecture06-%E5%8A%A0%E5%87%8F%E6%B3%95%E5%8D%81%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA/</id>
+        <id>https://quas-modo.github.io/2022/10/18/NJUSE/COA/Lecture06-%E5%8A%A0%E5%87%8F%E6%B3%95%E5%8D%81%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA/</id>
         <title>Lecture06-加减法十进制表示</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/10/18/NJUSE/COA/Lecture06-%E5%8A%A0%E5%87%8F%E6%B3%95%E5%8D%81%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/10/18/NJUSE/COA/Lecture06-%E5%8A%A0%E5%87%8F%E6%B3%95%E5%8D%81%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA/"/>
         <content type="html">&lt;p&gt;十进制表示的加减法&lt;br /&gt;
  &amp;lt;!--more&amp;gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture06-加减法十进制数表示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture06-加减法十进制数表示&#34;&gt;#&lt;/a&gt; Lecture06 加减法十进制数表示&lt;/h1&gt;
@@ -1437,15 +1437,15 @@
 &lt;h2 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221018164912432.png&#34; alt=&#34;image-20221018164912432&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
-        <category term="计组" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%AE%A1%E7%BB%84/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
         <updated>2022-10-18T11:50:47.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/10/14/NJUSE/COA/Lecture05-%E6%B5%AE%E7%82%B9%E6%95%B0%E8%AE%A1%E7%AE%97/</id>
+        <id>https://quas-modo.github.io/2022/10/14/NJUSE/COA/Lecture05-%E6%B5%AE%E7%82%B9%E6%95%B0%E8%AE%A1%E7%AE%97/</id>
         <title>Lecture05-浮点数计算</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/10/14/NJUSE/COA/Lecture05-%E6%B5%AE%E7%82%B9%E6%95%B0%E8%AE%A1%E7%AE%97/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/10/14/NJUSE/COA/Lecture05-%E6%B5%AE%E7%82%B9%E6%95%B0%E8%AE%A1%E7%AE%97/"/>
         <content type="html">&lt;p&gt;浮点数的加减乘除。&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture05-浮点数运算&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture05-浮点数运算&#34;&gt;#&lt;/a&gt; Lecture05 - 浮点数运算&lt;/h1&gt;
@@ -1557,15 +1557,15 @@
 &lt;p&gt;​		舍入位是 10，前置位是 1，因此要进位，从而造成了误差。&lt;/p&gt;
 &lt;p&gt;只要有精度的丢失，就是 “否”&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
-        <category term="计组" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%AE%A1%E7%BB%84/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
         <updated>2022-10-14T02:57:07.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/10/04/NJUSE/COA/Lecture04-%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97/</id>
+        <id>https://quas-modo.github.io/2022/10/04/NJUSE/COA/Lecture04-%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97/</id>
         <title>Lecture04-整数运算</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/10/04/NJUSE/COA/Lecture04-%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/10/04/NJUSE/COA/Lecture04-%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97/"/>
         <content type="html">&lt;p&gt;整数的加减乘除计算的实现。&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;整数运算&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#整数运算&#34;&gt;#&lt;/a&gt; 整数运算&lt;/h1&gt;
@@ -1875,15 +1875,15 @@
 &lt;p&gt;全加器算了两次 X+Y：第一次 X+Y 得到 Z，第二次 Z+Cin 得到结果。&lt;/p&gt;
 &lt;p&gt;注意各整数运算的优化过程&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
-        <category term="计组" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%AE%A1%E7%BB%84/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
         <updated>2022-10-04T13:32:43.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/09/23/NJUSE/COA/Lecture03-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E8%A1%A8%E7%A4%BA/</id>
+        <id>https://quas-modo.github.io/2022/09/23/NJUSE/COA/Lecture03-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E8%A1%A8%E7%A4%BA/</id>
         <title>Lecture03-数据的机器级表表示</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/09/23/NJUSE/COA/Lecture03-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E8%A1%A8%E7%A4%BA/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/09/23/NJUSE/COA/Lecture03-%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E8%A1%A8%E7%A4%BA/"/>
         <content type="html">&lt;p&gt;仅记录有用部分，课件详细内容在 ppt 上已经很清楚了。&lt;br /&gt;
 期末更新完毕。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -2060,15 +2060,15 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
-        <category term="计组" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%AE%A1%E7%BB%84/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
         <updated>2022-09-22T23:41:11.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/09/15/NJUSE/COA/Lecture02-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+        <id>https://quas-modo.github.io/2022/09/15/NJUSE/COA/Lecture02-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
         <title>Lecture02-计算机体系结构的问题及解决方案</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/09/15/NJUSE/COA/Lecture02-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/09/15/NJUSE/COA/Lecture02-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
         <content type="html">&lt;p&gt;讲述了六个计算机体系结构的问题以及解决方案&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture02-计算机顶层视图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture02-计算机顶层视图&#34;&gt;#&lt;/a&gt; Lecture02 - 计算机顶层视图&lt;/h1&gt;
@@ -2182,15 +2182,15 @@
 &lt;p&gt;&lt;strong&gt;数据线&lt;/strong&gt; —— 为系统模块之间的数据传输提供路径，一般而言，线路的条数决定了&lt;strong&gt;一次能传输的位数&lt;/strong&gt;，数据总线的宽度是决定系统整体性能的一个关键因素&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230206211430759.png&#34; alt=&#34;image-20230206211430759&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
-        <category term="计组" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%AE%A1%E7%BB%84/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
         <updated>2022-09-15T10:01:24.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/undergraduate/2022/09/08/NJUSE/COA/Lecture01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</id>
+        <id>https://quas-modo.github.io/2022/09/08/NJUSE/COA/Lecture01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</id>
         <title>Lecture01-计算机系统概述</title>
-        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/09/08/NJUSE/COA/Lecture01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/2022/09/08/NJUSE/COA/Lecture01-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/"/>
         <content type="html">&lt;p&gt;第一讲，以及对于书籍的第一章重点知识点整理&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;课程随笔&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课程随笔&#34;&gt;#&lt;/a&gt; 课程随笔&lt;/h1&gt;
@@ -2374,9 +2374,9 @@ PCIE/AGP、Memory、CPU。&lt;/p&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;cpu性能-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cpu性能-2&#34;&gt;#&lt;/a&gt; CPU 性能&lt;/h3&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
-        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
-        <category term="计组" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%AE%A1%E7%BB%84/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
+        <category term="计算机组成与结构" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E4%B8%8E%E7%BB%93%E6%9E%84/" />
+        <category term="计组" scheme="https://quas-modo.github.io/tags/%E8%AE%A1%E7%BB%84/" />
         <updated>2022-09-08T12:30:32.000Z</updated>
     </entry>
 </feed>
