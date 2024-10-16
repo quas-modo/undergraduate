@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://quas-modo.github.io</id>
+    <id>https://quas-modo.github.io/undergraduate</id>
     <title>Carpe diem</title>
     <subtitle>pluck the day</subtitle>
-    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
-    <link href="https://quas-modo.github.io" />
+    <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io/undergraduate" />
     <author>
       <name>quas-modo</name>
     </author>
     <updated>2022-10-10T09:39:52.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/2022/10/10/NJU/%E8%A5%BF%E6%96%B9%E7%BE%8E%E6%9C%AF%E5%8F%B2/Lecture02-03-%E5%8F%A4%E5%85%B8%E6%97%B6%E6%9C%9F-%E5%8F%A4%E7%BD%97%E9%A9%AC%E6%97%B6%E6%9C%9F/</id>
+        <id>https://quas-modo.github.io/undergraduate/2022/10/10/NJU/%E8%A5%BF%E6%96%B9%E7%BE%8E%E6%9C%AF%E5%8F%B2/Lecture02-03-%E5%8F%A4%E5%85%B8%E6%97%B6%E6%9C%9F-%E5%8F%A4%E7%BD%97%E9%A9%AC%E6%97%B6%E6%9C%9F/</id>
         <title>Lecture02/03 古典时期 古罗马时期</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/10/10/NJU/%E8%A5%BF%E6%96%B9%E7%BE%8E%E6%9C%AF%E5%8F%B2/Lecture02-03-%E5%8F%A4%E5%85%B8%E6%97%B6%E6%9C%9F-%E5%8F%A4%E7%BD%97%E9%A9%AC%E6%97%B6%E6%9C%9F/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/10/10/NJU/%E8%A5%BF%E6%96%B9%E7%BE%8E%E6%9C%AF%E5%8F%B2/Lecture02-03-%E5%8F%A4%E5%85%B8%E6%97%B6%E6%9C%9F-%E5%8F%A4%E7%BD%97%E9%A9%AC%E6%97%B6%E6%9C%9F/"/>
         <content type="html">&lt;p&gt;古典时期和古罗马时期艺术&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&#34;lecture02&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture02&#34;&gt;#&lt;/a&gt; Lecture02&lt;/h2&gt;
@@ -62,15 +62,15 @@
 &lt;p&gt;庞贝红&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221012105826460.png&#34; alt=&#34;image-20221012105826460&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="其他" scheme="https://quas-modo.github.io/categories/%E5%85%B6%E4%BB%96/" />
-        <category term="西方美术史" scheme="https://quas-modo.github.io/categories/%E5%85%B6%E4%BB%96/%E8%A5%BF%E6%96%B9%E7%BE%8E%E6%9C%AF%E5%8F%B2/" />
-        <category term="美术" scheme="https://quas-modo.github.io/tags/%E7%BE%8E%E6%9C%AF/" />
+        <category term="其他" scheme="https://quas-modo.github.io/undergraduate/categories/%E5%85%B6%E4%BB%96/" />
+        <category term="西方美术史" scheme="https://quas-modo.github.io/undergraduate/categories/%E5%85%B6%E4%BB%96/%E8%A5%BF%E6%96%B9%E7%BE%8E%E6%9C%AF%E5%8F%B2/" />
+        <category term="美术" scheme="https://quas-modo.github.io/undergraduate/tags/%E7%BE%8E%E6%9C%AF/" />
         <updated>2022-10-10T09:39:52.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2022/09/20/NJU/%E8%A5%BF%E6%96%B9%E7%BE%8E%E6%9C%AF%E5%8F%B2/Lecture01-%E5%8F%B2%E5%89%8D%E5%8F%8A%E5%9F%83%E5%8F%8A%E7%BE%8E%E6%9C%AF/</id>
+        <id>https://quas-modo.github.io/undergraduate/2022/09/20/NJU/%E8%A5%BF%E6%96%B9%E7%BE%8E%E6%9C%AF%E5%8F%B2/Lecture01-%E5%8F%B2%E5%89%8D%E5%8F%8A%E5%9F%83%E5%8F%8A%E7%BE%8E%E6%9C%AF/</id>
         <title>Lecture01 史前及埃及美术</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2022/09/20/NJU/%E8%A5%BF%E6%96%B9%E7%BE%8E%E6%9C%AF%E5%8F%B2/Lecture01-%E5%8F%B2%E5%89%8D%E5%8F%8A%E5%9F%83%E5%8F%8A%E7%BE%8E%E6%9C%AF/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2022/09/20/NJU/%E8%A5%BF%E6%96%B9%E7%BE%8E%E6%9C%AF%E5%8F%B2/Lecture01-%E5%8F%B2%E5%89%8D%E5%8F%8A%E5%9F%83%E5%8F%8A%E7%BE%8E%E6%9C%AF/"/>
         <content type="html">&lt;p&gt;整个艺术发展史不是技术熟练程度的发展史，而是观念和要求的变化史。&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture01&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture01&#34;&gt;#&lt;/a&gt; Lecture01&lt;/h1&gt;
@@ -154,9 +154,9 @@
 &lt;p&gt;注重表现人间美貌的一面，刻画着精巧的五官，少了很多程式化的东西。&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://tse4-mm.cn.bing.net/th/id/OIP-C.Y7N7fcEA9xVKYs9SWPRFVQHaLI?pid=ImgDet&amp;amp;rs=1&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="其他" scheme="https://quas-modo.github.io/categories/%E5%85%B6%E4%BB%96/" />
-        <category term="西方美术史" scheme="https://quas-modo.github.io/categories/%E5%85%B6%E4%BB%96/%E8%A5%BF%E6%96%B9%E7%BE%8E%E6%9C%AF%E5%8F%B2/" />
-        <category term="美术" scheme="https://quas-modo.github.io/tags/%E7%BE%8E%E6%9C%AF/" />
+        <category term="其他" scheme="https://quas-modo.github.io/undergraduate/categories/%E5%85%B6%E4%BB%96/" />
+        <category term="西方美术史" scheme="https://quas-modo.github.io/undergraduate/categories/%E5%85%B6%E4%BB%96/%E8%A5%BF%E6%96%B9%E7%BE%8E%E6%9C%AF%E5%8F%B2/" />
+        <category term="美术" scheme="https://quas-modo.github.io/undergraduate/tags/%E7%BE%8E%E6%9C%AF/" />
         <updated>2022-09-19T16:19:56.000Z</updated>
     </entry>
 </feed>

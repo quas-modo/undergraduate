@@ -3,8 +3,8 @@
     <channel>
         <title>Carpe diem</title>
         <subtitle>pluck the day</subtitle>
-        <icon>https://quas-modo.github.io/images/favicon.ico</icon>
-        <link>https://quas-modo.github.io</link>
+        <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
+        <link>https://quas-modo.github.io/undergraduate</link>
         <author>
           <name>quas-modo</name>
         </author>
@@ -13,12 +13,12 @@
         <pubDate>Wed, 08 Feb 2023 17:49:10 +0800</pubDate>
         <lastBuildDate>Wed, 08 Feb 2023 17:49:10 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture14-%E6%A8%A1%E6%9D%BF/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2023/02/08/NJUSE/cpp/Lecture14-%E6%A8%A1%E6%9D%BF/</guid>
             <title>Lecture14-模板</title>
-            <link>https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture14-%E6%A8%A1%E6%9D%BF/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+            <link>https://quas-modo.github.io/undergraduate/2023/02/08/NJUSE/cpp/Lecture14-%E6%A8%A1%E6%9D%BF/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
             <pubDate>Wed, 08 Feb 2023 17:49:10 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221213140245554.png&#34; alt=&#34;image-20221213140245554&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221213140325903.png&#34; alt=&#34;image-20221213140325903&#34; /&gt;&lt;/p&gt;
@@ -68,12 +68,12 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture13-newdelete/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2023/02/08/NJUSE/cpp/Lecture13-newdelete/</guid>
             <title>Lecture13-newdelete</title>
-            <link>https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture13-newdelete/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+            <link>https://quas-modo.github.io/undergraduate/2023/02/08/NJUSE/cpp/Lecture13-newdelete/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
             <pubDate>Wed, 08 Feb 2023 17:49:01 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221208152207062.png&#34; alt=&#34;image-20221208152207062&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20221208152217123.png&#34; alt=&#34;image-20221208152217123&#34; /&gt;&lt;/p&gt;
@@ -94,12 +94,12 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture12-%E5%A4%9A%E6%80%81/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2023/02/08/NJUSE/cpp/Lecture12-%E5%A4%9A%E6%80%81/</guid>
             <title>Lecture12-多态</title>
-            <link>https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture12-%E5%A4%9A%E6%80%81/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+            <link>https://quas-modo.github.io/undergraduate/2023/02/08/NJUSE/cpp/Lecture12-%E5%A4%9A%E6%80%81/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
             <pubDate>Wed, 08 Feb 2023 17:48:46 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;lecture12-多态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture12-多态&#34;&gt;#&lt;/a&gt; Lecture12 - 多态&lt;/h1&gt;
 &lt;p&gt;&amp;amp; 引用就是某一变量（目标）的一个别名，对引用的操作与对变量直接操作完全一样。&lt;/p&gt;
@@ -257,12 +257,12 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture11-%E7%BB%A7%E6%89%BF%E3%80%81%E8%99%9A%E5%87%BD%E6%95%B0/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2023/02/08/NJUSE/cpp/Lecture11-%E7%BB%A7%E6%89%BF%E3%80%81%E8%99%9A%E5%87%BD%E6%95%B0/</guid>
             <title>Lecture11-继承、虚函数</title>
-            <link>https://quas-modo.github.io/2023/02/08/NJUSE/cpp/Lecture11-%E7%BB%A7%E6%89%BF%E3%80%81%E8%99%9A%E5%87%BD%E6%95%B0/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+            <link>https://quas-modo.github.io/undergraduate/2023/02/08/NJUSE/cpp/Lecture11-%E7%BB%A7%E6%89%BF%E3%80%81%E8%99%9A%E5%87%BD%E6%95%B0/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
             <pubDate>Wed, 08 Feb 2023 17:47:48 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;lecture11-继承-虚函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture11-继承-虚函数&#34;&gt;#&lt;/a&gt; Lecture11 - 继承、虚函数&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;能声明成 const 就声明成 const&lt;/strong&gt;&lt;/p&gt;
@@ -450,12 +450,12 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2022/11/21/NJUSE/cpp/Homework4-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2022/11/21/NJUSE/cpp/Homework4-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</guid>
             <title>Homework4-内存管理</title>
-            <link>https://quas-modo.github.io/2022/11/21/NJUSE/cpp/Homework4-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+            <link>https://quas-modo.github.io/undergraduate/2022/11/21/NJUSE/cpp/Homework4-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
             <pubDate>Mon, 21 Nov 2022 01:01:58 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;深拷贝、shared_ptr、memory context&lt;br /&gt;
 map、pair 的应用&lt;br /&gt;
@@ -629,12 +629,12 @@ free（）：在 tcache 2 中检测到双空闲，在执行程序的过程中对
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2022/11/02/NJUSE/cpp/Lecture10-OOP/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2022/11/02/NJUSE/cpp/Lecture10-OOP/</guid>
             <title>Lecture10-OOP</title>
-            <link>https://quas-modo.github.io/2022/11/02/NJUSE/cpp/Lecture10-OOP/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+            <link>https://quas-modo.github.io/undergraduate/2022/11/02/NJUSE/cpp/Lecture10-OOP/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
             <pubDate>Wed, 02 Nov 2022 20:40:09 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;OOP 相关&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -1053,12 +1053,12 @@ free（）：在 tcache 2 中检测到双空闲，在执行程序的过程中对
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2022/11/01/NJUSE/cpp/Lecture09-%E6%8C%87%E9%92%88/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2022/11/01/NJUSE/cpp/Lecture09-%E6%8C%87%E9%92%88/</guid>
             <title>Lecture09-指针</title>
-            <link>https://quas-modo.github.io/2022/11/01/NJUSE/cpp/Lecture09-%E6%8C%87%E9%92%88/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+            <link>https://quas-modo.github.io/undergraduate/2022/11/01/NJUSE/cpp/Lecture09-%E6%8C%87%E9%92%88/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
             <pubDate>Tue, 01 Nov 2022 20:42:02 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;lecture09-指针&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lecture09-指针&#34;&gt;#&lt;/a&gt; Lecture09 - 指针&lt;/h1&gt;
@@ -1092,12 +1092,12 @@ free（）：在 tcache 2 中检测到双空闲，在执行程序的过程中对
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2022/10/18/NJUSE/cpp/Lecture08-%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2022/10/18/NJUSE/cpp/Lecture08-%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/</guid>
             <title>Lecture08-数组和指针</title>
-            <link>https://quas-modo.github.io/2022/10/18/NJUSE/cpp/Lecture08-%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+            <link>https://quas-modo.github.io/undergraduate/2022/10/18/NJUSE/cpp/Lecture08-%E6%95%B0%E7%BB%84%E5%92%8C%E6%8C%87%E9%92%88/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
             <pubDate>Tue, 18 Oct 2022 19:53:25 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;一维数组、指针的指针、RAII、union、函数指针&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -1205,12 +1205,12 @@ Int *q1 = new int[8];&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2022/10/04/NJUSE/cpp/Lecture07-%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2022/10/04/NJUSE/cpp/Lecture07-%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/</guid>
             <title>Lecture07-程序组织</title>
-            <link>https://quas-modo.github.io/2022/10/04/NJUSE/cpp/Lecture07-%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+            <link>https://quas-modo.github.io/undergraduate/2022/10/04/NJUSE/cpp/Lecture07-%E7%A8%8B%E5%BA%8F%E7%BB%84%E7%BB%87/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
             <pubDate>Tue, 04 Oct 2022 20:07:08 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;内联函数、ROP、头文件、namespace、宏&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -1301,12 +1301,12 @@ Int *q1 = new int[8];&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2022/09/29/NJUSE/cpp/Lecture06-%E5%87%BD%E6%95%B0/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2022/09/29/NJUSE/cpp/Lecture06-%E5%87%BD%E6%95%B0/</guid>
             <title>Lecture06-函数</title>
-            <link>https://quas-modo.github.io/2022/09/29/NJUSE/cpp/Lecture06-%E5%87%BD%E6%95%B0/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+            <link>https://quas-modo.github.io/undergraduate/2022/09/29/NJUSE/cpp/Lecture06-%E5%87%BD%E6%95%B0/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
             <pubDate>Thu, 29 Sep 2022 16:22:20 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;cpp 中的函数&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -1569,12 +1569,12 @@ Int *q1 = new int[8];&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2022/09/22/NJUSE/cpp/105-STL/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2022/09/22/NJUSE/cpp/105-STL/</guid>
             <title>105 STL</title>
-            <link>https://quas-modo.github.io/2022/09/22/NJUSE/cpp/105-STL/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+            <link>https://quas-modo.github.io/undergraduate/2022/09/22/NJUSE/cpp/105-STL/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
             <pubDate>Thu, 22 Sep 2022 07:56:44 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;STL 算法概述&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -1704,12 +1704,12 @@ Search_n&lt;br /&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2022/09/21/NJUSE/cpp/Lecture04-%E7%AC%AC%E4%B8%80%E6%AC%A1cpp%E7%BC%96%E7%A8%8B/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2022/09/21/NJUSE/cpp/Lecture04-%E7%AC%AC%E4%B8%80%E6%AC%A1cpp%E7%BC%96%E7%A8%8B/</guid>
             <title>Lecture04-第一次cpp编程</title>
-            <link>https://quas-modo.github.io/2022/09/21/NJUSE/cpp/Lecture04-%E7%AC%AC%E4%B8%80%E6%AC%A1cpp%E7%BC%96%E7%A8%8B/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+            <link>https://quas-modo.github.io/undergraduate/2022/09/21/NJUSE/cpp/Lecture04-%E7%AC%AC%E4%B8%80%E6%AC%A1cpp%E7%BC%96%E7%A8%8B/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
             <pubDate>Wed, 21 Sep 2022 23:02:26 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;主要整理了第一次 cpp 作业的问题和想法，以及一些函数和 io。&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -1870,12 +1870,12 @@ Search_n&lt;br /&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2022/09/15/NJUSE/cpp/Lecture03-%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2022/09/15/NJUSE/cpp/Lecture03-%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</guid>
             <title>Lecture03-结构化程序设计</title>
-            <link>https://quas-modo.github.io/2022/09/15/NJUSE/cpp/Lecture03-%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</link>
-            <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/categories/NJUSE/cpp/" />
-            <category term="cpp" scheme="https://quas-modo.github.io/tags/cpp/" />
+            <link>https://quas-modo.github.io/undergraduate/2022/09/15/NJUSE/cpp/Lecture03-%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</link>
+            <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/cpp/" />
+            <category term="cpp" scheme="https://quas-modo.github.io/undergraduate/tags/cpp/" />
             <pubDate>Thu, 15 Sep 2022 16:12:37 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;cpp 第三讲&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;

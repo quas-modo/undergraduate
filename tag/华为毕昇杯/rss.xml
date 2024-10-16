@@ -3,8 +3,8 @@
     <channel>
         <title>Carpe diem</title>
         <subtitle>pluck the day</subtitle>
-        <icon>https://quas-modo.github.io/images/favicon.ico</icon>
-        <link>https://quas-modo.github.io</link>
+        <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
+        <link>https://quas-modo.github.io/undergraduate</link>
         <author>
           <name>quas-modo</name>
         </author>
@@ -13,11 +13,11 @@
         <pubDate>Tue, 26 Sep 2023 10:15:24 +0800</pubDate>
         <lastBuildDate>Tue, 26 Sep 2023 10:15:24 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://quas-modo.github.io/2023/09/26/%E6%AF%94%E8%B5%9B/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%BC%96%E8%AF%91%E5%99%A8-1-%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF/</guid>
+            <guid isPermalink="true">https://quas-modo.github.io/undergraduate/2023/09/26/%E6%AF%94%E8%B5%9B/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%BC%96%E8%AF%91%E5%99%A8-1-%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF/</guid>
             <title>如何手搓一个简易编译器(1)——前端</title>
-            <link>https://quas-modo.github.io/2023/09/26/%E6%AF%94%E8%B5%9B/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%BC%96%E8%AF%91%E5%99%A8-1-%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF/</link>
-            <category term="比赛" scheme="https://quas-modo.github.io/tags/%E6%AF%94%E8%B5%9B/" />
-            <category term="华为毕昇杯" scheme="https://quas-modo.github.io/tags/%E5%8D%8E%E4%B8%BA%E6%AF%95%E6%98%87%E6%9D%AF/" />
+            <link>https://quas-modo.github.io/undergraduate/2023/09/26/%E6%AF%94%E8%B5%9B/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%BC%96%E8%AF%91%E5%99%A8-1-%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF/</link>
+            <category term="比赛" scheme="https://quas-modo.github.io/undergraduate/tags/%E6%AF%94%E8%B5%9B/" />
+            <category term="华为毕昇杯" scheme="https://quas-modo.github.io/undergraduate/tags/%E5%8D%8E%E4%B8%BA%E6%AF%95%E6%98%87%E6%9D%AF/" />
             <pubDate>Tue, 26 Sep 2023 10:15:24 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;本篇依托于 2023 年华为毕昇杯 CompilerBagel 组参赛作品和本院 lab 教程。&lt;/p&gt;
 &lt;p&gt;受比赛时间限制，性能优化做得比较少，只先考虑满足正确性。&lt;/p&gt;

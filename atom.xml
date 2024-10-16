@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://quas-modo.github.io</id>
+    <id>https://quas-modo.github.io/undergraduate</id>
     <title>Carpe diem</title>
     <subtitle>pluck the day</subtitle>
-    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
-    <link href="https://quas-modo.github.io" />
+    <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io/undergraduate" />
     <author>
       <name>quas-modo</name>
     </author>
     <updated>2024-10-16T03:12:39.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/2024/10/16/%E5%81%9C%E7%AB%99%E5%85%AC%E5%91%8A/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/10/16/%E5%81%9C%E7%AB%99%E5%85%AC%E5%91%8A/</id>
         <title>停站公告</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/10/16/%E5%81%9C%E7%AB%99%E5%85%AC%E5%91%8A/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/10/16/%E5%81%9C%E7%AB%99%E5%85%AC%E5%91%8A/"/>
         <content type="html">&lt;p&gt;本博客网站于 2024 年 10 月 16 日停止更新。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;迈入新阶段了，和本科这个经营不善的小破博客网站告别了，会在新的地址重新更新。&lt;/p&gt;
@@ -21,9 +21,9 @@
         <updated>2024-10-16T03:12:39.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/04/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E5%90%84%E7%A7%8D%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/04/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E5%90%84%E7%A7%8D%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</id>
         <title>快速了解各种神经网络</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/04/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E5%90%84%E7%A7%8D%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/04/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E5%90%84%E7%A7%8D%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
         <content type="html">&lt;p&gt;根据李沐 stanford 课程第三章梳理。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;神经网络&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#神经网络&#34;&gt;#&lt;/a&gt; 神经网络&lt;/h1&gt;
@@ -79,16 +79,16 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20240404141207231.png&#34; alt=&#34;image-20240404141207231&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="nlp" scheme="https://quas-modo.github.io/categories/nlp/" />
-        <category term="机器学习基础" scheme="https://quas-modo.github.io/categories/nlp/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/" />
-        <category term="AI" scheme="https://quas-modo.github.io/tags/AI/" />
-        <category term="机器学习" scheme="https://quas-modo.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
+        <category term="nlp" scheme="https://quas-modo.github.io/undergraduate/categories/nlp/" />
+        <category term="机器学习基础" scheme="https://quas-modo.github.io/undergraduate/categories/nlp/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/" />
+        <category term="AI" scheme="https://quas-modo.github.io/undergraduate/tags/AI/" />
+        <category term="机器学习" scheme="https://quas-modo.github.io/undergraduate/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
         <updated>2024-04-04T06:09:20.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/04/02/jyyos/02-%E5%BA%94%E7%94%A8%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/04/02/jyyos/02-%E5%BA%94%E7%94%A8%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</id>
         <title>02-应用视角下的操作系统</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/04/02/jyyos/02-%E5%BA%94%E7%94%A8%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/04/02/jyyos/02-%E5%BA%94%E7%94%A8%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
         <content type="html">&lt;p&gt;蒋岩炎老师 2024spring 操作系统第二课。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -170,15 +170,15 @@ info re
 &lt;h3 id=&#34;非递归汉诺塔&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#非递归汉诺塔&#34;&gt;#&lt;/a&gt; 非递归汉诺塔&lt;/h3&gt;
 &lt;p&gt;（todo）&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="OS" scheme="https://quas-modo.github.io/categories/NJUSE/OS/" />
-        <category term="OS" scheme="https://quas-modo.github.io/tags/OS/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="OS" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/OS/" />
+        <category term="OS" scheme="https://quas-modo.github.io/undergraduate/tags/OS/" />
         <updated>2024-04-01T16:35:41.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/04/02/jyyos/01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/04/02/jyyos/01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</id>
         <title>01-操作系统概述</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/04/02/jyyos/01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/04/02/jyyos/01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/"/>
         <content type="html">&lt;p&gt;蒋岩炎老师 2024spring 操作系统第一课。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&#34;课后教材阅读&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课后教材阅读&#34;&gt;#&lt;/a&gt; 课后教材阅读&lt;/h2&gt;
@@ -216,15 +216,15 @@ kill $(pgrep -f &#39;./cpu&#39;)
 &lt;h4 id=&#34;持久化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#持久化&#34;&gt;#&lt;/a&gt; 持久化&lt;/h4&gt;
 &lt;p&gt;和 CPU 与内存不一样，OS 并没有创建私有、虚拟的磁盘为每一个应用。相反，他们需要共享文件。&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="OS" scheme="https://quas-modo.github.io/categories/NJUSE/OS/" />
-        <category term="OS" scheme="https://quas-modo.github.io/tags/OS/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="OS" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/OS/" />
+        <category term="OS" scheme="https://quas-modo.github.io/undergraduate/tags/OS/" />
         <updated>2024-04-01T16:32:26.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/04/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%86%B3%E7%AD%96%E6%A0%91/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/04/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%86%B3%E7%AD%96%E6%A0%91/</id>
         <title>决策树</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/04/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%86%B3%E7%AD%96%E6%A0%91/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/04/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/%E5%86%B3%E7%AD%96%E6%A0%91/"/>
         <content type="html">&lt;p&gt;根据西瓜书《决策树》章节和李沐 b 站相关视频整理。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;决策树&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#决策树&#34;&gt;#&lt;/a&gt; 决策树&lt;/h1&gt;
@@ -335,16 +335,16 @@ kill $(pgrep -f &#39;./cpu&#39;)
 &lt;p&gt;​     树模型在工业界用的比较多【简单，训练算法简单，没有太多的超参数，结果还不错】（不用调参结果还不错）&lt;/p&gt;
 &lt;p&gt;​      树模型能够用的时候，通常是第一选择。&lt;/p&gt;
 </content>
-        <category term="nlp" scheme="https://quas-modo.github.io/categories/nlp/" />
-        <category term="机器学习基础" scheme="https://quas-modo.github.io/categories/nlp/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/" />
-        <category term="AI" scheme="https://quas-modo.github.io/tags/AI/" />
-        <category term="机器学习" scheme="https://quas-modo.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
+        <category term="nlp" scheme="https://quas-modo.github.io/undergraduate/categories/nlp/" />
+        <category term="机器学习基础" scheme="https://quas-modo.github.io/undergraduate/categories/nlp/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/" />
+        <category term="AI" scheme="https://quas-modo.github.io/undergraduate/tags/AI/" />
+        <category term="机器学习" scheme="https://quas-modo.github.io/undergraduate/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
         <updated>2024-04-01T15:40:56.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</id>
         <title>移动端2023期末回忆</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/"/>
         <content type="html">&lt;p&gt;南京大学软件学院移动互联网期末回忆。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;by cxy xbf&lt;/p&gt;
@@ -356,15 +356,15 @@ kill $(pgrep -f &#39;./cpu&#39;)
 &lt;p&gt;多模态 UI 的优秀案例、前景、准则&lt;/p&gt;
 &lt;p&gt;跨平台技术&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="移动端开发" scheme="https://quas-modo.github.io/categories/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" />
-        <category term="移动端开发" scheme="https://quas-modo.github.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="移动端开发" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <category term="移动端开发" scheme="https://quas-modo.github.io/undergraduate/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" />
         <updated>2024-01-15T04:11:31.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</id>
         <title>服务端2023期末回忆</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/"/>
         <content type="html">&lt;p&gt;南京大学软件学院服务端开发回忆。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;by cxy nyb dsy&lt;/p&gt;
@@ -494,15 +494,15 @@ kill $(pgrep -f &#39;./cpu&#39;)
 &lt;li&gt;数据库初始化的时机&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="服务端开发" scheme="https://quas-modo.github.io/categories/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
-        <category term="服务端开发" scheme="https://quas-modo.github.io/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="服务端开发" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <category term="服务端开发" scheme="https://quas-modo.github.io/undergraduate/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
         <updated>2024-01-15T04:11:17.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952023%E5%9B%9E%E5%BF%86/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952023%E5%9B%9E%E5%BF%86/</id>
         <title>软件测试2023回忆</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952023%E5%9B%9E%E5%BF%86/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%952023%E5%9B%9E%E5%BF%86/"/>
         <content type="html">&lt;p&gt;南京大学软件学院软件测试回忆。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;by cxy nyb&lt;/p&gt;
@@ -543,15 +543,15 @@ kill $(pgrep -f &#39;./cpu&#39;)
 &lt;li&gt;语音识别系统，设计模糊测试（要求至少 1 个种子选择策略，3 个变异方式、2 个评估标准）&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="软件测试" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
-        <category term="软件测试" scheme="https://quas-modo.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="软件测试" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
+        <category term="软件测试" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
         <updated>2024-01-15T04:11:03.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/NJUSE/devops%E5%9B%9E%E5%BF%86/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/devops%E5%9B%9E%E5%BF%86/</id>
         <title>devops-2023fall回忆</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/devops%E5%9B%9E%E5%BF%86/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/devops%E5%9B%9E%E5%BF%86/"/>
         <content type="html">&lt;p&gt;南京大学软件学院 devops 回忆。&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
 by hw nyb&lt;/p&gt;
@@ -573,15 +573,15 @@ by hw nyb&lt;/p&gt;
 &lt;li&gt;云计算时代下的运维有哪些挑战&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="Devops" scheme="https://quas-modo.github.io/categories/NJUSE/Devops/" />
-        <category term="Devops" scheme="https://quas-modo.github.io/tags/Devops/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="Devops" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/Devops/" />
+        <category term="Devops" scheme="https://quas-modo.github.io/undergraduate/tags/Devops/" />
         <updated>2024-01-15T04:10:49.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E9%9C%80%E6%B1%822023%E5%9B%9E%E5%BF%86/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E9%9C%80%E6%B1%822023%E5%9B%9E%E5%BF%86/</id>
         <title>需求2023回忆</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E9%9C%80%E6%B1%822023%E5%9B%9E%E5%BF%86/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E9%9C%80%E6%B1%822023%E5%9B%9E%E5%BF%86/"/>
         <content type="html">&lt;p&gt;南京大学软件学院回忆。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;by cxy nyb&lt;/p&gt;
@@ -610,15 +610,15 @@ by hw nyb&lt;/p&gt;
 &lt;li&gt;侯毅先生不喜欢社区团购，2021 的疫情盒马还是推出了盒马集市，最后合并到了淘宝买菜。请简述需求分析的四项基本活动，并基于回答说明这属于哪项活动，&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="需求" scheme="https://quas-modo.github.io/categories/NJUSE/%E9%9C%80%E6%B1%82/" />
-        <category term="需求" scheme="https://quas-modo.github.io/tags/%E9%9C%80%E6%B1%82/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="需求" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E9%9C%80%E6%B1%82/" />
+        <category term="需求" scheme="https://quas-modo.github.io/undergraduate/tags/%E9%9C%80%E6%B1%82/" />
         <updated>2024-01-15T04:10:37.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA2023%E5%9B%9E%E5%BF%86/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA2023%E5%9B%9E%E5%BF%86/</id>
         <title>人机交互-2023fall回忆</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA2023%E5%9B%9E%E5%BF%86/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA2023%E5%9B%9E%E5%BF%86/"/>
         <content type="html">&lt;p&gt;南京大学软件学院人机交互回忆。&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
 by hw nyb&lt;/p&gt;
@@ -637,15 +637,15 @@ by hw nyb&lt;/p&gt;
 &lt;li&gt;选择实验分配方式：组间、组内还是裂区&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="人机交互" scheme="https://quas-modo.github.io/categories/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
-        <category term="人机交互" scheme="https://quas-modo.github.io/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="人机交互" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
+        <category term="人机交互" scheme="https://quas-modo.github.io/undergraduate/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
         <updated>2024-01-15T04:10:26.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
         <title>服务端期末复习</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html">&lt;p&gt;南京大学软件学院服务端开发期末整理。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;多选题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#多选题&#34;&gt;#&lt;/a&gt; 多选题&lt;/h1&gt;
@@ -1546,15 +1546,15 @@ by hw nyb&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=N2VkNWZjNmQ2YWUyODUyNjM5ZTkyMWNhYTAxMWYwOGJfUkpWV29ud0F5NjV6SHBCYmFQNEJFTFh4TjJBQXVOSmdfVG9rZW46SWxkc2JLY2Jnb3J5RUt4MTZJOWNyNnc1bmtnXzE3MDUyOTMzMTM6MTcwNTI5NjkxM19WNA&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="服务端开发" scheme="https://quas-modo.github.io/categories/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
-        <category term="服务端开发" scheme="https://quas-modo.github.io/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="服务端开发" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <category term="服务端开发" scheme="https://quas-modo.github.io/undergraduate/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91/" />
         <updated>2024-01-15T04:10:11.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
         <title>软件测试期末复习</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html">&lt;p&gt;南京大学软件学院软件测试期末复习。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;选择题 10 题（源码、移动、ai）433&lt;/p&gt;
@@ -2583,15 +2583,15 @@ by hw nyb&lt;/p&gt;
 &lt;h2 id=&#34;其他&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他&#34;&gt;#&lt;/a&gt; 其他&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;C:/codedocuments/gh/hexo/source/_posts/NJUSE/assets/1729048167474-30.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="软件测试" scheme="https://quas-modo.github.io/categories/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
-        <category term="软件测试" scheme="https://quas-modo.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="软件测试" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
+        <category term="软件测试" scheme="https://quas-modo.github.io/undergraduate/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" />
         <updated>2024-01-15T04:09:12.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/NJUSE/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
         <title>devops期末复习</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html">&lt;p&gt;南京大学软件大学 devops 期末复习。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;devops渊源&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#devops渊源&#34;&gt;#&lt;/a&gt; Devops 渊源&lt;/h1&gt;
@@ -3292,15 +3292,15 @@ by hw nyb&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWFkNGJhZGUyZTA0NDUxZjM1ZjE4OTk5MzQ1MjRiNmJfZnJoWHBMazJVa3hQRGY4QVUyNEZwOXZxdW4zUEczVlNfVG9rZW46QmFCU2JJSDVDbzQyck94cHFVNmN0SXA2bldjXzE3MDUyOTMxNTE6MTcwNTI5Njc1MV9WNA&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=YWIyNTI4NzFkNjVhYjg1NDQ5NGJlOTFkZWQ5OWUxYTBfWUJkbFFzRGxzdXhyUVNKaEFFMm0wV0RMV2puaU9BUWpfVG9rZW46V01LUmJrQjRNb0Rkc0V4QUp4R2NwSDA4blNDXzE3MDUyOTMxNTE6MTcwNTI5Njc1MV9WNA&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="Devops" scheme="https://quas-modo.github.io/categories/NJUSE/Devops/" />
-        <category term="Devops" scheme="https://quas-modo.github.io/tags/Devops/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="Devops" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/Devops/" />
+        <category term="Devops" scheme="https://quas-modo.github.io/undergraduate/tags/Devops/" />
         <updated>2024-01-15T04:08:50.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E9%9C%80%E6%B1%82%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E9%9C%80%E6%B1%82%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
         <title>需求期末复习</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E9%9C%80%E6%B1%82%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E9%9C%80%E6%B1%82%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html">&lt;p&gt;南京大学软件学院需求期末复习。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=OGFmNTBlZjdiZjU5NTNmZjI4MDk2NmE5MWYwODNjMWRfZ0tKNDlBQ0gxdnZ2bVBmbkQzMVlzdVlTQjZDd0NOYjNfVG9rZW46Tm5uZWJCVXpXb2NNb2N4TmI3bWNRTlpxbmRiXzE3MDUyOTMwMjQ6MTcwNTI5NjYyNF9WNA&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
@@ -5496,15 +5496,15 @@ by hw nyb&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=NTVmYzY3MzZlNmJjYTU3MGVlZDEwZTc0Y2M4MjUzMzhfZnR2aWUzMzF1ZlpYWXNTSTlOeFNhZ2tjNjBwa005MWtfVG9rZW46UmtZTGJnd3Fqb3NFMGR4aURZMmM1NnQ4blp5XzE3MDUyOTMwMjQ6MTcwNTI5NjYyNF9WNA&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="需求" scheme="https://quas-modo.github.io/categories/NJUSE/%E9%9C%80%E6%B1%82/" />
-        <category term="需求" scheme="https://quas-modo.github.io/tags/%E9%9C%80%E6%B1%82/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="需求" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E9%9C%80%E6%B1%82/" />
+        <category term="需求" scheme="https://quas-modo.github.io/undergraduate/tags/%E9%9C%80%E6%B1%82/" />
         <updated>2024-01-15T04:08:31.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
         <title>人机交互期末复习</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html">&lt;p&gt;南京大学软件学院 2023fall 人机交互期末复习整理。&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;题型：&lt;/strong&gt;&lt;/p&gt;
@@ -8790,15 +8790,15 @@ by hw nyb&lt;/p&gt;
 &lt;li&gt;【2014】文件复制到另一地方，会出现显示动画，这个属于（反馈）现象&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="人机交互" scheme="https://quas-modo.github.io/categories/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
-        <category term="人机交互" scheme="https://quas-modo.github.io/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="人机交互" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
+        <category term="人机交互" scheme="https://quas-modo.github.io/undergraduate/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
         <updated>2024-01-15T04:08:05.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2023/09/27/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9A%E4%BB%A5%E4%BA%BA%E4%B8%BA%E6%9C%AC%E7%9A%84%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E5%8F%AF%E9%9D%A0%E3%80%81%E5%AE%89%E5%85%A8%E3%80%81%E5%8F%AF%E4%BF%A1/</id>
+        <id>https://quas-modo.github.io/undergraduate/2023/09/27/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9A%E4%BB%A5%E4%BA%BA%E4%B8%BA%E6%9C%AC%E7%9A%84%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E5%8F%AF%E9%9D%A0%E3%80%81%E5%AE%89%E5%85%A8%E3%80%81%E5%8F%AF%E4%BF%A1/</id>
         <title>论文阅读：以人为本的人工智能：可靠、安全、可信</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2023/09/27/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9A%E4%BB%A5%E4%BA%BA%E4%B8%BA%E6%9C%AC%E7%9A%84%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E5%8F%AF%E9%9D%A0%E3%80%81%E5%AE%89%E5%85%A8%E3%80%81%E5%8F%AF%E4%BF%A1/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2023/09/27/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9A%E4%BB%A5%E4%BA%BA%E4%B8%BA%E6%9C%AC%E7%9A%84%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E5%8F%AF%E9%9D%A0%E3%80%81%E5%AE%89%E5%85%A8%E3%80%81%E5%8F%AF%E4%BF%A1/"/>
         <content type="html">&lt;p&gt;总结自论文 Human-Centered Artificial Intelligence: Reliable, Safe &amp;amp; Trustworthy&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&#34;论文阅读好用的工具推荐&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#论文阅读好用的工具推荐&#34;&gt;#&lt;/a&gt; 论文阅读好用的工具推荐&lt;/h2&gt;
@@ -8900,14 +8900,14 @@ RST 的设计将包括一个医院控制中心，用于监控数百个 PCA 设�
 &lt;h3 id=&#34;结论&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#结论&#34;&gt;#&lt;/a&gt; 结论&lt;/h3&gt;
 &lt;p&gt;HCAI 框架将人类控制与计算机自动化问题分开，明确指出通过良好的设计可以实现高水 平的人类控制和高水平的自动化。设计决策可让人类操作员清楚地了解机器状态和他们 的选择，并以错误的后果和可逆性等问题为指导。 精心设计的自动化系统可在适当的情况下保留人为控制，从而提高性能并实现创造性的改进。&lt;/p&gt;
 </content>
-        <category term="论文阅读" scheme="https://quas-modo.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" />
-        <category term="人机交互" scheme="https://quas-modo.github.io/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
+        <category term="论文阅读" scheme="https://quas-modo.github.io/undergraduate/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" />
+        <category term="人机交互" scheme="https://quas-modo.github.io/undergraduate/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
         <updated>2023-09-27T09:35:36.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2023/09/26/%E6%AF%94%E8%B5%9B/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%BC%96%E8%AF%91%E5%99%A8-1-%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF/</id>
+        <id>https://quas-modo.github.io/undergraduate/2023/09/26/%E6%AF%94%E8%B5%9B/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%BC%96%E8%AF%91%E5%99%A8-1-%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF/</id>
         <title>如何手搓一个简易编译器(1)——前端</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2023/09/26/%E6%AF%94%E8%B5%9B/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%BC%96%E8%AF%91%E5%99%A8-1-%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2023/09/26/%E6%AF%94%E8%B5%9B/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%BC%96%E8%AF%91%E5%99%A8-1-%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF/"/>
         <content type="html">&lt;p&gt;本篇依托于 2023 年华为毕昇杯 CompilerBagel 组参赛作品和本院 lab 教程。&lt;/p&gt;
 &lt;p&gt;受比赛时间限制，性能优化做得比较少，只先考虑满足正确性。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
@@ -8947,14 +8947,14 @@ RST 的设计将包括一个医院控制中心，用于监控数百个 PCA 设�
 &lt;p&gt;虽然编译原理课程并不完整，比如没有教更多后端和性能优化的内容，但是没有前端积累的 lab 经验，我们就没有信心走完剩下的全部，在此感谢蚂蚁和 fy 老师的悉心教导，也希望你软 byyl 课越来越好～&lt;/p&gt;
 &lt;p&gt;下一篇来聊聊如何手搓后端。&lt;/p&gt;
 </content>
-        <category term="比赛" scheme="https://quas-modo.github.io/tags/%E6%AF%94%E8%B5%9B/" />
-        <category term="华为毕昇杯" scheme="https://quas-modo.github.io/tags/%E5%8D%8E%E4%B8%BA%E6%AF%95%E6%98%87%E6%9D%AF/" />
+        <category term="比赛" scheme="https://quas-modo.github.io/undergraduate/tags/%E6%AF%94%E8%B5%9B/" />
+        <category term="华为毕昇杯" scheme="https://quas-modo.github.io/undergraduate/tags/%E5%8D%8E%E4%B8%BA%E6%AF%95%E6%98%87%E6%9D%AF/" />
         <updated>2023-09-26T02:15:24.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2023/07/16/nlp-summer-camp/%E5%A4%9A%E6%A8%A1%E6%80%81%E4%BF%A1%E6%81%AF%E6%8C%87%E5%AF%BC%E7%9A%84%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/</id>
+        <id>https://quas-modo.github.io/undergraduate/2023/07/16/nlp-summer-camp/%E5%A4%9A%E6%A8%A1%E6%80%81%E4%BF%A1%E6%81%AF%E6%8C%87%E5%AF%BC%E7%9A%84%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/</id>
         <title>多模态信息指导的开放世界小样本图像识别</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2023/07/16/nlp-summer-camp/%E5%A4%9A%E6%A8%A1%E6%80%81%E4%BF%A1%E6%81%AF%E6%8C%87%E5%AF%BC%E7%9A%84%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2023/07/16/nlp-summer-camp/%E5%A4%9A%E6%A8%A1%E6%80%81%E4%BF%A1%E6%81%AF%E6%8C%87%E5%AF%BC%E7%9A%84%E5%BC%80%E6%94%BE%E4%B8%96%E7%95%8C%E5%B0%8F%E6%A0%B7%E6%9C%AC%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/"/>
         <content type="html">&lt;p&gt;Few-shot learning (FSL) 在机器学习领域具有重大意义和挑战性，是否拥有从少量样本中学习和概括的能力。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;传统的小样本图像识别模型大多基于封闭世界的假设，即目标域测试集必属于训练类别。但是，实际应用场景往往不服从这个假设，在开放世界的假设下，模型需要处理测试集中的未知样本（例如小样本开放集识别和小样本类别增量式识别等）。在测试阶段，模型需要侦测出未知类别的样本，同时也要正确区分已知类别的样本，甚至再进一步学习未知类别的样本。如何利用多模态数据（图像，文本等）提升模型对未知类别样本的侦测能力和对已知类别样本的区分能力，同时避免灾难性遗忘是本课题探究的重点问题。&lt;/p&gt;
@@ -9004,13 +9004,13 @@ RST 的设计将包括一个医院控制中心，用于监控数百个 PCA 设�
 &lt;p&gt;Learning Adaptive Classifiers Synthesis for Generalized Few-Shot Learning&lt;/p&gt;
 &lt;p&gt;区别：在少量样本的情况下学习尾部类别，同时对头部类别进行分类。&lt;/p&gt;
 </content>
-        <category term="nlp" scheme="https://quas-modo.github.io/categories/nlp/" />
+        <category term="nlp" scheme="https://quas-modo.github.io/undergraduate/categories/nlp/" />
         <updated>2023-07-16T15:24:41.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2023/07/14/ospp/%E4%B8%80%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8BCurve/</id>
+        <id>https://quas-modo.github.io/undergraduate/2023/07/14/ospp/%E4%B8%80%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8BCurve/</id>
         <title>一分钟快速上手Curve</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2023/07/14/ospp/%E4%B8%80%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8BCurve/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2023/07/14/ospp/%E4%B8%80%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8BCurve/"/>
         <content type="html">&lt;p&gt;利用 CurveAdm 快速部署一个单机集群 CurveBS.&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Curve 是云原生计算基金会 (CNCF) Sandbox 项目，是网易自研和开源的高性能、易运维、云原生的分布式存储系统，由块存储 CurveBS 和文件系统 CurveFS 两部分组成。&lt;/p&gt;
@@ -9057,8 +9057,8 @@ sudo mkfs.ext4 /dev/nbd0
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://quasdo.oss-cn-hangzhou.aliyuncs.com/img/image-20230714002651049.png&#34; alt=&#34;image-20230714002651049&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="ospp" scheme="https://quas-modo.github.io/categories/ospp/" />
-        <category term="ospp" scheme="https://quas-modo.github.io/tags/ospp/" />
+        <category term="ospp" scheme="https://quas-modo.github.io/undergraduate/categories/ospp/" />
+        <category term="ospp" scheme="https://quas-modo.github.io/undergraduate/tags/ospp/" />
         <updated>2023-07-13T16:06:33.000Z</updated>
     </entry>
 </feed>

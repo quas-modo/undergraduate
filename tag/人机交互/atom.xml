@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://quas-modo.github.io</id>
+    <id>https://quas-modo.github.io/undergraduate</id>
     <title>Carpe diem</title>
     <subtitle>pluck the day</subtitle>
-    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
-    <link href="https://quas-modo.github.io" />
+    <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io/undergraduate" />
     <author>
       <name>quas-modo</name>
     </author>
     <updated>2024-01-15T04:10:26.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA2023%E5%9B%9E%E5%BF%86/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA2023%E5%9B%9E%E5%BF%86/</id>
         <title>人机交互-2023fall回忆</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA2023%E5%9B%9E%E5%BF%86/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA2023%E5%9B%9E%E5%BF%86/"/>
         <content type="html">&lt;p&gt;南京大学软件学院人机交互回忆。&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
 by hw nyb&lt;/p&gt;
@@ -31,15 +31,15 @@ by hw nyb&lt;/p&gt;
 &lt;li&gt;选择实验分配方式：组间、组内还是裂区&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="人机交互" scheme="https://quas-modo.github.io/categories/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
-        <category term="人机交互" scheme="https://quas-modo.github.io/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="人机交互" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
+        <category term="人机交互" scheme="https://quas-modo.github.io/undergraduate/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
         <updated>2024-01-15T04:10:26.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
         <title>人机交互期末复习</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html">&lt;p&gt;南京大学软件学院 2023fall 人机交互期末复习整理。&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;题型：&lt;/strong&gt;&lt;/p&gt;
@@ -3325,15 +3325,15 @@ by hw nyb&lt;/p&gt;
 &lt;li&gt;【2014】文件复制到另一地方，会出现显示动画，这个属于（反馈）现象&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="人机交互" scheme="https://quas-modo.github.io/categories/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
-        <category term="人机交互" scheme="https://quas-modo.github.io/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="人机交互" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
+        <category term="人机交互" scheme="https://quas-modo.github.io/undergraduate/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
         <updated>2024-01-15T04:08:05.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2023/09/27/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9A%E4%BB%A5%E4%BA%BA%E4%B8%BA%E6%9C%AC%E7%9A%84%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E5%8F%AF%E9%9D%A0%E3%80%81%E5%AE%89%E5%85%A8%E3%80%81%E5%8F%AF%E4%BF%A1/</id>
+        <id>https://quas-modo.github.io/undergraduate/2023/09/27/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9A%E4%BB%A5%E4%BA%BA%E4%B8%BA%E6%9C%AC%E7%9A%84%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E5%8F%AF%E9%9D%A0%E3%80%81%E5%AE%89%E5%85%A8%E3%80%81%E5%8F%AF%E4%BF%A1/</id>
         <title>论文阅读：以人为本的人工智能：可靠、安全、可信</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2023/09/27/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9A%E4%BB%A5%E4%BA%BA%E4%B8%BA%E6%9C%AC%E7%9A%84%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E5%8F%AF%E9%9D%A0%E3%80%81%E5%AE%89%E5%85%A8%E3%80%81%E5%8F%AF%E4%BF%A1/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2023/09/27/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%EF%BC%9A%E4%BB%A5%E4%BA%BA%E4%B8%BA%E6%9C%AC%E7%9A%84%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E5%8F%AF%E9%9D%A0%E3%80%81%E5%AE%89%E5%85%A8%E3%80%81%E5%8F%AF%E4%BF%A1/"/>
         <content type="html">&lt;p&gt;总结自论文 Human-Centered Artificial Intelligence: Reliable, Safe &amp;amp; Trustworthy&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&#34;论文阅读好用的工具推荐&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#论文阅读好用的工具推荐&#34;&gt;#&lt;/a&gt; 论文阅读好用的工具推荐&lt;/h2&gt;
@@ -3435,8 +3435,8 @@ RST 的设计将包括一个医院控制中心，用于监控数百个 PCA 设�
 &lt;h3 id=&#34;结论&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#结论&#34;&gt;#&lt;/a&gt; 结论&lt;/h3&gt;
 &lt;p&gt;HCAI 框架将人类控制与计算机自动化问题分开，明确指出通过良好的设计可以实现高水 平的人类控制和高水平的自动化。设计决策可让人类操作员清楚地了解机器状态和他们 的选择，并以错误的后果和可逆性等问题为指导。 精心设计的自动化系统可在适当的情况下保留人为控制，从而提高性能并实现创造性的改进。&lt;/p&gt;
 </content>
-        <category term="论文阅读" scheme="https://quas-modo.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" />
-        <category term="人机交互" scheme="https://quas-modo.github.io/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
+        <category term="论文阅读" scheme="https://quas-modo.github.io/undergraduate/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" />
+        <category term="人机交互" scheme="https://quas-modo.github.io/undergraduate/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/" />
         <updated>2023-09-27T09:35:36.000Z</updated>
     </entry>
 </feed>

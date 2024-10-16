@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://quas-modo.github.io</id>
+    <id>https://quas-modo.github.io/undergraduate</id>
     <title>Carpe diem</title>
     <subtitle>pluck the day</subtitle>
-    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
-    <link href="https://quas-modo.github.io" />
+    <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io/undergraduate" />
     <author>
       <name>quas-modo</name>
     </author>
     <updated>2024-01-15T04:11:31.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/</id>
         <title>移动端2023期末回忆</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF2023%E6%9C%9F%E6%9C%AB%E5%9B%9E%E5%BF%86/"/>
         <content type="html">&lt;p&gt;南京大学软件学院移动互联网期末回忆。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;by cxy xbf&lt;/p&gt;
@@ -24,9 +24,9 @@
 &lt;p&gt;多模态 UI 的优秀案例、前景、准则&lt;/p&gt;
 &lt;p&gt;跨平台技术&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="移动端开发" scheme="https://quas-modo.github.io/categories/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" />
-        <category term="移动端开发" scheme="https://quas-modo.github.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="移动端开发" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" />
+        <category term="移动端开发" scheme="https://quas-modo.github.io/undergraduate/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" />
         <updated>2024-01-15T04:11:31.000Z</updated>
     </entry>
 </feed>

@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://quas-modo.github.io</id>
+    <id>https://quas-modo.github.io/undergraduate</id>
     <title>Carpe diem</title>
     <subtitle>pluck the day</subtitle>
-    <icon>https://quas-modo.github.io/images/favicon.ico</icon>
-    <link href="https://quas-modo.github.io" />
+    <icon>https://quas-modo.github.io/undergraduate/images/favicon.ico</icon>
+    <link href="https://quas-modo.github.io/undergraduate" />
     <author>
       <name>quas-modo</name>
     </author>
     <updated>2024-01-15T04:10:49.000Z</updated>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/NJUSE/devops%E5%9B%9E%E5%BF%86/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/devops%E5%9B%9E%E5%BF%86/</id>
         <title>devops-2023fall回忆</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/devops%E5%9B%9E%E5%BF%86/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/devops%E5%9B%9E%E5%BF%86/"/>
         <content type="html">&lt;p&gt;南京大学软件学院 devops 回忆。&lt;br /&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;br /&gt;
 by hw nyb&lt;/p&gt;
@@ -34,15 +34,15 @@ by hw nyb&lt;/p&gt;
 &lt;li&gt;云计算时代下的运维有哪些挑战&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="Devops" scheme="https://quas-modo.github.io/categories/NJUSE/Devops/" />
-        <category term="Devops" scheme="https://quas-modo.github.io/tags/Devops/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="Devops" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/Devops/" />
+        <category term="Devops" scheme="https://quas-modo.github.io/undergraduate/tags/Devops/" />
         <updated>2024-01-15T04:10:49.000Z</updated>
     </entry>
     <entry>
-        <id>https://quas-modo.github.io/2024/01/15/NJUSE/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
+        <id>https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</id>
         <title>devops期末复习</title>
-        <link rel="alternate" href="https://quas-modo.github.io/2024/01/15/NJUSE/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
+        <link rel="alternate" href="https://quas-modo.github.io/undergraduate/2024/01/15/NJUSE/devops%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"/>
         <content type="html">&lt;p&gt;南京大学软件大学 devops 期末复习。&lt;/p&gt;
 &lt;p&gt;&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;devops渊源&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#devops渊源&#34;&gt;#&lt;/a&gt; Devops 渊源&lt;/h1&gt;
@@ -743,9 +743,9 @@ by hw nyb&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWFkNGJhZGUyZTA0NDUxZjM1ZjE4OTk5MzQ1MjRiNmJfZnJoWHBMazJVa3hQRGY4QVUyNEZwOXZxdW4zUEczVlNfVG9rZW46QmFCU2JJSDVDbzQyck94cHFVNmN0SXA2bldjXzE3MDUyOTMxNTE6MTcwNTI5Njc1MV9WNA&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://y6gbjg9hbn.feishu.cn/space/api/box/stream/download/asynccode/?code=YWIyNTI4NzFkNjVhYjg1NDQ5NGJlOTFkZWQ5OWUxYTBfWUJkbFFzRGxzdXhyUVNKaEFFMm0wV0RMV2puaU9BUWpfVG9rZW46V01LUmJrQjRNb0Rkc0V4QUp4R2NwSDA4blNDXzE3MDUyOTMxNTE6MTcwNTI5Njc1MV9WNA&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="NJUSE" scheme="https://quas-modo.github.io/categories/NJUSE/" />
-        <category term="Devops" scheme="https://quas-modo.github.io/categories/NJUSE/Devops/" />
-        <category term="Devops" scheme="https://quas-modo.github.io/tags/Devops/" />
+        <category term="NJUSE" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/" />
+        <category term="Devops" scheme="https://quas-modo.github.io/undergraduate/categories/NJUSE/Devops/" />
+        <category term="Devops" scheme="https://quas-modo.github.io/undergraduate/tags/Devops/" />
         <updated>2024-01-15T04:08:50.000Z</updated>
     </entry>
 </feed>
